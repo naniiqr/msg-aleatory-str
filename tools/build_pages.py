@@ -718,13 +718,18 @@ PAGES = {"inici": ("page", page_inici), "parking": ("page", page_parking),
          "header": ("header", header), "footer": ("footer", footer)}
 
 
+TITLES = {"inici": "Inici", "parking": "Parking", "serveis": "Serveis",
+          "installacions": "Instal·lacions", "sobre-nosaltres": "Sobre nosaltres",
+          "contacte": "Contacte", "header": "Header", "footer": "Footer"}
+
+
 def main():
     out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "elementor")
     os.makedirs(out, exist_ok=True)
     for slug, (kind, fn) in PAGES.items():
         content = [finalize(c) for c in fn()]
         doc = {"content": content, "page_settings": [], "version": "0.4",
-               "title": slug.replace("-", " ").title(), "type": kind}
+               "title": TITLES.get(slug, slug.title()), "type": kind}
         path = os.path.join(out, f"{slug}.json")
         with open(path, "w", encoding="utf-8") as f:
             json.dump(doc, f, ensure_ascii=False, indent=1)
