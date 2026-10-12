@@ -1,0 +1,2659 @@
+{
+ "content": [
+  {
+   "id": "c9f0f895",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 70,
+     "right": 24,
+     "bottom": 70,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 30,
+     "right": 16,
+     "bottom": 30,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_image": {
+     "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/vista_aerea.webp",
+     "id": 18,
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#061C49",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.5
+    },
+    "min_height": {
+     "unit": "px",
+     "size": 520
+    },
+    "justify_content": "center"
+   },
+   "elements": [
+    {
+     "id": "8f14e45f",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 62
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "eccbc87e",
+       "settings": {
+        "title": "CARAVANING VILAMACOLUM",
+        "header_size": "h6",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        },
+        "typography_font_weight": "700",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "a87ff679",
+       "settings": {
+        "title": "La teva caravana, sempre en bones mans",
+        "header_size": "h1",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 46
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 31
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 37
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "e4da3b7f",
+       "settings": {
+        "editor": "<p>Parking i cura de caravanes a Vilamacolum, en ple Alt Empordà.</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 16
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      },
+      {
+       "id": "1679091c",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "flex_wrap": "wrap",
+        "flex_direction_mobile": "column"
+       },
+       "elements": [
+        {
+         "id": "c4ca4238",
+         "settings": {
+          "text": "SOL·LICITAR PLAÇA",
+          "link": {
+           "url": "#contacte"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Montserrat",
+          "typography_font_weight": "600",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 13
+          },
+          "border_radius": {
+           "unit": "px",
+           "top": 6,
+           "right": 6,
+           "bottom": 6,
+           "left": 6,
+           "isLinked": true
+          },
+          "button_text_color": "#061C49",
+          "background_color": "#FFFFFF"
+         },
+         "elements": [],
+         "isInner": false,
+         "widgetType": "button",
+         "elType": "widget"
+        },
+        {
+         "id": "c81e728d",
+         "settings": {
+          "text": "VEURE INSTAL·LACIONS",
+          "link": {
+           "url": "/installacions/"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Montserrat",
+          "typography_font_weight": "600",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 13
+          },
+          "border_radius": {
+           "unit": "px",
+           "top": 6,
+           "right": 6,
+           "bottom": 6,
+           "left": 6,
+           "isLinked": true
+          },
+          "button_text_color": "#FFFFFF",
+          "background_color": "rgba(255,255,255,0)",
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "1",
+           "right": "1",
+           "bottom": "1",
+           "left": "1",
+           "isLinked": true
+          },
+          "border_color": "#FFFFFF"
+         },
+         "elements": [],
+         "isInner": false,
+         "widgetType": "button",
+         "elType": "widget"
+        }
+       ],
+       "isInner": true,
+       "elType": "container"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "6ea9ab1b",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 20,
+     "right": 24,
+     "bottom": 20,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 20,
+     "right": 16,
+     "bottom": 20,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "c20ad4d7",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 6,
+       "column": "6",
+       "row": "6",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 20
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "45c48cce",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-vector-square",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 28
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "d3d94468",
+       "settings": {
+        "title": "12.000 m²",
+        "header_size": "h4",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "6512bd43",
+       "settings": {
+        "editor": "<p>d'instal·lacions</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "c74d97b0",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 6,
+       "column": "6",
+       "row": "6",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 20
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "c51ce410",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-home",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 28
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "aab32389",
+       "settings": {
+        "title": "PLACES COBERTES",
+        "header_size": "h4",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "9bf31c7f",
+       "settings": {
+        "editor": "<p>i exteriors</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "98f13708",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 6,
+       "column": "6",
+       "row": "6",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 20
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "70efdf2e",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-shield-alt",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 28
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "6f4922f4",
+       "settings": {
+        "title": "VIGILÀNCIA",
+        "header_size": "h4",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "1f0e3dad",
+       "settings": {
+        "editor": "<p>per a la teva tranquil·litat</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "1ff1de77",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 6,
+       "column": "6",
+       "row": "6",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 20
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "3c59dc04",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-wrench",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 28
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "b6d767d2",
+       "settings": {
+        "title": "MANTENIMENT",
+        "header_size": "h4",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "37693cfc",
+       "settings": {
+        "editor": "<p>i reparacions</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "33e75ff0",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 6,
+       "column": "6",
+       "row": "6",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 20
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "8e296a06",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-tint",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 28
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "4e732ced",
+       "settings": {
+        "title": "NETEJA",
+        "header_size": "h4",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "02e74f10",
+       "settings": {
+        "editor": "<p>per tenir-la sempre a punt</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "17e62166",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 30,
+     "right": 24,
+     "bottom": 30,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 30,
+     "right": 16,
+     "bottom": 30,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#F3F7FA"
+   },
+   "elements": [
+    {
+     "id": "e369853d",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 40
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 22,
+       "right": 22,
+       "bottom": 22,
+       "left": 22,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 22,
+       "right": 16,
+       "bottom": 22,
+       "left": 16,
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "34173cb3",
+       "settings": {
+        "title": "MOLT MÉS QUE UN PARKING",
+        "header_size": "h6",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        },
+        "typography_font_weight": "700",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "c16a5320",
+       "settings": {
+        "title": "Un espai pensat per a la teva tranquil·litat",
+        "header_size": "h2",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 30
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 24
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "6364d3f0",
+       "settings": {
+        "editor": "<p>A Caravaning Vilamacolum t'oferim un espai ampli, segur i ben equipat per guardar la teva caravana durant tot l'any, amb serveis de manteniment, neteja i reparacions.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      },
+      {
+       "id": "182be0c5",
+       "settings": {
+        "text": "DESCOBREIX ELS NOSTRES SERVEIS",
+        "link": {
+         "url": "/serveis/"
+        },
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_weight": "600",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 13
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": 6,
+         "right": 6,
+         "bottom": 6,
+         "left": 6,
+         "isLinked": true
+        },
+        "button_text_color": "#FFFFFF",
+        "background_color": "#061C49"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "button",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "a5771bce",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 30
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 20,
+       "right": 20,
+       "bottom": 20,
+       "left": 20,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 20,
+       "right": 16,
+       "bottom": 20,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF"
+     },
+     "elements": [
+      {
+       "id": "1c383cd3",
+       "settings": {
+        "image": {
+         "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/places_cobertes.webp",
+         "id": 19,
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "image_size": "full",
+        "_css_classes": "foto-parking_cobert"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "image",
+       "elType": "widget"
+      },
+      {
+       "id": "19ca14e7",
+       "settings": {
+        "title": "Parking cobert",
+        "header_size": "h3",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 23
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "a5bfc9e0",
+       "settings": {
+        "editor": "<p>Protecció durant tot l'any.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "a1d0c6e8",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 30
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 20,
+       "right": 20,
+       "bottom": 20,
+       "left": 20,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 20,
+       "right": 16,
+       "bottom": 20,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF"
+     },
+     "elements": [
+      {
+       "id": "d67d8ab4",
+       "settings": {
+        "image": {
+         "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/zona_exterior.webp",
+         "id": 20,
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "image_size": "full",
+        "_css_classes": "foto-parking_exterior"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "image",
+       "elType": "widget"
+      },
+      {
+       "id": "d645920e",
+       "settings": {
+        "title": "Parking exterior",
+        "header_size": "h3",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 23
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "3416a75f",
+       "settings": {
+        "editor": "<p>Amples zones per a caravanes i altres vehicles.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "03afdbd6",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 48,
+     "right": 24,
+     "bottom": 48,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 30,
+     "right": 16,
+     "bottom": 30,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#F3F7FA"
+   },
+   "elements": [
+    {
+     "id": "d9d4f495",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "f7177163",
+       "settings": {
+        "title": "ELS NOSTRES SERVEIS",
+        "header_size": "h6",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        },
+        "typography_font_weight": "700",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "6c8349cc",
+       "settings": {
+        "title": "Ens ocupem de la teva caravana",
+        "header_size": "h2",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 30
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 24
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "c0c7c76d",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 25
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 20,
+       "right": 20,
+       "bottom": 20,
+       "left": 20,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 20,
+       "right": 16,
+       "bottom": 20,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF"
+     },
+     "elements": [
+      {
+       "id": "67c6a1e7",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-parking",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 34
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "642e92ef",
+       "settings": {
+        "title": "Parking",
+        "header_size": "h3",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 23
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "f457c545",
+       "settings": {
+        "editor": "<p>Espais amplis, còmodes i segurs.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "a684ecee",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 25
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 20,
+       "right": 20,
+       "bottom": 20,
+       "left": 20,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 20,
+       "right": 16,
+       "bottom": 20,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF"
+     },
+     "elements": [
+      {
+       "id": "2838023a",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-tint",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 34
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "9a115815",
+       "settings": {
+        "title": "Neteja",
+        "header_size": "h3",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 23
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "d82c8d16",
+       "settings": {
+        "editor": "<p>La preparem perquè estigui llesta per a les teves properes vacances.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "66f041e1",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 25
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 20,
+       "right": 20,
+       "bottom": 20,
+       "left": 20,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 20,
+       "right": 16,
+       "bottom": 20,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF"
+     },
+     "elements": [
+      {
+       "id": "b53b3a3d",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-wrench",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 34
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "9f61408e",
+       "settings": {
+        "title": "Manteniment",
+        "header_size": "h3",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 23
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "72b32a1f",
+       "settings": {
+        "editor": "<p>Revisió i manteniment per conservar-la en les millors condicions.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "44f683a8",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 25
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 20,
+       "right": 20,
+       "bottom": 20,
+       "left": 20,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 20,
+       "right": 16,
+       "bottom": 20,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF"
+     },
+     "elements": [
+      {
+       "id": "093f65e0",
+       "settings": {
+        "selected_icon": {
+         "value": "fas fa-cog",
+         "library": "fa-solid"
+        },
+        "primary_color": "#061C49",
+        "size": {
+         "unit": "px",
+         "size": 34
+        },
+        "align": "left"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon",
+       "elType": "widget"
+      },
+      {
+       "id": "072b030b",
+       "settings": {
+        "title": "Reparacions",
+        "header_size": "h3",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 23
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 22
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "7f39f831",
+       "settings": {
+        "editor": "<p>Solucions per a petites reparacions i posada a punt.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "7cbbc409",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 22,
+     "right": 24,
+     "bottom": 22,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 22,
+     "right": 16,
+     "bottom": 22,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#061C49"
+   },
+   "elements": [
+    {
+     "id": "fc490ca4",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 55
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 22,
+       "right": 22,
+       "bottom": 22,
+       "left": 22,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 22,
+       "right": 16,
+       "bottom": 22,
+       "left": 16,
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "ea5d2f1c",
+       "settings": {
+        "image": {
+         "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/vista_aerea_panoramica.webp",
+         "id": 25,
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "image_size": "full",
+        "_css_classes": "foto-vista_aeria"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "image",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "14bfa6bb",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 45
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 22,
+       "right": 22,
+       "bottom": 22,
+       "left": 22,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 22,
+       "right": 16,
+       "bottom": 22,
+       "left": 16,
+       "isLinked": false
+      },
+      "justify_content": "center"
+     },
+     "elements": [
+      {
+       "id": "3295c76a",
+       "settings": {
+        "title": "TRANQUIL·LITAT TOT L'ANY",
+        "header_size": "h6",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        },
+        "typography_font_weight": "700",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "735b90b4",
+       "settings": {
+        "title": "Tu gaudeix del viatge. Nosaltres cuidem de la teva caravana.",
+        "header_size": "h2",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 40
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 27
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 32
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "a3f390d8",
+       "settings": {
+        "text": "SOL·LICITAR INFORMACIÓ",
+        "link": {
+         "url": "#contacte"
+        },
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_weight": "600",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 13
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": 6,
+         "right": 6,
+         "bottom": 6,
+         "left": 6,
+         "isLinked": true
+        },
+        "button_text_color": "#061C49",
+        "background_color": "#FFFFFF"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "button",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "43ec517d",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 30,
+     "right": 24,
+     "bottom": 30,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 30,
+     "right": 16,
+     "bottom": 30,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "28dd2c79",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 40
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 22,
+       "right": 22,
+       "bottom": 22,
+       "left": 22,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 22,
+       "right": 16,
+       "bottom": 22,
+       "left": 16,
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "e2c420d9",
+       "settings": {
+        "title": "UBICACIÓ",
+        "header_size": "h6",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        },
+        "typography_font_weight": "700",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "32bb90e8",
+       "settings": {
+        "title": "En un punt estratègic de l'Alt Empordà",
+        "header_size": "h2",
+        "title_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 30
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 24
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "d2ddea18",
+       "settings": {
+        "editor": "<p>Caravaning Vilamacolum està situat a Vilamacolum, molt a prop de Sant Pere Pescador i de les principals zones de la Costa Brava, amb fàcil accés des de Figueres i la resta de la comarca.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      },
+      {
+       "id": "ad61ab14",
+       "settings": {
+        "editor": "<p><strong>Caravaning Vilamacolum – Mas Font</strong><br>Ctra. Figueres a la Bisbal, Km 28 · 17474 Vilamacolum · Girona</p>",
+        "text_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      },
+      {
+       "id": "d09bf415",
+       "settings": {
+        "editor": "<p><a href=\"tel:+34677858096\">677 858 096</a></p>",
+        "text_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      },
+      {
+       "id": "fbd7939d",
+       "settings": {
+        "editor": "<p><a href=\"mailto:masfont@caravanvilamacolum.es\">masfont@caravanvilamacolum.es</a></p>",
+        "text_color": "#061C49",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "f033ab37",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 60
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 22,
+       "right": 22,
+       "bottom": 22,
+       "left": 22,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 22,
+       "right": 16,
+       "bottom": 22,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA"
+     },
+     "elements": [
+      {
+       "id": "35f4a8d4",
+       "settings": {
+        "address": "Caravaning Vilamacolum, Vilamacolum, Girona",
+        "zoom": {
+         "unit": "px",
+         "size": 13
+        },
+        "height": {
+         "unit": "px",
+         "size": 320
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "google_maps",
+       "elType": "widget"
+      },
+      {
+       "id": "d1fe173d",
+       "settings": {
+        "text": "VEURE UBICACIÓ",
+        "link": {
+         "url": "https://www.google.com/maps/search/?api=1&query=Caravaning+Vilamacolum"
+        },
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_weight": "600",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 13
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": 6,
+         "right": 6,
+         "bottom": 6,
+         "left": 6,
+         "isLinked": true
+        },
+        "button_text_color": "#FFFFFF",
+        "background_color": "#061C49"
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "button",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "2a38a4a9",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "flex_wrap": "wrap",
+    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 50,
+     "right": 24,
+     "bottom": 50,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 30,
+     "right": 16,
+     "bottom": 30,
+     "left": 16,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#061C49",
+    "_element_id": "contacte"
+   },
+   "elements": [
+    {
+     "id": "3ef81541",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 40
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "9778d5d2",
+       "settings": {
+        "title": "CONTACTE",
+        "header_size": "h6",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12
+        },
+        "typography_font_weight": "700",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "fe9fc289",
+       "settings": {
+        "title": "Busques un lloc per a la teva caravana?",
+        "header_size": "h2",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 30
+        },
+        "typography_font_weight": "700",
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 24
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "68d30a95",
+       "settings": {
+        "editor": "<p>Explica'ns què necessites i t'informarem sobre disponibilitat i serveis.</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 15
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "c7e1249f",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 60
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      },
+      "padding": {
+       "unit": "px",
+       "top": 22,
+       "right": 22,
+       "bottom": 22,
+       "left": 22,
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": 22,
+       "right": 16,
+       "bottom": 22,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#FFFFFF",
+      "border_radius": {
+       "unit": "px",
+       "top": 10,
+       "right": 10,
+       "bottom": 10,
+       "left": 10,
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "93db85ed",
+       "settings": {
+        "form_name": "Contacte Caravaning Vilamacolum",
+        "form_fields": [
+         {
+          "field_type": "text",
+          "field_label": "Nom",
+          "placeholder": "Nom",
+          "required": "true",
+          "_id": "nom",
+          "width": "50"
+         },
+         {
+          "field_type": "tel",
+          "field_label": "Telèfon",
+          "placeholder": "Telèfon",
+          "required": "true",
+          "_id": "telefon",
+          "width": "50"
+         },
+         {
+          "field_type": "email",
+          "field_label": "Email",
+          "placeholder": "Email",
+          "required": "true",
+          "_id": "email"
+         },
+         {
+          "field_type": "select",
+          "field_label": "Tipus de vehicle",
+          "field_options": "Caravana\nAutocaravana\nRemolc\nAltres",
+          "_id": "vehicle"
+         },
+         {
+          "field_type": "textarea",
+          "field_label": "Missatge",
+          "placeholder": "Missatge",
+          "_id": "missatge"
+         },
+         {
+          "field_type": "acceptance",
+          "field_label": "Accepto la política de privacitat",
+          "required": "true",
+          "_id": "privacitat"
+         }
+        ],
+        "button_text": "SOL·LICITAR INFORMACIÓ",
+        "submit_actions": [
+         "email"
+        ],
+        "email_subject": "Nova consulta - Caravaning Vilamacolum",
+        "email_content": "[all-fields]",
+        "success_message": "Gràcies! Hem rebut la teva consulta.",
+        "error_message": "S'ha produït un error. Torna-ho a provar.",
+        "server_message": "Error del servidor. Torna-ho a provar.",
+        "invalid_message": "El formulari no és vàlid.",
+        "required_field_message": "Aquest camp és obligatori."
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "form",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  }
+ ],
+ "page_settings": [],
+ "version": "0.4",
+ "title": "Inici",
+ "type": "page"
+}
