@@ -277,7 +277,7 @@
    "elType": "container"
   },
   {
-   "id": "f8c1f23d",
+   "id": "e46de7e1",
    "settings": {
     "content_width": "full",
     "flex_direction": "row",
@@ -321,7 +321,7 @@
    },
    "elements": [
     {
-     "id": "28f0b864",
+     "id": "1543843a",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -428,7 +428,28 @@
       {
        "id": "70c639df",
        "settings": {
-        "editor": "<p>[Text a revisar amb el client: història de Mas Font, anys d'experiència i valors.]</p>",
+        "editor": "<p>Caravaning Vilamacolum és un parking i servei de cura de caravanes situat a Mas Font, a Vilamacolum, en ple Alt Empordà. Disposem de 12.000 m² d'instal·lacions amb places cobertes i exteriors, pensades perquè la teva caravana, autocaravana o remolc estigui ben protegida durant tot l'any, en un recinte tancat, vigilat i amb fàcil accés.</p>",
+        "text_color": "#526078",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.55
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      },
+      {
+       "id": "28f0b864",
+       "settings": {
+        "editor": "<p>Però som molt més que un parking. Ens ocupem de la neteja, el manteniment i les petites reparacions perquè el teu vehicle estigui sempre a punt per a la propera escapada. Ens trobaràs molt a prop de Sant Pere Pescador, de Figueres i de les principals zones de la Costa Brava, i t'oferim un tracte proper i professional perquè només hagis de preocupar-te de gaudir del viatge.</p>",
         "text_color": "#526078",
         "typography_typography": "custom",
         "typography_font_family": "Montserrat",
@@ -451,7 +472,7 @@
      "elType": "container"
     },
     {
-     "id": "1543843a",
+     "id": "f8c1f23d",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -506,7 +527,7 @@
    "elType": "container"
   },
   {
-   "id": "18d80423",
+   "id": "816b112c",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -553,7 +574,7 @@
    },
    "elements": [
     {
-     "id": "352fe25d",
+     "id": "18d80423",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -579,7 +600,7 @@
      },
      "elements": [
       {
-       "id": "e46de7e1",
+       "id": "b7b16ecf",
        "settings": {
         "title": "ELS NOSTRES VALORS",
         "header_size": "h6",
@@ -602,7 +623,7 @@
        "elType": "widget"
       },
       {
-       "id": "b7b16ecf",
+       "id": "352fe25d",
        "settings": {
         "title": "Per què confiar en nosaltres",
         "header_size": "h2",
@@ -641,7 +662,7 @@
    "elType": "container"
   },
   {
-   "id": "0deb1c54",
+   "id": "66808e32",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -690,7 +711,7 @@
    },
    "elements": [
     {
-     "id": "4f4adcbf",
+     "id": "bbcbff5c",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -758,7 +779,7 @@
      },
      "elements": [
       {
-       "id": "816b112c",
+       "id": "69cb3ea3",
        "settings": {
         "selected_icon": {
          "value": "fas fa-shield-alt",
@@ -778,7 +799,7 @@
        "elType": "widget"
       },
       {
-       "id": "69cb3ea3",
+       "id": "bbf94b34",
        "settings": {
         "title": "Seguretat",
         "header_size": "h3",
@@ -809,7 +830,7 @@
        "elType": "widget"
       },
       {
-       "id": "bbf94b34",
+       "id": "4f4adcbf",
        "settings": {
         "editor": "<p>Recinte vigilat i amb accés controlat.</p>",
         "text_color": "#526078",
@@ -834,7 +855,7 @@
      "elType": "container"
     },
     {
-     "id": "0d0fd7c6",
+     "id": "a96b65a7",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -902,7 +923,7 @@
      },
      "elements": [
       {
-       "id": "bbcbff5c",
+       "id": "8cb22bdd",
        "settings": {
         "selected_icon": {
          "value": "fas fa-handshake",
@@ -922,7 +943,7 @@
        "elType": "widget"
       },
       {
-       "id": "8cb22bdd",
+       "id": "f4f6dce2",
        "settings": {
         "title": "Tracte proper",
         "header_size": "h3",
@@ -953,7 +974,7 @@
        "elType": "widget"
       },
       {
-       "id": "f4f6dce2",
+       "id": "0d0fd7c6",
        "settings": {
         "editor": "<p>T'assessorem amb un servei personalitzat.</p>",
         "text_color": "#526078",
@@ -978,7 +999,7 @@
      "elType": "container"
     },
     {
-     "id": "b9228e09",
+     "id": "0deb1c54",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -1046,7 +1067,7 @@
      },
      "elements": [
       {
-       "id": "a96b65a7",
+       "id": "1068c6e4",
        "settings": {
         "selected_icon": {
          "value": "fas fa-tools",
@@ -1066,7 +1087,7 @@
        "elType": "widget"
       },
       {
-       "id": "1068c6e4",
+       "id": "17d63b16",
        "settings": {
         "title": "Servei complet",
         "header_size": "h3",
@@ -1097,7 +1118,7 @@
        "elType": "widget"
       },
       {
-       "id": "17d63b16",
+       "id": "b9228e09",
        "settings": {
         "editor": "<p>Parking, neteja, manteniment i reparacions.</p>",
         "text_color": "#526078",
@@ -1126,7 +1147,7 @@
    "elType": "container"
   },
   {
-   "id": "7eacb532",
+   "id": "b6f0479a",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -1175,7 +1196,7 @@
    },
    "elements": [
     {
-     "id": "8fe0093b",
+     "id": "41ae36ec",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -1201,7 +1222,7 @@
      },
      "elements": [
       {
-       "id": "66808e32",
+       "id": "42e7aaa8",
        "settings": {
         "title": "VOLS SABER-NE MÉS?",
         "header_size": "h6",
@@ -1224,7 +1245,7 @@
        "elType": "widget"
       },
       {
-       "id": "42e7aaa8",
+       "id": "8fe0093b",
        "settings": {
         "title": "Sol·licita informació sense compromís",
         "header_size": "h2",
@@ -1259,7 +1280,7 @@
      "elType": "container"
     },
     {
-     "id": "d1f255a3",
+     "id": "7eacb532",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -1288,7 +1309,7 @@
      },
      "elements": [
       {
-       "id": "41ae36ec",
+       "id": "d1f255a3",
        "settings": {
         "text": "CONTACTA ARA",
         "link": {

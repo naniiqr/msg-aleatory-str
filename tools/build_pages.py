@@ -620,8 +620,15 @@ def page_sobre():
              "a l'Alt Empordà.", [btn("CONTACTA AMB NOSALTRES", "/contacte/", hero=True)], bg="aeria",
              min_h=400),
         box([box([eyebrow("Qui som", size=10), h("Un equip proper i de confiança", 28),
-                  p("[Text a revisar amb el client: història de Mas Font, anys d'experiència i valors.]",
-                    size=14)], width=52, gap=14, padding=pad(40, 40), justify="center"),
+                  p("Caravaning Vilamacolum és un parking i servei de cura de caravanes situat a Mas Font, a Vilamacolum, "
+                    "en ple Alt Empordà. Disposem de 12.000 m² d'instal·lacions amb places cobertes i exteriors, "
+                    "pensades perquè la teva caravana, autocaravana o remolc estigui ben protegida durant tot "
+                    "l'any, en un recinte tancat, vigilat i amb fàcil accés.", size=14),
+                  p("Però som molt més que un parking. Ens ocupem de la neteja, el manteniment i les petites "
+                    "reparacions perquè el teu vehicle estigui sempre a punt per a la propera escapada. Ens "
+                    "trobaràs molt a prop de Sant Pere Pescador, de Figueres i de les principals zones de la "
+                    "Costa Brava, i t'oferim un tracte proper i professional perquè només hagis de preocupar-te "
+                    "de gaudir del viatge.", size=14)], width=52, gap=14, padding=pad(40, 40), justify="center"),
              box([], width=48, bg_image="exterior", min_h=300)],
             row=True, inner=False, gap=0, bg=SOFT, padding=pad(0), align="stretch"),
         head("Els nostres valors", "Per què confiar en nosaltres", bg=LIGHT),

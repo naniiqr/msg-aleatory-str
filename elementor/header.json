@@ -1,7 +1,7 @@
 {
  "content": [
   {
-   "id": "821fa74b",
+   "id": "250cf8b5",
    "settings": {
     "content_width": "full",
     "flex_direction": "row",
@@ -63,7 +63,7 @@
    },
    "elements": [
     {
-     "id": "f5f8590c",
+     "id": "941e1aaa",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -78,7 +78,7 @@
      },
      "elements": [
       {
-       "id": "d61e4bbd",
+       "id": "f5f8590c",
        "settings": {
         "width": {
          "unit": "px",
@@ -124,7 +124,7 @@
      "elType": "container"
     },
     {
-     "id": "9431c87f",
+     "id": "49ae49a2",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -141,7 +141,7 @@
      },
      "elements": [
       {
-       "id": "941e1aaa",
+       "id": "9431c87f",
        "settings": {
         "menu": "menu-principal",
         "layout": "horizontal",
@@ -186,7 +186,7 @@
      "elType": "container"
     },
     {
-     "id": "e44fea3b",
+     "id": "821fa74b",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -201,7 +201,7 @@
      },
      "elements": [
       {
-       "id": "49ae49a2",
+       "id": "e44fea3b",
        "settings": {
         "text": "SOL·LICITAR INFORMACIÓ",
         "link": {

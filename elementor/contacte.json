@@ -1,7 +1,7 @@
 {
  "content": [
   {
-   "id": "6ecbdd6e",
+   "id": "18997733",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -90,7 +90,7 @@
    },
    "elements": [
     {
-     "id": "25b2822c",
+     "id": "6ecbdd6e",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -116,7 +116,7 @@
      },
      "elements": [
       {
-       "id": "e0c64119",
+       "id": "f85454e8",
        "settings": {
         "title": "CONTACTE",
         "header_size": "h6",
@@ -139,7 +139,7 @@
        "elType": "widget"
       },
       {
-       "id": "f85454e8",
+       "id": "faa9afea",
        "settings": {
         "title": "Parlem de la teva caravana",
         "header_size": "h1",
@@ -170,7 +170,7 @@
        "elType": "widget"
       },
       {
-       "id": "faa9afea",
+       "id": "3c7781a3",
        "settings": {
         "editor": "<p>Explica'ns què necessites i t'informarem sobre disponibilitat i serveis.</p>",
         "text_color": "#FFFFFF",
@@ -191,7 +191,7 @@
        "elType": "widget"
       },
       {
-       "id": "3c7781a3",
+       "id": "25b2822c",
        "settings": {
         "content_width": "full",
         "flex_direction": "row",
@@ -206,7 +206,7 @@
        },
        "elements": [
         {
-         "id": "b6f0479a",
+         "id": "e0c64119",
          "settings": {
           "text": "TRUCA'NS: 677 858 096",
           "link": {
@@ -277,7 +277,7 @@
    "elType": "container"
   },
   {
-   "id": "9b70e8fe",
+   "id": "d61e4bbd",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -328,7 +328,7 @@
    },
    "elements": [
     {
-     "id": "eed5af6a",
+     "id": "a8abb4bb",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -355,7 +355,7 @@
      },
      "elements": [
       {
-       "id": "18997733",
+       "id": "8d7d8ee0",
        "settings": {
         "title": "Ubicació",
         "header_size": "h6",
@@ -378,7 +378,7 @@
        "elType": "widget"
       },
       {
-       "id": "8d7d8ee0",
+       "id": "75fc093c",
        "settings": {
         "title": "En un punt estratègic de l'Alt Empordà",
         "header_size": "h2",
@@ -409,7 +409,7 @@
        "elType": "widget"
       },
       {
-       "id": "75fc093c",
+       "id": "f74909ac",
        "settings": {
         "editor": "<p>Caravaning Vilamacolum està situat a Vilamacolum, molt a prop de Sant Pere Pescador i de les principals zones de la Costa Brava, amb fàcil accés des de Figueres i la resta de la comarca.</p>",
         "text_color": "#526078",
@@ -430,7 +430,7 @@
        "elType": "widget"
       },
       {
-       "id": "248e8443",
+       "id": "019d385e",
        "settings": {
         "content_width": "full",
         "flex_direction": "row",
@@ -446,7 +446,7 @@
        },
        "elements": [
         {
-         "id": "f74909ac",
+         "id": "66368270",
          "settings": {
           "selected_icon": {
            "value": "fas fa-map-marker-alt",
@@ -466,7 +466,7 @@
          "elType": "widget"
         },
         {
-         "id": "66368270",
+         "id": "248e8443",
          "settings": {
           "editor": "<p>Caravaning Vilamacolum – Mas Font<br><span style='font-weight:400'>Ctra. Figueres a La Bisbal, Km 28<br>17474 Vilamacolum · Girona</span></p>",
           "text_color": "#061C49",
@@ -492,7 +492,7 @@
        "elType": "container"
       },
       {
-       "id": "ddb30680",
+       "id": "2421fcb1",
        "settings": {
         "content_width": "full",
         "flex_direction": "row",
@@ -508,7 +508,7 @@
        },
        "elements": [
         {
-         "id": "019d385e",
+         "id": "a49e9411",
          "settings": {
           "selected_icon": {
            "value": "fas fa-phone",
@@ -528,7 +528,7 @@
          "elType": "widget"
         },
         {
-         "id": "a49e9411",
+         "id": "ddb30680",
          "settings": {
           "editor": "<p><a href=\"tel:+34677858096\" style=\"color:inherit\">677 858 096</a></p>",
           "text_color": "#061C49",
@@ -554,7 +554,7 @@
        "elType": "container"
       },
       {
-       "id": "1651cf0d",
+       "id": "eed5af6a",
        "settings": {
         "content_width": "full",
         "flex_direction": "row",
@@ -570,7 +570,7 @@
        },
        "elements": [
         {
-         "id": "2421fcb1",
+         "id": "fccb60fb",
          "settings": {
           "selected_icon": {
            "value": "fas fa-envelope",
@@ -590,7 +590,7 @@
          "elType": "widget"
         },
         {
-         "id": "fccb60fb",
+         "id": "1651cf0d",
          "settings": {
           "editor": "<p><a href=\"mailto:masfont@caravanvilamacolum.es\" style=\"color:inherit\">masfont@caravanvilamacolum.es</a></p>",
           "text_color": "#061C49",
@@ -620,7 +620,7 @@
      "elType": "container"
     },
     {
-     "id": "15d4e891",
+     "id": "c203d8a1",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -656,7 +656,7 @@
      },
      "elements": [
       {
-       "id": "a8abb4bb",
+       "id": "15d4e891",
        "settings": {
         "address": "Caravaning Vilamacolum, Vilamacolum, Girona",
         "zoom": {
@@ -682,7 +682,7 @@
      "elType": "container"
     },
     {
-     "id": "9a96876e",
+     "id": "9b70e8fe",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -742,7 +742,7 @@
      },
      "elements": [
       {
-       "id": "550a141f",
+       "id": "67f7fb87",
        "settings": {
         "content_width": "full",
         "flex_direction": "row",
@@ -758,7 +758,7 @@
        },
        "elements": [
         {
-         "id": "c203d8a1",
+         "id": "13f3cf8c",
          "settings": {
           "title": "CONTACTE",
           "header_size": "h6",
@@ -781,7 +781,7 @@
          "elType": "widget"
         },
         {
-         "id": "13f3cf8c",
+         "id": "550a141f",
          "settings": {
           "title": "Busques un lloc per a la teva caravana?",
           "header_size": "h3",
@@ -816,7 +816,7 @@
        "elType": "container"
       },
       {
-       "id": "67f7fb87",
+       "id": "1a5b1e4d",
        "settings": {
         "editor": "<p>Explica'ns què necessites i t'informarem sobre disponibilitat i serveis.</p>",
         "text_color": "#DCE5F3",
@@ -837,7 +837,7 @@
        "elType": "widget"
       },
       {
-       "id": "1a5b1e4d",
+       "id": "9a96876e",
        "settings": {
         "form_name": "Contacte Caravaning Vilamacolum",
         "form_fields": [
