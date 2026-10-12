@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "3e2c91e",
+      "id": "65db6a0",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -111,7 +111,7 @@
       },
       "elements": [
         {
-          "id": "e852829",
+          "id": "98ab86c",
           "elType": "widget",
           "settings": {
             "title": "Contacte",
@@ -145,7 +145,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "eb612a2",
+          "id": "3b13ed5",
           "elType": "widget",
           "settings": {
             "title": "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
@@ -179,7 +179,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "7cfd925",
+          "id": "295b5ac",
           "elType": "widget",
           "settings": {
             "text": "Truca'ns",
@@ -246,7 +246,7 @@
       "isInner": false
     },
     {
-      "id": "e4ee291",
+      "id": "60a4e88",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -311,7 +311,7 @@
       },
       "elements": [
         {
-          "id": "c4f34fd",
+          "id": "804e6dc",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -346,7 +346,7 @@
           },
           "elements": [
             {
-              "id": "0d47e70",
+              "id": "03d5b4b",
               "elType": "widget",
               "settings": {
                 "title": "ESCRIU-NOS",
@@ -375,7 +375,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "3b26f23",
+              "id": "d060600",
               "elType": "widget",
               "settings": {
                 "title": "Parlem del<br>teu projecte",
@@ -409,7 +409,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "fce1951",
+              "id": "73ed6be",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -452,7 +452,7 @@
               },
               "elements": [
                 {
-                  "id": "cddb117",
+                  "id": "c5e012a",
                   "elType": "widget",
                   "settings": {
                     "form_name": "Contacte Creem Llar",
@@ -461,7 +461,7 @@
                         "custom_id": "field_0",
                         "field_label": "Nom",
                         "placeholder": "Nom",
-                        "_id": "3aedb97",
+                        "_id": "acf132d",
                         "width": "100",
                         "width_mobile": "100",
                         "required": "true"
@@ -470,7 +470,7 @@
                         "custom_id": "field_1",
                         "field_label": "Correu electrònic",
                         "placeholder": "Correu electrònic",
-                        "_id": "dcf24d0",
+                        "_id": "ca5942c",
                         "width": "100",
                         "width_mobile": "100",
                         "field_type": "email",
@@ -480,7 +480,7 @@
                         "custom_id": "field_2",
                         "field_label": "Assumpte",
                         "placeholder": "Assumpte",
-                        "_id": "f48cd31",
+                        "_id": "61b6c8d",
                         "width": "100",
                         "width_mobile": "100",
                         "required": "true"
@@ -489,7 +489,7 @@
                         "custom_id": "field_3",
                         "field_label": "Missatge",
                         "placeholder": "Missatge",
-                        "_id": "262e8b1",
+                        "_id": "2df64b0",
                         "width": "100",
                         "width_mobile": "100",
                         "field_type": "textarea",
@@ -499,7 +499,7 @@
                         "custom_id": "field_4",
                         "field_label": "Accepto la política de privacitat",
                         "placeholder": "",
-                        "_id": "e4b9885",
+                        "_id": "6c9f4a2",
                         "width": "100",
                         "width_mobile": "100",
                         "field_type": "acceptance",
@@ -619,7 +619,7 @@
           "isInner": true
         },
         {
-          "id": "a1a453f",
+          "id": "97dde5c",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -654,7 +654,7 @@
           },
           "elements": [
             {
-              "id": "e37aef7",
+              "id": "3180eac",
               "elType": "widget",
               "settings": {
                 "title": "ON TROBAR-NOS",
@@ -683,7 +683,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "9dc50d4",
+              "id": "4231455",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -708,7 +708,7 @@
               },
               "elements": [
                 {
-                  "id": "ee7139b",
+                  "id": "ada4bc9",
                   "elType": "widget",
                   "settings": {
                     "title": "Figueres",
@@ -732,7 +732,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "9245d32",
+                  "id": "e8bc675",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -742,7 +742,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "4d22cd2",
+                        "_id": "a3254f2",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -756,7 +756,7 @@
                           "value": "fas fa-phone-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "fddb277",
+                        "_id": "5716d75",
                         "link": {
                           "url": "tel:+34972684896",
                           "is_external": "",
@@ -770,7 +770,7 @@
                           "value": "far fa-envelope",
                           "library": "fa-regular"
                         },
-                        "_id": "46d0336",
+                        "_id": "f7698ac",
                         "link": {
                           "url": "mailto:info@creemllar.com",
                           "is_external": "",
@@ -815,7 +815,7 @@
                   "widgetType": "icon-list"
                 },
                 {
-                  "id": "30013fc",
+                  "id": "c4734c2",
                   "elType": "widget",
                   "settings": {
                     "address": "C. Hortes, 34, 17600 Figueres",
@@ -837,7 +837,7 @@
               "isInner": true
             },
             {
-              "id": "ff4a6c7",
+              "id": "1b23f35",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -862,7 +862,7 @@
               },
               "elements": [
                 {
-                  "id": "9d43473",
+                  "id": "036198a",
                   "elType": "widget",
                   "settings": {
                     "title": "Banyoles",
@@ -886,7 +886,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "854b03c",
+                  "id": "d572415",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -896,7 +896,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "13a1899",
+                        "_id": "b690bb2",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -910,7 +910,7 @@
                           "value": "fas fa-phone-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "8233a55",
+                        "_id": "be3da9a",
                         "link": {
                           "url": "tel:+34972519324",
                           "is_external": "",
@@ -924,7 +924,7 @@
                           "value": "far fa-envelope",
                           "library": "fa-regular"
                         },
-                        "_id": "3cbd8d6",
+                        "_id": "210fd8b",
                         "link": {
                           "url": "mailto:info@creemllar.com",
                           "is_external": "",
@@ -969,7 +969,7 @@
                   "widgetType": "icon-list"
                 },
                 {
-                  "id": "59b0cff",
+                  "id": "96fb58c",
                   "elType": "widget",
                   "settings": {
                     "address": "C/ Pare Claret, 1, 17820 Banyoles",

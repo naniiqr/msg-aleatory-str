@@ -688,16 +688,16 @@ def interiorisme(titulo="Dissenyem espais<br>per cada estil de vida"):
                      cls="cl-split")
 
 
-def equip():
+def equip(titol="Un equip al teu costat", text=None, enllac=True):
     img = container([image("equip.jpg", h=R(255, 240, 220), alt="L'equip de Creem Llar")],
                     inner=True, width=R(36, 100), pad=0)
     text = container([heading("PERSONES QUE FAN POSSIBLE CREEM LLAR", "p", SANS, 12, 400, "#4A443F", 1.2, 2.5),
-                      heading("Un equip al teu costat", "h2", SERIF, R(36, 32, 30), 400, "#141413", 1.15),
-                      heading("Som un estudi d'interiorisme amb arrels a Figueres, apassionats pel disseny i la "
-                              "qualitat. Treballem amb proximitat, escolta i compromís per crear espais únics, "
-                              "pensats per a tu.", "p", SANS, 16, 300, "#2E2A27", 1.55),
-                      button("Coneix l'equip", "/nosaltres/", None, C_DARK, 15, 400, 0, (4, 0, 4, 0),
-                             border=C_DARK, bw=(0, 0, 1, 0), radius=0, icon="fas fa-long-arrow-alt-right")],
+                      heading(titol, "h2", SERIF, R(36, 32, 30), 400, "#141413", 1.15),
+                      heading(text or ("Som un estudi d'interiorisme amb arrels a Figueres, apassionats pel disseny i la "
+                                       "qualitat. Treballem amb proximitat, escolta i compromís per crear espais únics, "
+                                       "pensats per a tu."), "p", SANS, 16, 300, "#2E2A27", 1.55),
+                      ] + ([button("Coneix l'equip", "/nosaltres/", None, C_DARK, 15, 400, 0, (4, 0, 4, 0),
+                             border=C_DARK, bw=(0, 0, 1, 0), radius=0, icon="fas fa-long-arrow-alt-right")] if enllac else []),
                      gap=14, inner=True, pad=0, width=R(44, 100), align="flex-start")
     q = quote("“ Llar<br>és molt més<br>que un lloc ”", 30)
     return container([img, text, q], dir=R("row", "column", "column"), align=R("center", "flex-start", "flex-start"),
@@ -941,40 +941,13 @@ def page_parquets():
 
 
 def page_nosaltres():
-    quote_sec = container([heading("«Tot i confiar en un interiorista, cada projecte és únicament del client»", "h2",
-                                   SERIF, R(38, 32, 26), 400, "#111111", 1.25, align="center"),
-                           heading("T'animem, doncs, a conèixer l'exposició que tenim a la botiga, amb mobiliari per a "
-                                   "cuines i banys, parquet, portes i armaris com a elements principals.", "p", SANS, 17,
-                                   300, "#4A443F", 1.55, align="center")],
-                          gap=18, align="center", boxed=1000, bg=C_BG,
-                          pad=R((80, 24, 40, 24), (64, 24, 32, 24), (48, 20, 28, 20)), cls="cl-quote")
-    foto = container([image("equip-fundadors.jpg", h=R(560, 420, 300), alt="Carlos, Xavi i Samuel, fundadors de Creem Llar")],
-                     boxed=1320, bg=C_BG, pad=R((20, 60, 20, 60), (20, 40, 20, 40), (16, 24, 16, 24)), gap=0, cls="cl-foto")
-    equip_sec = container([divider(10, 1, "#141413"),
-                           heading("L'equip", "h2", SANS, 26, 400, "#141413", 1.2, align="center"),
-                           heading("Després d'una llarga trajectòria laboral vinculada al món de la construcció, tres "
-                                   "emprenedors de Figueres, Carlos, Xavi i Samuel, decideixen posar tot aquest bagatge "
-                                   "professional al servei d'una idea: crear espais per viure, crear llar.", "p", SANS, 17,
-                                   300, "#4A443F", 1.6, align="center"),
-                           heading("D'aquesta idea, que vincula l'interiorisme, el disseny i la construcció, neix una "
-                                   "empresa jove i amb empenta, capaç de dissenyar els espais que les persones desitgen i "
-                                   "executar-los fins a l'últim detall.", "p", SANS, 17, 300, "#4A443F", 1.6, align="center"),
-                           heading("Per portar a terme aquest projecte, ens hem envoltat d'un gran equip de professionals "
-                                   "que desenvolupen la seva feina a la nostra empresa: interioristes, paletes, muntadors, "
-                                   "lampistes... que donen el millor de si mateixos per aconseguir que els nostres clients "
-                                   "facin realitat els seus somnis.", "p", SANS, 17, 300, "#4A443F", 1.6, align="center")],
-                          gap=22, align="center", boxed=1000, bg=C_BG,
-                          pad=R((50, 24, 50, 24), (44, 24, 44, 24), (36, 20, 36, 20)), cls="cl-equip")
-    marques = container([divider(10, 1, "#141413"),
-                         heading("Marques", "h2", SANS, 26, 400, "#141413", 1.2, align="center"),
-                         container([image(f"marca-{m}.jpg", h=90, fit="contain", alt=m.capitalize())
-                                    for m in ("levantina", "lapitec", "laminam", "kronoswiss")],
-                                   grid=(R(4, 2, 2), 1), gap=R(30, 20, 14), inner=True, pad=0)],
-                        gap=26, align="stretch", boxed=1200, bg=C_BG,
-                        pad=R((30, 60, 80, 60), (30, 40, 64, 40), (24, 20, 48, 20)), cls="cl-marques")
+    text = ("Després d'una llarga trajectòria vinculada al món de la construcció, tres emprenedors de Figueres, "
+            "Carlos, Xavi i Samuel, decideixen posar tot aquest bagatge al servei d'una idea: crear espais per "
+            "viure, crear llar. Ens envoltem d'un gran equip d'interioristes, paletes, muntadors i lampistes que "
+            "donen el millor de si mateixos perquè els nostres clients facin realitat els seus somnis.")
     return [hero("hero-nosaltres.jpg", None, "Dissenyem espais per viure.<br>Crear espais, crear llar.",
                  "Parlem del teu projecte", "/contacte/", minh=505, py=(120, 40), arrow=False, title="Nosaltres"),
-            quote_sec, foto, equip_sec, marques, interiorisme()]
+            equip("L'equip de Creem Llar", text, enllac=False), props(), metode(), interiorisme()]
 
 
 def office(titol, adreca, tel, mail, maps_q):
