@@ -20,6 +20,8 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 
 ## Pendiente / decisiones
 - **Provisionales** (el PDF solo diseña Inici y Projectes): Cuines, Banys, Interiorisme, Parquets, Nosaltres y Contacte. Reutilizan los componentes del PDF; los textos de Parquets y Nosaltres son míos y hay que validarlos. El formulario de Contacte envía a info@creemllar.com (a confirmar).
+- **Nosaltres y Contacte** se han construido con los textos del web actual (traducidos al catalán): citas, equipo, marcas, direcciones, teléfonos, horario y mapas. Faltan las fotos reales (equipo, tienda) y los logos de Levantina, Lapitec, Laminam y Kronoswiss (ahora hay marcadores de texto).
+- Footer: añade horario, redes (enlaces `#` por completar) y política de privacidad.
 - Hero: es un contenedor con imagen (el PDF muestra flechas de slider; se puede pasar al widget *Slides*).
 - Feed de Instagram: imagen fija; sustituir por plugin (Smash Balloon) cuando se quiera dinámico.
 - Filtro de Projectes: JS en un widget HTML sobre contenedores estáticos (ideal: CPT + Loop Grid).

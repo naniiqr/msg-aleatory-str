@@ -4,7 +4,7 @@
   "type": "header",
   "content": [
     {
-      "id": "b1a5646",
+      "id": "4b7be21",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -67,7 +67,7 @@
       },
       "elements": [
         {
-          "id": "d52006a",
+          "id": "6bb9450",
           "elType": "widget",
           "settings": {
             "image": {
@@ -89,7 +89,7 @@
           "widgetType": "image"
         },
         {
-          "id": "63e31af",
+          "id": "b297a6b",
           "elType": "widget",
           "settings": {
             "layout": "horizontal",
@@ -147,7 +147,7 @@
           "widgetType": "nav-menu"
         },
         {
-          "id": "b9f7fe3",
+          "id": "232e496",
           "elType": "widget",
           "settings": {
             "text": "Demana pressupost",

@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "a31574f",
+      "id": "fdeaa5a",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -111,7 +111,7 @@
       },
       "elements": [
         {
-          "id": "98edc6e",
+          "id": "2218b66",
           "elType": "widget",
           "settings": {
             "title": "Parquets",
@@ -145,7 +145,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "0b40961",
+          "id": "34b5e44",
           "elType": "widget",
           "settings": {
             "title": "Paviments càlids<br>pensats per a la teva llar.",
@@ -179,7 +179,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "0d545d3",
+          "id": "edb5683",
           "elType": "widget",
           "settings": {
             "text": "Demana pressupost",
@@ -246,7 +246,7 @@
       "isInner": false
     },
     {
-      "id": "edb5683",
+      "id": "23a985f",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -313,7 +313,7 @@
       },
       "elements": [
         {
-          "id": "a29a62e",
+          "id": "990f3bc",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -348,7 +348,7 @@
           },
           "elements": [
             {
-              "id": "920dff0",
+              "id": "b3c0c82",
               "elType": "widget",
               "settings": {
                 "title": "ELS NOSTRES",
@@ -377,7 +377,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "20d7c5b",
+              "id": "33b54fa",
               "elType": "widget",
               "settings": {
                 "title": "Parquets",
@@ -414,7 +414,7 @@
           "isInner": true
         },
         {
-          "id": "34b5e44",
+          "id": "d44e160",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -449,7 +449,7 @@
           },
           "elements": [
             {
-              "id": "2218b66",
+              "id": "9d64388",
               "elType": "widget",
               "settings": {
                 "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
@@ -479,7 +479,7 @@
       "isInner": false
     },
     {
-      "id": "d44e160",
+      "id": "bf05026",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -528,7 +528,7 @@
       },
       "elements": [
         {
-          "id": "9d64388",
+          "id": "238bf3b",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -588,7 +588,7 @@
           },
           "elements": [
             {
-              "id": "990f3bc",
+              "id": "d240423",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -681,7 +681,7 @@
               },
               "elements": [
                 {
-                  "id": "fdeaa5a",
+                  "id": "9bbae8c",
                   "elType": "widget",
                   "settings": {
                     "title": "Parquet d'interior",
@@ -705,7 +705,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "b3c0c82",
+                  "id": "2a47ab9",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -715,7 +715,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "33b54fa",
+                        "_id": "6511aa3",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -769,7 +769,7 @@
       "isInner": false
     },
     {
-      "id": "49be6a2",
+      "id": "7f5b202",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -818,7 +818,7 @@
       },
       "elements": [
         {
-          "id": "0885dd8",
+          "id": "2729911",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -859,7 +859,7 @@
           },
           "elements": [
             {
-              "id": "2a47ab9",
+              "id": "f76568c",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -894,7 +894,7 @@
               },
               "elements": [
                 {
-                  "id": "23a985f",
+                  "id": "cf649ab",
                   "elType": "widget",
                   "settings": {
                     "title": "EL NOSTRE MÈTODE",
@@ -923,7 +923,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "9bbae8c",
+                  "id": "e522af8",
                   "elType": "widget",
                   "settings": {
                     "title": "Un procés senzill,<br>amb grans resultats",
@@ -960,7 +960,7 @@
               "isInner": true
             },
             {
-              "id": "10036b2",
+              "id": "5710298",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1072,179 +1072,6 @@
               },
               "elements": [
                 {
-                  "id": "f76568c",
-                  "elType": "container",
-                  "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "flex_gap": {
-                      "column": "10",
-                      "row": "10",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 10
-                    },
-                    "flex_justify_content": "flex-start",
-                    "flex_align_items": "stretch",
-                    "padding": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "0",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": true
-                    }
-                  },
-                  "elements": [
-                    {
-                      "id": "bf05026",
-                      "elType": "container",
-                      "settings": {
-                        "content_width": "full",
-                        "flex_direction": "row",
-                        "flex_gap": {
-                          "column": "14",
-                          "row": "14",
-                          "isLinked": true,
-                          "unit": "px",
-                          "size": 14
-                        },
-                        "flex_justify_content": "flex-start",
-                        "flex_align_items": "center",
-                        "padding": {
-                          "unit": "px",
-                          "top": "0",
-                          "right": "0",
-                          "bottom": "0",
-                          "left": "0",
-                          "isLinked": true
-                        }
-                      },
-                      "elements": [
-                        {
-                          "id": "6511aa3",
-                          "elType": "widget",
-                          "settings": {
-                            "title": "01",
-                            "header_size": "p",
-                            "title_color": "#5A5550",
-                            "typography_typography": "custom",
-                            "typography_font_family": "Playfair Display",
-                            "typography_font_size": {
-                              "unit": "px",
-                              "size": 34,
-                              "sizes": []
-                            },
-                            "typography_font_weight": "400",
-                            "typography_line_height": {
-                              "unit": "em",
-                              "size": 1,
-                              "sizes": []
-                            },
-                            "typography_font_style": "italic"
-                          },
-                          "elements": [],
-                          "widgetType": "heading"
-                        },
-                        {
-                          "id": "d240423",
-                          "elType": "widget",
-                          "settings": {
-                            "selected_icon": {
-                              "value": "far fa-comment",
-                              "library": "fa-regular"
-                            },
-                            "primary_color": "#2B2B2B",
-                            "size": {
-                              "unit": "px",
-                              "size": 30,
-                              "sizes": []
-                            }
-                          },
-                          "elements": [],
-                          "widgetType": "icon"
-                        },
-                        {
-                          "id": "238bf3b",
-                          "elType": "widget",
-                          "settings": {
-                            "style": "solid",
-                            "weight": {
-                              "unit": "px",
-                              "size": 1,
-                              "sizes": []
-                            },
-                            "color": "#8F877D",
-                            "width": {
-                              "unit": "%",
-                              "size": 100,
-                              "sizes": []
-                            },
-                            "gap": {
-                              "unit": "px",
-                              "size": 0,
-                              "sizes": []
-                            },
-                            "_flex_size": "grow"
-                          },
-                          "elements": [],
-                          "widgetType": "divider"
-                        }
-                      ],
-                      "isInner": true
-                    },
-                    {
-                      "id": "cf649ab",
-                      "elType": "widget",
-                      "settings": {
-                        "title": "Escoltem",
-                        "header_size": "h3",
-                        "title_color": "#141413",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Jost",
-                        "typography_font_size": {
-                          "unit": "px",
-                          "size": 20,
-                          "sizes": []
-                        },
-                        "typography_font_weight": "500",
-                        "typography_line_height": {
-                          "unit": "em",
-                          "size": 1.2,
-                          "sizes": []
-                        }
-                      },
-                      "elements": [],
-                      "widgetType": "heading"
-                    },
-                    {
-                      "id": "e522af8",
-                      "elType": "widget",
-                      "settings": {
-                        "title": "Analitzem les teves necessitats i et proposem idees a mida.",
-                        "header_size": "p",
-                        "title_color": "#5E5A57",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Jost",
-                        "typography_font_size": {
-                          "unit": "px",
-                          "size": 15,
-                          "sizes": []
-                        },
-                        "typography_font_weight": "300",
-                        "typography_line_height": {
-                          "unit": "em",
-                          "size": 1.45,
-                          "sizes": []
-                        }
-                      },
-                      "elements": [],
-                      "widgetType": "heading"
-                    }
-                  ],
-                  "isInner": true
-                },
-                {
                   "id": "c07d6b9",
                   "elType": "container",
                   "settings": {
@@ -1298,7 +1125,7 @@
                           "id": "5d3456f",
                           "elType": "widget",
                           "settings": {
-                            "title": "02",
+                            "title": "01",
                             "header_size": "p",
                             "title_color": "#5A5550",
                             "typography_typography": "custom",
@@ -1324,7 +1151,7 @@
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
-                              "value": "far fa-file-alt",
+                              "value": "far fa-comment",
                               "library": "fa-regular"
                             },
                             "primary_color": "#2B2B2B",
@@ -1370,7 +1197,7 @@
                       "id": "62f370d",
                       "elType": "widget",
                       "settings": {
-                        "title": "Dissenyem",
+                        "title": "Escoltem",
                         "header_size": "h3",
                         "title_color": "#141413",
                         "typography_typography": "custom",
@@ -1394,7 +1221,7 @@
                       "id": "1dc389d",
                       "elType": "widget",
                       "settings": {
-                        "title": "Planifiquem cada detall amb rigor i transparència.",
+                        "title": "Analitzem les teves necessitats i et proposem idees a mida.",
                         "header_size": "p",
                         "title_color": "#5E5A57",
                         "typography_typography": "custom",
@@ -1471,7 +1298,7 @@
                           "id": "7e9fbb9",
                           "elType": "widget",
                           "settings": {
-                            "title": "03",
+                            "title": "02",
                             "header_size": "p",
                             "title_color": "#5A5550",
                             "typography_typography": "custom",
@@ -1497,8 +1324,8 @@
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
-                              "value": "fas fa-wrench",
-                              "library": "fa-solid"
+                              "value": "far fa-file-alt",
+                              "library": "fa-regular"
                             },
                             "primary_color": "#2B2B2B",
                             "size": {
@@ -1543,7 +1370,7 @@
                       "id": "83809e4",
                       "elType": "widget",
                       "settings": {
-                        "title": "Fem realitat",
+                        "title": "Dissenyem",
                         "header_size": "h3",
                         "title_color": "#141413",
                         "typography_typography": "custom",
@@ -1565,6 +1392,179 @@
                     },
                     {
                       "id": "097b110",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Planifiquem cada detall amb rigor i transparència.",
+                        "header_size": "p",
+                        "title_color": "#5E5A57",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Jost",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.45,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "5fe4b03",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "stretch",
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "6260253",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": {
+                          "column": "14",
+                          "row": "14",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 14
+                        },
+                        "flex_justify_content": "flex-start",
+                        "flex_align_items": "center",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "10036b2",
+                          "elType": "widget",
+                          "settings": {
+                            "title": "03",
+                            "header_size": "p",
+                            "title_color": "#5A5550",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Playfair Display",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 34,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1,
+                              "sizes": []
+                            },
+                            "typography_font_style": "italic"
+                          },
+                          "elements": [],
+                          "widgetType": "heading"
+                        },
+                        {
+                          "id": "0885dd8",
+                          "elType": "widget",
+                          "settings": {
+                            "selected_icon": {
+                              "value": "fas fa-wrench",
+                              "library": "fa-solid"
+                            },
+                            "primary_color": "#2B2B2B",
+                            "size": {
+                              "unit": "px",
+                              "size": 30,
+                              "sizes": []
+                            }
+                          },
+                          "elements": [],
+                          "widgetType": "icon"
+                        },
+                        {
+                          "id": "49be6a2",
+                          "elType": "widget",
+                          "settings": {
+                            "style": "solid",
+                            "weight": {
+                              "unit": "px",
+                              "size": 1,
+                              "sizes": []
+                            },
+                            "color": "#8F877D",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "gap": {
+                              "unit": "px",
+                              "size": 0,
+                              "sizes": []
+                            },
+                            "_flex_size": "grow"
+                          },
+                          "elements": [],
+                          "widgetType": "divider"
+                        }
+                      ],
+                      "isInner": true
+                    },
+                    {
+                      "id": "e2e26ef",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Fem realitat",
+                        "header_size": "h3",
+                        "title_color": "#141413",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Jost",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.2,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "ac2270c",
                       "elType": "widget",
                       "settings": {
                         "title": "Ens ocupem de tot perquè només gaudeixis del resultat.",
@@ -1600,7 +1600,7 @@
       "isInner": false
     },
     {
-      "id": "2ec5333",
+      "id": "2f0ae8a",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -1628,7 +1628,7 @@
       },
       "elements": [
         {
-          "id": "6260253",
+          "id": "f0f5855",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1687,7 +1687,7 @@
           "isInner": true
         },
         {
-          "id": "dc6d28d",
+          "id": "8673f14",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1758,7 +1758,7 @@
           },
           "elements": [
             {
-              "id": "2729911",
+              "id": "11665ad",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1793,7 +1793,7 @@
               },
               "elements": [
                 {
-                  "id": "e2e26ef",
+                  "id": "abc83a8",
                   "elType": "widget",
                   "settings": {
                     "title": "INTERIORISME A FIGUERES | BANYOLES",
@@ -1822,7 +1822,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "ac2270c",
+                  "id": "dc6d28d",
                   "elType": "widget",
                   "settings": {
                     "title": "Dissenyem espais<br>per a persones reals",
@@ -1856,7 +1856,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "5fe4b03",
+                  "id": "2ec5333",
                   "elType": "widget",
                   "settings": {
                     "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
@@ -1880,7 +1880,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "5710298",
+                  "id": "1d39000",
                   "elType": "widget",
                   "settings": {
                     "text": "Parlem del teu projecte",
@@ -1947,7 +1947,7 @@
               "isInner": true
             },
             {
-              "id": "abc83a8",
+              "id": "941dabb",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1982,7 +1982,7 @@
               },
               "elements": [
                 {
-                  "id": "7f5b202",
+                  "id": "9b88c6a",
                   "elType": "widget",
                   "settings": {
                     "title": "“ La teva llar,<br>el nostre<br>compromís ”",
@@ -2006,7 +2006,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "f0f5855",
+                  "id": "30eb497",
                   "elType": "widget",
                   "settings": {
                     "style": "solid",

@@ -4,7 +4,7 @@
   "type": "footer",
   "content": [
     {
-      "id": "d60b516",
+      "id": "8cde18d",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -49,7 +49,7 @@
       },
       "elements": [
         {
-          "id": "359df3c",
+          "id": "f1db84f",
           "elType": "container",
           "settings": {
             "content_width": "boxed",
@@ -60,11 +60,11 @@
             },
             "flex_direction": "column",
             "flex_gap": {
-              "column": "32",
-              "row": "32",
+              "column": "40",
+              "row": "40",
               "isLinked": true,
               "unit": "px",
-              "size": 32
+              "size": 40
             },
             "flex_justify_content": "flex-start",
             "flex_align_items": "stretch",
@@ -370,12 +370,12 @@
                         "container_type": "grid",
                         "grid_columns_grid": {
                           "unit": "fr",
-                          "size": 3,
+                          "size": 2,
                           "sizes": []
                         },
                         "grid_columns_grid_tablet": {
                           "unit": "fr",
-                          "size": 3,
+                          "size": 2,
                           "sizes": []
                         },
                         "grid_columns_grid_mobile": {
@@ -385,7 +385,7 @@
                         },
                         "grid_rows_grid": {
                           "unit": "fr",
-                          "size": 2,
+                          "size": 3,
                           "sizes": []
                         },
                         "grid_gaps": {
@@ -428,14 +428,14 @@
                           "settings": {
                             "icon_list": [
                               {
-                                "text": "+34 972 684 896",
+                                "text": "C. Hortes, 34 – 17600 Figueres",
                                 "selected_icon": {
-                                  "value": "fas fa-phone-alt",
+                                  "value": "fas fa-map-marker-alt",
                                   "library": "fa-solid"
                                 },
                                 "_id": "202d4ea",
                                 "link": {
-                                  "url": "tel:+34972684896",
+                                  "url": "",
                                   "is_external": "",
                                   "nofollow": "",
                                   "custom_attributes": ""
@@ -483,14 +483,14 @@
                           "settings": {
                             "icon_list": [
                               {
-                                "text": "info@creemllar.com",
+                                "text": "C/ Pare Claret, 1 – 17820 Banyoles",
                                 "selected_icon": {
-                                  "value": "far fa-envelope",
-                                  "library": "fa-regular"
+                                  "value": "fas fa-map-marker-alt",
+                                  "library": "fa-solid"
                                 },
                                 "_id": "3b2f082",
                                 "link": {
-                                  "url": "mailto:info@creemllar.com",
+                                  "url": "",
                                   "is_external": "",
                                   "nofollow": "",
                                   "custom_attributes": ""
@@ -538,14 +538,14 @@
                           "settings": {
                             "icon_list": [
                               {
-                                "text": "Figueres, Girona",
+                                "text": "+34 972 684 896",
                                 "selected_icon": {
-                                  "value": "fas fa-map-marker-alt",
+                                  "value": "fas fa-phone-alt",
                                   "library": "fa-solid"
                                 },
                                 "_id": "3e0c4de",
                                 "link": {
-                                  "url": "",
+                                  "url": "tel:+34972684896",
                                   "is_external": "",
                                   "nofollow": "",
                                   "custom_attributes": ""
@@ -703,14 +703,14 @@
                           "settings": {
                             "icon_list": [
                               {
-                                "text": "Banyoles, Girona",
+                                "text": "info@creemllar.com",
                                 "selected_icon": {
-                                  "value": "fas fa-map-marker-alt",
-                                  "library": "fa-solid"
+                                  "value": "far fa-envelope",
+                                  "library": "fa-regular"
                                 },
                                 "_id": "9d8bedf",
                                 "link": {
-                                  "url": "",
+                                  "url": "mailto:info@creemllar.com",
                                   "is_external": "",
                                   "nofollow": "",
                                   "custom_attributes": ""
@@ -762,31 +762,251 @@
               "isInner": true
             },
             {
-              "id": "18fb5b8",
-              "elType": "widget",
+              "id": "b1a5646",
+              "elType": "container",
               "settings": {
-                "title": "Copyright CREEM LLAR",
-                "header_size": "p",
-                "title_color": "#FFFFFFB3",
-                "typography_typography": "custom",
-                "typography_font_family": "Jost",
-                "typography_font_size": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_tablet": "column",
+                "flex_direction_mobile": "column",
+                "flex_gap": {
+                  "column": "24",
+                  "row": "24",
+                  "isLinked": true,
                   "unit": "px",
-                  "size": 14,
-                  "sizes": []
+                  "size": 24
                 },
-                "typography_font_weight": "300",
-                "typography_line_height": {
-                  "unit": "em",
-                  "size": 1.2,
-                  "sizes": []
-                }
+                "flex_gap_tablet": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "flex_gap_mobile": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center",
+                "flex_align_items_tablet": "flex-start",
+                "flex_align_items_mobile": "flex-start",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_color": "#FFFFFF26"
               },
-              "elements": [],
-              "widgetType": "heading"
+              "elements": [
+                {
+                  "id": "18fb5b8",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Copyright CREEM LLAR",
+                    "header_size": "p",
+                    "title_color": "#FFFFFFB3",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Jost",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "300",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "17747e3",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · Diumenges tancat",
+                    "header_size": "p",
+                    "title_color": "#FFFFFFB3",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Jost",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "300",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "b9f7fe3",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_gap": {
+                      "column": "18",
+                      "row": "18",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "flex_justify_content": "flex-end",
+                    "flex_align_items": "center",
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "width": {
+                      "unit": "%",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "width_tablet": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "359df3c",
+                      "elType": "widget",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fab fa-facebook-f",
+                          "library": "fa-brands"
+                        },
+                        "primary_color": "#FFFFFFCC",
+                        "size": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "link": {
+                          "url": "#",
+                          "is_external": "on",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "icon"
+                    },
+                    {
+                      "id": "d60b516",
+                      "elType": "widget",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fab fa-instagram",
+                          "library": "fa-brands"
+                        },
+                        "primary_color": "#FFFFFFCC",
+                        "size": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "link": {
+                          "url": "https://www.instagram.com/",
+                          "is_external": "on",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "icon"
+                    },
+                    {
+                      "id": "d52006a",
+                      "elType": "widget",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fab fa-pinterest-p",
+                          "library": "fa-brands"
+                        },
+                        "primary_color": "#FFFFFFCC",
+                        "size": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "link": {
+                          "url": "#",
+                          "is_external": "on",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "icon"
+                    },
+                    {
+                      "id": "63e31af",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Política de privacitat",
+                        "header_size": "p",
+                        "title_color": "#FFFFFFB3",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Jost",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.2,
+                          "sizes": []
+                        },
+                        "link": {
+                          "url": "/politica-de-privacitat/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    }
+                  ],
+                  "isInner": true
+                }
+              ],
+              "isInner": true
             },
             {
-              "id": "17747e3",
+              "id": "a751198",
               "elType": "widget",
               "settings": {
                 "selected_icon": {

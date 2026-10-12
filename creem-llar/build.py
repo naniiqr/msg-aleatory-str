@@ -524,22 +524,33 @@ def ftr():
 
     cta = button("Demana pressupost", "/contacte/", bg="#F7F4F0", color=C_DARK, size=17, weight=400,
                  pad=(16, 34, 16, 34), radius=2, icon="fas fa-long-arrow-alt-right")
-    items = [("+34 972 684 896", "fas fa-phone-alt", "tel:+34972684896"),
-             ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com"),
-             ("Figueres, Girona", "fas fa-map-marker-alt", None),
+    items = [("C. Hortes, 34 – 17600 Figueres", "fas fa-map-marker-alt", None),
+             ("C/ Pare Claret, 1 – 17820 Banyoles", "fas fa-map-marker-alt", None),
+             ("+34 972 684 896", "fas fa-phone-alt", "tel:+34972684896"),
              ("+34 972 519 324", "fas fa-phone-alt", "tel:+34972519324"),
              ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com"),
-             ("Banyoles, Girona", "fas fa-map-marker-alt", None)]
+             ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com")]
     cells = [icon_list([it], "#FFFFFF", 15, "#FFFFFFD9", SANS, 15, 300) for it in items]
-    contact = container(cells, grid=(R(3, 3, 1), 2), gap=R(14, 14, 10), inner=True, pad=0)
+    contact = container(cells, grid=(R(2, 2, 1), 3), gap=R(14, 14, 10), inner=True, pad=0)
     right = container([cta, contact], gap=28, inner=True, width=R(50, 100), pad=0,
                       align=R("flex-start", "flex-start", "flex-start"))
     top = container([left, right], dir=R("row", "column", "column"), justify="space-between", align="center",
                     gap=R(60, 36, 32), inner=True, pad=0)
     copy = heading("Copyright CREEM LLAR", "p", SANS, 14, 300, "#FFFFFFB3", 1.2)
+    horari = heading("Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · "
+                     "Diumenges tancat", "p", SANS, 14, 300, "#FFFFFFB3", 1.5)
+    socials = container([icon("fab fa-facebook-f", 18, "#FFFFFFCC", link_url="#"),
+                         icon("fab fa-instagram", 18, "#FFFFFFCC", link_url="https://www.instagram.com/"),
+                         icon("fab fa-pinterest-p", 18, "#FFFFFFCC", link_url="#"),
+                         heading("Política de privacitat", "p", SANS, 14, 300, "#FFFFFFB3", 1.2,
+                                 href="/politica-de-privacitat/")],
+                        dir="row", align="center", justify="flex-end", gap=18, inner=True, pad=0, width=R(30, 100))
+    copy = container([copy, horari, socials], dir=R("row", "column", "column"), justify="space-between",
+                     align=R("center", "flex-start", "flex-start"), gap=R(24, 14, 14), inner=True, pad=0,
+                     border="#FFFFFF26", bw=(1, 0, 0, 0))
     wa = icon("fab fa-whatsapp", 32, "#fff", pos=(24, 24), link_url="https://wa.me/34972684896",
               view="stacked", bgc="#25D366", pad=15, shape="circle")
-    return container([top, copy, wa], gap=32, boxed=1320,
+    return container([top, copy, wa], gap=40, boxed=1320,
                      pad=R((70, 60, 40, 60), (60, 40, 32, 40), (48, 24, 28, 24)),
                      cls="cl-footer")
 
@@ -804,6 +815,19 @@ def page_projectes():
             interiorisme("Dissenyem espais<br>per a persones reals"), equip()]
 
 
+def gmap(address, h=200):
+    i = nid()
+    s = {"address": address, "zoom": sz(15), "height": sz(h)}
+    q = address.replace(" ", "+")
+    rules = [("", f".e{i} iframe", f"width:100%;height:{h}px;border:0;display:block")]
+    el = {"id": i, "elType": "widget", "settings": s, "elements": [], "widgetType": "google_maps"}
+    html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-google_maps">'
+            f'<div class="elementor-widget-container"><div class="elementor-custom-embed">'
+            f'<iframe loading="lazy" src="https://maps.google.com/maps?q={q}&t=m&z=15&output=embed&iwloc=near" '
+            f'title="{escape(address)}"></iframe></div></div></div>')
+    return Node(el, html, rules)
+
+
 # ---------------------------------------------------------------- formulari
 def form(fields, button_text, email_to, name="Contacte Creem Llar"):
     """Widget Formulari d'Elementor Pro. fields: [(tipus, etiqueta, ample, requerit, opcions)]"""
@@ -917,35 +941,68 @@ def page_parquets():
 
 
 def page_nosaltres():
-    return [hero("hero-projectes.jpg", None, "Un estudi d'interiorisme<br>amb arrels a Figueres.",
+    quote_sec = container([heading("«Tot i confiar en un interiorista, cada projecte és únicament del client»", "h2",
+                                   SERIF, R(38, 32, 26), 400, "#111111", 1.25, align="center"),
+                           heading("T'animem, doncs, a conèixer l'exposició que tenim a la botiga, amb mobiliari per a "
+                                   "cuines i banys, parquet, portes i armaris com a elements principals.", "p", SANS, 17,
+                                   300, "#4A443F", 1.55, align="center")],
+                          gap=18, align="center", boxed=1000, bg=C_BG,
+                          pad=R((80, 24, 40, 24), (64, 24, 32, 24), (48, 20, 28, 20)), cls="cl-quote")
+    foto = container([image("equip-fundadors.jpg", h=R(560, 420, 300), alt="Carlos, Xavi i Samuel, fundadors de Creem Llar")],
+                     boxed=1320, bg=C_BG, pad=R((20, 60, 20, 60), (20, 40, 20, 40), (16, 24, 16, 24)), gap=0, cls="cl-foto")
+    equip_sec = container([divider(10, 1, "#141413"),
+                           heading("L'equip", "h2", SANS, 26, 400, "#141413", 1.2, align="center"),
+                           heading("Després d'una llarga trajectòria laboral vinculada al món de la construcció, tres "
+                                   "emprenedors de Figueres, Carlos, Xavi i Samuel, decideixen posar tot aquest bagatge "
+                                   "professional al servei d'una idea: crear espais per viure, crear llar.", "p", SANS, 17,
+                                   300, "#4A443F", 1.6, align="center"),
+                           heading("D'aquesta idea, que vincula l'interiorisme, el disseny i la construcció, neix una "
+                                   "empresa jove i amb empenta, capaç de dissenyar els espais que les persones desitgen i "
+                                   "executar-los fins a l'últim detall.", "p", SANS, 17, 300, "#4A443F", 1.6, align="center"),
+                           heading("Per portar a terme aquest projecte, ens hem envoltat d'un gran equip de professionals "
+                                   "que desenvolupen la seva feina a la nostra empresa: interioristes, paletes, muntadors, "
+                                   "lampistes... que donen el millor de si mateixos per aconseguir que els nostres clients "
+                                   "facin realitat els seus somnis.", "p", SANS, 17, 300, "#4A443F", 1.6, align="center")],
+                          gap=22, align="center", boxed=1000, bg=C_BG,
+                          pad=R((50, 24, 50, 24), (44, 24, 44, 24), (36, 20, 36, 20)), cls="cl-equip")
+    marques = container([divider(10, 1, "#141413"),
+                         heading("Marques", "h2", SANS, 26, 400, "#141413", 1.2, align="center"),
+                         container([image(f"marca-{m}.jpg", h=90, fit="contain", alt=m.capitalize())
+                                    for m in ("levantina", "lapitec", "laminam", "kronoswiss")],
+                                   grid=(R(4, 2, 2), 1), gap=R(30, 20, 14), inner=True, pad=0)],
+                        gap=26, align="stretch", boxed=1200, bg=C_BG,
+                        pad=R((30, 60, 80, 60), (30, 40, 64, 40), (24, 20, 48, 20)), cls="cl-marques")
+    return [hero("hero-nosaltres.jpg", None, "Dissenyem espais per viure.<br>Crear espais, crear llar.",
                  "Parlem del teu projecte", "/contacte/", minh=505, py=(120, 40), arrow=False, title="Nosaltres"),
-            equip(), props(), metode(), interiorisme()]
+            quote_sec, foto, equip_sec, marques, interiorisme()]
+
+
+def office(titol, adreca, tel, mail, maps_q):
+    return container([heading(titol, "h3", SERIF, 30, 400, "#111111", 1.2),
+                      icon_list([(adreca, "fas fa-map-marker-alt", None), (tel, "fas fa-phone-alt", "tel:" + tel.replace(" ", "")),
+                                 (mail, "far fa-envelope", "mailto:" + mail)], C_BROWN, 16, "#2E2A27", SANS, 17, 300),
+                      gmap(maps_q, 220)], gap=14, inner=True, pad=0)
 
 
 def page_contacte():
-    info_items = [("+34 972 684 896", "fas fa-phone-alt", "tel:+34972684896"),
-                  ("+34 972 519 324", "fas fa-phone-alt", "tel:+34972519324"),
-                  ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com"),
-                  ("Figueres, Girona", "fas fa-map-marker-alt", None),
-                  ("Banyoles, Girona", "fas fa-map-marker-alt", None)]
-    info = container([heading("COMENCEM?", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
-                      heading("Parlem del<br>teu projecte", "h2", SERIF, R(56, 46, 38), 400, "#111111", 1.1),
-                      heading("Explica'ns la teva idea i t'assessorem sense compromís.", "p", SANS, 18, 300,
-                              "#4A443F", 1.5)] +
-                     [icon_list([it], C_BROWN, 16, "#2E2A27", SANS, 17, 300) for it in info_items],
-                     gap=16, inner=True, pad=0, width=R(40, 100), align="flex-start")
-    fm = form([("text", "Nom", 50, True, None), ("tel", "Telèfon", 50, True, None),
-               ("email", "Email", 100, True, None),
-               ("select", "Què t'interessa?", 100, False, ["Cuines", "Banys", "Interiorisme", "Reformes", "Parquets"]),
-               ("textarea", "Missatge", 100, False, None),
+    fm = form([("text", "Nom", 100, True, None), ("email", "Correu electrònic", 100, True, None),
+               ("text", "Assumpte", 100, True, None), ("textarea", "Missatge", 100, True, None),
                ("acceptance", "Accepto la política de privacitat", 100, True, None)],
-              "Demana pressupost", "info@creemllar.com")
-    form_box = container([fm], inner=True, width=R(60, 100), bg="#FFFFFF",
-                         pad=R((40, 40, 40, 40), (32, 28, 32, 28), (24, 20, 24, 20)))
-    body = container([info, form_box], dir=R("row", "column", "column"), gap=R(60, 40, 32), align="flex-start",
+              "Enviar", "info@creemllar.com")
+    left = container([heading("ESCRIU-NOS", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                      heading("Parlem del<br>teu projecte", "h2", SERIF, R(48, 42, 36), 400, "#111111", 1.1),
+                      container([fm], inner=True, bg="#FFFFFF", pad=R((36, 36, 36, 36), (28, 28, 28, 28), (22, 18, 22, 18)))],
+                     gap=16, inner=True, pad=0, width=R(48, 100))
+    right = container([heading("ON TROBAR-NOS", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                       office("Figueres", "C. Hortes, 34 – 17600 Figueres", "+34 972 684 896", "info@creemllar.com",
+                              "C. Hortes, 34, 17600 Figueres"),
+                       office("Banyoles", "C/ Pare Claret, 1 – 17820 Banyoles", "+34 972 519 324", "info@creemllar.com",
+                              "C/ Pare Claret, 1, 17820 Banyoles")],
+                      gap=26, inner=True, pad=0, width=R(52, 100))
+    body = container([left, right], dir=R("row", "column", "column"), gap=R(60, 40, 36), align="flex-start",
                      boxed=1320, bg=C_BG, pad=R((80, 60, 90, 60), (64, 40, 64, 40), (48, 24, 48, 24)),
                      cls="cl-contact")
-    return [hero("hero-projectes.jpg", None, "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
+    return [hero("hero-contacte.jpg", None, "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
                  "Truca'ns", "tel:+34972684896", minh=505, py=(120, 40), arrow=False, title="Contacte"),
             body]
 

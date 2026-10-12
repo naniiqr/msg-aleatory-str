@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "b690bb2",
+      "id": "3e2c91e",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -74,7 +74,7 @@
         },
         "background_background": "classic",
         "background_image": {
-          "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/hero-projectes.jpg",
+          "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/hero-contacte.jpg",
           "id": "",
           "size": "",
           "alt": "",
@@ -111,7 +111,7 @@
       },
       "elements": [
         {
-          "id": "4231455",
+          "id": "e852829",
           "elType": "widget",
           "settings": {
             "title": "Contacte",
@@ -145,7 +145,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "036198a",
+          "id": "eb612a2",
           "elType": "widget",
           "settings": {
             "title": "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
@@ -179,7 +179,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "d572415",
+          "id": "7cfd925",
           "elType": "widget",
           "settings": {
             "text": "Truca'ns",
@@ -246,7 +246,7 @@
       "isInner": false
     },
     {
-      "id": "c4734c2",
+      "id": "e4ee291",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -273,11 +273,11 @@
           "size": 40
         },
         "flex_gap_mobile": {
-          "column": "32",
-          "row": "32",
+          "column": "36",
+          "row": "36",
           "isLinked": true,
           "unit": "px",
-          "size": 32
+          "size": 36
         },
         "flex_justify_content": "flex-start",
         "flex_align_items": "flex-start",
@@ -311,7 +311,7 @@
       },
       "elements": [
         {
-          "id": "d060600",
+          "id": "c4f34fd",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -324,7 +324,7 @@
               "size": 16
             },
             "flex_justify_content": "flex-start",
-            "flex_align_items": "flex-start",
+            "flex_align_items": "stretch",
             "padding": {
               "unit": "px",
               "top": "0",
@@ -335,7 +335,7 @@
             },
             "width": {
               "unit": "%",
-              "size": 40,
+              "size": 48,
               "sizes": []
             },
             "width_tablet": {
@@ -346,10 +346,10 @@
           },
           "elements": [
             {
-              "id": "3e2c91e",
+              "id": "0d47e70",
               "elType": "widget",
               "settings": {
-                "title": "COMENCEM?",
+                "title": "ESCRIU-NOS",
                 "header_size": "p",
                 "title_color": "#5E5A57",
                 "typography_typography": "custom",
@@ -375,7 +375,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "fa22f5c",
+              "id": "3b26f23",
               "elType": "widget",
               "settings": {
                 "title": "Parlem del<br>teu projecte",
@@ -385,17 +385,17 @@
                 "typography_font_family": "Playfair Display",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 56,
+                  "size": 48,
                   "sizes": []
                 },
                 "typography_font_size_tablet": {
                   "unit": "px",
-                  "size": 46,
+                  "size": 42,
                   "sizes": []
                 },
                 "typography_font_size_mobile": {
                   "unit": "px",
-                  "size": 38,
+                  "size": 36,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -409,23 +409,273 @@
               "widgetType": "heading"
             },
             {
-              "id": "24808a9",
+              "id": "fce1951",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "column": "20",
+                  "row": "20",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 20
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch",
+                "padding": {
+                  "unit": "px",
+                  "top": "36",
+                  "right": "36",
+                  "bottom": "36",
+                  "left": "36",
+                  "isLinked": true
+                },
+                "padding_tablet": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "28",
+                  "bottom": "28",
+                  "left": "28",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "18",
+                  "bottom": "22",
+                  "left": "18",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF"
+              },
+              "elements": [
+                {
+                  "id": "cddb117",
+                  "elType": "widget",
+                  "settings": {
+                    "form_name": "Contacte Creem Llar",
+                    "form_fields": [
+                      {
+                        "custom_id": "field_0",
+                        "field_label": "Nom",
+                        "placeholder": "Nom",
+                        "_id": "3aedb97",
+                        "width": "100",
+                        "width_mobile": "100",
+                        "required": "true"
+                      },
+                      {
+                        "custom_id": "field_1",
+                        "field_label": "Correu electrònic",
+                        "placeholder": "Correu electrònic",
+                        "_id": "dcf24d0",
+                        "width": "100",
+                        "width_mobile": "100",
+                        "field_type": "email",
+                        "required": "true"
+                      },
+                      {
+                        "custom_id": "field_2",
+                        "field_label": "Assumpte",
+                        "placeholder": "Assumpte",
+                        "_id": "f48cd31",
+                        "width": "100",
+                        "width_mobile": "100",
+                        "required": "true"
+                      },
+                      {
+                        "custom_id": "field_3",
+                        "field_label": "Missatge",
+                        "placeholder": "Missatge",
+                        "_id": "262e8b1",
+                        "width": "100",
+                        "width_mobile": "100",
+                        "field_type": "textarea",
+                        "required": "true"
+                      },
+                      {
+                        "custom_id": "field_4",
+                        "field_label": "Accepto la política de privacitat",
+                        "placeholder": "",
+                        "_id": "e4b9885",
+                        "width": "100",
+                        "width_mobile": "100",
+                        "field_type": "acceptance",
+                        "required": "true",
+                        "acceptance_text": "Accepto la política de privacitat"
+                      }
+                    ],
+                    "show_labels": "true",
+                    "button_text": "Enviar",
+                    "button_size": "md",
+                    "button_width": "100",
+                    "submit_actions": [
+                      "email"
+                    ],
+                    "email_to": "info@creemllar.com",
+                    "email_subject": "Nova consulta des de Contacte Creem Llar",
+                    "email_content": "[all-fields]",
+                    "email_from_name": "Creem Llar",
+                    "success_message": "Gràcies! Hem rebut la teva consulta.",
+                    "column_gap": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "row_gap": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "field_text_color": "#141413",
+                    "field_background_color": "#FFFFFF",
+                    "field_border_color": "#CFC8BF",
+                    "field_border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "field_border_radius": {
+                      "unit": "px",
+                      "top": "2",
+                      "right": "2",
+                      "bottom": "2",
+                      "left": "2",
+                      "isLinked": true
+                    },
+                    "label_color": "#4A443F",
+                    "button_text_color": "#FFFFFF",
+                    "button_background_color": "#141413",
+                    "button_border_radius": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "button_text_padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "34",
+                      "bottom": "18",
+                      "left": "34",
+                      "isLinked": false
+                    },
+                    "button_background_hover_color": "#2B2926",
+                    "button_hover_color": "#FFFFFF",
+                    "field_typography_typography": "custom",
+                    "field_typography_font_family": "Jost",
+                    "field_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "field_typography_font_weight": "300",
+                    "field_typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "label_typography_typography": "custom",
+                    "label_typography_font_family": "Jost",
+                    "label_typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "label_typography_font_weight": "400",
+                    "label_typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "button_typography_typography": "custom",
+                    "button_typography_font_family": "Jost",
+                    "button_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "button_typography_font_weight": "400",
+                    "button_typography_line_height": {
+                      "unit": "em",
+                      "size": 1,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "form"
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": true
+        },
+        {
+          "id": "a1a453f",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_gap": {
+              "column": "26",
+              "row": "26",
+              "isLinked": true,
+              "unit": "px",
+              "size": 26
+            },
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "stretch",
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "width": {
+              "unit": "%",
+              "size": 52,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "e37aef7",
               "elType": "widget",
               "settings": {
-                "title": "Explica'ns la teva idea i t'assessorem sense compromís.",
+                "title": "ON TROBAR-NOS",
                 "header_size": "p",
-                "title_color": "#4A443F",
+                "title_color": "#5E5A57",
                 "typography_typography": "custom",
                 "typography_font_family": "Jost",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 18,
+                  "size": 13,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
-                  "size": 1.5,
+                  "size": 1.2,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2.5,
                   "sizes": []
                 }
               },
@@ -433,506 +683,312 @@
               "widgetType": "heading"
             },
             {
-              "id": "cfdafb4",
-              "elType": "widget",
+              "id": "9dc50d4",
+              "elType": "container",
               "settings": {
-                "icon_list": [
-                  {
-                    "text": "+34 972 684 896",
-                    "selected_icon": {
-                      "value": "fas fa-phone-alt",
-                      "library": "fa-solid"
-                    },
-                    "_id": "24d4fe2",
-                    "link": {
-                      "url": "tel:+34972684896",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    }
-                  }
-                ],
-                "view": "traditional",
-                "icon_color": "#5B452D",
-                "icon_size": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
                   "unit": "px",
-                  "size": 16,
-                  "sizes": []
+                  "size": 14
                 },
-                "text_color": "#2E2A27",
-                "text_indent": {
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch",
+                "padding": {
                   "unit": "px",
-                  "size": 8,
-                  "sizes": []
-                },
-                "space_between": {
-                  "unit": "px",
-                  "size": 0,
-                  "sizes": []
-                },
-                "icon_typography_typography": "custom",
-                "icon_typography_font_family": "Jost",
-                "icon_typography_font_size": {
-                  "unit": "px",
-                  "size": 17,
-                  "sizes": []
-                },
-                "icon_typography_font_weight": "300",
-                "icon_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                }
-              },
-              "elements": [],
-              "widgetType": "icon-list"
-            },
-            {
-              "id": "3cceab6",
-              "elType": "widget",
-              "settings": {
-                "icon_list": [
-                  {
-                    "text": "+34 972 519 324",
-                    "selected_icon": {
-                      "value": "fas fa-phone-alt",
-                      "library": "fa-solid"
-                    },
-                    "_id": "c5e012a",
-                    "link": {
-                      "url": "tel:+34972519324",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    }
-                  }
-                ],
-                "view": "traditional",
-                "icon_color": "#5B452D",
-                "icon_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "text_color": "#2E2A27",
-                "text_indent": {
-                  "unit": "px",
-                  "size": 8,
-                  "sizes": []
-                },
-                "space_between": {
-                  "unit": "px",
-                  "size": 0,
-                  "sizes": []
-                },
-                "icon_typography_typography": "custom",
-                "icon_typography_font_family": "Jost",
-                "icon_typography_font_size": {
-                  "unit": "px",
-                  "size": 17,
-                  "sizes": []
-                },
-                "icon_typography_font_weight": "300",
-                "icon_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                }
-              },
-              "elements": [],
-              "widgetType": "icon-list"
-            },
-            {
-              "id": "acf132d",
-              "elType": "widget",
-              "settings": {
-                "icon_list": [
-                  {
-                    "text": "info@creemllar.com",
-                    "selected_icon": {
-                      "value": "far fa-envelope",
-                      "library": "fa-regular"
-                    },
-                    "_id": "ca5942c",
-                    "link": {
-                      "url": "mailto:info@creemllar.com",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    }
-                  }
-                ],
-                "view": "traditional",
-                "icon_color": "#5B452D",
-                "icon_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "text_color": "#2E2A27",
-                "text_indent": {
-                  "unit": "px",
-                  "size": 8,
-                  "sizes": []
-                },
-                "space_between": {
-                  "unit": "px",
-                  "size": 0,
-                  "sizes": []
-                },
-                "icon_typography_typography": "custom",
-                "icon_typography_font_family": "Jost",
-                "icon_typography_font_size": {
-                  "unit": "px",
-                  "size": 17,
-                  "sizes": []
-                },
-                "icon_typography_font_weight": "300",
-                "icon_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                }
-              },
-              "elements": [],
-              "widgetType": "icon-list"
-            },
-            {
-              "id": "61b6c8d",
-              "elType": "widget",
-              "settings": {
-                "icon_list": [
-                  {
-                    "text": "Figueres, Girona",
-                    "selected_icon": {
-                      "value": "fas fa-map-marker-alt",
-                      "library": "fa-solid"
-                    },
-                    "_id": "2df64b0",
-                    "link": {
-                      "url": "",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    }
-                  }
-                ],
-                "view": "traditional",
-                "icon_color": "#5B452D",
-                "icon_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "text_color": "#2E2A27",
-                "text_indent": {
-                  "unit": "px",
-                  "size": 8,
-                  "sizes": []
-                },
-                "space_between": {
-                  "unit": "px",
-                  "size": 0,
-                  "sizes": []
-                },
-                "icon_typography_typography": "custom",
-                "icon_typography_font_family": "Jost",
-                "icon_typography_font_size": {
-                  "unit": "px",
-                  "size": 17,
-                  "sizes": []
-                },
-                "icon_typography_font_weight": "300",
-                "icon_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                }
-              },
-              "elements": [],
-              "widgetType": "icon-list"
-            },
-            {
-              "id": "6c9f4a2",
-              "elType": "widget",
-              "settings": {
-                "icon_list": [
-                  {
-                    "text": "Banyoles, Girona",
-                    "selected_icon": {
-                      "value": "fas fa-map-marker-alt",
-                      "library": "fa-solid"
-                    },
-                    "_id": "03d5b4b",
-                    "link": {
-                      "url": "",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    }
-                  }
-                ],
-                "view": "traditional",
-                "icon_color": "#5B452D",
-                "icon_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "text_color": "#2E2A27",
-                "text_indent": {
-                  "unit": "px",
-                  "size": 8,
-                  "sizes": []
-                },
-                "space_between": {
-                  "unit": "px",
-                  "size": 0,
-                  "sizes": []
-                },
-                "icon_typography_typography": "custom",
-                "icon_typography_font_family": "Jost",
-                "icon_typography_font_size": {
-                  "unit": "px",
-                  "size": 17,
-                  "sizes": []
-                },
-                "icon_typography_font_weight": "300",
-                "icon_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                }
-              },
-              "elements": [],
-              "widgetType": "icon-list"
-            }
-          ],
-          "isInner": true
-        },
-        {
-          "id": "f7698ac",
-          "elType": "container",
-          "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "flex_gap": {
-              "column": "20",
-              "row": "20",
-              "isLinked": true,
-              "unit": "px",
-              "size": 20
-            },
-            "flex_justify_content": "flex-start",
-            "flex_align_items": "stretch",
-            "padding": {
-              "unit": "px",
-              "top": "40",
-              "right": "40",
-              "bottom": "40",
-              "left": "40",
-              "isLinked": true
-            },
-            "padding_tablet": {
-              "unit": "px",
-              "top": "32",
-              "right": "28",
-              "bottom": "32",
-              "left": "28",
-              "isLinked": false
-            },
-            "padding_mobile": {
-              "unit": "px",
-              "top": "24",
-              "right": "20",
-              "bottom": "24",
-              "left": "20",
-              "isLinked": false
-            },
-            "width": {
-              "unit": "%",
-              "size": 60,
-              "sizes": []
-            },
-            "width_tablet": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            },
-            "background_background": "classic",
-            "background_color": "#FFFFFF"
-          },
-          "elements": [
-            {
-              "id": "73ed6be",
-              "elType": "widget",
-              "settings": {
-                "form_name": "Contacte Creem Llar",
-                "form_fields": [
-                  {
-                    "custom_id": "field_0",
-                    "field_label": "Nom",
-                    "placeholder": "Nom",
-                    "_id": "804e6dc",
-                    "width": "50",
-                    "width_mobile": "100",
-                    "required": "true"
-                  },
-                  {
-                    "custom_id": "field_1",
-                    "field_label": "Telèfon",
-                    "placeholder": "Telèfon",
-                    "_id": "3180eac",
-                    "width": "50",
-                    "width_mobile": "100",
-                    "field_type": "tel",
-                    "required": "true"
-                  },
-                  {
-                    "custom_id": "field_2",
-                    "field_label": "Email",
-                    "placeholder": "Email",
-                    "_id": "ada4bc9",
-                    "width": "100",
-                    "width_mobile": "100",
-                    "field_type": "email",
-                    "required": "true"
-                  },
-                  {
-                    "custom_id": "field_3",
-                    "field_label": "Què t'interessa?",
-                    "placeholder": "",
-                    "_id": "e8bc675",
-                    "width": "100",
-                    "width_mobile": "100",
-                    "field_type": "select",
-                    "field_options": "Cuines\nBanys\nInteriorisme\nReformes\nParquets"
-                  },
-                  {
-                    "custom_id": "field_4",
-                    "field_label": "Missatge",
-                    "placeholder": "Missatge",
-                    "_id": "a3254f2",
-                    "width": "100",
-                    "width_mobile": "100",
-                    "field_type": "textarea"
-                  },
-                  {
-                    "custom_id": "field_5",
-                    "field_label": "Accepto la política de privacitat",
-                    "placeholder": "",
-                    "_id": "5716d75",
-                    "width": "100",
-                    "width_mobile": "100",
-                    "field_type": "acceptance",
-                    "required": "true",
-                    "acceptance_text": "Accepto la política de privacitat"
-                  }
-                ],
-                "show_labels": "true",
-                "button_text": "Demana pressupost",
-                "button_size": "md",
-                "button_width": "100",
-                "submit_actions": [
-                  "email"
-                ],
-                "email_to": "info@creemllar.com",
-                "email_subject": "Nova consulta des de Contacte Creem Llar",
-                "email_content": "[all-fields]",
-                "email_from_name": "Creem Llar",
-                "success_message": "Gràcies! Hem rebut la teva consulta.",
-                "column_gap": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "row_gap": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "field_text_color": "#141413",
-                "field_background_color": "#FFFFFF",
-                "field_border_color": "#CFC8BF",
-                "field_border_width": {
-                  "unit": "px",
-                  "top": "1",
-                  "right": "1",
-                  "bottom": "1",
-                  "left": "1",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
                   "isLinked": true
-                },
-                "field_border_radius": {
-                  "unit": "px",
-                  "top": "2",
-                  "right": "2",
-                  "bottom": "2",
-                  "left": "2",
-                  "isLinked": true
-                },
-                "label_color": "#4A443F",
-                "button_text_color": "#FFFFFF",
-                "button_background_color": "#141413",
-                "button_border_radius": {
-                  "unit": "px",
-                  "top": "1",
-                  "right": "1",
-                  "bottom": "1",
-                  "left": "1",
-                  "isLinked": true
-                },
-                "button_text_padding": {
-                  "unit": "px",
-                  "top": "18",
-                  "right": "34",
-                  "bottom": "18",
-                  "left": "34",
-                  "isLinked": false
-                },
-                "button_background_hover_color": "#2B2926",
-                "button_hover_color": "#FFFFFF",
-                "field_typography_typography": "custom",
-                "field_typography_font_family": "Jost",
-                "field_typography_font_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "field_typography_font_weight": "300",
-                "field_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                },
-                "label_typography_typography": "custom",
-                "label_typography_font_family": "Jost",
-                "label_typography_font_size": {
-                  "unit": "px",
-                  "size": 14,
-                  "sizes": []
-                },
-                "label_typography_font_weight": "400",
-                "label_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                },
-                "button_typography_typography": "custom",
-                "button_typography_font_family": "Jost",
-                "button_typography_font_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "button_typography_font_weight": "400",
-                "button_typography_line_height": {
-                  "unit": "em",
-                  "size": 1,
-                  "sizes": []
                 }
               },
-              "elements": [],
-              "widgetType": "form"
+              "elements": [
+                {
+                  "id": "ee7139b",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Figueres",
+                    "header_size": "h3",
+                    "title_color": "#111111",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Playfair Display",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "9245d32",
+                  "elType": "widget",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "text": "C. Hortes, 34 – 17600 Figueres",
+                        "selected_icon": {
+                          "value": "fas fa-map-marker-alt",
+                          "library": "fa-solid"
+                        },
+                        "_id": "4d22cd2",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      {
+                        "text": "+34 972 684 896",
+                        "selected_icon": {
+                          "value": "fas fa-phone-alt",
+                          "library": "fa-solid"
+                        },
+                        "_id": "fddb277",
+                        "link": {
+                          "url": "tel:+34972684896",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      {
+                        "text": "info@creemllar.com",
+                        "selected_icon": {
+                          "value": "far fa-envelope",
+                          "library": "fa-regular"
+                        },
+                        "_id": "46d0336",
+                        "link": {
+                          "url": "mailto:info@creemllar.com",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      }
+                    ],
+                    "view": "traditional",
+                    "icon_color": "#5B452D",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "text_color": "#2E2A27",
+                    "text_indent": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "space_between": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "icon_typography_typography": "custom",
+                    "icon_typography_font_family": "Jost",
+                    "icon_typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "icon_typography_font_weight": "300",
+                    "icon_typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "icon-list"
+                },
+                {
+                  "id": "30013fc",
+                  "elType": "widget",
+                  "settings": {
+                    "address": "C. Hortes, 34, 17600 Figueres",
+                    "zoom": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "height": {
+                      "unit": "px",
+                      "size": 220,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "google_maps"
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "ff4a6c7",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "flex_justify_content": "flex-start",
+                "flex_align_items": "stretch",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "9d43473",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Banyoles",
+                    "header_size": "h3",
+                    "title_color": "#111111",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Playfair Display",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "854b03c",
+                  "elType": "widget",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "text": "C/ Pare Claret, 1 – 17820 Banyoles",
+                        "selected_icon": {
+                          "value": "fas fa-map-marker-alt",
+                          "library": "fa-solid"
+                        },
+                        "_id": "13a1899",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      {
+                        "text": "+34 972 519 324",
+                        "selected_icon": {
+                          "value": "fas fa-phone-alt",
+                          "library": "fa-solid"
+                        },
+                        "_id": "8233a55",
+                        "link": {
+                          "url": "tel:+34972519324",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      {
+                        "text": "info@creemllar.com",
+                        "selected_icon": {
+                          "value": "far fa-envelope",
+                          "library": "fa-regular"
+                        },
+                        "_id": "3cbd8d6",
+                        "link": {
+                          "url": "mailto:info@creemllar.com",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      }
+                    ],
+                    "view": "traditional",
+                    "icon_color": "#5B452D",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "text_color": "#2E2A27",
+                    "text_indent": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "space_between": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "icon_typography_typography": "custom",
+                    "icon_typography_font_family": "Jost",
+                    "icon_typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "icon_typography_font_weight": "300",
+                    "icon_typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "icon-list"
+                },
+                {
+                  "id": "59b0cff",
+                  "elType": "widget",
+                  "settings": {
+                    "address": "C/ Pare Claret, 1, 17820 Banyoles",
+                    "zoom": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "height": {
+                      "unit": "px",
+                      "size": 220,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "google_maps"
+                }
+              ],
+              "isInner": true
             }
           ],
           "isInner": true
