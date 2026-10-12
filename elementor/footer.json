@@ -1,7 +1,7 @@
 {
  "content": [
   {
-   "id": "019d385e",
+   "id": "25ddc0f8",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -50,7 +50,7 @@
    },
    "elements": [
     {
-     "id": "41ae36ec",
+     "id": "d07e70ef",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -76,7 +76,7 @@
      },
      "elements": [
       {
-       "id": "42e7aaa8",
+       "id": "250cf8b5",
        "settings": {
         "title": "Caravaning Vilamacolum",
         "header_size": "h3",
@@ -94,7 +94,7 @@
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 20
+         "size": 18
         },
         "typography_font_size_mobile": {
          "unit": "px",
@@ -107,7 +107,7 @@
        "elType": "widget"
       },
       {
-       "id": "8fe0093b",
+       "id": "42998cf3",
        "settings": {
         "editor": "<p>Parking i cura de caravanes a Vilamacolum, en ple Alt Empordà.</p>",
         "text_color": "#FFFFFF",
@@ -119,7 +119,7 @@
         },
         "typography_line_height": {
          "unit": "em",
-         "size": 1.6
+         "size": 1.55
         }
        },
        "elements": [],
@@ -132,7 +132,7 @@
      "elType": "container"
     },
     {
-     "id": "6ecbdd6e",
+     "id": "ab817c93",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -158,7 +158,7 @@
      },
      "elements": [
       {
-       "id": "d1f255a3",
+       "id": "7fe1f8ab",
        "settings": {
         "title": "Enllaços",
         "header_size": "h4",
@@ -176,7 +176,7 @@
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 20
+         "size": 18
         },
         "typography_font_size_mobile": {
          "unit": "px",
@@ -189,7 +189,7 @@
        "elType": "widget"
       },
       {
-       "id": "25b2822c",
+       "id": "e836d813",
        "settings": {
         "icon_list": [
          {
@@ -197,66 +197,66 @@
           "link": {
            "url": "/"
           },
-          "_id": "7eacb532",
           "selected_icon": {
            "value": "fas fa-angle-right",
            "library": "fa-solid"
-          }
+          },
+          "_id": "98b29795"
          },
          {
           "text": "Parking",
           "link": {
            "url": "/parking/"
           },
-          "_id": "b6f0479a",
           "selected_icon": {
            "value": "fas fa-angle-right",
            "library": "fa-solid"
-          }
+          },
+          "_id": "0353ab4c"
          },
          {
           "text": "Serveis",
           "link": {
            "url": "/serveis/"
           },
-          "_id": "e0c64119",
           "selected_icon": {
            "value": "fas fa-angle-right",
            "library": "fa-solid"
-          }
+          },
+          "_id": "51d92be1"
          },
          {
           "text": "Instal·lacions",
           "link": {
            "url": "/installacions/"
           },
-          "_id": "f85454e8",
           "selected_icon": {
            "value": "fas fa-angle-right",
            "library": "fa-solid"
-          }
+          },
+          "_id": "428fca9b"
          },
          {
           "text": "Sobre nosaltres",
           "link": {
            "url": "/sobre-nosaltres/"
           },
-          "_id": "faa9afea",
           "selected_icon": {
            "value": "fas fa-angle-right",
            "library": "fa-solid"
-          }
+          },
+          "_id": "f1b6f285"
          },
          {
           "text": "Contacte",
           "link": {
            "url": "/contacte/"
           },
-          "_id": "3c7781a3",
           "selected_icon": {
            "value": "fas fa-angle-right",
            "library": "fa-solid"
-          }
+          },
+          "_id": "68ce199e"
          }
         ],
         "space_between": {
@@ -290,7 +290,7 @@
      "elType": "container"
     },
     {
-     "id": "248e8443",
+     "id": "2050e03c",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -316,7 +316,7 @@
      },
      "elements": [
       {
-       "id": "18997733",
+       "id": "877a9ba7",
        "settings": {
         "title": "Contacte",
         "header_size": "h4",
@@ -334,7 +334,7 @@
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 20
+         "size": 18
         },
         "typography_font_size_mobile": {
          "unit": "px",
@@ -347,41 +347,41 @@
        "elType": "widget"
       },
       {
-       "id": "66368270",
+       "id": "ef575e88",
        "settings": {
         "icon_list": [
          {
-          "text": "Ctra. Figueres a la Bisbal, Km 28 · 17474 Vilamacolum · Girona",
+          "text": "Ctra. Figueres a La Bisbal, Km 28 · 17474 Vilamacolum · Girona",
           "link": {
            "url": "https://www.google.com/maps/search/?api=1&query=Caravaning+Vilamacolum"
           },
-          "_id": "8d7d8ee0",
           "selected_icon": {
            "value": "fas fa-map-marker-alt",
            "library": "fa-solid"
-          }
+          },
+          "_id": "dc6a6489"
          },
          {
           "text": "677 858 096",
           "link": {
            "url": "tel:+34677858096"
           },
-          "_id": "75fc093c",
           "selected_icon": {
            "value": "fas fa-phone",
            "library": "fa-solid"
-          }
+          },
+          "_id": "26337353"
          },
          {
           "text": "masfont@caravanvilamacolum.es",
           "link": {
            "url": "mailto:masfont@caravanvilamacolum.es"
           },
-          "_id": "f74909ac",
           "selected_icon": {
            "value": "fas fa-envelope",
            "library": "fa-solid"
-          }
+          },
+          "_id": "8e6b42f1"
          }
         ],
         "space_between": {
@@ -419,7 +419,7 @@
    "elType": "container"
   },
   {
-   "id": "1651cf0d",
+   "id": "d18f655c",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -477,7 +477,7 @@
    },
    "elements": [
     {
-     "id": "ddb30680",
+     "id": "598b3e71",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -503,7 +503,7 @@
      },
      "elements": [
       {
-       "id": "a49e9411",
+       "id": "5ef0b4eb",
        "settings": {
         "editor": "<p>© 2026 Caravaning Vilamacolum. Tots els drets reservats.</p>",
         "text_color": "#C5D0E6",
@@ -515,7 +515,7 @@
         },
         "typography_line_height": {
          "unit": "em",
-         "size": 1.6
+         "size": 1.55
         }
        },
        "elements": [],
@@ -528,7 +528,7 @@
      "elType": "container"
     },
     {
-     "id": "fccb60fb",
+     "id": "cfee3986",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -554,7 +554,7 @@
      },
      "elements": [
       {
-       "id": "2421fcb1",
+       "id": "74071a67",
        "settings": {
         "editor": "<p><a href=\"/politica-de-privacitat/\" style=\"color:inherit\">Política de privacitat</a></p>",
         "text_color": "#C5D0E6",

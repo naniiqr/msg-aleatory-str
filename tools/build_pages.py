@@ -1,29 +1,28 @@
 #!/usr/bin/env python3
 """Genera les plantilles Elementor (JSON) de Caravaning Vilamacolum.
 
+Dissenys de referència: caravaning_vilamacolum.pdf (Inici, Parking, Serveis).
 Ús:  python3 tools/build_pages.py   ->  escriu els fitxers a ./elementor/
-Pàgines: Elementor > Plantilles > Plantilles desades > Importa.
-Header/Footer: Elementor Pro > Theme Builder > Importa (types header / footer).
 """
 import hashlib
 import json
 import os
 
-NAVY, LIGHT, TEXT, WHITE = "#061C49", "#F3F7FA", "#526078", "#FFFFFF"
+NAVY, LIGHT, SOFT, TEXT, WHITE = "#061C49", "#EEF3F8", "#F7FAFD", "#526078", "#FFFFFF"
 FONT = "Montserrat"
 UP = "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/"
 
-# Només les imatges que ja són a la mediateca. La resta queden com a placeholder.
+# Imatges que ja són a la mediateca. Els "slots" que encara no tenen foto pròpia
+# reutilitzen una d'aquestes (vegeu README, taula d'imatges pendents).
 IMG = {
     "aeria": (UP + "vista_aerea.webp", 18),
     "coberts": (UP + "places_cobertes.webp", 19),
     "exterior": (UP + "zona_exterior.webp", 20),
     "panoramica": (UP + "vista_aerea_panoramica.webp", 25),
 }
-ADDR = "Ctra. Figueres a la Bisbal, Km 28 · 17474 Vilamacolum · Girona"
+ADDR1, ADDR2 = "Ctra. Figueres a La Bisbal, Km 28", "17474 Vilamacolum · Girona"
 TEL, MAIL = "677 858 096", "masfont@caravanvilamacolum.es"
 MAPS = "https://www.google.com/maps/search/?api=1&query=Caravaning+Vilamacolum"
-
 _n = 0
 
 
@@ -51,6 +50,18 @@ def img(key):
     return {"url": url, "id": i, "size": "", "alt": "", "source": "library"}
 
 
+def rgba(a):
+    return f"rgba(6,28,73,{a})"
+
+
+def gradient(prefix, a, sa, b, sb, angle):
+    return {f"{prefix}background": "gradient", f"{prefix}color": a,
+            f"{prefix}color_stop": {"unit": "%", "size": sa}, f"{prefix}color_b": b,
+            f"{prefix}color_b_stop": {"unit": "%", "size": sb},
+            f"{prefix}gradient_type": "linear",
+            f"{prefix}gradient_angle": {"unit": "deg", "size": angle}}
+
+
 def widget(kind, settings):
     return {"id": _id(), "settings": settings, "elements": [], "isInner": False,
             "widgetType": kind, "elType": "widget"}
@@ -59,7 +70,8 @@ def widget(kind, settings):
 # ------------------------------------------------------------ contenidors
 def box(children, *, width=None, row=False, bg=None, padding=None, gap=16, boxed=False,
         inner=True, align=None, justify=None, radius=None, bg_image=None, overlay=None,
-        min_h=None, css=None, mob=None, center=False, align_mobile=None, shadow=False):
+        grad=None, min_h=None, css=None, mob=None, center=False, align_mobile=None,
+        shadow=False, flush=False, grow=False, border_r=None, full_h=False):
     s = {"content_width": "boxed" if boxed else "full",
          "flex_direction": "row" if row else "column",
          "flex_gap": {"unit": "px", "size": gap, "column": str(gap), "row": str(gap), "isLinked": True}}
@@ -77,13 +89,17 @@ def box(children, *, width=None, row=False, bg=None, padding=None, gap=16, boxed
         s["background_image"] = img(bg_image)
         s["background_position"] = "center center"
         s["background_size"] = "cover"
-    if overlay:
+    if overlay is not None:
         s["background_overlay_background"] = "classic"
         s["background_overlay_color"] = NAVY
         s["background_overlay_opacity"] = {"unit": "px", "size": overlay, "sizes": []}
+    if grad:  # (color_a, stop_a, color_b, stop_b, angle)
+        s.update(gradient("background_overlay_", *grad))
+        s["background_overlay_opacity"] = {"unit": "px", "size": 1, "sizes": []}
     if min_h:
         s["min_height"] = px(min_h)
-        s["min_height_mobile"] = px(int(min_h * 0.75))
+        s["min_height_tablet"] = px(int(min_h * 0.85))
+        s["min_height_mobile"] = px(int(min_h * 0.7))
     if align:
         s["align_items"] = align
     if align_mobile:
@@ -97,6 +113,17 @@ def box(children, *, width=None, row=False, bg=None, padding=None, gap=16, boxed
         s["box_shadow_box_shadow_type"] = "yes"
         s["box_shadow_box_shadow"] = {"horizontal": 0, "vertical": 4, "blur": 18, "spread": 0,
                                       "color": "rgba(6,28,73,0.08)"}
+    if flush:
+        s["overflow"] = "hidden"
+    if grow:
+        s["_flex_size"] = "grow"
+    if border_r:
+        s["border_border"] = "solid"
+        s["border_width"] = {"unit": "px", "top": "0", "right": "1", "bottom": "0", "left": "0",
+                             "isLinked": False}
+        s["border_width_tablet"] = {"unit": "px", "top": "0", "right": "0", "bottom": "0",
+                                    "left": "0", "isLinked": False}
+        s["border_color"] = "#D5DEEA"
     if css:
         s["_css_classes"] = css
     if mob:
@@ -116,7 +143,7 @@ def section(children, **kw):
 
 
 def finalize(node):
-    """Aplica responsive i alineació de manera uniforme a tot l'arbre."""
+    """Responsive i alineació uniformes per a tot l'arbre."""
     if node["elType"] != "container":
         return node
     s = node["settings"]
@@ -128,10 +155,8 @@ def finalize(node):
         for k in kids:
             if k["elType"] == "widget":
                 k["settings"]["align"] = "center"
-    # padding escalat per tablet / mòbil
     if "padding" in s:
-        t, r = s["padding"]["top"], s["padding"]["right"]
-        b = s["padding"]["bottom"]
+        t, r, b = s["padding"]["top"], s["padding"]["right"], s["padding"]["bottom"]
         s["padding_tablet"] = pad(min(t, 44), min(r, 24), min(b, 44))
         s["padding_mobile"] = pad(min(t, 32), min(r, 16), min(b, 32))
     if s["flex_direction"] == "row":
@@ -149,15 +174,15 @@ def finalize(node):
             if n >= 3:
                 s["justify_content_tablet"] = "center"
                 s["justify_content_mobile"] = "center"
+            uneven = n == 3 and len({x["settings"]["width"]["size"] for x in narrow}) > 1
             for k in sized:
                 w = k["settings"]["width"]["size"]
-                uneven = n == 3 and len({x["settings"]["width"]["size"] for x in narrow}) > 1
                 if w >= 90 or n <= 2 or (uneven and k is narrow[0]):
                     tw = 100
                 elif uneven:
                     tw = 47
                 else:
-                    tw = 30 if n in (3, 5) else 47
+                    tw = 30 if n in (3, 5, 6) else 47
                 mw = 46 if (mob == 2 and w < 90) else 100
                 k["settings"]["width_tablet"] = {"unit": "%", "size": tw}
                 k["settings"]["width_mobile"] = {"unit": "%", "size": mw}
@@ -167,12 +192,12 @@ def finalize(node):
 
 
 # ---------------------------------------------------------------- widgets
-def eyebrow(text, color=NAVY):
+def eyebrow(text, color=NAVY, upper=True, size=11):
     return widget("heading", {
-        "title": text.upper(), "header_size": "h6", "title_color": color,
+        "title": text.upper() if upper else text, "header_size": "h6", "title_color": color,
         "typography_typography": "custom", "typography_font_family": FONT,
-        "typography_font_size": px(12), "typography_font_weight": "700",
-        "typography_letter_spacing": px(2)})
+        "typography_font_size": px(size), "typography_font_weight": "600" if upper else "700",
+        "typography_letter_spacing": px(2 if upper else 0)})
 
 
 def h(text, size=30, color=NAVY, tag="h2", align=None):
@@ -180,24 +205,27 @@ def h(text, size=30, color=NAVY, tag="h2", align=None):
          "typography_typography": "custom", "typography_font_family": FONT,
          "typography_font_size": px(size), "typography_font_weight": "700",
          "typography_line_height": {"unit": "em", "size": 1.2},
-         "typography_font_size_tablet": px(max(20, int(size * 0.82))),
-         "typography_font_size_mobile": px(max(18, int(size * 0.66)))}
+         "typography_font_size_tablet": px(max(18, int(size * 0.85))),
+         "typography_font_size_mobile": px(max(18, int(size * 0.68)))}
     if align:
         s["align"] = align
     return widget("heading", s)
 
 
-def p(text, color=TEXT, size=15, align=None):
+def p(text, color=TEXT, size=15, align=None, weight=None):
     s = {"editor": f"<p>{text}</p>", "text_color": color,
          "typography_typography": "custom", "typography_font_family": FONT,
          "typography_font_size": px(size),
-         "typography_line_height": {"unit": "em", "size": 1.6}}
+         "typography_line_height": {"unit": "em", "size": 1.55}}
+    if weight:
+        s["typography_font_weight"] = weight
     if align:
         s["align"] = align
     return widget("text-editor", s)
 
 
-def btn(text, url, *, light=False, outline=False, icon_cls="fas fa-arrow-right"):
+def btn(text, url, *, light=False, outline=False, dark_outline=False, arrow=True, hero=False,
+        icon_cls=None):
     s = {"text": text, "link": {"url": url}, "size": "md",
          "typography_typography": "custom", "typography_font_family": FONT,
          "typography_font_weight": "600", "typography_font_size": px(13),
@@ -205,16 +233,20 @@ def btn(text, url, *, light=False, outline=False, icon_cls="fas fa-arrow-right")
          "button_text_color": NAVY if light else WHITE,
          "background_color": WHITE if light else NAVY,
          "text_padding": pad(14, 22), "align_mobile": "stretch"}
-    if icon_cls:
-        s["selected_icon"] = {"value": icon_cls, "library": "fa-solid"}
-        s["icon_align"] = "row-reverse"
-        s["icon_indent"] = px(8)
-    if outline:
-        s.update({"background_color": "rgba(255,255,255,0)", "button_text_color": WHITE,
-                  "border_border": "solid",
-                  "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1",
-                                  "left": "1", "isLinked": True},
-                  "border_color": WHITE})
+    ic = icon_cls or ("fas fa-arrow-right" if arrow else None)
+    if ic:
+        s["selected_icon"] = {"value": ic, "library": "fa-solid" if ic.startswith("fas") else "fa-regular"}
+        s["icon_align"] = "row-reverse" if arrow and not icon_cls else "row"
+        s["icon_indent"] = px(10)
+    bw = {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": True}
+    if hero:  # botó primari del hero: blau amb vora clara
+        s.update({"border_border": "solid", "border_width": bw, "border_color": "rgba(255,255,255,0.45)"})
+    if outline:  # secundari del hero: transparent, vora blanca
+        s.update({"background_color": "rgba(255,255,255,0.06)", "button_text_color": WHITE,
+                  "border_border": "solid", "border_width": bw, "border_color": "rgba(255,255,255,0.55)"})
+    if dark_outline:  # "Veure totes les imatges"
+        s.update({"background_color": "rgba(255,255,255,0)", "button_text_color": NAVY,
+                  "border_border": "solid", "border_width": bw, "border_color": NAVY})
     return widget("button", s)
 
 
@@ -222,68 +254,75 @@ def btn_row(buttons):
     return box(buttons, row=True, gap=14)
 
 
-def image(key, height=260):
+def image(key, height=260, radius=8):
     return widget("image", {
-        "image": img(key), "image_size": "full",
-        "width": {"unit": "%", "size": 100},
+        "image": img(key), "image_size": "full", "width": {"unit": "%", "size": 100},
         "height": px(height), "height_tablet": px(int(height * 0.9)),
         "height_mobile": px(int(height * 0.75)), "object-fit": "cover",
-        "image_border_radius": {"unit": "px", "top": 8, "right": 8, "bottom": 8, "left": 8,
-                                "isLinked": True}})
+        "image_border_radius": {"unit": "px", "top": radius, "right": radius, "bottom": radius,
+                                "left": radius, "isLinked": True}})
 
 
-def checklist(items):
+def checklist(items, size=13, light=False):
     return widget("icon-list", {
         "icon_list": [{"text": t, "selected_icon": {"value": "fas fa-check-circle", "library": "fa-solid"},
                        "_id": _id()} for t in items],
-        "space_between": px(8), "icon_color": NAVY, "icon_size": px(14), "text_color": TEXT,
+        "space_between": px(9), "icon_color": NAVY, "icon_size": px(size + 1), "text_color": TEXT,
         "text_indent": px(10),
         "icon_typography_typography": "custom", "icon_typography_font_family": FONT,
-        "icon_typography_font_size": px(14)})
+        "icon_typography_font_size": px(size)})
 
 
-def icon(cls, size=34):
+def icon(cls, size=34, color=NAVY, align="left"):
     return widget("icon", {"selected_icon": {"value": cls, "library": "fa-solid"},
-                           "primary_color": NAVY, "size": px(size), "align": "left"})
+                           "primary_color": color, "size": px(size), "align": align,
+                           "_element_width": "auto"})
 
 
-def gallery(keys):
-    return widget("image-gallery", {
-        "wp_gallery": [{"id": IMG[k][1], "url": IMG[k][0]} for k in keys],
-        "gallery_columns": "3", "gallery_columns_tablet": "2", "gallery_columns_mobile": "1",
-        "gallery_link": "file", "thumbnail_size": "large", "gap": px(12)})
-
-
-def map_block():
+def map_block(height=300):
     return widget("google_maps", {"address": "Caravaning Vilamacolum, Vilamacolum, Girona",
                                   "zoom": {"unit": "px", "size": 13},
-                                  "height": px(340), "height_mobile": px(260)})
+                                  "height": px(height), "height_mobile": px(260)})
 
 
-def info_lines(color=NAVY):
-    return [p(f"<strong>Caravaning Vilamacolum – Mas Font</strong><br>{ADDR}", color),
-            p(f'<a href="tel:+34677858096" style="color:inherit">{TEL}</a>', color),
-            p(f'<a href="mailto:{MAIL}" style="color:inherit">{MAIL}</a>', color)]
+def contact_line(ic, html):
+    return box([icon(ic, 20), p(html, NAVY, 14, weight="600")], row=True, gap=14, align="flex-start")
 
 
 def form():
+    fld = {"width_mobile": "100"}
     return widget("form", {
         "form_name": "Contacte Caravaning Vilamacolum",
         "form_fields": [
             {"field_type": "text", "field_label": "Nom", "placeholder": "Nom", "required": "true",
-             "_id": "nom", "css_classes": "", "width": "50", "width_mobile": "100"},
+             "_id": "nom", "width": "50", **fld},
             {"field_type": "tel", "field_label": "Telèfon", "placeholder": "Telèfon", "required": "true",
-             "_id": "telefon", "width": "50", "width_mobile": "100"},
+             "_id": "telefon", "width": "50", **fld},
             {"field_type": "email", "field_label": "Email", "placeholder": "Email", "required": "true",
              "_id": "email", "width": "100"},
             {"field_type": "select", "field_label": "Tipus de vehicle",
-             "field_options": "Caravana\nAutocaravana\nRemolc\nAltres", "_id": "vehicle", "width": "100"},
-            {"field_type": "textarea", "field_label": "Missatge", "placeholder": "Missatge",
+             "field_options": "Tipus de vehicle|\nCaravana\nAutocaravana\nRemolc\nAltres", "_id": "vehicle",
+             "width": "100"},
+            {"field_type": "textarea", "field_label": "Missatge", "placeholder": "Missatge", "rows": "3",
              "_id": "missatge", "width": "100"},
             {"field_type": "acceptance", "field_label": "Accepto la política de privacitat",
              "required": "true", "_id": "privacitat", "width": "100"}],
-        "show_labels": "", "button_text": "SOL·LICITAR INFORMACIÓ", "button_width": "100",
-        "button_background_color": NAVY, "button_text_color": WHITE,
+        "show_labels": "", "button_text": "SOL·LICITAR INFORMACIÓ", "button_size": "md",
+        "button_align": "start",
+        "selected_button_icon": {"value": "fas fa-arrow-right", "library": "fa-solid"},
+        "button_icon_align": "row-reverse", "button_icon_indent": px(10),
+        "field_background_color": "rgba(255,255,255,0.04)", "field_text_color": WHITE,
+        "field_border_border": "solid", "field_border_color": "rgba(255,255,255,0.35)",
+        "field_border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1",
+                               "isLinked": True},
+        "field_border_radius": {"unit": "px", "top": 4, "right": 4, "bottom": 4, "left": 4, "isLinked": True},
+        "field_typography_typography": "custom", "field_typography_font_family": FONT,
+        "field_typography_font_size": px(12),
+        "button_text_color": NAVY, "button_background_color": WHITE,
+        "button_border_radius": {"unit": "px", "top": 6, "right": 6, "bottom": 6, "left": 6, "isLinked": True},
+        "button_typography_typography": "custom", "button_typography_font_family": FONT,
+        "button_typography_font_weight": "600", "button_typography_font_size": px(13),
+        "row_gap": px(12), "column_gap": px(12),
         "submit_actions": ["email"], "email_subject": "Nova consulta - Caravaning Vilamacolum",
         "email_content": "[all-fields]",
         "success_message": "Gràcies! Hem rebut la teva consulta.",
@@ -293,138 +332,176 @@ def form():
         "required_field_message": "Aquest camp és obligatori."})
 
 
-# --------------------------------------------------------------- blocs
-def stat(ic, title, sub, width):
-    return box([icon(ic, 28), h(title, 14, tag="h4"), p(sub, size=12)],
-               width=width, padding=pad(16), gap=6, bg=LIGHT, radius=8, center=True,
-               justify="center")
+# ----------------------------------------------------------------- blocs
+HERO_GRAD = (rgba(0.80), 0, rgba(0.10), 72, 90)
+
+
+def hero(eyebrow_t, title, text, buttons, bg="aeria", min_h=440):
+    inner = ([eyebrow(eyebrow_t, WHITE, size=11)] if eyebrow_t else []) + [
+        h(title, 44, WHITE, "h1"), p(text, WHITE, 16), btn_row(buttons)]
+    return section([box(inner, width=62, gap=16)], bg_image=bg, grad=HERO_GRAD, min_h=min_h,
+                   padding=pad(60, 24), align="center", justify="flex-end" if False else None)
+
+
+def hero_btns(primary_label, primary_url, second_label, second_url):
+    return [btn(primary_label, primary_url, hero=True), btn(second_label, second_url, outline=True, arrow=False)]
+
+
+def stat_item(ic, title, sub, width, last=False):
+    return box([icon(ic, 34), box([h(title, 13, tag="h4"), p(sub, size=11)], gap=2, grow=True)],
+               row=True, width=width, gap=12, padding=pad(6, 16), align="center",
+               border_r=not last)
 
 
 def stats_row(items):
     w = 100 // len(items)
-    return section([stat(*i, w) for i in items], bg=WHITE, padding=pad(20, 24), mob=2)
+    return section([stat_item(*i, w, last=(k == len(items) - 1)) for k, i in enumerate(items)],
+                   bg=WHITE, padding=pad(18, 24), mob=2)
 
 
-def hero(eyebrow_t, title, text, buttons, bg="aeria", min_h=460):
-    return section(
-        [box([eyebrow(eyebrow_t, WHITE), h(title, 46, WHITE, "h1"), p(text, WHITE, 16),
-              btn_row(buttons)], width=62, gap=18)],
-        bg_image=bg, overlay=0.5, min_h=min_h, padding=pad(70, 24), align="center")
-
-
-def head(eyebrow_t, title, text=None, button=None, bg=LIGHT):
-    left = [eyebrow(eyebrow_t), h(title)] + ([p(text)] if text else [])
+def head(eyebrow_t, title, text=None, button=None, bg=LIGHT, upper=True):
+    left = [eyebrow(eyebrow_t, upper=upper), h(title, 32)] + ([p(text)] if text else [])
     if button:
         return section([box(left, width=70), box([button], width=30, align="flex-end",
                                                  align_mobile="flex-start", justify="center")],
-                       bg=bg, padding=pad(48, 24, 0), align="center")
-    return section([box(left, width=100)], bg=bg, padding=pad(48, 24, 0))
+                       bg=bg, padding=pad(40, 24, 0), align="center")
+    return section([box(left, width=100)], bg=bg, padding=pad(40, 24, 0))
 
 
-def grid(cards, bg=LIGHT, mob=None, bottom=48):
+def grid(cards, bg=LIGHT, mob=None, bottom=40):
     return section(cards, bg=bg, padding=pad(24, 24, bottom), mob=mob)
 
 
 def card(children, width, **kw):
-    return box(children, width=width, bg=WHITE, padding=pad(20), gap=14, radius=8, shadow=True, **kw)
+    return box(children, width=width, bg=WHITE, padding=pad(20), gap=12, radius=8, shadow=True, **kw)
 
 
-def icon_card(ic, title, text, width, size=40, tsize=18, center=False):
+def icon_card(ic, title, text, width, size=34, tsize=18, center=False):
     return card([icon(ic, size), h(title, tsize, tag="h3"), p(text, size=13)], width, center=center)
+
+
+def photo_card(key, title, text, width, h_min=215):
+    """Imatge a tota la targeta amb degradat inferior i text a sobre (Inici)."""
+    return box([h(title, 20, WHITE, "h3"), p(text, "#E3EAF5", 12)], width=width, bg_image=key,
+               grad=(rgba(0), 30, rgba(0.88), 100, 180), min_h=h_min, justify="flex-end",
+               padding=pad(22), gap=6, radius=8, flush=True)
+
+
+def flush_card(top, body, width):
+    """Targeta amb imatge a dalt sense marges (Parking / Serveis)."""
+    return box([top, box(body, padding=pad(20), gap=14, grow=True, justify="space-between")],
+               width=width, bg=WHITE, gap=0, radius=8, shadow=True, flush=True, padding=pad(0))
 
 
 def cta(eyebrow_t, title, label="CONTACTA ARA", url="/contacte/"):
     return section(
-        [box([eyebrow(eyebrow_t, WHITE), h(title, 32, WHITE)], width=65),
-         box([btn(label, url, light=True)], width=35, align="flex-end", align_mobile="flex-start",
+        [box([eyebrow(eyebrow_t, WHITE, size=10), h(title, 30, WHITE)], width=62),
+         box([btn(label, url, light=True)], width=38, align="flex-end", align_mobile="flex-start",
              justify="center")],
-        bg=NAVY, padding=pad(50, 24), align="center")
+        bg=NAVY, padding=pad(54, 24), align="center", css="cta-vilamacolum")
 
 
-def contact_block(title="Busques un lloc per a la teva caravana?"):
-    sec = section(
-        [box([eyebrow("Contacte", WHITE), h(title, 30, WHITE),
-              p("Explica'ns què necessites i t'informarem sobre disponibilitat i serveis.", WHITE)],
-             width=40, justify="center"),
-         box([form()], width=60, padding=pad(24), bg=WHITE, radius=10)],
-        bg=NAVY, padding=pad(50, 24), align="center")
+def location_row(bg=WHITE):
+    """Un sol contenidor amb 3 columnes: ubicació | mapa | formulari (com al PDF)."""
+    info = box([eyebrow("Ubicació", upper=False, size=12),
+                h("En un punt estratègic de l'Alt Empordà", 28),
+                p("Caravaning Vilamacolum està situat a Vilamacolum, molt a prop de Sant Pere Pescador "
+                  "i de les principals zones de la Costa Brava, amb fàcil accés des de Figueres i la "
+                  "resta de la comarca.", size=13),
+                contact_line("fas fa-map-marker-alt",
+                             f"Caravaning Vilamacolum – Mas Font<br><span style='font-weight:400'>{ADDR1}<br>{ADDR2}</span>"),
+                contact_line("fas fa-phone", f'<a href="tel:+34677858096" style="color:inherit">{TEL}</a>'),
+                contact_line("fas fa-envelope", f'<a href="mailto:{MAIL}" style="color:inherit">{MAIL}</a>')],
+               width=34, gap=14, justify="center")
+    mapa = box([map_block(300)], width=30, radius=10, flush=True, justify="center")
+    card_form = box([
+        box([eyebrow("Contacte", WHITE, size=10), h("Busques un lloc per a la teva caravana?", 18, WHITE, "h3")],
+            row=True, gap=14, align="center"),
+        p("Explica'ns què necessites i t'informarem sobre disponibilitat i serveis.", "#DCE5F3", 11),
+        form()], width=36, bg=NAVY, padding=pad(22), gap=14, radius=10)
+    sec = section([info, mapa, card_form], bg=bg, padding=pad(40, 24), align="stretch", gap=24)
     sec["settings"]["_element_id"] = "contacte"
     return sec
 
 
-# ---------------------------------------------------------------- pàgines
+# ------------------------------------------------------------ pàgines
 def page_inici():
     return [
-        hero("Caravaning Vilamacolum", "La teva caravana, sempre en bones mans",
+        hero("", "La teva caravana, sempre en bones mans",
              "Parking i cura de caravanes a Vilamacolum, en ple Alt Empordà.",
-             [btn("SOL·LICITAR PLAÇA", "#contacte", light=True),
-              btn("VEURE INSTAL·LACIONS", "/installacions/", outline=True, icon_cls=None)],
-             bg="aeria", min_h=520),
-        stats_row([("fas fa-vector-square", "12.000 m²", "d'instal·lacions"),
+             hero_btns("SOL·LICITAR PLAÇA", "#contacte", "VEURE INSTAL·LACIONS", "/installacions/"),
+             bg="aeria", min_h=440),
+        stats_row([("far fa-square", "12.000 m²", "d'instal·lacions"),
                    ("fas fa-home", "PLACES COBERTES", "i exteriors"),
                    ("fas fa-shield-alt", "VIGILÀNCIA", "per a la teva tranquil·litat"),
                    ("fas fa-wrench", "MANTENIMENT", "i reparacions"),
                    ("fas fa-tint", "NETEJA", "per tenir-la sempre a punt")]),
         section([
-            box([eyebrow("Molt més que un parking"), h("Un espai pensat per a la teva tranquil·litat"),
+            box([eyebrow("Molt més que un parking", size=10), h("Un espai pensat per a la teva tranquil·litat", 28),
                  p("A Caravaning Vilamacolum t'oferim un espai ampli, segur i ben equipat per guardar "
-                   "la teva caravana durant tot l'any, amb serveis de manteniment, neteja i reparacions."),
-                 btn("DESCOBREIX ELS NOSTRES SERVEIS", "/serveis/")], width=40, justify="center"),
-            card([image("coberts", 240), h("Parking cobert", 23, tag="h3"),
-                  p("Protecció durant tot l'any.")], 30),
-            card([image("exterior", 240), h("Parking exterior", 23, tag="h3"),
-                  p("Amples zones per a caravanes i altres vehicles.")], 30),
-        ], bg=LIGHT, padding=pad(40, 24), align="stretch"),
-        head("Els nostres serveis", "Ens ocupem de la teva caravana"),
-        grid([icon_card("fas fa-parking", "Parking", "Espais amplis, còmodes i segurs.", 25, 34, 23),
-              icon_card("fas fa-tint", "Neteja",
-                        "La preparem perquè estigui llesta per a les teves properes vacances.", 25, 34, 23),
-              icon_card("fas fa-wrench", "Manteniment",
-                        "Revisió i manteniment per conservar-la en les millors condicions.", 25, 34, 23),
-              icon_card("fas fa-cog", "Reparacions",
-                        "Solucions per a petites reparacions i posada a punt.", 25, 34, 23)]),
-        section([box([image("panoramica", 340)], width=55),
-                 box([eyebrow("Tranquil·litat tot l'any", WHITE),
-                      h("Tu gaudeix del viatge. Nosaltres cuidem de la teva caravana.", 40, WHITE),
-                      btn("SOL·LICITAR INFORMACIÓ", "#contacte", light=True)],
-                     width=45, gap=18, justify="center")],
-                bg=NAVY, padding=pad(40, 24), align="center"),
-        section([box([eyebrow("Ubicació"), h("En un punt estratègic de l'Alt Empordà"),
-                      p("Caravaning Vilamacolum està situat a Vilamacolum, molt a prop de Sant Pere "
-                        "Pescador i de les principals zones de la Costa Brava, amb fàcil accés des de "
-                        "Figueres i la resta de la comarca.")] + info_lines(), width=45,
-                     justify="center"),
-                 box([map_block(), btn("VEURE UBICACIÓ", MAPS)], width=55, bg=LIGHT, padding=pad(20),
-                     radius=8)],
-                bg=WHITE, padding=pad(48, 24), align="center"),
-        contact_block(),
+                   "la teva caravana durant tot l'any, amb serveis de manteniment, neteja i reparacions.",
+                   size=14),
+                 btn("DESCOBREIX ELS NOSTRES SERVEIS", "/serveis/")], width=40, gap=14, justify="center"),
+            photo_card("coberts", "Parking cobert", "Protecció durant tot l'any.", 30),
+            photo_card("exterior", "Parking exterior", "Amples zones per a caravanes i altres vehicles.", 30),
+        ], bg=SOFT, padding=pad(36, 24), align="center"),
+        section([box([eyebrow("Els nostres serveis", size=10, color=NAVY), h("Ens ocupem de la teva caravana", 30)],
+                     width=100, align="center", gap=8, center=True)],
+                bg=LIGHT, padding=pad(40, 24, 0)),
+        grid([card([icon("fas fa-parking", 34), h("Parking", 20, tag="h3"),
+                    p("Espais amplis, còmodes i segurs.", size=13)], 25),
+              card([icon("fas fa-tint", 34), h("Neteja", 20, tag="h3"),
+                    p("La preparem perquè estigui llesta per a les teves properes vacances.", size=13)], 25),
+              card([icon("fas fa-wrench", 34), h("Manteniment", 20, tag="h3"),
+                    p("Revisió i manteniment per conservar-la en les millors condicions.", size=13)], 25),
+              card([icon("fas fa-cog", 34), h("Reparacions", 20, tag="h3"),
+                    p("Solucions per a petites reparacions i posada a punt.", size=13)], 25)]),
+        # banda: imatge a l'esquerra que es fon en blau cap a la dreta (degradat)
+        box([box([], width=62, min_h=200),
+             box([eyebrow("Tranquil·litat tot l'any", WHITE, size=10),
+                  h("Tu gaudeix del viatge. Nosaltres cuidem de la teva caravana.", 30, WHITE),
+                  btn("SOL·LICITAR INFORMACIÓ", "#contacte", light=True)],
+                 width=38, bg=NAVY, padding=pad(36, 40), gap=16, justify="center")],
+            row=True, inner=False, gap=0, bg_image="panoramica", min_h=300, padding=pad(0),
+            grad=(rgba(0), 40, NAVY, 62, 90), align="stretch"),
+        location_row(WHITE),
     ]
+
+
+def mosaic():
+    big = box([], width=44, bg_image="coberts", min_h=340, radius=8)
+    col1 = box([box([], bg_image="exterior", min_h=164, radius=8),
+                box([], bg_image="panoramica", min_h=164, radius=8)], width=28, gap=12)
+    col2 = box([box([], bg_image="aeria", min_h=164, radius=8),
+                box([], bg_image="coberts", min_h=164, radius=8)], width=28, gap=12)
+    return section([big, col1, col2], bg=WHITE, padding=pad(24, 24, 44), gap=12)
 
 
 def page_parking():
     def col(key, title, items, label):
-        return card([image(key, 300), h(title, 24, tag="h3"), checklist(items),
-                     btn(label, "/contacte/")], 50, justify="space-between")
+        return flush_card(image(key, 200, 0),
+                          [h(title, 22, tag="h3"), checklist(items), btn(label, "/contacte/")], 50)
     return [
         hero("Parking de caravanes", "Un espai segur per a la teva caravana",
              "A Caravaning Vilamacolum posem a la teva disposició un ampli espai amb places cobertes i "
              "exteriors perquè la teva caravana estigui sempre protegida i llesta per a la teva "
              "pròxima aventura.",
-             [btn("SOL·LICITAR PLAÇA", "/contacte/", light=True),
-              btn("VEURE INSTAL·LACIONS", "/installacions/", outline=True, icon_cls=None)],
-             bg="coberts"),
-        stats_row([("fas fa-vector-square", "12.000 m²", "d'instal·lacions"),
+             hero_btns("SOL·LICITAR PLAÇA", "/contacte/", "VEURE INSTAL·LACIONS", "/installacions/"),
+             bg="coberts", min_h=440),
+        stats_row([("far fa-square", "12.000 m²", "d'instal·lacions"),
                    ("fas fa-home", "PLACES COBERTES", "i exteriors"),
                    ("fas fa-shield-alt", "VIGILÀNCIA", "24 hores"),
-                   ("fas fa-video", "ACCÉS CONTROLAT", "i tancat perimetralment")]),
-        section([box([eyebrow("Dos tipus de places"), h("Parking cobert i exterior"),
+                   ("fas fa-camera", "ACCÉS CONTROLAT", "i tancat perimetralment")]),
+        section([box([eyebrow("Dos tipus de places", size=10), h("Parking cobert i exterior", 34),
                       p("Oferim solucions adaptades a les teves necessitats amb places cobertes i "
-                        "exteriors, totes dins d'un recinte tancat, vigilat i amb fàcil accés durant tot l'any.")],
-                     width=58, justify="center"),
-                 box([icon("fas fa-parking", 40), h("Espais amplis i còmodes", 18, tag="h3"),
-                      p("Dissenyats per a tot tipus de caravanes, autocaravanes i altres vehicles d'oci.",
-                        size=13)], width=42, bg="#E8EFF7", padding=pad(22), radius=8)],
-                bg=LIGHT, padding=pad(48, 24, 0), align="center"),
+                        "exteriors, totes dins d'un recinte tancat, vigilat i amb fàcil accés durant tot l'any.",
+                        size=14)], width=58, gap=12, justify="center"),
+                 box([box([icon("fas fa-parking", 44),
+                           box([h("Espais amplis i còmodes", 17, tag="h3"),
+                                p("Dissenyats per a tot tipus de caravanes, autocaravanes i altres vehicles d'oci.",
+                                  size=12)], gap=6, grow=True)], row=True, gap=16, align="center")],
+                     width=42, bg="#E4ECF7", padding=pad(24), radius=8, justify="center")],
+                bg=SOFT, padding=pad(44, 24, 0), align="center"),
         grid([col("coberts", "Parking cobert",
                   ["Protecció davant del sol, la pluja i les inclemències del temps",
                    "Manté la teva caravana en les millors condicions",
@@ -433,81 +510,89 @@ def page_parking():
               col("exterior", "Parking exterior",
                   ["Zones àmplies i ben delimitades", "Bona maniobrabilitat",
                    "Espais per a caravanes, autocaravanes i remolcs", "Entorn tranquil i segur"],
-                  "SOL·LICITAR PLAÇA EXTERIOR")]),
-        section([box([eyebrow("12.000 m²", WHITE), h("12.000 m²", 44, WHITE),
-                      h("dedicats a la teva tranquil·litat", 22, WHITE, "h3"),
+                  "SOL·LICITAR PLAÇA EXTERIOR")], bg=SOFT, bottom=44),
+        section([box([eyebrow("12.000 m²", WHITE, size=10), h("12.000 m²", 44, WHITE),
+                      h("dedicats a la teva tranquil·litat", 20, WHITE, "h3"),
                       p("Un gran espai, ben organitzat i equipat, per garantir la seguretat i el bon "
-                        "estat de la teva caravana durant tot l'any.", WHITE)], width=50)],
-                bg_image="panoramica", overlay=0.45, min_h=380, padding=pad(60, 24), align="center"),
-        head("Per què triar-nos", "Màxima seguretat i comoditat"),
-        grid([icon_card("fas fa-shield-alt", "Vigilància 24 hores", "Recinte tancat amb control d'accessos.", 25, center=True),
-              icon_card("fas fa-video", "Entorn segur", "Càmeres de seguretat i il·luminació.", 25, center=True),
-              icon_card("fas fa-map-marker-alt", "Fàcil accés", "Accés ampli per a tot tipus de vehicles.", 25, center=True),
-              icon_card("fas fa-cog", "Servei addicional", "Neteja, manteniment i reparacions.", 25, center=True)]),
+                        "estat de la teva caravana durant tot l'any.", WHITE, 14)], width=42, gap=10)],
+                bg_image="panoramica", grad=(rgba(0.78), 0, rgba(0), 60, 90), min_h=300,
+                padding=pad(50, 24), align="center"),
+        head("Per què triar-nos", "Màxima seguretat i comoditat", bg=SOFT),
+        grid([card([icon("fas fa-shield-alt", 38), h("Vigilància 24 hores", 16, tag="h3"),
+                    p("Recinte tancat amb control d'accessos.", size=13)], 25),
+              card([icon("fas fa-camera", 38), h("Entorn segur", 16, tag="h3"),
+                    p("Càmeres de seguretat i il·luminació.", size=13)], 25),
+              card([icon("fas fa-map-marker-alt", 38), h("Fàcil accés", 16, tag="h3"),
+                    p("Accés ampli per a tot tipus de vehicles.", size=13)], 25),
+              card([icon("fas fa-cog", 38), h("Servei addicional", 16, tag="h3"),
+                    p("Neteja, manteniment i reparacions.", size=13)], 25)], bg=SOFT),
         head("Galeria", "Les nostres instal·lacions",
-             button=btn("VEURE TOTES LES IMATGES", "/installacions/", outline=True), bg=WHITE),
-        section([box([gallery(["coberts", "exterior", "aeria", "panoramica"])], width=100)],
-                bg=WHITE, padding=pad(24, 24, 48)),
+             button=btn("VEURE TOTES LES IMATGES", "/installacions/", dark_outline=True), bg=WHITE),
+        mosaic(),
         cta("Busques una plaça per a la teva caravana?", "Sol·licita informació sense compromís"),
     ]
 
 
 def page_serveis():
     def svc(ic, title, intro, items, key):
-        return card([image(key, 190),
-                     box([icon(ic, 24), h(title, 22, tag="h3")], row=True, gap=10, align="center"),
-                     p(intro, size=14), checklist(items), btn("MÉS INFORMACIÓ", "/contacte/")],
-                    25, justify="space-between")
+        return flush_card(image(key, 160, 0),
+                          [box([icon(ic, 26), h(title, 20, tag="h3")], row=True, gap=12, align="center"),
+                           p(intro, size=13), checklist(items, 12), btn("MÉS INFORMACIÓ", "/contacte/")], 25)
+    small = lambda ic, t, sub: card([icon(ic, 26, align="center"), h(t, 12, tag="h4", align="center"),
+                                     p(sub, size=11, align="center")], 25, center=True)
     return [
         hero("Els nostres serveis", "Tot el que la teva caravana necessita",
              "A Caravaning Vilamacolum t'oferim molt més que un parking. Ens ocupem del manteniment, "
              "la neteja i les reparacions perquè la teva caravana estigui sempre a punt per gaudir de "
              "la pròxima escapada.",
-             [btn("SOL·LICITAR INFORMACIÓ", "/contacte/", light=True),
-              btn("VEURE INSTAL·LACIONS", "/installacions/", outline=True, icon_cls=None)],
-             bg="exterior"),
+             hero_btns("SOL·LICITAR INFORMACIÓ", "/contacte/", "VEURE INSTAL·LACIONS", "/installacions/"),
+             bg="exterior", min_h=440),
         stats_row([("fas fa-wrench", "MANTENIMENT", "i revisions"),
                    ("fas fa-tint", "NETEJA", "interior i exterior"),
                    ("fas fa-cog", "REPARACIONS", "petites i mitjanes"),
                    ("fas fa-shield-alt", "TOT EN UN SOL LLOC", "professional i de confiança")]),
         head("Els nostres serveis", "Ens ocupem de la teva caravana",
              "Oferim un servei complet per mantenir la teva caravana en perfectes condicions "
-             "durant tot l'any. Qualitat, experiència i un tracte proper."),
+             "durant tot l'any. Qualitat, experiència i un tracte proper.", bg=SOFT),
         grid([svc("fas fa-parking", "Parking", "Places cobertes i exteriors en un entorn segur i vigilat.",
                   ["Places cobertes i exteriors", "Accés fàcil i ampli", "Vigilància 24 hores",
                    "Ideal per estades llargues"], "coberts"),
               svc("fas fa-tint", "Neteja", "Neteja interior i exterior per tenir la teva caravana sempre a punt.",
                   ["Neteja exterior de carrosseria", "Neteja interior completa",
-                   "Tractament de plàstics i gomes", "Preparació per a noves vacances"], None),
+                   "Tractament de plàstics i gomes", "Preparació per a noves vacances"], "exterior"),
               svc("fas fa-cog", "Manteniment",
                   "Revisions periòdiques per garantir la seguretat i el bon estat del teu vehicle.",
                   ["Revisió general", "Control d'instal·lacions", "Bateria, pneumàtics i frens",
-                   "Consells personalitzats"], None),
+                   "Consells personalitzats"], "aeria"),
               svc("fas fa-wrench", "Reparacions", "Solucions per a petites i mitjanes reparacions.",
                   ["Electricitat i il·luminació", "Aigua i sanejament", "Substitució de peces",
-                   "Posada a punt abans de viatjar"], None)]),
-        section([box([image("exterior", 320)], width=45),
-                 box([h("Viatja amb tranquil·litat"),
-                      p("Confia la teva caravana a un equip amb experiència. Nosaltres ens encarreguem "
-                        "de mantenir-la segura, neta i en perfectes condicions."),
-                      box([stat("fas fa-shield-alt", "Seguretat", "durant tot l'any", 25),
-                           stat("far fa-calendar-alt", "Estalvi de temps", "i preocupacions", 25),
-                           stat("far fa-check-circle", "Més durabilitat", "del teu vehicle", 25),
-                           stat("fas fa-sun", "Llesta per a", "la pròxima aventura", 25)],
-                          row=True, gap=10, mob=2)],
-                     width=55, justify="center")],
-                bg=LIGHT, padding=pad(24, 24, 48), align="center"),
-        section([box([eyebrow("Un servei personalitzat"), h("Assessorament i tracte proper"),
-                      p("Cada caravana és diferent, per això t'oferim un servei adaptat a les teves "
-                        "necessitats. T'assessorem sobre el manteniment, la neteja i qualsevol dubte que "
-                        "tinguis, amb un tracte pròxim i professional."),
-                      btn("CONTACTA AMB NOSALTRES", "/contacte/")], width=50, justify="center"),
-                 box([image("coberts", 320)], width=50)],
-                bg=LIGHT, padding=pad(24, 24, 48), align="center"),
+                   "Posada a punt abans de viatjar"], "panoramica")], bg=SOFT, bottom=36),
+        # imatge a sagnat esquerre (flush) + text
+        box([box([], width=48, bg_image="exterior", min_h=260),
+             box([h("Viatja amb tranquil·litat", 28),
+                  p("Confia la teva caravana a un equip amb experiència. Nosaltres ens encarreguem "
+                    "de mantenir-la segura, neta i en perfectes condicions.", size=14),
+                  box([small("fas fa-shield-alt", "Seguretat", "durant tot l'any"),
+                       small("far fa-calendar-alt", "Estalvi de temps", "i preocupacions"),
+                       small("far fa-check-circle", "Més durabilitat", "del teu vehicle"),
+                       small("fas fa-sun", "Llesta per a", "la pròxima aventura")],
+                      row=True, gap=10, mob=2)],
+                 width=52, gap=14, padding=pad(30, 32), justify="center")],
+            row=True, inner=False, gap=0, bg=SOFT, padding=pad(0), align="stretch"),
+        # text + imatge a sagnat dret (flush)
+        box([box([eyebrow("Un servei personalitzat", size=10), h("Assessorament i tracte proper", 28),
+                  p("Cada caravana és diferent, per això t'oferim un servei adaptat a les teves "
+                    "necessitats. T'assessorem sobre el manteniment, la neteja i qualsevol dubte que "
+                    "tinguis, amb un tracte pròxim i professional.", size=14),
+                  btn("CONTACTA AMB NOSALTRES", "/contacte/")],
+                 width=52, gap=14, padding=pad(40, 40), justify="center"),
+             box([], width=48, bg_image="coberts", min_h=240)],
+            row=True, inner=False, gap=0, bg=SOFT, padding=pad(0), align="stretch"),
         head("Galeria", "Serveis en imatges",
-             button=btn("VEURE TOTES LES IMATGES", "/installacions/", outline=True), bg=WHITE),
-        section([box([gallery(["coberts", "exterior", "aeria", "panoramica"])], width=100)],
-                bg=WHITE, padding=pad(24, 24, 48)),
+             button=btn("VEURE TOTES LES IMATGES", "/installacions/", dark_outline=True), bg=WHITE),
+        section([box([], width=16, bg_image=k, min_h=135, radius=8)
+                 for k in ("coberts", "exterior", "aeria", "panoramica", "coberts", "exterior")],
+                bg=WHITE, padding=pad(24, 24, 44), gap=12),
         cta("Vols saber més sobre els nostres serveis?", "Sol·licita informació sense compromís",
             "SOL·LICITAR INFORMACIÓ"),
     ]
@@ -517,14 +602,13 @@ def page_installacions():
     return [
         hero("Instal·lacions", "12.000 m² pensats per a la teva caravana",
              "Un recinte ampli, ben organitzat i vigilat, amb places cobertes i exteriors a Vilamacolum.",
-             [btn("SOL·LICITAR PLAÇA", "/contacte/", light=True)], bg="panoramica"),
-        stats_row([("fas fa-vector-square", "12.000 m²", "d'instal·lacions"),
+             [btn("SOL·LICITAR PLAÇA", "/contacte/", hero=True)], bg="panoramica", min_h=400),
+        stats_row([("far fa-square", "12.000 m²", "d'instal·lacions"),
                    ("fas fa-home", "PLACES COBERTES", "i exteriors"),
                    ("fas fa-shield-alt", "VIGILÀNCIA", "24 hores"),
-                   ("fas fa-video", "ACCÉS CONTROLAT", "i tancat perimetralment")]),
-        head("Galeria", "Les nostres instal·lacions"),
-        section([box([gallery(["coberts", "exterior", "aeria", "panoramica"])], width=100)],
-                bg=LIGHT, padding=pad(24, 24, 48)),
+                   ("fas fa-camera", "ACCÉS CONTROLAT", "i tancat perimetralment")]),
+        head("Galeria", "Les nostres instal·lacions", bg=WHITE),
+        mosaic(),
         cta("Busques una plaça per a la teva caravana?", "Sol·licita informació sense compromís"),
     ]
 
@@ -533,16 +617,20 @@ def page_sobre():
     return [
         hero("Sobre nosaltres", "Cuidem la teva caravana com si fos nostra",
              "A Caravaning Vilamacolum (Mas Font) ens dediquem al parking i la cura de caravanes "
-             "a l'Alt Empordà.", [btn("CONTACTA AMB NOSALTRES", "/contacte/", light=True)], bg="aeria"),
-        section([box([eyebrow("Qui som"), h("Un equip proper i de confiança"),
-                      p("[Text a revisar amb el client: història de Mas Font, anys d'experiència i valors.]")],
-                     width=55, justify="center"),
-                 box([image("exterior", 340)], width=45)],
-                bg=WHITE, padding=pad(48, 24), align="center"),
-        head("Els nostres valors", "Per què confiar en nosaltres"),
-        grid([icon_card("fas fa-shield-alt", "Seguretat", "Recinte vigilat i amb accés controlat.", 33, center=True),
-              icon_card("fas fa-handshake", "Tracte proper", "T'assessorem amb un servei personalitzat.", 33, center=True),
-              icon_card("fas fa-tools", "Servei complet", "Parking, neteja, manteniment i reparacions.", 33, center=True)]),
+             "a l'Alt Empordà.", [btn("CONTACTA AMB NOSALTRES", "/contacte/", hero=True)], bg="aeria",
+             min_h=400),
+        box([box([eyebrow("Qui som", size=10), h("Un equip proper i de confiança", 28),
+                  p("[Text a revisar amb el client: història de Mas Font, anys d'experiència i valors.]",
+                    size=14)], width=52, gap=14, padding=pad(40, 40), justify="center"),
+             box([], width=48, bg_image="exterior", min_h=300)],
+            row=True, inner=False, gap=0, bg=SOFT, padding=pad(0), align="stretch"),
+        head("Els nostres valors", "Per què confiar en nosaltres", bg=LIGHT),
+        grid([card([icon("fas fa-shield-alt", 38), h("Seguretat", 16, tag="h3"),
+                    p("Recinte vigilat i amb accés controlat.", size=13)], 33),
+              card([icon("fas fa-handshake", 38), h("Tracte proper", 16, tag="h3"),
+                    p("T'assessorem amb un servei personalitzat.", size=13)], 33),
+              card([icon("fas fa-tools", 38), h("Servei complet", 16, tag="h3"),
+                    p("Parking, neteja, manteniment i reparacions.", size=13)], 33)]),
         cta("Vols saber-ne més?", "Sol·licita informació sense compromís"),
     ]
 
@@ -551,20 +639,20 @@ def page_contacte():
     return [
         hero("Contacte", "Parlem de la teva caravana",
              "Explica'ns què necessites i t'informarem sobre disponibilitat i serveis.",
-             [btn("TRUCA'NS: " + TEL, "tel:+34677858096", light=True, icon_cls="fas fa-phone")],
+             [btn("TRUCA'NS: " + TEL, "tel:+34677858096", hero=True, arrow=False, icon_cls="fas fa-phone")],
              bg="exterior", min_h=360),
-        section([box([eyebrow("Ubicació"), h("Com arribar")] + info_lines() + [btn("VEURE UBICACIÓ", MAPS)],
-                     width=40, justify="center"),
-                 box([map_block()], width=60, padding=pad(20), bg=LIGHT, radius=8)],
-                bg=WHITE, padding=pad(48, 24), align="center"),
-        contact_block("Sol·licita informació sense compromís"),
+        location_row(WHITE),
     ]
 
 
 # ------------------------------------------------- header i footer (Pro)
 def header():
-    logo = box([widget("theme-site-logo", {"width": px(110), "width_mobile": px(80),
-                                           "link_to": "custom", "link": {"url": "/"}})])
+    logo = box([widget("theme-site-logo", {
+        "width": px(118), "width_tablet": px(100), "width_mobile": px(76),
+        "link_to": "custom", "link": {"url": "/"},
+        "_margin": {"unit": "px", "top": "4", "right": "0", "bottom": "-46", "left": "0", "isLinked": False},
+        "_margin_mobile": {"unit": "px", "top": "2", "right": "0", "bottom": "-14", "left": "0", "isLinked": False},
+        "_z_index": 100})], align="flex-start")
     nav = box([widget("nav-menu", {
         "menu": "menu-principal", "layout": "horizontal", "align_items": "center",
         "pointer": "underline", "animation_line": "fade", "dropdown": "tablet", "toggle": "burger",
@@ -573,14 +661,13 @@ def header():
         "menu_typography_font_size": px(13), "menu_typography_font_weight": "500",
         "color_menu_item": NAVY, "color_menu_item_hover": NAVY, "color_menu_item_active": NAVY,
         "pointer_color_menu_item_hover": NAVY, "pointer_color_menu_item_active": NAVY,
-        "menu_space_between": px(14),
-        "toggle_color": NAVY, "toggle_size": px(26),
+        "menu_space_between": px(16), "toggle_color": NAVY, "toggle_size": px(26),
         "color_dropdown_item": NAVY, "background_color_dropdown_item": WHITE})],
-        justify="center", align="center")
-    cta_btn = box([btn("SOL·LICITAR INFORMACIÓ", "/contacte/", icon_cls="far fa-calendar-alt")])
+        justify="center", align="center", grow=True)
+    cta_btn = box([btn("SOL·LICITAR INFORMACIÓ", "/contacte/", arrow=False, icon_cls="far fa-calendar-alt")])
     cta_btn["settings"]["hide_mobile"] = "hidden-mobile"
-    root = box([logo, nav, cta_btn], row=True, inner=False, gap=20, padding=pad(10, 24),
-               bg=WHITE, justify="space-between", align="center", shadow=True)
+    root = box([logo, nav, cta_btn], row=True, inner=False, gap=20, padding=pad(0, 24),
+               bg=WHITE, justify="space-between", align="center", min_h=76)
     root["settings"]["sticky"] = "top"
     root["settings"]["sticky_on"] = ["desktop", "tablet", "mobile"]
     root["settings"]["z_index"] = 99
@@ -588,12 +675,10 @@ def header():
 
 
 def footer():
-    def link_list(items, icons=False):
-        lst = []
-        for t, u, ic in items:
-            it = {"text": t, "link": {"url": u}, "_id": _id()}
-            it["selected_icon"] = {"value": ic or "fas fa-angle-right", "library": "fa-solid"}
-            lst.append(it)
+    def link_list(items):
+        lst = [{"text": t, "link": {"url": u},
+                "selected_icon": {"value": ic or "fas fa-angle-right", "library": "fa-solid"},
+                "_id": _id()} for t, u, ic in items]
         return widget("icon-list", {
             "icon_list": lst, "space_between": px(10), "icon_color": WHITE, "icon_size": px(13),
             "text_color": WHITE, "text_indent": px(10),
@@ -608,7 +693,8 @@ def footer():
                         ("Sobre nosaltres", "/sobre-nosaltres/", None),
                         ("Contacte", "/contacte/", None)])], width=28),
         box([h("Contacte", 16, WHITE, "h4"),
-             link_list([(ADDR, MAPS, "fas fa-map-marker-alt"), (TEL, "tel:+34677858096", "fas fa-phone"),
+             link_list([(f"{ADDR1} · {ADDR2}", MAPS, "fas fa-map-marker-alt"),
+                        (TEL, "tel:+34677858096", "fas fa-phone"),
                         (MAIL, "mailto:" + MAIL, "fas fa-envelope")])], width=36)],
         bg=NAVY, padding=pad(50, 24, 30), gap=30)
     bottom = section([

@@ -1,7 +1,7 @@
 {
  "content": [
   {
-   "id": "66808e32",
+   "id": "821fa74b",
    "settings": {
     "content_width": "full",
     "flex_direction": "row",
@@ -14,24 +14,28 @@
     },
     "padding": {
      "unit": "px",
-     "top": 10,
+     "top": 0,
      "right": 24,
-     "bottom": 10,
+     "bottom": 0,
      "left": 24,
      "isLinked": false
     },
     "background_background": "classic",
     "background_color": "#FFFFFF",
+    "min_height": {
+     "unit": "px",
+     "size": 76
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 64
+    },
+    "min_height_mobile": {
+     "unit": "px",
+     "size": 53
+    },
     "align_items": "center",
     "justify_content": "space-between",
-    "box_shadow_box_shadow_type": "yes",
-    "box_shadow_box_shadow": {
-     "horizontal": 0,
-     "vertical": 4,
-     "blur": 18,
-     "spread": 0,
-     "color": "rgba(6,28,73,0.08)"
-    },
     "sticky": "top",
     "sticky_on": [
      "desktop",
@@ -41,17 +45,17 @@
     "z_index": 99,
     "padding_tablet": {
      "unit": "px",
-     "top": 10,
+     "top": 0,
      "right": 24,
-     "bottom": 10,
+     "bottom": 0,
      "left": 24,
      "isLinked": false
     },
     "padding_mobile": {
      "unit": "px",
-     "top": 10,
+     "top": 0,
      "right": 16,
-     "bottom": 10,
+     "bottom": 0,
      "left": 16,
      "isLinked": false
     },
@@ -59,7 +63,7 @@
    },
    "elements": [
     {
-     "id": "a96b65a7",
+     "id": "f5f8590c",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -69,24 +73,46 @@
        "column": "16",
        "row": "16",
        "isLinked": true
-      }
+      },
+      "align_items": "flex-start"
      },
      "elements": [
       {
-       "id": "0d0fd7c6",
+       "id": "d61e4bbd",
        "settings": {
         "width": {
          "unit": "px",
-         "size": 110
+         "size": 118
+        },
+        "width_tablet": {
+         "unit": "px",
+         "size": 100
         },
         "width_mobile": {
          "unit": "px",
-         "size": 80
+         "size": 76
         },
         "link_to": "custom",
         "link": {
          "url": "/"
-        }
+        },
+        "_margin": {
+         "unit": "px",
+         "top": "4",
+         "right": "0",
+         "bottom": "-46",
+         "left": "0",
+         "isLinked": false
+        },
+        "_margin_mobile": {
+         "unit": "px",
+         "top": "2",
+         "right": "0",
+         "bottom": "-14",
+         "left": "0",
+         "isLinked": false
+        },
+        "_z_index": 100
        },
        "elements": [],
        "isInner": false,
@@ -98,7 +124,7 @@
      "elType": "container"
     },
     {
-     "id": "17d63b16",
+     "id": "9431c87f",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -110,11 +136,12 @@
        "isLinked": true
       },
       "align_items": "center",
-      "justify_content": "center"
+      "justify_content": "center",
+      "_flex_size": "grow"
      },
      "elements": [
       {
-       "id": "1068c6e4",
+       "id": "941e1aaa",
        "settings": {
         "menu": "menu-principal",
         "layout": "horizontal",
@@ -139,7 +166,7 @@
         "pointer_color_menu_item_active": "#061C49",
         "menu_space_between": {
          "unit": "px",
-         "size": 14
+         "size": 16
         },
         "toggle_color": "#061C49",
         "toggle_size": {
@@ -159,7 +186,7 @@
      "elType": "container"
     },
     {
-     "id": "0deb1c54",
+     "id": "e44fea3b",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -174,7 +201,7 @@
      },
      "elements": [
       {
-       "id": "b9228e09",
+       "id": "49ae49a2",
        "settings": {
         "text": "SOL·LICITAR INFORMACIÓ",
         "link": {
@@ -209,12 +236,12 @@
         "align_mobile": "stretch",
         "selected_icon": {
          "value": "far fa-calendar-alt",
-         "library": "fa-solid"
+         "library": "fa-regular"
         },
-        "icon_align": "row-reverse",
+        "icon_align": "row",
         "icon_indent": {
          "unit": "px",
-         "size": 8
+         "size": 10
         }
        },
        "elements": [],
