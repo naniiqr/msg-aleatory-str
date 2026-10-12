@@ -551,11 +551,12 @@ def ftr_wrap():
                      grad={"a": "#4B3F36", "b": "#2A2420", "angle": 125, "ap": 0, "bp": 100}, cls="cl-footer-wrap")
 
 
-def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(110, 40), arrow=True):
+def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(110, 40), arrow=True,
+         title="Espais<br>fets a mida"):
     kids = []
     if eyebrow:
         kids.append(heading(eyebrow, "p", SANS, 16, 300, "#FFFFFFE6", 1.2, 3))
-    kids.append(heading("Espais<br>fets a mida", "h1", SANS, R(74, 60, 44), 300, "#FFFFFF", 1.05))
+    kids.append(heading(title, "h1", SANS, R(74, 60, 44), 300, "#FFFFFF", 1.05))
     kids.append(heading(p_text, "p", SANS, R(24, 22, 19), 300, "#FFFFFFF2", 1.4))
     kids.append(button(btn_text, btn_url, bg=C_TAN, color="#2B2118", size=15, weight=500, ls=1.2,
                        pad=(20, 34, 20, 34), radius=1, tf="uppercase" if arrow else None,
@@ -803,6 +804,152 @@ def page_projectes():
             interiorisme("Dissenyem espais<br>per a persones reals"), equip()]
 
 
+# ---------------------------------------------------------------- formulari
+def form(fields, button_text, email_to, name="Contacte Creem Llar"):
+    """Widget Formulari d'Elementor Pro. fields: [(tipus, etiqueta, ample, requerit, opcions)]"""
+    i = nid()
+    s = {"form_name": name, "form_fields": [], "show_labels": "true", "button_text": button_text,
+         "button_size": "md", "button_width": "100", "submit_actions": ["email"], "email_to": email_to,
+         "email_subject": f"Nova consulta des de {name}", "email_content": "[all-fields]",
+         "email_from_name": "Creem Llar", "success_message": "Gràcies! Hem rebut la teva consulta.",
+         "column_gap": sz(16), "row_gap": sz(16),
+         "field_text_color": C_DARK, "field_background_color": "#FFFFFF", "field_border_color": "#CFC8BF",
+         "field_border_width": box(1), "field_border_radius": box(2), "label_color": "#4A443F",
+         "button_text_color": "#FFFFFF", "button_background_color": C_DARK, "button_border_radius": box(1),
+         "button_text_padding": box((18, 34, 18, 34)),
+         "button_background_hover_color": "#2B2926", "button_hover_color": "#FFFFFF"}
+    rules = []
+    typo(s, rules, f".e{i} .elementor-field", "field_", SANS, 16, 300, 1.3)
+    typo(s, rules, f".e{i} label", "label_", SANS, 14, 400, 1.3)
+    typo(s, rules, f".e{i} .elementor-button", "button_", SANS, 16, 400, 1)
+    rules += [("", f".e{i} .elementor-field", f"color:{C_DARK}"), ("", f".e{i} .elementor-field", "background:#fff"),
+              ("", f".e{i} .elementor-field", "border:1px solid #CFC8BF;border-radius:2px;padding:14px 16px;width:100%"),
+              ("", f".e{i} label", "color:#4A443F;display:block;margin-bottom:6px"),
+              ("", f".e{i} .elementor-button", f"background:{C_DARK};color:#fff;padding:18px 34px;border-radius:1px;border:0;width:100%;cursor:pointer"),
+              ("", f".e{i} .elementor-form-fields-wrapper", "display:flex;flex-wrap:wrap;gap:16px"),
+              ("", f".e{i} .elementor-field-group", "flex:1 1 100%"),
+              ("", f".e{i} .elementor-col-50", "flex:1 1 calc(50% - 8px)")]
+    rules.append(("_mobile", f".e{i} .elementor-col-50", "flex:1 1 100%"))
+    groups = ""
+    for n, (typ, label, width, req, opts) in enumerate(fields):
+        f = {"custom_id": f"field_{n}", "field_label": label, "placeholder": label if typ in ("text", "tel", "email", "textarea") else "",
+             "_id": nid(), "width": str(width), "width_mobile": "100"}
+        if typ != "text":
+            f["field_type"] = typ
+        if req:
+            f["required"] = "true"
+        if opts:
+            f["field_options"] = "\n".join(opts)
+        if typ == "acceptance":
+            f["acceptance_text"] = label
+        s["form_fields"].append(f)
+        r = " required" if req else ""
+        if typ == "select":
+            ctl = '<select class="elementor-field"><option>' + label + "</option>" + "".join(f"<option>{o}</option>" for o in opts) + "</select>"
+        elif typ == "textarea":
+            ctl = f'<textarea class="elementor-field" rows="5" placeholder="{label}"{r}></textarea>'
+        elif typ == "acceptance":
+            ctl = f'<label style="display:flex;gap:10px;align-items:center"><input type="checkbox"{r}> {label}</label>'
+        else:
+            ctl = f'<input class="elementor-field" type="{typ}" placeholder="{label}"{r}>'
+        lab = "" if typ == "acceptance" else f'<label>{label}</label>'
+        col = " elementor-col-50" if width == 50 else ""
+        groups += f'<div class="elementor-field-group{col}">{lab}{ctl}</div>'
+    el = {"id": i, "elType": "widget", "settings": s, "elements": [], "widgetType": "form"}
+    html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-form">'
+            f'<div class="elementor-widget-container"><form class="elementor-form" onsubmit="return false">'
+            f'<div class="elementor-form-fields-wrapper">{groups}'
+            f'<div class="elementor-field-group"><button class="elementor-button" type="submit">{button_text}</button></div>'
+            f'</div></form></div></div>')
+    return Node(el, html, rules)
+
+
+# ---------------------------------------------------------------- pàgines de servei (CONTINGUT PROVISIONAL)
+INTRO_TXT = ("Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al "
+             "teu estil de vida i a l'entorn on vius.")
+
+
+def sec_intro(eyebrow, titol, text):
+    left = container([heading(eyebrow, "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                      heading(titol, "h2", SERIF, R(56, 46, 38), 400, "#111111", 1.1)],
+                     gap=8, inner=True, pad=0, width=R(50, 100))
+    right = container([heading(text, "p", SANS, 17, 300, "#4A443F", 1.5)], inner=True, pad=0,
+                      width=R(36, 100), align="flex-start")
+    return container([left, right], dir=R("row", "column", "column"), justify="space-between",
+                     align=R("flex-end", "flex-start", "flex-start"), gap=R(40, 24, 20), boxed=1380,
+                     pad=R((60, 30, 40, 30), (52, 40, 32, 40), (40, 24, 28, 24)), bg=C_BG, cls="cl-intro")
+
+
+def cat_grid(cat):
+    items = [(n + 1, t, c) for n, (t, c, k) in enumerate(PROJECTS) if k == cat]
+    cards = [proj_card(n, t, c, cat) for n, t, c in items]
+    rows = (len(cards) + 2) // 3
+    grid = container(cards, grid=(R(3, 2, 1), rows), gap=R(24, 20, 18), inner=True, pad=0)
+    return container([grid], boxed=1380, bg=C_BG, gap=0,
+                     pad=R((0, 30, 70, 30), (0, 40, 56, 40), (0, 24, 44, 24)), cls="cl-pgrid")
+
+
+def page_servei(titol, tagline, cat, hero_img, eyebrow, h2):
+    return [hero(hero_img, None, tagline, "Demana pressupost", "/contacte/", minh=505, py=(120, 40),
+                 arrow=False, title=titol),
+            sec_intro(eyebrow, h2, INTRO_TXT), cat_grid(cat), metode(),
+            interiorisme("Dissenyem espais<br>per a persones reals")]
+
+
+def page_cuines():
+    return page_servei("Cuines", "Dissenys funcionals i elegants<br>per al teu dia a dia.", "cuina",
+                       "hero-inici.jpg", "LES NOSTRES", "Cuines")
+
+
+def page_banys():
+    return page_servei("Banys", "Espais moderns, còmodes<br>i plens de benestar.", "banys",
+                       "hero-projectes.jpg", "ELS NOSTRES", "Banys")
+
+
+def page_interiorisme():
+    return page_servei("Interiorisme", "Solucions a mida<br>per a cada estil de vida.", "interiorisme",
+                       "hero-inici.jpg", "EL NOSTRE", "Interiorisme")
+
+
+def page_parquets():
+    return page_servei("Parquets", "Paviments càlids<br>pensats per a la teva llar.", "parquets",
+                       "hero-projectes.jpg", "ELS NOSTRES", "Parquets")
+
+
+def page_nosaltres():
+    return [hero("hero-projectes.jpg", None, "Un estudi d'interiorisme<br>amb arrels a Figueres.",
+                 "Parlem del teu projecte", "/contacte/", minh=505, py=(120, 40), arrow=False, title="Nosaltres"),
+            equip(), props(), metode(), interiorisme()]
+
+
+def page_contacte():
+    info_items = [("+34 972 684 896", "fas fa-phone-alt", "tel:+34972684896"),
+                  ("+34 972 519 324", "fas fa-phone-alt", "tel:+34972519324"),
+                  ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com"),
+                  ("Figueres, Girona", "fas fa-map-marker-alt", None),
+                  ("Banyoles, Girona", "fas fa-map-marker-alt", None)]
+    info = container([heading("COMENCEM?", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                      heading("Parlem del<br>teu projecte", "h2", SERIF, R(56, 46, 38), 400, "#111111", 1.1),
+                      heading("Explica'ns la teva idea i t'assessorem sense compromís.", "p", SANS, 18, 300,
+                              "#4A443F", 1.5)] +
+                     [icon_list([it], C_BROWN, 16, "#2E2A27", SANS, 17, 300) for it in info_items],
+                     gap=16, inner=True, pad=0, width=R(40, 100), align="flex-start")
+    fm = form([("text", "Nom", 50, True, None), ("tel", "Telèfon", 50, True, None),
+               ("email", "Email", 100, True, None),
+               ("select", "Què t'interessa?", 100, False, ["Cuines", "Banys", "Interiorisme", "Reformes", "Parquets"]),
+               ("textarea", "Missatge", 100, False, None),
+               ("acceptance", "Accepto la política de privacitat", 100, True, None)],
+              "Demana pressupost", "info@creemllar.com")
+    form_box = container([fm], inner=True, width=R(60, 100), bg="#FFFFFF",
+                         pad=R((40, 40, 40, 40), (32, 28, 32, 28), (24, 20, 24, 20)))
+    body = container([info, form_box], dir=R("row", "column", "column"), gap=R(60, 40, 32), align="flex-start",
+                     boxed=1320, bg=C_BG, pad=R((80, 60, 90, 60), (64, 40, 64, 40), (48, 24, 48, 24)),
+                     cls="cl-contact")
+    return [hero("hero-projectes.jpg", None, "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
+                 "Truca'ns", "tel:+34972684896", minh=505, py=(120, 40), arrow=False, title="Contacte"),
+            body]
+
+
 # ================================================================ SORTIDA
 BASE_CSS = """
 *{box-sizing:border-box}
@@ -900,7 +1047,11 @@ def main():
     write_json("header", "Creem Llar - Header", "header", [hdr("Inici")])
 
     # --- pàgines (JSON) + previsualització (HTML = header + pàgina + footer)
-    pages = [("inici", "Inici", "Inici", page_inici), ("projectes", "Projectes", "Projectes", page_projectes)]
+    pages = [("inici", "Inici", "Inici", page_inici), ("projectes", "Projectes", "Projectes", page_projectes),
+             ("cuines", "Cuines", "Cuines", page_cuines), ("banys", "Banys", "Banys", page_banys),
+             ("interiorisme", "Interiorisme", "Interiorisme", page_interiorisme),
+             ("parquets", "Parquets", "Parquets", page_parquets), ("nosaltres", "Nosaltres", "Nosaltres", page_nosaltres),
+             ("contacte", "Contacte", "Contacte", page_contacte)]
     for slug, title, active, fn in pages:
         nodes = fn()
         write_json(slug, f"Creem Llar - {title}", "page", nodes, ps)
@@ -910,15 +1061,15 @@ def main():
         f.write("<!doctype html><meta charset=utf-8><title>Creem Llar</title>"
                 "<body style='font-family:sans-serif;padding:40px'><h1>Previsualitzacions</h1><ul>"
                 + "".join(f"<li><a href='{s}.html'>{t}</a></li>" for s, t, _, _ in pages) + "</ul>")
-    standalone()
+    standalone([p[0] for p in pages])
     print("OK ->", OUT)
 
 
-def standalone():
+def standalone(slugs):
     """HTML autocontingut (imatges en base64) per descarregar i obrir directament."""
     import base64, re
     os.makedirs(f"{OUT}/descarregar", exist_ok=True)
-    for slug in ("inici", "projectes"):
+    for slug in slugs:
         h = open(f"{OUT}/html/{slug}.html", encoding="utf-8").read()
 
         def rep(m):

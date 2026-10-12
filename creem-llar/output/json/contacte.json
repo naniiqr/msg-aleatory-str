@@ -1,0 +1,949 @@
+{
+  "version": "0.4",
+  "title": "Creem Llar - Contacte",
+  "type": "page",
+  "content": [
+    {
+      "id": "b690bb2",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "column": "22",
+          "row": "22",
+          "isLinked": true,
+          "unit": "px",
+          "size": 22
+        },
+        "flex_gap_tablet": {
+          "column": "20",
+          "row": "20",
+          "isLinked": true,
+          "unit": "px",
+          "size": 20
+        },
+        "flex_gap_mobile": {
+          "column": "18",
+          "row": "18",
+          "isLinked": true,
+          "unit": "px",
+          "size": 18
+        },
+        "flex_justify_content": "center",
+        "flex_align_items": "flex-start",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "60",
+          "bottom": "40",
+          "left": "133",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "110",
+          "right": "48",
+          "bottom": "40",
+          "left": "48",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "110",
+          "right": "24",
+          "bottom": "40",
+          "left": "24",
+          "isLinked": false
+        },
+        "height": "min-height",
+        "min_height": {
+          "unit": "px",
+          "size": 505,
+          "sizes": []
+        },
+        "min_height_tablet": {
+          "unit": "px",
+          "size": 520,
+          "sizes": []
+        },
+        "min_height_mobile": {
+          "unit": "px",
+          "size": 520,
+          "sizes": []
+        },
+        "background_background": "classic",
+        "background_image": {
+          "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/hero-projectes.jpg",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_position": "right center",
+        "background_repeat": "no-repeat",
+        "background_size": "cover",
+        "background_overlay_background": "gradient",
+        "background_overlay_color": "#1A120CCC",
+        "background_overlay_color_b": "#1A120C00",
+        "background_overlay_color_stop": {
+          "unit": "%",
+          "size": 0,
+          "sizes": []
+        },
+        "background_overlay_color_b_stop": {
+          "unit": "%",
+          "size": 62,
+          "sizes": []
+        },
+        "background_overlay_gradient_type": "linear",
+        "background_overlay_gradient_angle": {
+          "unit": "deg",
+          "size": 90,
+          "sizes": []
+        },
+        "background_overlay_opacity": {
+          "unit": "px",
+          "size": 1,
+          "sizes": []
+        },
+        "css_classes": "cl-hero"
+      },
+      "elements": [
+        {
+          "id": "4231455",
+          "elType": "widget",
+          "settings": {
+            "title": "Contacte",
+            "header_size": "h1",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Jost",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 74,
+              "sizes": []
+            },
+            "typography_font_size_tablet": {
+              "unit": "px",
+              "size": 60,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 44,
+              "sizes": []
+            },
+            "typography_font_weight": "300",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.05,
+              "sizes": []
+            }
+          },
+          "elements": [],
+          "widgetType": "heading"
+        },
+        {
+          "id": "036198a",
+          "elType": "widget",
+          "settings": {
+            "title": "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
+            "header_size": "p",
+            "title_color": "#FFFFFFF2",
+            "typography_typography": "custom",
+            "typography_font_family": "Jost",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 24,
+              "sizes": []
+            },
+            "typography_font_size_tablet": {
+              "unit": "px",
+              "size": 22,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 19,
+              "sizes": []
+            },
+            "typography_font_weight": "300",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.4,
+              "sizes": []
+            }
+          },
+          "elements": [],
+          "widgetType": "heading"
+        },
+        {
+          "id": "d572415",
+          "elType": "widget",
+          "settings": {
+            "text": "Truca'ns",
+            "link": {
+              "url": "tel:+34972684896",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "button_text_color": "#2B2118",
+            "background_color": "#E3C39C",
+            "text_padding": {
+              "unit": "px",
+              "top": "20",
+              "right": "34",
+              "bottom": "20",
+              "left": "34",
+              "isLinked": false
+            },
+            "border_radius": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "size": "sm",
+            "typography_typography": "custom",
+            "typography_font_family": "Jost",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1,
+              "sizes": []
+            },
+            "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.2,
+              "sizes": []
+            },
+            "button_background_hover_color": "#E3C39C",
+            "hover_color": "#2B2118",
+            "selected_icon": {
+              "value": "fas fa-long-arrow-alt-right",
+              "library": "fa-solid"
+            },
+            "icon_align": "right",
+            "icon_indent": {
+              "unit": "px",
+              "size": 10,
+              "sizes": []
+            }
+          },
+          "elements": [],
+          "widgetType": "button"
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "c4734c2",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1320,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_direction_mobile": "column",
+        "flex_gap": {
+          "column": "60",
+          "row": "60",
+          "isLinked": true,
+          "unit": "px",
+          "size": 60
+        },
+        "flex_gap_tablet": {
+          "column": "40",
+          "row": "40",
+          "isLinked": true,
+          "unit": "px",
+          "size": 40
+        },
+        "flex_gap_mobile": {
+          "column": "32",
+          "row": "32",
+          "isLinked": true,
+          "unit": "px",
+          "size": 32
+        },
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "flex-start",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "60",
+          "bottom": "90",
+          "left": "60",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "64",
+          "right": "40",
+          "bottom": "64",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "48",
+          "right": "24",
+          "bottom": "48",
+          "left": "24",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F8F5F0",
+        "css_classes": "cl-contact"
+      },
+      "elements": [
+        {
+          "id": "d060600",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_gap": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "flex-start",
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "width": {
+              "unit": "%",
+              "size": 40,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "3e2c91e",
+              "elType": "widget",
+              "settings": {
+                "title": "COMENCEM?",
+                "header_size": "p",
+                "title_color": "#5E5A57",
+                "typography_typography": "custom",
+                "typography_font_family": "Jost",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.2,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2.5,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "fa22f5c",
+              "elType": "widget",
+              "settings": {
+                "title": "Parlem del<br>teu projecte",
+                "header_size": "h2",
+                "title_color": "#111111",
+                "typography_typography": "custom",
+                "typography_font_family": "Playfair Display",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 46,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.1,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "24808a9",
+              "elType": "widget",
+              "settings": {
+                "title": "Explica'ns la teva idea i t'assessorem sense compromís.",
+                "header_size": "p",
+                "title_color": "#4A443F",
+                "typography_typography": "custom",
+                "typography_font_family": "Jost",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_font_weight": "300",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "cfdafb4",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "+34 972 684 896",
+                    "selected_icon": {
+                      "value": "fas fa-phone-alt",
+                      "library": "fa-solid"
+                    },
+                    "_id": "24d4fe2",
+                    "link": {
+                      "url": "tel:+34972684896",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "view": "traditional",
+                "icon_color": "#5B452D",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "text_color": "#2E2A27",
+                "text_indent": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "space_between": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Jost",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "300",
+                "icon_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            },
+            {
+              "id": "3cceab6",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "+34 972 519 324",
+                    "selected_icon": {
+                      "value": "fas fa-phone-alt",
+                      "library": "fa-solid"
+                    },
+                    "_id": "c5e012a",
+                    "link": {
+                      "url": "tel:+34972519324",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "view": "traditional",
+                "icon_color": "#5B452D",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "text_color": "#2E2A27",
+                "text_indent": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "space_between": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Jost",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "300",
+                "icon_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            },
+            {
+              "id": "acf132d",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "info@creemllar.com",
+                    "selected_icon": {
+                      "value": "far fa-envelope",
+                      "library": "fa-regular"
+                    },
+                    "_id": "ca5942c",
+                    "link": {
+                      "url": "mailto:info@creemllar.com",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "view": "traditional",
+                "icon_color": "#5B452D",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "text_color": "#2E2A27",
+                "text_indent": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "space_between": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Jost",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "300",
+                "icon_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            },
+            {
+              "id": "61b6c8d",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Figueres, Girona",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    },
+                    "_id": "2df64b0",
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "view": "traditional",
+                "icon_color": "#5B452D",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "text_color": "#2E2A27",
+                "text_indent": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "space_between": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Jost",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "300",
+                "icon_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            },
+            {
+              "id": "6c9f4a2",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Banyoles, Girona",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    },
+                    "_id": "03d5b4b",
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "view": "traditional",
+                "icon_color": "#5B452D",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "text_color": "#2E2A27",
+                "text_indent": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "space_between": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Jost",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "300",
+                "icon_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            }
+          ],
+          "isInner": true
+        },
+        {
+          "id": "f7698ac",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_gap": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px",
+              "size": 20
+            },
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "stretch",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "40",
+              "bottom": "40",
+              "left": "40",
+              "isLinked": true
+            },
+            "padding_tablet": {
+              "unit": "px",
+              "top": "32",
+              "right": "28",
+              "bottom": "32",
+              "left": "28",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "24",
+              "right": "20",
+              "bottom": "24",
+              "left": "20",
+              "isLinked": false
+            },
+            "width": {
+              "unit": "%",
+              "size": 60,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "background_background": "classic",
+            "background_color": "#FFFFFF"
+          },
+          "elements": [
+            {
+              "id": "73ed6be",
+              "elType": "widget",
+              "settings": {
+                "form_name": "Contacte Creem Llar",
+                "form_fields": [
+                  {
+                    "custom_id": "field_0",
+                    "field_label": "Nom",
+                    "placeholder": "Nom",
+                    "_id": "804e6dc",
+                    "width": "50",
+                    "width_mobile": "100",
+                    "required": "true"
+                  },
+                  {
+                    "custom_id": "field_1",
+                    "field_label": "Telèfon",
+                    "placeholder": "Telèfon",
+                    "_id": "3180eac",
+                    "width": "50",
+                    "width_mobile": "100",
+                    "field_type": "tel",
+                    "required": "true"
+                  },
+                  {
+                    "custom_id": "field_2",
+                    "field_label": "Email",
+                    "placeholder": "Email",
+                    "_id": "ada4bc9",
+                    "width": "100",
+                    "width_mobile": "100",
+                    "field_type": "email",
+                    "required": "true"
+                  },
+                  {
+                    "custom_id": "field_3",
+                    "field_label": "Què t'interessa?",
+                    "placeholder": "",
+                    "_id": "e8bc675",
+                    "width": "100",
+                    "width_mobile": "100",
+                    "field_type": "select",
+                    "field_options": "Cuines\nBanys\nInteriorisme\nReformes\nParquets"
+                  },
+                  {
+                    "custom_id": "field_4",
+                    "field_label": "Missatge",
+                    "placeholder": "Missatge",
+                    "_id": "a3254f2",
+                    "width": "100",
+                    "width_mobile": "100",
+                    "field_type": "textarea"
+                  },
+                  {
+                    "custom_id": "field_5",
+                    "field_label": "Accepto la política de privacitat",
+                    "placeholder": "",
+                    "_id": "5716d75",
+                    "width": "100",
+                    "width_mobile": "100",
+                    "field_type": "acceptance",
+                    "required": "true",
+                    "acceptance_text": "Accepto la política de privacitat"
+                  }
+                ],
+                "show_labels": "true",
+                "button_text": "Demana pressupost",
+                "button_size": "md",
+                "button_width": "100",
+                "submit_actions": [
+                  "email"
+                ],
+                "email_to": "info@creemllar.com",
+                "email_subject": "Nova consulta des de Contacte Creem Llar",
+                "email_content": "[all-fields]",
+                "email_from_name": "Creem Llar",
+                "success_message": "Gràcies! Hem rebut la teva consulta.",
+                "column_gap": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "row_gap": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "field_text_color": "#141413",
+                "field_background_color": "#FFFFFF",
+                "field_border_color": "#CFC8BF",
+                "field_border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "field_border_radius": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "label_color": "#4A443F",
+                "button_text_color": "#FFFFFF",
+                "button_background_color": "#141413",
+                "button_border_radius": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "button_text_padding": {
+                  "unit": "px",
+                  "top": "18",
+                  "right": "34",
+                  "bottom": "18",
+                  "left": "34",
+                  "isLinked": false
+                },
+                "button_background_hover_color": "#2B2926",
+                "button_hover_color": "#FFFFFF",
+                "field_typography_typography": "custom",
+                "field_typography_font_family": "Jost",
+                "field_typography_font_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "field_typography_font_weight": "300",
+                "field_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "label_typography_typography": "custom",
+                "label_typography_font_family": "Jost",
+                "label_typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "label_typography_font_weight": "400",
+                "label_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "button_typography_typography": "custom",
+                "button_typography_font_family": "Jost",
+                "button_typography_font_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "button_typography_font_weight": "400",
+                "button_typography_line_height": {
+                  "unit": "em",
+                  "size": 1,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "form"
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": {
+    "template": "elementor_header_footer",
+    "hide_title": "yes"
+  },
+  "metadata": []
+}
