@@ -1,40 +1,40 @@
 # Fitxa SEO – Caravaning Vilamacolum (Yoast SEO)
 
-Títol: 30–60 car. · Meta descripció: 120–156 car. · Tots dos comencen per la paraula clau.
+Títols amb només la inicial en majúscula.
 
 ## Inici
-- **Paraula clau:** Parking de caravanes a l'Alt Empordà
+- **Paraula clau:** Parking de caravanes a l'alt empordà
 - **Slug:** `/`
-- **Títol SEO** (50): Parking de caravanes a l'Alt Empordà | Vilamacolum
+- **Títol SEO** (50): Parking de caravanes a l'alt empordà | vilamacolum
 - **Meta descripció** (148): Parking de caravanes a l'Alt Empordà amb places cobertes i exteriors, vigilància, neteja i manteniment. Sol·licita informació a Vilamacolum, Girona.
 
 ## Parking
 - **Paraula clau:** Parking cobert per a caravanes
 - **Slug:** `/parking/`
-- **Títol SEO** (53): Parking cobert per a caravanes a Vilamacolum | Girona
+- **Títol SEO** (53): Parking cobert per a caravanes a vilamacolum | girona
 - **Meta descripció** (146): Parking cobert per a caravanes i places exteriors en un recinte tancat i vigilat de 12.000 m² a Vilamacolum. Demana la teva plaça sense compromís.
 
 ## Serveis
 - **Paraula clau:** Manteniment i neteja de caravanes
 - **Slug:** `/serveis/`
-- **Títol SEO** (56): Manteniment i neteja de caravanes a Vilamacolum | Girona
+- **Títol SEO** (56): Manteniment i neteja de caravanes a vilamacolum | girona
 - **Meta descripció** (150): Manteniment i neteja de caravanes, reparacions i posada a punt a Vilamacolum. Un servei complet i de confiança perquè la teva caravana estigui a punt.
 
 ## Instal·lacions
 - **Paraula clau:** Instal·lacions per a caravanes
 - **Slug:** `/installacions/`
-- **Títol SEO** (56): Instal·lacions per a caravanes | 12.000 m² a Vilamacolum
+- **Títol SEO** (56): Instal·lacions per a caravanes | 12.000 m² a vilamacolum
 - **Meta descripció** (152): Instal·lacions per a caravanes amb 12.000 m², places cobertes i exteriors, vigilància i accés controlat a Vilamacolum. Descobreix el recinte en imatges.
 
 ## Sobre nosaltres
-- **Paraula clau:** Caravaning Vilamacolum
+- **Paraula clau:** Caravaning vilamacolum
 - **Slug:** `/sobre-nosaltres/`
-- **Títol SEO** (52): Caravaning Vilamacolum | Parking i cura de caravanes
+- **Títol SEO** (52): Caravaning vilamacolum | parking i cura de caravanes
 - **Meta descripció** (151): Caravaning Vilamacolum és un parking i servei de cura de caravanes a Mas Font, a l'Alt Empordà. Coneix el nostre equip i la nostra manera de treballar.
 
 ## Contacte
-- **Paraula clau:** Contacte Caravaning Vilamacolum
+- **Paraula clau:** Contacte caravaning vilamacolum
 - **Slug:** `/contacte/`
-- **Títol SEO** (55): Contacte Caravaning Vilamacolum | Sol·licita informació
+- **Títol SEO** (55): Contacte caravaning vilamacolum | sol·licita informació
 - **Meta descripció** (148): Contacte Caravaning Vilamacolum: truca al 677 858 096 o escriu-nos a masfont@caravanvilamacolum.es per consultar disponibilitat de places i serveis.
 
