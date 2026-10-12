@@ -1,0 +1,588 @@
+{
+ "content": [
+  {
+   "id": "019d385e",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 30,
+     "column": "30",
+     "row": "30",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "padding": {
+     "unit": "px",
+     "top": 50,
+     "right": 24,
+     "bottom": 30,
+     "left": 24,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#061C49",
+    "padding_tablet": {
+     "unit": "px",
+     "top": 44,
+     "right": 24,
+     "bottom": 30,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 32,
+     "right": 16,
+     "bottom": 30,
+     "left": 16,
+     "isLinked": false
+    },
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap",
+    "justify_content_tablet": "center",
+    "justify_content_mobile": "center"
+   },
+   "elements": [
+    {
+     "id": "41ae36ec",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 36
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "42e7aaa8",
+       "settings": {
+        "title": "Caravaning Vilamacolum",
+        "header_size": "h3",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 22
+        },
+        "typography_font_weight": "700",
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "8fe0093b",
+       "settings": {
+        "editor": "<p>Parking i cura de caravanes a Vilamacolum, en ple Alt Empordà.</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "6ecbdd6e",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 28
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 47
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "d1f255a3",
+       "settings": {
+        "title": "Enllaços",
+        "header_size": "h4",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 16
+        },
+        "typography_font_weight": "700",
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "25b2822c",
+       "settings": {
+        "icon_list": [
+         {
+          "text": "Inici",
+          "link": {
+           "url": "/"
+          },
+          "_id": "7eacb532",
+          "selected_icon": {
+           "value": "fas fa-angle-right",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "Parking",
+          "link": {
+           "url": "/parking/"
+          },
+          "_id": "b6f0479a",
+          "selected_icon": {
+           "value": "fas fa-angle-right",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "Serveis",
+          "link": {
+           "url": "/serveis/"
+          },
+          "_id": "e0c64119",
+          "selected_icon": {
+           "value": "fas fa-angle-right",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "Instal·lacions",
+          "link": {
+           "url": "/installacions/"
+          },
+          "_id": "f85454e8",
+          "selected_icon": {
+           "value": "fas fa-angle-right",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "Sobre nosaltres",
+          "link": {
+           "url": "/sobre-nosaltres/"
+          },
+          "_id": "faa9afea",
+          "selected_icon": {
+           "value": "fas fa-angle-right",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "Contacte",
+          "link": {
+           "url": "/contacte/"
+          },
+          "_id": "3c7781a3",
+          "selected_icon": {
+           "value": "fas fa-angle-right",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "space_between": {
+         "unit": "px",
+         "size": 10
+        },
+        "icon_color": "#FFFFFF",
+        "icon_size": {
+         "unit": "px",
+         "size": 13
+        },
+        "text_color": "#FFFFFF",
+        "text_indent": {
+         "unit": "px",
+         "size": 10
+        },
+        "icon_typography_typography": "custom",
+        "icon_typography_font_family": "Montserrat",
+        "icon_typography_font_size": {
+         "unit": "px",
+         "size": 14
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon-list",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "248e8443",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 36
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 47
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "18997733",
+       "settings": {
+        "title": "Contacte",
+        "header_size": "h4",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 16
+        },
+        "typography_font_weight": "700",
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "heading",
+       "elType": "widget"
+      },
+      {
+       "id": "66368270",
+       "settings": {
+        "icon_list": [
+         {
+          "text": "Ctra. Figueres a la Bisbal, Km 28 · 17474 Vilamacolum · Girona",
+          "link": {
+           "url": "https://www.google.com/maps/search/?api=1&query=Caravaning+Vilamacolum"
+          },
+          "_id": "8d7d8ee0",
+          "selected_icon": {
+           "value": "fas fa-map-marker-alt",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "677 858 096",
+          "link": {
+           "url": "tel:+34677858096"
+          },
+          "_id": "75fc093c",
+          "selected_icon": {
+           "value": "fas fa-phone",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "text": "masfont@caravanvilamacolum.es",
+          "link": {
+           "url": "mailto:masfont@caravanvilamacolum.es"
+          },
+          "_id": "f74909ac",
+          "selected_icon": {
+           "value": "fas fa-envelope",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "space_between": {
+         "unit": "px",
+         "size": 10
+        },
+        "icon_color": "#FFFFFF",
+        "icon_size": {
+         "unit": "px",
+         "size": 13
+        },
+        "text_color": "#FFFFFF",
+        "text_indent": {
+         "unit": "px",
+         "size": 10
+        },
+        "icon_typography_typography": "custom",
+        "icon_typography_font_family": "Montserrat",
+        "icon_typography_font_size": {
+         "unit": "px",
+         "size": 14
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "icon-list",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "1651cf0d",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
+    "padding": {
+     "unit": "px",
+     "top": 18,
+     "right": 24,
+     "bottom": 18,
+     "left": 24,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#061C49",
+    "align_items": "center",
+    "border_border": "solid",
+    "border_width": {
+     "unit": "px",
+     "top": "1",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": false
+    },
+    "border_color": "rgba(255,255,255,0.18)",
+    "padding_tablet": {
+     "unit": "px",
+     "top": 18,
+     "right": 24,
+     "bottom": 18,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 18,
+     "right": 16,
+     "bottom": 18,
+     "left": 16,
+     "isLinked": false
+    },
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap"
+   },
+   "elements": [
+    {
+     "id": "ddb30680",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 60
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "a49e9411",
+       "settings": {
+        "editor": "<p>© 2026 Caravaning Vilamacolum. Tots els drets reservats.</p>",
+        "text_color": "#C5D0E6",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 13
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    },
+    {
+     "id": "fccb60fb",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 40
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "2421fcb1",
+       "settings": {
+        "editor": "<p><a href=\"/politica-de-privacitat/\" style=\"color:inherit\">Política de privacitat</a></p>",
+        "text_color": "#C5D0E6",
+        "align": "right",
+        "align_mobile": "left",
+        "typography_typography": "custom",
+        "typography_font_family": "Montserrat",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 13
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "text-editor",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  }
+ ],
+ "page_settings": [],
+ "version": "0.4",
+ "title": "Footer",
+ "type": "footer"
+}

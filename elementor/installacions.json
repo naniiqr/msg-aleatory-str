@@ -1,7 +1,7 @@
 {
  "content": [
   {
-   "id": "9dfcd5e5",
+   "id": "3fe94a00",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -16,22 +16,12 @@
      "unit": "px",
      "size": 1200
     },
-    "flex_wrap": "wrap",
-    "flex_direction_mobile": "column",
     "padding": {
      "unit": "px",
      "top": 70,
      "right": 24,
      "bottom": 70,
      "left": 24,
-     "isLinked": false
-    },
-    "padding_mobile": {
-     "unit": "px",
-     "top": 30,
-     "right": 16,
-     "bottom": 30,
-     "left": 16,
      "isLinked": false
     },
     "background_background": "classic",
@@ -48,17 +38,41 @@
     "background_overlay_color": "#061C49",
     "background_overlay_opacity": {
      "unit": "px",
-     "size": 0.5
+     "size": 0.5,
+     "sizes": []
     },
     "min_height": {
      "unit": "px",
      "size": 460
     },
-    "justify_content": "center"
+    "min_height_mobile": {
+     "unit": "px",
+     "size": 345
+    },
+    "align_items": "center",
+    "padding_tablet": {
+     "unit": "px",
+     "top": 44,
+     "right": 24,
+     "bottom": 44,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 32,
+     "right": 16,
+     "bottom": 32,
+     "left": 16,
+     "isLinked": false
+    },
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap"
    },
    "elements": [
     {
-     "id": "06eb61b8",
+     "id": "ad13a2a0",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -84,7 +98,7 @@
      },
      "elements": [
       {
-       "id": "b2eb7349",
+       "id": "9dfcd5e5",
        "settings": {
         "title": "INSTAL·LACIONS",
         "header_size": "h6",
@@ -107,7 +121,7 @@
        "elType": "widget"
       },
       {
-       "id": "8e98d81f",
+       "id": "950a4152",
        "settings": {
         "title": "12.000 m² pensats per a la teva caravana",
         "header_size": "h1",
@@ -119,13 +133,17 @@
          "size": 46
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 31
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
          "size": 37
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 30
         }
        },
        "elements": [],
@@ -134,7 +152,7 @@
        "elType": "widget"
       },
       {
-       "id": "a8c88a00",
+       "id": "158f3069",
        "settings": {
         "editor": "<p>Un recinte ampli, ben organitzat i vigilat, amb places cobertes i exteriors a Vilamacolum.</p>",
         "text_color": "#FFFFFF",
@@ -143,6 +161,10 @@
         "typography_font_size": {
          "unit": "px",
          "size": 16
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
         }
        },
        "elements": [],
@@ -151,7 +173,7 @@
        "elType": "widget"
       },
       {
-       "id": "eddea82a",
+       "id": "75887499",
        "settings": {
         "content_width": "full",
         "flex_direction": "row",
@@ -162,17 +184,17 @@
          "row": "14",
          "isLinked": true
         },
-        "flex_wrap": "wrap",
-        "flex_direction_mobile": "column"
+        "flex_wrap": "wrap"
        },
        "elements": [
         {
-         "id": "496e05e1",
+         "id": "06eb61b8",
          "settings": {
           "text": "SOL·LICITAR PLAÇA",
           "link": {
            "url": "/contacte/"
           },
+          "size": "md",
           "typography_typography": "custom",
           "typography_font_family": "Montserrat",
           "typography_font_weight": "600",
@@ -189,7 +211,25 @@
            "isLinked": true
           },
           "button_text_color": "#061C49",
-          "background_color": "#FFFFFF"
+          "background_color": "#FFFFFF",
+          "text_padding": {
+           "unit": "px",
+           "top": 14,
+           "right": 22,
+           "bottom": 14,
+           "left": 22,
+           "isLinked": false
+          },
+          "align_mobile": "stretch",
+          "selected_icon": {
+           "value": "fas fa-arrow-right",
+           "library": "fa-solid"
+          },
+          "icon_align": "row-reverse",
+          "icon_indent": {
+           "unit": "px",
+           "size": 8
+          }
          },
          "elements": [],
          "isInner": false,
@@ -209,7 +249,7 @@
    "elType": "container"
   },
   {
-   "id": "cd00692c",
+   "id": "310dcbbf",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -224,9 +264,17 @@
      "unit": "px",
      "size": 1200
     },
-    "flex_wrap": "wrap",
-    "flex_direction_mobile": "column",
     "padding": {
+     "unit": "px",
+     "top": 20,
+     "right": 24,
+     "bottom": 20,
+     "left": 24,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#FFFFFF",
+    "padding_tablet": {
      "unit": "px",
      "top": 20,
      "right": 24,
@@ -242,12 +290,15 @@
      "left": 16,
      "isLinked": false
     },
-    "background_background": "classic",
-    "background_color": "#FFFFFF"
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap",
+    "justify_content_tablet": "center",
+    "justify_content_mobile": "center"
    },
    "elements": [
     {
-     "id": "ad13a2a0",
+     "id": "32072254",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -262,15 +313,35 @@
        "unit": "%",
        "size": 25
       },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "justify_content": "center",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      },
       "width_tablet": {
        "unit": "%",
-       "size": 50
+       "size": 47
       },
       "width_mobile": {
        "unit": "%",
-       "size": 100
+       "size": 46
       },
-      "padding": {
+      "align_items": "center",
+      "padding_tablet": {
        "unit": "px",
        "top": 16,
        "right": 16,
@@ -285,21 +356,11 @@
        "bottom": 16,
        "left": 16,
        "isLinked": false
-      },
-      "background_background": "classic",
-      "background_color": "#F3F7FA",
-      "border_radius": {
-       "unit": "px",
-       "top": 8,
-       "right": 8,
-       "bottom": 8,
-       "left": 8,
-       "isLinked": true
       }
      },
      "elements": [
       {
-       "id": "950a4152",
+       "id": "5b8add2a",
        "settings": {
         "selected_icon": {
          "value": "fas fa-vector-square",
@@ -310,7 +371,7 @@
          "unit": "px",
          "size": 28
         },
-        "align": "left"
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -318,7 +379,7 @@
        "elType": "widget"
       },
       {
-       "id": "158f3069",
+       "id": "432aca3a",
        "settings": {
         "title": "12.000 m²",
         "header_size": "h4",
@@ -330,14 +391,19 @@
          "size": 14
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 20
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 22
-        }
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -345,7 +411,7 @@
        "elType": "widget"
       },
       {
-       "id": "75887499",
+       "id": "8d3bba74",
        "settings": {
         "editor": "<p>d'instal·lacions</p>",
         "text_color": "#526078",
@@ -354,7 +420,12 @@
         "typography_font_size": {
          "unit": "px",
          "size": 12
-        }
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -366,7 +437,7 @@
      "elType": "container"
     },
     {
-     "id": "8d3bba74",
+     "id": "f2fc9902",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -381,15 +452,35 @@
        "unit": "%",
        "size": 25
       },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "justify_content": "center",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      },
       "width_tablet": {
        "unit": "%",
-       "size": 50
+       "size": 47
       },
       "width_mobile": {
        "unit": "%",
-       "size": 100
+       "size": 46
       },
-      "padding": {
+      "align_items": "center",
+      "padding_tablet": {
        "unit": "px",
        "top": 16,
        "right": 16,
@@ -404,21 +495,11 @@
        "bottom": 16,
        "left": 16,
        "isLinked": false
-      },
-      "background_background": "classic",
-      "background_color": "#F3F7FA",
-      "border_radius": {
-       "unit": "px",
-       "top": 8,
-       "right": 8,
-       "bottom": 8,
-       "left": 8,
-       "isLinked": true
       }
      },
      "elements": [
       {
-       "id": "3fe94a00",
+       "id": "caf1a3df",
        "settings": {
         "selected_icon": {
          "value": "fas fa-home",
@@ -429,7 +510,7 @@
          "unit": "px",
          "size": 28
         },
-        "align": "left"
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -437,7 +518,7 @@
        "elType": "widget"
       },
       {
-       "id": "5b8add2a",
+       "id": "5737c6ec",
        "settings": {
         "title": "PLACES COBERTES",
         "header_size": "h4",
@@ -449,14 +530,19 @@
          "size": 14
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 20
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 22
-        }
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -464,7 +550,7 @@
        "elType": "widget"
       },
       {
-       "id": "432aca3a",
+       "id": "bc6dc48b",
        "settings": {
         "editor": "<p>i exteriors</p>",
         "text_color": "#526078",
@@ -473,7 +559,12 @@
         "typography_font_size": {
          "unit": "px",
          "size": 12
-        }
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -485,7 +576,7 @@
      "elType": "container"
     },
     {
-     "id": "bc6dc48b",
+     "id": "cd00692c",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -500,15 +591,35 @@
        "unit": "%",
        "size": 25
       },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "justify_content": "center",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      },
       "width_tablet": {
        "unit": "%",
-       "size": 50
+       "size": 47
       },
       "width_mobile": {
        "unit": "%",
-       "size": 100
+       "size": 46
       },
-      "padding": {
+      "align_items": "center",
+      "padding_tablet": {
        "unit": "px",
        "top": 16,
        "right": 16,
@@ -523,21 +634,11 @@
        "bottom": 16,
        "left": 16,
        "isLinked": false
-      },
-      "background_background": "classic",
-      "background_color": "#F3F7FA",
-      "border_radius": {
-       "unit": "px",
-       "top": 8,
-       "right": 8,
-       "bottom": 8,
-       "left": 8,
-       "isLinked": true
       }
      },
      "elements": [
       {
-       "id": "32072254",
+       "id": "89f0fd5c",
        "settings": {
         "selected_icon": {
          "value": "fas fa-shield-alt",
@@ -548,7 +649,7 @@
          "unit": "px",
          "size": 28
         },
-        "align": "left"
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -556,7 +657,7 @@
        "elType": "widget"
       },
       {
-       "id": "caf1a3df",
+       "id": "a666587a",
        "settings": {
         "title": "VIGILÀNCIA",
         "header_size": "h4",
@@ -568,14 +669,19 @@
          "size": 14
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 20
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 22
-        }
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -583,7 +689,7 @@
        "elType": "widget"
       },
       {
-       "id": "5737c6ec",
+       "id": "b83aac23",
        "settings": {
         "editor": "<p>24 hores</p>",
         "text_color": "#526078",
@@ -592,7 +698,12 @@
         "typography_font_size": {
          "unit": "px",
          "size": 12
-        }
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -604,7 +715,7 @@
      "elType": "container"
     },
     {
-     "id": "b83aac23",
+     "id": "c042f4db",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -619,15 +730,35 @@
        "unit": "%",
        "size": 25
       },
+      "padding": {
+       "unit": "px",
+       "top": 16,
+       "right": 16,
+       "bottom": 16,
+       "left": 16,
+       "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#F3F7FA",
+      "justify_content": "center",
+      "border_radius": {
+       "unit": "px",
+       "top": 8,
+       "right": 8,
+       "bottom": 8,
+       "left": 8,
+       "isLinked": true
+      },
       "width_tablet": {
        "unit": "%",
-       "size": 50
+       "size": 47
       },
       "width_mobile": {
        "unit": "%",
-       "size": 100
+       "size": 46
       },
-      "padding": {
+      "align_items": "center",
+      "padding_tablet": {
        "unit": "px",
        "top": 16,
        "right": 16,
@@ -642,21 +773,11 @@
        "bottom": 16,
        "left": 16,
        "isLinked": false
-      },
-      "background_background": "classic",
-      "background_color": "#F3F7FA",
-      "border_radius": {
-       "unit": "px",
-       "top": 8,
-       "right": 8,
-       "bottom": 8,
-       "left": 8,
-       "isLinked": true
       }
      },
      "elements": [
       {
-       "id": "f2fc9902",
+       "id": "6faa8040",
        "settings": {
         "selected_icon": {
          "value": "fas fa-video",
@@ -667,7 +788,7 @@
          "unit": "px",
          "size": 28
         },
-        "align": "left"
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -675,7 +796,7 @@
        "elType": "widget"
       },
       {
-       "id": "89f0fd5c",
+       "id": "fe73f687",
        "settings": {
         "title": "ACCÉS CONTROLAT",
         "header_size": "h4",
@@ -687,14 +808,19 @@
          "size": 14
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 20
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 22
-        }
+         "size": 20
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 18
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -702,7 +828,7 @@
        "elType": "widget"
       },
       {
-       "id": "a666587a",
+       "id": "6da37dd3",
        "settings": {
         "editor": "<p>i tancat perimetralment</p>",
         "text_color": "#526078",
@@ -711,7 +837,12 @@
         "typography_font_size": {
          "unit": "px",
          "size": 12
-        }
+        },
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.6
+        },
+        "align": "center"
        },
        "elements": [],
        "isInner": false,
@@ -727,7 +858,7 @@
    "elType": "container"
   },
   {
-   "id": "2f2b2656",
+   "id": "357a6fdf",
    "settings": {
     "content_width": "boxed",
     "flex_direction": "row",
@@ -742,30 +873,39 @@
      "unit": "px",
      "size": 1200
     },
-    "flex_wrap": "wrap",
-    "flex_direction_mobile": "column",
     "padding": {
      "unit": "px",
      "top": 48,
      "right": 24,
-     "bottom": 48,
+     "bottom": 0,
+     "left": 24,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#F3F7FA",
+    "padding_tablet": {
+     "unit": "px",
+     "top": 44,
+     "right": 24,
+     "bottom": 0,
      "left": 24,
      "isLinked": false
     },
     "padding_mobile": {
      "unit": "px",
-     "top": 30,
+     "top": 32,
      "right": 16,
-     "bottom": 30,
+     "bottom": 0,
      "left": 16,
      "isLinked": false
     },
-    "background_background": "classic",
-    "background_color": "#F3F7FA"
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap"
    },
    "elements": [
     {
-     "id": "6da37dd3",
+     "id": "6855456e",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -791,7 +931,7 @@
      },
      "elements": [
       {
-       "id": "6faa8040",
+       "id": "2f2b2656",
        "settings": {
         "title": "GALERIA",
         "header_size": "h6",
@@ -814,7 +954,7 @@
        "elType": "widget"
       },
       {
-       "id": "fe73f687",
+       "id": "f9b902fc",
        "settings": {
         "title": "Les nostres instal·lacions",
         "header_size": "h2",
@@ -826,78 +966,22 @@
          "size": 30
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 20
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
          "size": 24
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 19
         }
        },
        "elements": [],
        "isInner": false,
        "widgetType": "heading",
-       "elType": "widget"
-      }
-     ],
-     "isInner": true,
-     "elType": "container"
-    },
-    {
-     "id": "310dcbbf",
-     "settings": {
-      "content_width": "full",
-      "flex_direction": "column",
-      "flex_gap": {
-       "unit": "px",
-       "size": 16,
-       "column": "16",
-       "row": "16",
-       "isLinked": true
-      },
-      "width": {
-       "unit": "%",
-       "size": 100
-      },
-      "width_tablet": {
-       "unit": "%",
-       "size": 100
-      },
-      "width_mobile": {
-       "unit": "%",
-       "size": 100
-      }
-     },
-     "elements": [
-      {
-       "id": "c042f4db",
-       "settings": {
-        "wp_gallery": [
-         {
-          "id": 19,
-          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/places_cobertes.webp"
-         },
-         {
-          "id": 20,
-          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/zona_exterior.webp"
-         },
-         {
-          "id": 18,
-          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/vista_aerea.webp"
-         },
-         {
-          "id": 25,
-          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/vista_aerea_panoramica.webp"
-         }
-        ],
-        "gallery_columns": "3",
-        "gallery_link": "file",
-        "thumbnail_size": "large"
-       },
-       "elements": [],
-       "isInner": false,
-       "widgetType": "image-gallery",
        "elType": "widget"
       }
      ],
@@ -924,8 +1008,123 @@
      "unit": "px",
      "size": 1200
     },
-    "flex_wrap": "wrap",
-    "flex_direction_mobile": "column",
+    "padding": {
+     "unit": "px",
+     "top": 24,
+     "right": 24,
+     "bottom": 48,
+     "left": 24,
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#F3F7FA",
+    "padding_tablet": {
+     "unit": "px",
+     "top": 24,
+     "right": 24,
+     "bottom": 44,
+     "left": 24,
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": 24,
+     "right": 16,
+     "bottom": 32,
+     "left": 16,
+     "isLinked": false
+    },
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap"
+   },
+   "elements": [
+    {
+     "id": "04025959",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100
+      }
+     },
+     "elements": [
+      {
+       "id": "819f46e5",
+       "settings": {
+        "wp_gallery": [
+         {
+          "id": 19,
+          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/places_cobertes.webp"
+         },
+         {
+          "id": 20,
+          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/zona_exterior.webp"
+         },
+         {
+          "id": 18,
+          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/vista_aerea.webp"
+         },
+         {
+          "id": 25,
+          "url": "https://proveswebsfigueres.com/caravaningvilamacolum/wp-content/uploads/2026/10/vista_aerea_panoramica.webp"
+         }
+        ],
+        "gallery_columns": "3",
+        "gallery_columns_tablet": "2",
+        "gallery_columns_mobile": "1",
+        "gallery_link": "file",
+        "thumbnail_size": "large",
+        "gap": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "isInner": false,
+       "widgetType": "image-gallery",
+       "elType": "widget"
+      }
+     ],
+     "isInner": true,
+     "elType": "container"
+    }
+   ],
+   "isInner": false,
+   "elType": "container"
+  },
+  {
+   "id": "13f9896d",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1200
+    },
     "padding": {
      "unit": "px",
      "top": 50,
@@ -934,21 +1133,32 @@
      "left": 24,
      "isLinked": false
     },
+    "background_background": "classic",
+    "background_color": "#061C49",
+    "align_items": "center",
+    "padding_tablet": {
+     "unit": "px",
+     "top": 44,
+     "right": 24,
+     "bottom": 44,
+     "left": 24,
+     "isLinked": false
+    },
     "padding_mobile": {
      "unit": "px",
-     "top": 30,
+     "top": 32,
      "right": 16,
-     "bottom": 30,
+     "bottom": 32,
      "left": 16,
      "isLinked": false
     },
-    "background_background": "classic",
-    "background_color": "#061C49",
-    "justify_content": "space-between"
+    "flex_wrap": "nowrap",
+    "flex_wrap_tablet": "wrap",
+    "flex_wrap_mobile": "wrap"
    },
    "elements": [
     {
-     "id": "357a6fdf",
+     "id": "3ad7c2eb",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -974,7 +1184,7 @@
      },
      "elements": [
       {
-       "id": "f9b902fc",
+       "id": "3dd48ab3",
        "settings": {
         "title": "BUSQUES UNA PLAÇA PER A LA TEVA CARAVANA?",
         "header_size": "h6",
@@ -997,7 +1207,7 @@
        "elType": "widget"
       },
       {
-       "id": "6855456e",
+       "id": "58238e9a",
        "settings": {
         "title": "Sol·licita informació sense compromís",
         "header_size": "h2",
@@ -1009,13 +1219,17 @@
          "size": 32
         },
         "typography_font_weight": "700",
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 21
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.2
         },
         "typography_font_size_tablet": {
          "unit": "px",
          "size": 26
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 21
         }
        },
        "elements": [],
@@ -1028,7 +1242,7 @@
      "elType": "container"
     },
     {
-     "id": "04025959",
+     "id": "d81f9c1b",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
@@ -1043,6 +1257,9 @@
        "unit": "%",
        "size": 35
       },
+      "align_items": "flex-end",
+      "align_items_mobile": "flex-start",
+      "justify_content": "center",
       "width_tablet": {
        "unit": "%",
        "size": 100
@@ -1050,17 +1267,17 @@
       "width_mobile": {
        "unit": "%",
        "size": 100
-      },
-      "justify_content": "center"
+      }
      },
      "elements": [
       {
-       "id": "819f46e5",
+       "id": "b3967a0e",
        "settings": {
         "text": "CONTACTA ARA",
         "link": {
          "url": "/contacte/"
         },
+        "size": "md",
         "typography_typography": "custom",
         "typography_font_family": "Montserrat",
         "typography_font_weight": "600",
@@ -1077,7 +1294,25 @@
          "isLinked": true
         },
         "button_text_color": "#061C49",
-        "background_color": "#FFFFFF"
+        "background_color": "#FFFFFF",
+        "text_padding": {
+         "unit": "px",
+         "top": 14,
+         "right": 22,
+         "bottom": 14,
+         "left": 22,
+         "isLinked": false
+        },
+        "align_mobile": "stretch",
+        "selected_icon": {
+         "value": "fas fa-arrow-right",
+         "library": "fa-solid"
+        },
+        "icon_align": "row-reverse",
+        "icon_indent": {
+         "unit": "px",
+         "size": 8
+        }
        },
        "elements": [],
        "isInner": false,
