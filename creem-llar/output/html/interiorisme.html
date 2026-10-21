@@ -10,8 +10,8 @@ body{background:#F8F5F0;font-family:'Jost',sans-serif;-webkit-font-smoothing:ant
 img{max-width:100%;height:auto;vertical-align:middle;display:inline-block;border:0}
 a{text-decoration:none;color:inherit}
 .e-con{display:flex;flex-direction:column;position:relative;width:100%;min-width:0;--w:100%}
-.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0}
-.e-con.e-child{width:var(--w);flex:0 1 auto}
+.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0;flex-grow:1}
+.e-con.e-child{width:var(--w);flex:0 1 auto;max-width:100%}
 .e-con.e-parent{width:100%}
 .e-con::before{content:'';position:absolute;inset:0;pointer-events:none}
 .e-con:not(.has-ov)::before{display:none}
@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 .elementor-nav-menu{list-style:none;margin:0;padding:0;display:flex;align-items:center}
 .elementor-nav-menu a{display:block;border:1px solid transparent;white-space:nowrap}
 .elementor-nav-menu .active a,.elementor-nav-menu a:hover{border-color:#fff}
-.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;min-width:44px;min-height:44px}
 .elementor-divider{display:block}
 .cl-header .elementor-widget-nav-menu{flex:0 0 auto}
 @media (max-width:1024px){
@@ -39,11 +39,12 @@ a{text-decoration:none;color:inherit}
   .elementor-widget-nav-menu.open .elementor-nav-menu{flex-direction:column;align-items:stretch;gap:4px!important}
 }
 
-.ea29a62e{flex-direction:row}
-.ea29a62e{gap:24px}
-.ea29a62e{justify-content:space-between}
-.ea29a62e{align-items:center}
-.ea29a62e{padding:16px 19px 16px 96px}
+.ea29a62e>.e-con-inner{max-width:1312px}
+.ea29a62e>.e-con-inner{flex-direction:row}
+.ea29a62e>.e-con-inner{gap:24px}
+.ea29a62e>.e-con-inner{justify-content:space-between}
+.ea29a62e>.e-con-inner{align-items:center}
+.ea29a62e{padding:16px 64px 16px 64px}
 .ea29a62e{position:absolute}
 .ea29a62e{left:0px}
 .ea29a62e{top:0px}
@@ -64,17 +65,18 @@ a{text-decoration:none;color:inherit}
 .e20d7c5b .elementor-button{font-weight:400}
 .e20d7c5b .elementor-button{color:#fff}
 .e20d7c5b .elementor-button{background-color:#5B452D}
-.e20d7c5b .elementor-button{padding:15px 30px 15px 30px}
 .e20d7c5b .elementor-button{border-radius:2px 2px 2px 2px}
+.e20d7c5b .elementor-button{padding:16px 32px 16px 32px}
 .e20d7c5b .elementor-button{border:solid #8C7358}
 .e20d7c5b .elementor-button{border-width:1px 1px 1px 1px}
 .e20d7c5b .elementor-button:hover{background-color:#5B452D}
 .e20d7c5b .elementor-button:hover{color:#fff}
-.e00df23b{flex-direction:column}
-.e00df23b{gap:22px}
-.e00df23b{justify-content:center}
-.e00df23b{align-items:flex-start}
-.e00df23b{padding:120px 60px 40px 133px}
+.e00df23b>.e-con-inner{max-width:1312px}
+.e00df23b>.e-con-inner{flex-direction:column}
+.e00df23b>.e-con-inner{gap:24px}
+.e00df23b>.e-con-inner{justify-content:center}
+.e00df23b>.e-con-inner{align-items:flex-start}
+.e00df23b{padding:112px 64px 48px 64px}
 .e00df23b{min-height:505px}
 .e00df23b{background-image:url(../../assets/hero-inici.jpg)}
 .e00df23b{background-position:right center}
@@ -98,16 +100,16 @@ a{text-decoration:none;color:inherit}
 .e351930b .elementor-button{font-weight:500}
 .e351930b .elementor-button{color:#2B2118}
 .e351930b .elementor-button{background-color:#E3C39C}
-.e351930b .elementor-button{padding:20px 34px 20px 34px}
 .e351930b .elementor-button{border-radius:1px 1px 1px 1px}
+.e351930b .elementor-button{padding:20px 32px 20px 32px}
 .e351930b .elementor-button:hover{background-color:#E3C39C}
 .e351930b .elementor-button:hover{color:#2B2118}
-.e0f17bc1>.e-con-inner{max-width:1380px}
+.e0f17bc1>.e-con-inner{max-width:1312px}
 .e0f17bc1>.e-con-inner{flex-direction:row}
 .e0f17bc1>.e-con-inner{gap:40px}
 .e0f17bc1>.e-con-inner{justify-content:space-between}
 .e0f17bc1>.e-con-inner{align-items:flex-end}
-.e0f17bc1{padding:60px 30px 40px 30px}
+.e0f17bc1{padding:80px 64px 48px 64px}
 .e0f17bc1{background-color:#F8F5F0}
 .ea3bef6a{flex-direction:column}
 .ea3bef6a{gap:8px}
@@ -127,7 +129,7 @@ a{text-decoration:none;color:inherit}
 .efb677c9 .elementor-heading-title{font-weight:400}
 .efb677c9 .elementor-heading-title{color:#111111}
 .ec6552ff{flex-direction:column}
-.ec6552ff{gap:20px}
+.ec6552ff{gap:24px}
 .ec6552ff{justify-content:flex-start}
 .ec6552ff{align-items:flex-start}
 .ec6552ff{padding:0px 0px 0px 0px}
@@ -137,12 +139,12 @@ a{text-decoration:none;color:inherit}
 .e78a2bbb .elementor-heading-title{font-family:'Jost',sans-serif}
 .e78a2bbb .elementor-heading-title{font-weight:300}
 .e78a2bbb .elementor-heading-title{color:#4A443F}
-.ea20ab9d>.e-con-inner{max-width:1380px}
+.ea20ab9d>.e-con-inner{max-width:1312px}
 .ea20ab9d>.e-con-inner{flex-direction:column}
 .ea20ab9d>.e-con-inner{gap:0px}
 .ea20ab9d>.e-con-inner{justify-content:flex-start}
 .ea20ab9d>.e-con-inner{align-items:stretch}
-.ea20ab9d{padding:0px 30px 70px 30px}
+.ea20ab9d{padding:0px 64px 80px 64px}
 .ea20ab9d{background-color:#F8F5F0}
 .e8f5c37d{display:grid}
 .e8f5c37d{grid-template-columns:repeat(3,1fr)}
@@ -151,10 +153,10 @@ a{text-decoration:none;color:inherit}
 .e8f5c37d{align-items:stretch}
 .e8f5c37d{padding:0px 0px 0px 0px}
 .ea63f618{flex-direction:column}
-.ea63f618{gap:6px}
+.ea63f618{gap:8px}
 .ea63f618{justify-content:flex-end}
 .ea63f618{align-items:flex-start}
-.ea63f618{padding:20px 22px 18px 22px}
+.ea63f618{padding:24px 24px 24px 24px}
 .ea63f618{min-height:240px}
 .ea63f618{background-image:url(../../assets/proj-10.jpg)}
 .ea63f618{background-position:center center}
@@ -175,10 +177,10 @@ a{text-decoration:none;color:inherit}
 .e830b135 .elementor-icon-list-icon{font-size:14px}
 .e830b135 .elementor-icon-list-text{padding-left:8px}
 .e22f283e{flex-direction:column}
-.e22f283e{gap:6px}
+.e22f283e{gap:8px}
 .e22f283e{justify-content:flex-end}
 .e22f283e{align-items:flex-start}
-.e22f283e{padding:20px 22px 18px 22px}
+.e22f283e{padding:24px 24px 24px 24px}
 .e22f283e{min-height:240px}
 .e22f283e{background-image:url(../../assets/proj-11.jpg)}
 .e22f283e{background-position:center center}
@@ -199,10 +201,10 @@ a{text-decoration:none;color:inherit}
 .e935b053 .elementor-icon-list-icon{font-size:14px}
 .e935b053 .elementor-icon-list-text{padding-left:8px}
 .eef1d05f{flex-direction:column}
-.eef1d05f{gap:6px}
+.eef1d05f{gap:8px}
 .eef1d05f{justify-content:flex-end}
 .eef1d05f{align-items:flex-start}
-.eef1d05f{padding:20px 22px 18px 22px}
+.eef1d05f{padding:24px 24px 24px 24px}
 .eef1d05f{min-height:240px}
 .eef1d05f{background-image:url(../../assets/proj-12.jpg)}
 .eef1d05f{background-position:center center}
@@ -222,20 +224,20 @@ a{text-decoration:none;color:inherit}
 .efc12a11 .elementor-icon-list-icon{color:#E3B988}
 .efc12a11 .elementor-icon-list-icon{font-size:14px}
 .efc12a11 .elementor-icon-list-text{padding-left:8px}
-.e925615b>.e-con-inner{max-width:1310px}
+.e925615b>.e-con-inner{max-width:1312px}
 .e925615b>.e-con-inner{flex-direction:column}
 .e925615b>.e-con-inner{gap:0px}
 .e925615b>.e-con-inner{justify-content:flex-start}
 .e925615b>.e-con-inner{align-items:stretch}
-.e925615b{padding:44px 65px 44px 65px}
+.e925615b{padding:48px 64px 48px 64px}
 .e925615b{background-color:#F1ECE6}
 .e02f0aba{flex-direction:row}
-.e02f0aba{gap:44px}
+.e02f0aba{gap:48px}
 .e02f0aba{justify-content:flex-start}
 .e02f0aba{align-items:center}
 .e02f0aba{padding:0px 0px 0px 0px}
 .e8f71d04{flex-direction:column}
-.e8f71d04{gap:14px}
+.e8f71d04{gap:16px}
 .e8f71d04{justify-content:flex-start}
 .e8f71d04{align-items:stretch}
 .e8f71d04{padding:0px 0px 0px 0px}
@@ -254,19 +256,19 @@ a{text-decoration:none;color:inherit}
 .ef807e7e{display:grid}
 .ef807e7e{grid-template-columns:repeat(3,1fr)}
 .ef807e7e{grid-template-rows:repeat(1,1fr)}
-.ef807e7e{gap:34px}
+.ef807e7e{gap:32px}
 .ef807e7e{align-items:stretch}
-.ef807e7e{padding:0px 0px 0px 44px}
+.ef807e7e{padding:0px 0px 0px 48px}
 .ef807e7e{--w:70%}
 .ef807e7e{border-style:solid;border-color:#D9D2C9}
 .ef807e7e{border-width:0px 0px 0px 1px}
 .ef816a5d{flex-direction:column}
-.ef816a5d{gap:10px}
+.ef816a5d{gap:8px}
 .ef816a5d{justify-content:flex-start}
 .ef816a5d{align-items:stretch}
 .ef816a5d{padding:0px 0px 0px 0px}
 .ea2d3151{flex-direction:row}
-.ea2d3151{gap:14px}
+.ea2d3151{gap:16px}
 .ea2d3151{justify-content:flex-start}
 .ea2d3151{align-items:center}
 .ea2d3151{padding:0px 0px 0px 0px}
@@ -294,12 +296,12 @@ a{text-decoration:none;color:inherit}
 .ea9d0901 .elementor-heading-title{font-weight:300}
 .ea9d0901 .elementor-heading-title{color:#5E5A57}
 .e72fbd36{flex-direction:column}
-.e72fbd36{gap:10px}
+.e72fbd36{gap:8px}
 .e72fbd36{justify-content:flex-start}
 .e72fbd36{align-items:stretch}
 .e72fbd36{padding:0px 0px 0px 0px}
 .e5c26755{flex-direction:row}
-.e5c26755{gap:14px}
+.e5c26755{gap:16px}
 .e5c26755{justify-content:flex-start}
 .e5c26755{align-items:center}
 .e5c26755{padding:0px 0px 0px 0px}
@@ -327,12 +329,12 @@ a{text-decoration:none;color:inherit}
 .e43e5a86 .elementor-heading-title{font-weight:300}
 .e43e5a86 .elementor-heading-title{color:#5E5A57}
 .e7379c75{flex-direction:column}
-.e7379c75{gap:10px}
+.e7379c75{gap:8px}
 .e7379c75{justify-content:flex-start}
 .e7379c75{align-items:stretch}
 .e7379c75{padding:0px 0px 0px 0px}
 .e5a3147d{flex-direction:row}
-.e5a3147d{gap:14px}
+.e5a3147d{gap:16px}
 .e5a3147d{justify-content:flex-start}
 .e5a3147d{align-items:center}
 .e5a3147d{padding:0px 0px 0px 0px}
@@ -365,7 +367,7 @@ a{text-decoration:none;color:inherit}
 .e0d545d3{align-items:stretch}
 .e0d545d3{padding:0px 0px 0px 0px}
 .e5d870b4{flex-direction:column}
-.e5d870b4{gap:20px}
+.e5d870b4{gap:24px}
 .e5d870b4{justify-content:flex-start}
 .e5d870b4{align-items:stretch}
 .e5d870b4{padding:0px 0px 0px 0px}
@@ -376,14 +378,14 @@ a{text-decoration:none;color:inherit}
 .e5d870b4{background-repeat:no-repeat}
 .e5d870b4{background-size:cover}
 .e0b40961{flex-direction:row}
-.e0b40961{gap:30px}
+.e0b40961{gap:32px}
 .e0b40961{justify-content:center}
 .e0b40961{align-items:center}
-.e0b40961{padding:60px 60px 60px 70px}
+.e0b40961{padding:64px 72px 64px 72px}
 .e0b40961{--w:54.5%}
 .e0b40961{background-color:#F0E9E3}
 .e5e7c8da{flex-direction:column}
-.e5e7c8da{gap:18px}
+.e5e7c8da{gap:16px}
 .e5e7c8da{justify-content:flex-start}
 .e5e7c8da{align-items:flex-start}
 .e5e7c8da{padding:0px 0px 0px 0px}
@@ -411,12 +413,12 @@ a{text-decoration:none;color:inherit}
 .ef91ee37 .elementor-button{font-weight:400}
 .ef91ee37 .elementor-button{color:#fff}
 .ef91ee37 .elementor-button{background-color:#141413}
-.ef91ee37 .elementor-button{padding:18px 34px 18px 34px}
 .ef91ee37 .elementor-button{border-radius:1px 1px 1px 1px}
+.ef91ee37 .elementor-button{padding:20px 36px 20px 36px}
 .ef91ee37 .elementor-button:hover{background-color:#141413}
 .ef91ee37 .elementor-button:hover{color:#fff}
 .e98edc6e{flex-direction:column}
-.e98edc6e{gap:10px}
+.e98edc6e{gap:8px}
 .e98edc6e{justify-content:flex-start}
 .e98edc6e{align-items:flex-start}
 .e98edc6e{padding:0px 0px 0px 0px}
@@ -435,19 +437,19 @@ a{text-decoration:none;color:inherit}
 .e8cde18d{align-items:stretch}
 .e8cde18d{padding:0px 0px 0px 0px}
 .e8cde18d{background-image:linear-gradient(125deg,#4B3F36 0%,#2A2420 100%)}
-.ef1db84f>.e-con-inner{max-width:1320px}
+.ef1db84f>.e-con-inner{max-width:1312px}
 .ef1db84f>.e-con-inner{flex-direction:column}
 .ef1db84f>.e-con-inner{gap:40px}
 .ef1db84f>.e-con-inner{justify-content:flex-start}
 .ef1db84f>.e-con-inner{align-items:stretch}
-.ef1db84f{padding:70px 60px 40px 60px}
+.ef1db84f{padding:80px 64px 48px 64px}
 .ee70425f{flex-direction:row}
-.ee70425f{gap:60px}
+.ee70425f{gap:64px}
 .ee70425f{justify-content:space-between}
 .ee70425f{align-items:center}
 .ee70425f{padding:0px 0px 0px 0px}
 .e3954f85{flex-direction:column}
-.e3954f85{gap:12px}
+.e3954f85{gap:16px}
 .e3954f85{justify-content:flex-start}
 .e3954f85{align-items:stretch}
 .e3954f85{padding:0px 0px 0px 0px}
@@ -469,7 +471,7 @@ a{text-decoration:none;color:inherit}
 .e8ea330e .elementor-heading-title{font-weight:300}
 .e8ea330e .elementor-heading-title{color:#FFFFFFE6}
 .e3a61edd{flex-direction:column}
-.e3a61edd{gap:28px}
+.e3a61edd{gap:32px}
 .e3a61edd{justify-content:flex-start}
 .e3a61edd{align-items:flex-start}
 .e3a61edd{padding:0px 0px 0px 0px}
@@ -481,14 +483,14 @@ a{text-decoration:none;color:inherit}
 .e8315dbe .elementor-button{font-weight:400}
 .e8315dbe .elementor-button{color:#141413}
 .e8315dbe .elementor-button{background-color:#F7F4F0}
-.e8315dbe .elementor-button{padding:16px 34px 16px 34px}
 .e8315dbe .elementor-button{border-radius:2px 2px 2px 2px}
+.e8315dbe .elementor-button{padding:16px 36px 16px 36px}
 .e8315dbe .elementor-button:hover{background-color:#F7F4F0}
 .e8315dbe .elementor-button:hover{color:#141413}
 .e1aba2f0{display:grid}
 .e1aba2f0{grid-template-columns:repeat(2,1fr)}
 .e1aba2f0{grid-template-rows:repeat(3,1fr)}
-.e1aba2f0{gap:14px}
+.e1aba2f0{gap:16px}
 .e1aba2f0{align-items:stretch}
 .e1aba2f0{padding:0px 0px 0px 0px}
 .ea1cfea9 .elementor-icon-list-text{font-size:15px}
@@ -557,7 +559,7 @@ a{text-decoration:none;color:inherit}
 .e17747e3 .elementor-heading-title{font-weight:300}
 .e17747e3 .elementor-heading-title{color:#FFFFFFB3}
 .eb9f7fe3{flex-direction:row}
-.eb9f7fe3{gap:18px}
+.eb9f7fe3{gap:16px}
 .eb9f7fe3{justify-content:flex-end}
 .eb9f7fe3{align-items:center}
 .eb9f7fe3{padding:0px 0px 0px 0px}
@@ -590,35 +592,35 @@ a{text-decoration:none;color:inherit}
 .ea751198{bottom:24px}
 .ea751198{z-index:999}
 @media (max-width:1024px){
-.ea29a62e{padding:16px 24px 16px 24px}
-.e00df23b{gap:20px}
-.e00df23b{padding:110px 48px 40px 48px}
+.ea29a62e{padding:16px 40px 16px 40px}
+.e00df23b>.e-con-inner{gap:24px}
+.e00df23b{padding:112px 40px 48px 40px}
 .e00df23b{min-height:520px}
 .e9f734e5 .elementor-heading-title{font-size:60px}
 .e8d12eb0 .elementor-heading-title{font-size:22px}
 .e0f17bc1>.e-con-inner{flex-direction:column}
 .e0f17bc1>.e-con-inner{gap:24px}
 .e0f17bc1>.e-con-inner{align-items:flex-start}
-.e0f17bc1{padding:52px 40px 32px 40px}
+.e0f17bc1{padding:64px 40px 40px 40px}
 .ea3bef6a{--w:100%}
 .efb677c9 .elementor-heading-title{font-size:46px}
 .ec6552ff{--w:100%}
-.ea20ab9d{padding:0px 40px 56px 40px}
+.ea20ab9d{padding:0px 40px 64px 40px}
 .e8f5c37d{grid-template-columns:repeat(2,1fr)}
-.e8f5c37d{gap:20px}
-.ea63f618{padding:20px 22px 18px 22px}
+.e8f5c37d{gap:24px}
+.ea63f618{padding:24px 24px 24px 24px}
 .ea63f618{min-height:230px}
-.e22f283e{padding:20px 22px 18px 22px}
+.e22f283e{padding:24px 24px 24px 24px}
 .e22f283e{min-height:230px}
-.eef1d05f{padding:20px 22px 18px 22px}
+.eef1d05f{padding:24px 24px 24px 24px}
 .eef1d05f{min-height:230px}
-.e925615b{padding:44px 40px 44px 40px}
+.e925615b{padding:40px 40px 40px 40px}
 .e02f0aba{flex-direction:column}
 .e02f0aba{gap:32px}
 .e8f71d04{--w:100%}
 .e9758776 .elementor-heading-title{font-size:36px}
 .ef807e7e{grid-template-columns:repeat(1,1fr)}
-.ef807e7e{gap:28px}
+.ef807e7e{gap:32px}
 .ef807e7e{padding:0px 0px 0px 0px}
 .ef807e7e{--w:100%}
 .ef807e7e{border-width:0px 0px 0px 0px}
@@ -626,55 +628,57 @@ a{text-decoration:none;color:inherit}
 .e5d870b4{min-height:300px}
 .e5d870b4{--w:100%}
 .e0b40961{flex-direction:column}
-.e0b40961{gap:28px}
+.e0b40961{gap:32px}
 .e0b40961{align-items:flex-start}
 .e0b40961{padding:48px 40px 48px 40px}
 .e0b40961{--w:100%}
 .e5e7c8da{--w:100%}
 .e8cee669 .elementor-heading-title{font-size:40px}
 .e98edc6e{--w:100%}
-.ef1db84f{padding:60px 40px 32px 40px}
+.ef1db84f{padding:64px 40px 40px 40px}
 .ee70425f{flex-direction:column}
-.ee70425f{gap:36px}
+.ee70425f{gap:40px}
 .e3954f85{--w:100%}
 .ef03e3c8 .elementor-heading-title{font-size:40px}
 .e3a61edd{align-items:flex-start}
 .e3a61edd{--w:100%}
 .e1aba2f0{grid-template-columns:repeat(2,1fr)}
-.e1aba2f0{gap:14px}
+.e1aba2f0{gap:16px}
 .eb1a5646{flex-direction:column}
-.eb1a5646{gap:14px}
+.eb1a5646{gap:16px}
 .eb1a5646{align-items:flex-start}
 .eb9f7fe3{--w:100%}
 }
 @media (max-width:767px){
-.ea29a62e{padding:14px 16px 14px 16px}
+.ea29a62e{padding:16px 24px 16px 24px}
+.e20d7c5b .elementor-button{padding:16px 32px 16px 32px}
 .e20d7c5b{display:none!important}
-.e00df23b{gap:18px}
-.e00df23b{padding:110px 24px 40px 24px}
+.e00df23b>.e-con-inner{gap:16px}
+.e00df23b{padding:112px 24px 48px 24px}
 .e00df23b{min-height:520px}
 .e9f734e5 .elementor-heading-title{font-size:44px}
 .e8d12eb0 .elementor-heading-title{font-size:19px}
+.e351930b .elementor-button{padding:20px 32px 20px 32px}
 .e0f17bc1>.e-con-inner{flex-direction:column}
-.e0f17bc1>.e-con-inner{gap:20px}
+.e0f17bc1>.e-con-inner{gap:24px}
 .e0f17bc1>.e-con-inner{align-items:flex-start}
-.e0f17bc1{padding:40px 24px 28px 24px}
+.e0f17bc1{padding:48px 24px 32px 24px}
 .efb677c9 .elementor-heading-title{font-size:38px}
-.ea20ab9d{padding:0px 24px 44px 24px}
+.ea20ab9d{padding:0px 24px 48px 24px}
 .e8f5c37d{grid-template-columns:repeat(1,1fr)}
-.e8f5c37d{gap:18px}
-.ea63f618{padding:20px 18px 16px 18px}
+.e8f5c37d{gap:16px}
+.ea63f618{padding:24px 24px 24px 24px}
 .ea63f618{min-height:220px}
-.e22f283e{padding:20px 18px 16px 18px}
+.e22f283e{padding:24px 24px 24px 24px}
 .e22f283e{min-height:220px}
-.eef1d05f{padding:20px 18px 16px 18px}
+.eef1d05f{padding:24px 24px 24px 24px}
 .eef1d05f{min-height:220px}
-.e925615b{padding:36px 24px 36px 24px}
+.e925615b{padding:32px 24px 32px 24px}
 .e02f0aba{flex-direction:column}
-.e02f0aba{gap:28px}
+.e02f0aba{gap:32px}
 .e9758776 .elementor-heading-title{font-size:32px}
 .ef807e7e{grid-template-columns:repeat(1,1fr)}
-.ef807e7e{gap:28px}
+.ef807e7e{gap:32px}
 .ef807e7e{padding:0px 0px 0px 0px}
 .ef807e7e{border-width:0px 0px 0px 0px}
 .e0d545d3{flex-direction:column}
@@ -683,16 +687,18 @@ a{text-decoration:none;color:inherit}
 .e0b40961{align-items:flex-start}
 .e0b40961{padding:40px 24px 40px 24px}
 .e8cee669 .elementor-heading-title{font-size:34px}
-.ef1db84f{padding:48px 24px 28px 24px}
+.ef91ee37 .elementor-button{padding:20px 36px 20px 36px}
+.ef1db84f{padding:48px 24px 32px 24px}
 .ee70425f{flex-direction:column}
 .ee70425f{gap:32px}
 .ef03e3c8 .elementor-heading-title{font-size:34px}
 .e3a61edd{align-items:flex-start}
+.e8315dbe .elementor-button{padding:16px 36px 16px 36px}
 .e1aba2f0{grid-template-columns:repeat(1,1fr)}
-.e1aba2f0{gap:10px}
+.e1aba2f0{gap:8px}
 .eb1a5646{flex-direction:column}
-.eb1a5646{gap:14px}
+.eb1a5646{gap:16px}
 .eb1a5646{align-items:flex-start}
 }</style></head><body>
-<div class="e-con ea29a62e e-parent  cl-header"><div class="elementor-element ea31574f elementor-widget elementor-widget-image "><div class="elementor-widget-container"><img src="../../assets/logo-creemllar.jpg" alt="Creem Llar - espais per viure"></div></div><div class="elementor-element e920dff0 elementor-widget elementor-widget-nav-menu"><div class="elementor-widget-container"><nav class="elementor-nav-menu--main"><ul class="elementor-nav-menu"><li class="menu-item"><a class="elementor-item" href="/creemllar/">Inici</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/projectes/">Projectes</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/cuines/">Cuines</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/banys/">Banys</a></li><li class="menu-item active"><a class="elementor-item active" href="/creemllar/interiorisme/">Interiorisme</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/parquets/">Parquets</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/nosaltres/">Nosaltres</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/contacte/">Contacte</a></li></ul></nav><button class="elementor-menu-toggle" aria-label="Menú" onclick="this.parentNode.classList.toggle('open')"><i class="fas fa-bars"></i></button></div></div><div class="elementor-element e20d7c5b elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span></span></a></div></div></div></div><div class="e-con e00df23b e-parent has-ov cl-hero"><div class="elementor-element e9f734e5 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h1 class="elementor-heading-title elementor-size-default">Interiorisme</h1></div></div><div class="elementor-element e8d12eb0 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Solucions a mida<br>per a cada estil de vida.</p></div></div><div class="elementor-element e351930b elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div><div class="e-con e0f17bc1 e-parent  cl-intro"><div class="e-con-inner"><div class="e-con ea3bef6a e-child  "><div class="elementor-element ea7632a6 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">EL NOSTRE</p></div></div><div class="elementor-element efb677c9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Interiorisme</h2></div></div></div><div class="e-con ec6552ff e-child  "><div class="elementor-element e78a2bbb elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.</p></div></div></div></div></div><div class="e-con ea20ab9d e-parent  cl-pgrid"><div class="e-con-inner"><div class="e-con e8f5c37d e-child  "><div class="e-con ea63f618 e-child has-ov cl-card cat-interiorisme"><div class="elementor-element ea25eaa7 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Interiorisme integral</h3></div></div><div class="elementor-element e830b135 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">Fontcoberta</span></li></ul></div></div></div><div class="e-con e22f283e e-child has-ov cl-card cat-interiorisme"><div class="elementor-element e3e97278 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Sala d'estar i menjador</h3></div></div><div class="elementor-element e935b053 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">Castelló d'Empúries</span></li></ul></div></div></div><div class="e-con eef1d05f e-child has-ov cl-card cat-interiorisme"><div class="elementor-element e5d43110 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Dormitori principal</h3></div></div><div class="elementor-element efc12a11 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">Navata</span></li></ul></div></div></div></div></div></div><div class="e-con e925615b e-parent  cl-metode"><div class="e-con-inner"><div class="e-con e02f0aba e-child  "><div class="e-con e8f71d04 e-child  "><div class="elementor-element efe39ca9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">EL NOSTRE MÈTODE</p></div></div><div class="elementor-element e9758776 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Un procés senzill,<br>amb grans resultats</h2></div></div></div><div class="e-con ef807e7e e-child  "><div class="e-con ef816a5d e-child  "><div class="e-con ea2d3151 e-child  "><div class="elementor-element e948e34a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">01</p></div></div><div class="elementor-element e5efbd2d elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="far fa-comment"></i></div></div></div></div><div class="elementor-element ee7a8ec8 elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div><div class="elementor-element e671420a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Escoltem</h3></div></div><div class="elementor-element ea9d0901 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Analitzem les teves necessitats i et proposem idees a mida.</p></div></div></div><div class="e-con e72fbd36 e-child  "><div class="e-con e5c26755 e-child  "><div class="elementor-element ec874062 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">02</p></div></div><div class="elementor-element e030c2ad elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="far fa-file-alt"></i></div></div></div></div><div class="elementor-element e5d7d8ed elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div><div class="elementor-element eb3b348c elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Dissenyem</h3></div></div><div class="elementor-element e43e5a86 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Planifiquem cada detall amb rigor i transparència.</p></div></div></div><div class="e-con e7379c75 e-child  "><div class="e-con e5a3147d e-child  "><div class="elementor-element e43fe3e9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">03</p></div></div><div class="elementor-element ec1feeed elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="fas fa-wrench"></i></div></div></div></div><div class="elementor-element e9be3684 elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div><div class="elementor-element e26ae275 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Fem realitat</h3></div></div><div class="elementor-element edd5812e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Ens ocupem de tot perquè només gaudeixis del resultat.</p></div></div></div></div></div></div></div><div class="e-con e0d545d3 e-parent  cl-split"><div class="e-con e5d870b4 e-child  "></div><div class="e-con e0b40961 e-child  "><div class="e-con e5e7c8da e-child  "><div class="elementor-element e19697f2 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">INTERIORISME A FIGUERES | BANYOLES</p></div></div><div class="elementor-element e8cee669 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Dissenyem espais<br>per a persones reals</h2></div></div><div class="elementor-element e7613fd2 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.</p></div></div><div class="elementor-element ef91ee37 elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Parlem del teu projecte</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div><div class="e-con e98edc6e e-child  "><div class="elementor-element e64c91af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">“ La teva llar,<br>el nostre<br>compromís ”</p></div></div><div class="elementor-element eed58e54 elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div></div></div><div class="e-con e8cde18d e-parent  cl-footer-wrap"><div class="e-con ef1db84f e-parent  cl-footer"><div class="e-con-inner"><div class="e-con ee70425f e-child  "><div class="e-con e3954f85 e-child  "><div class="elementor-element e406752a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">COMENCEM?</p></div></div><div class="elementor-element ef03e3c8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del teu projecte</h2></div></div><div class="elementor-element e8ea330e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem sense compromís.</p></div></div></div><div class="e-con e3a61edd e-child  "><div class="elementor-element e8315dbe elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div><div class="e-con e1aba2f0 e-child  "><div class="elementor-element ea1cfea9 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li></ul></div></div><div class="elementor-element e106d736 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li></ul></div></div><div class="elementor-element ee16014f elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li></ul></div></div><div class="elementor-element e39b59bf elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li></ul></div></div><div class="elementor-element e22c8855 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e44c7b25 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div></div></div></div><div class="e-con eb1a5646 e-child  "><div class="elementor-element e18fb5b8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Copyright CREEM LLAR</p></div></div><div class="elementor-element e17747e3 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · Diumenges tancat</p></div></div><div class="e-con eb9f7fe3 e-child  "><div class="elementor-element e359df3c elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div></div></div></div><div class="elementor-element ed60b516 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div></div></div></div><div class="elementor-element ed52006a elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></div></div></div></div><div class="elementor-element e63e31af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default"><a href="/creemllar/politica-de-privacitat/">Política de privacitat</a></p></div></div></div></div><div class="elementor-element ea751198 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon elementor-view-stacked"><a href="https://wa.me/34972684896" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div></div></div></div></div></div>
+<div class="e-con ea29a62e e-parent  cl-header"><div class="e-con-inner"><div class="elementor-element ea31574f elementor-widget elementor-widget-image "><div class="elementor-widget-container"><img src="../../assets/logo-creemllar.jpg" alt="Creem Llar - espais per viure"></div></div><div class="elementor-element e920dff0 elementor-widget elementor-widget-nav-menu"><div class="elementor-widget-container"><nav class="elementor-nav-menu--main"><ul class="elementor-nav-menu"><li class="menu-item"><a class="elementor-item" href="/creemllar/">Inici</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/projectes/">Projectes</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/cuines/">Cuines</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/banys/">Banys</a></li><li class="menu-item active"><a class="elementor-item active" href="/creemllar/interiorisme/">Interiorisme</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/parquets/">Parquets</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/nosaltres/">Nosaltres</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/contacte/">Contacte</a></li></ul></nav><button class="elementor-menu-toggle" aria-label="Menú" onclick="this.closest('.elementor-widget-nav-menu').classList.toggle('open')"><i class="fas fa-bars"></i></button></div></div><div class="elementor-element e20d7c5b elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span></span></a></div></div></div></div></div><div class="e-con e00df23b e-parent has-ov cl-hero"><div class="e-con-inner"><div class="elementor-element e9f734e5 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h1 class="elementor-heading-title elementor-size-default">Interiorisme</h1></div></div><div class="elementor-element e8d12eb0 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Solucions a mida<br>per a cada estil de vida.</p></div></div><div class="elementor-element e351930b elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div></div><div class="e-con e0f17bc1 e-parent  cl-intro"><div class="e-con-inner"><div class="e-con ea3bef6a e-child  "><div class="elementor-element ea7632a6 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">EL NOSTRE</p></div></div><div class="elementor-element efb677c9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Interiorisme</h2></div></div></div><div class="e-con ec6552ff e-child  "><div class="elementor-element e78a2bbb elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.</p></div></div></div></div></div><div class="e-con ea20ab9d e-parent  cl-pgrid"><div class="e-con-inner"><div class="e-con e8f5c37d e-child  "><div class="e-con ea63f618 e-child has-ov cl-card cat-interiorisme"><div class="elementor-element ea25eaa7 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Interiorisme integral</h3></div></div><div class="elementor-element e830b135 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">Fontcoberta</span></li></ul></div></div></div><div class="e-con e22f283e e-child has-ov cl-card cat-interiorisme"><div class="elementor-element e3e97278 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Sala d'estar i menjador</h3></div></div><div class="elementor-element e935b053 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">Castelló d'Empúries</span></li></ul></div></div></div><div class="e-con eef1d05f e-child has-ov cl-card cat-interiorisme"><div class="elementor-element e5d43110 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Dormitori principal</h3></div></div><div class="elementor-element efc12a11 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">Navata</span></li></ul></div></div></div></div></div></div><div class="e-con e925615b e-parent  cl-metode"><div class="e-con-inner"><div class="e-con e02f0aba e-child  "><div class="e-con e8f71d04 e-child  "><div class="elementor-element efe39ca9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">EL NOSTRE MÈTODE</p></div></div><div class="elementor-element e9758776 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Un procés senzill,<br>amb grans resultats</h2></div></div></div><div class="e-con ef807e7e e-child  "><div class="e-con ef816a5d e-child  "><div class="e-con ea2d3151 e-child  "><div class="elementor-element e948e34a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">01</p></div></div><div class="elementor-element e5efbd2d elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="far fa-comment"></i></div></div></div></div><div class="elementor-element ee7a8ec8 elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div><div class="elementor-element e671420a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Escoltem</h3></div></div><div class="elementor-element ea9d0901 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Analitzem les teves necessitats i et proposem idees a mida.</p></div></div></div><div class="e-con e72fbd36 e-child  "><div class="e-con e5c26755 e-child  "><div class="elementor-element ec874062 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">02</p></div></div><div class="elementor-element e030c2ad elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="far fa-file-alt"></i></div></div></div></div><div class="elementor-element e5d7d8ed elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div><div class="elementor-element eb3b348c elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Dissenyem</h3></div></div><div class="elementor-element e43e5a86 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Planifiquem cada detall amb rigor i transparència.</p></div></div></div><div class="e-con e7379c75 e-child  "><div class="e-con e5a3147d e-child  "><div class="elementor-element e43fe3e9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">03</p></div></div><div class="elementor-element ec1feeed elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="fas fa-wrench"></i></div></div></div></div><div class="elementor-element e9be3684 elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div><div class="elementor-element e26ae275 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Fem realitat</h3></div></div><div class="elementor-element edd5812e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Ens ocupem de tot perquè només gaudeixis del resultat.</p></div></div></div></div></div></div></div><div class="e-con e0d545d3 e-parent  cl-split"><div class="e-con e5d870b4 e-child  "></div><div class="e-con e0b40961 e-child  "><div class="e-con e5e7c8da e-child  "><div class="elementor-element e19697f2 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">INTERIORISME A FIGUERES | BANYOLES</p></div></div><div class="elementor-element e8cee669 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Dissenyem espais<br>per a persones reals</h2></div></div><div class="elementor-element e7613fd2 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.</p></div></div><div class="elementor-element ef91ee37 elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Parlem del teu projecte</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div><div class="e-con e98edc6e e-child  "><div class="elementor-element e64c91af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">“ La teva llar,<br>el nostre<br>compromís ”</p></div></div><div class="elementor-element eed58e54 elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div></div></div><div class="e-con e8cde18d e-parent  cl-footer-wrap"><div class="e-con ef1db84f e-parent  cl-footer"><div class="e-con-inner"><div class="e-con ee70425f e-child  "><div class="e-con e3954f85 e-child  "><div class="elementor-element e406752a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">COMENCEM?</p></div></div><div class="elementor-element ef03e3c8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del teu projecte</h2></div></div><div class="elementor-element e8ea330e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem sense compromís.</p></div></div></div><div class="e-con e3a61edd e-child  "><div class="elementor-element e8315dbe elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div><div class="e-con e1aba2f0 e-child  "><div class="elementor-element ea1cfea9 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li></ul></div></div><div class="elementor-element e106d736 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li></ul></div></div><div class="elementor-element ee16014f elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li></ul></div></div><div class="elementor-element e39b59bf elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li></ul></div></div><div class="elementor-element e22c8855 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e44c7b25 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div></div></div></div><div class="e-con eb1a5646 e-child  "><div class="elementor-element e18fb5b8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Copyright CREEM LLAR</p></div></div><div class="elementor-element e17747e3 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · Diumenges tancat</p></div></div><div class="e-con eb9f7fe3 e-child  "><div class="elementor-element e359df3c elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div></div></div></div><div class="elementor-element ed60b516 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div></div></div></div><div class="elementor-element ed52006a elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></div></div></div></div><div class="elementor-element e63e31af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default"><a href="/creemllar/politica-de-privacitat/">Política de privacitat</a></p></div></div></div></div><div class="elementor-element ea751198 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon elementor-view-stacked"><a href="https://wa.me/34972684896" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div></div></div></div></div></div>
 </body></html>

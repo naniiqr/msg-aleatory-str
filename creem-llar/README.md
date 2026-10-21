@@ -25,3 +25,6 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 - Hero: es un contenedor con imagen (el PDF muestra flechas de slider; se puede pasar al widget *Slides*).
 - Feed de Instagram: imagen fija; sustituir por plugin (Smash Balloon) cuando se quiera dinámico.
 - Filtro de Projectes: JS en un widget HTML sobre contenedores estáticos (ideal: CPT + Loop Grid).
+
+## Previsualización web (GitHub Pages)
+`docs/` es una web navegable: `index.html` = Inici y el menú enlaza las 8 páginas entre sí. Se regenera con `python3 creem-llar/build.py`. En Settings → Pages elige la rama y la carpeta `/docs`.

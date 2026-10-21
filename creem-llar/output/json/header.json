@@ -7,7 +7,12 @@
       "id": "4b7be21",
       "elType": "container",
       "settings": {
-        "content_width": "full",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1312,
+          "sizes": []
+        },
         "flex_direction": "row",
         "flex_gap": {
           "column": "24",
@@ -21,25 +26,25 @@
         "padding": {
           "unit": "px",
           "top": "16",
-          "right": "19",
+          "right": "64",
           "bottom": "16",
-          "left": "96",
+          "left": "64",
           "isLinked": false
         },
         "padding_tablet": {
           "unit": "px",
           "top": "16",
-          "right": "24",
+          "right": "40",
           "bottom": "16",
-          "left": "24",
+          "left": "40",
           "isLinked": false
         },
         "padding_mobile": {
           "unit": "px",
-          "top": "14",
-          "right": "16",
-          "bottom": "14",
-          "left": "16",
+          "top": "16",
+          "right": "24",
+          "bottom": "16",
+          "left": "24",
           "isLinked": false
         },
         "position": "absolute",
@@ -159,14 +164,6 @@
             },
             "button_text_color": "#fff",
             "background_color": "#5B452D",
-            "text_padding": {
-              "unit": "px",
-              "top": "15",
-              "right": "30",
-              "bottom": "15",
-              "left": "30",
-              "isLinked": false
-            },
             "border_radius": {
               "unit": "px",
               "top": "2",
@@ -193,6 +190,22 @@
               "unit": "px",
               "size": 0,
               "sizes": []
+            },
+            "text_padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "32",
+              "bottom": "16",
+              "left": "32",
+              "isLinked": false
+            },
+            "text_padding_mobile": {
+              "unit": "px",
+              "top": "16",
+              "right": "32",
+              "bottom": "16",
+              "left": "32",
+              "isLinked": false
             },
             "border_border": "solid",
             "border_width": {

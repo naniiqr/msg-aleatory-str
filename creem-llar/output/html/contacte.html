@@ -10,8 +10,8 @@ body{background:#F8F5F0;font-family:'Jost',sans-serif;-webkit-font-smoothing:ant
 img{max-width:100%;height:auto;vertical-align:middle;display:inline-block;border:0}
 a{text-decoration:none;color:inherit}
 .e-con{display:flex;flex-direction:column;position:relative;width:100%;min-width:0;--w:100%}
-.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0}
-.e-con.e-child{width:var(--w);flex:0 1 auto}
+.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0;flex-grow:1}
+.e-con.e-child{width:var(--w);flex:0 1 auto;max-width:100%}
 .e-con.e-parent{width:100%}
 .e-con::before{content:'';position:absolute;inset:0;pointer-events:none}
 .e-con:not(.has-ov)::before{display:none}
@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 .elementor-nav-menu{list-style:none;margin:0;padding:0;display:flex;align-items:center}
 .elementor-nav-menu a{display:block;border:1px solid transparent;white-space:nowrap}
 .elementor-nav-menu .active a,.elementor-nav-menu a:hover{border-color:#fff}
-.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;min-width:44px;min-height:44px}
 .elementor-divider{display:block}
 .cl-header .elementor-widget-nav-menu{flex:0 0 auto}
 @media (max-width:1024px){
@@ -39,11 +39,12 @@ a{text-decoration:none;color:inherit}
   .elementor-widget-nav-menu.open .elementor-nav-menu{flex-direction:column;align-items:stretch;gap:4px!important}
 }
 
-.e4b93d29{flex-direction:row}
-.e4b93d29{gap:24px}
-.e4b93d29{justify-content:space-between}
-.e4b93d29{align-items:center}
-.e4b93d29{padding:16px 19px 16px 96px}
+.e4b93d29>.e-con-inner{max-width:1312px}
+.e4b93d29>.e-con-inner{flex-direction:row}
+.e4b93d29>.e-con-inner{gap:24px}
+.e4b93d29>.e-con-inner{justify-content:space-between}
+.e4b93d29>.e-con-inner{align-items:center}
+.e4b93d29{padding:16px 64px 16px 64px}
 .e4b93d29{position:absolute}
 .e4b93d29{left:0px}
 .e4b93d29{top:0px}
@@ -64,17 +65,18 @@ a{text-decoration:none;color:inherit}
 .e2ee244c .elementor-button{font-weight:400}
 .e2ee244c .elementor-button{color:#fff}
 .e2ee244c .elementor-button{background-color:#5B452D}
-.e2ee244c .elementor-button{padding:15px 30px 15px 30px}
 .e2ee244c .elementor-button{border-radius:2px 2px 2px 2px}
+.e2ee244c .elementor-button{padding:16px 32px 16px 32px}
 .e2ee244c .elementor-button{border:solid #8C7358}
 .e2ee244c .elementor-button{border-width:1px 1px 1px 1px}
 .e2ee244c .elementor-button:hover{background-color:#5B452D}
 .e2ee244c .elementor-button:hover{color:#fff}
-.e65db6a0{flex-direction:column}
-.e65db6a0{gap:22px}
-.e65db6a0{justify-content:center}
-.e65db6a0{align-items:flex-start}
-.e65db6a0{padding:120px 60px 40px 133px}
+.e65db6a0>.e-con-inner{max-width:1312px}
+.e65db6a0>.e-con-inner{flex-direction:column}
+.e65db6a0>.e-con-inner{gap:24px}
+.e65db6a0>.e-con-inner{justify-content:center}
+.e65db6a0>.e-con-inner{align-items:flex-start}
+.e65db6a0{padding:112px 64px 48px 64px}
 .e65db6a0{min-height:505px}
 .e65db6a0{background-image:url(../../assets/hero-contacte.jpg)}
 .e65db6a0{background-position:right center}
@@ -98,16 +100,16 @@ a{text-decoration:none;color:inherit}
 .e295b5ac .elementor-button{font-weight:500}
 .e295b5ac .elementor-button{color:#2B2118}
 .e295b5ac .elementor-button{background-color:#E3C39C}
-.e295b5ac .elementor-button{padding:20px 34px 20px 34px}
 .e295b5ac .elementor-button{border-radius:1px 1px 1px 1px}
+.e295b5ac .elementor-button{padding:20px 32px 20px 32px}
 .e295b5ac .elementor-button:hover{background-color:#E3C39C}
 .e295b5ac .elementor-button:hover{color:#2B2118}
-.e60a4e88>.e-con-inner{max-width:1320px}
+.e60a4e88>.e-con-inner{max-width:1312px}
 .e60a4e88>.e-con-inner{flex-direction:row}
-.e60a4e88>.e-con-inner{gap:60px}
+.e60a4e88>.e-con-inner{gap:64px}
 .e60a4e88>.e-con-inner{justify-content:flex-start}
 .e60a4e88>.e-con-inner{align-items:flex-start}
-.e60a4e88{padding:80px 60px 90px 60px}
+.e60a4e88{padding:80px 64px 80px 64px}
 .e60a4e88{background-color:#F8F5F0}
 .e804e6dc{flex-direction:column}
 .e804e6dc{gap:16px}
@@ -127,10 +129,10 @@ a{text-decoration:none;color:inherit}
 .ed060600 .elementor-heading-title{font-weight:400}
 .ed060600 .elementor-heading-title{color:#111111}
 .e73ed6be{flex-direction:column}
-.e73ed6be{gap:20px}
+.e73ed6be{gap:24px}
 .e73ed6be{justify-content:flex-start}
 .e73ed6be{align-items:stretch}
-.e73ed6be{padding:36px 36px 36px 36px}
+.e73ed6be{padding:40px 40px 40px 40px}
 .e73ed6be{background-color:#FFFFFF}
 .ec5e012a .elementor-field{font-size:16px}
 .ec5e012a .elementor-field{line-height:1.3em}
@@ -153,7 +155,7 @@ a{text-decoration:none;color:inherit}
 .ec5e012a .elementor-field-group{flex:1 1 100%}
 .ec5e012a .elementor-col-50{flex:1 1 calc(50% - 8px)}
 .e97dde5c{flex-direction:column}
-.e97dde5c{gap:26px}
+.e97dde5c{gap:24px}
 .e97dde5c{justify-content:flex-start}
 .e97dde5c{align-items:stretch}
 .e97dde5c{padding:0px 0px 0px 0px}
@@ -165,7 +167,7 @@ a{text-decoration:none;color:inherit}
 .e3180eac .elementor-heading-title{font-weight:400}
 .e3180eac .elementor-heading-title{color:#5E5A57}
 .e4231455{flex-direction:column}
-.e4231455{gap:14px}
+.e4231455{gap:16px}
 .e4231455{justify-content:flex-start}
 .e4231455{align-items:stretch}
 .e4231455{padding:0px 0px 0px 0px}
@@ -184,7 +186,7 @@ a{text-decoration:none;color:inherit}
 .ee8bc675 .elementor-icon-list-text{padding-left:8px}
 .ec4734c2 iframe{width:100%;height:220px;border:0;display:block}
 .e1b23f35{flex-direction:column}
-.e1b23f35{gap:14px}
+.e1b23f35{gap:16px}
 .e1b23f35{justify-content:flex-start}
 .e1b23f35{align-items:stretch}
 .e1b23f35{padding:0px 0px 0px 0px}
@@ -208,19 +210,19 @@ a{text-decoration:none;color:inherit}
 .e8cde18d{align-items:stretch}
 .e8cde18d{padding:0px 0px 0px 0px}
 .e8cde18d{background-image:linear-gradient(125deg,#4B3F36 0%,#2A2420 100%)}
-.ef1db84f>.e-con-inner{max-width:1320px}
+.ef1db84f>.e-con-inner{max-width:1312px}
 .ef1db84f>.e-con-inner{flex-direction:column}
 .ef1db84f>.e-con-inner{gap:40px}
 .ef1db84f>.e-con-inner{justify-content:flex-start}
 .ef1db84f>.e-con-inner{align-items:stretch}
-.ef1db84f{padding:70px 60px 40px 60px}
+.ef1db84f{padding:80px 64px 48px 64px}
 .ee70425f{flex-direction:row}
-.ee70425f{gap:60px}
+.ee70425f{gap:64px}
 .ee70425f{justify-content:space-between}
 .ee70425f{align-items:center}
 .ee70425f{padding:0px 0px 0px 0px}
 .e3954f85{flex-direction:column}
-.e3954f85{gap:12px}
+.e3954f85{gap:16px}
 .e3954f85{justify-content:flex-start}
 .e3954f85{align-items:stretch}
 .e3954f85{padding:0px 0px 0px 0px}
@@ -242,7 +244,7 @@ a{text-decoration:none;color:inherit}
 .e8ea330e .elementor-heading-title{font-weight:300}
 .e8ea330e .elementor-heading-title{color:#FFFFFFE6}
 .e3a61edd{flex-direction:column}
-.e3a61edd{gap:28px}
+.e3a61edd{gap:32px}
 .e3a61edd{justify-content:flex-start}
 .e3a61edd{align-items:flex-start}
 .e3a61edd{padding:0px 0px 0px 0px}
@@ -254,14 +256,14 @@ a{text-decoration:none;color:inherit}
 .e8315dbe .elementor-button{font-weight:400}
 .e8315dbe .elementor-button{color:#141413}
 .e8315dbe .elementor-button{background-color:#F7F4F0}
-.e8315dbe .elementor-button{padding:16px 34px 16px 34px}
 .e8315dbe .elementor-button{border-radius:2px 2px 2px 2px}
+.e8315dbe .elementor-button{padding:16px 36px 16px 36px}
 .e8315dbe .elementor-button:hover{background-color:#F7F4F0}
 .e8315dbe .elementor-button:hover{color:#141413}
 .e1aba2f0{display:grid}
 .e1aba2f0{grid-template-columns:repeat(2,1fr)}
 .e1aba2f0{grid-template-rows:repeat(3,1fr)}
-.e1aba2f0{gap:14px}
+.e1aba2f0{gap:16px}
 .e1aba2f0{align-items:stretch}
 .e1aba2f0{padding:0px 0px 0px 0px}
 .ea1cfea9 .elementor-icon-list-text{font-size:15px}
@@ -330,7 +332,7 @@ a{text-decoration:none;color:inherit}
 .e17747e3 .elementor-heading-title{font-weight:300}
 .e17747e3 .elementor-heading-title{color:#FFFFFFB3}
 .eb9f7fe3{flex-direction:row}
-.eb9f7fe3{gap:18px}
+.eb9f7fe3{gap:16px}
 .eb9f7fe3{justify-content:flex-end}
 .eb9f7fe3{align-items:center}
 .eb9f7fe3{padding:0px 0px 0px 0px}
@@ -363,9 +365,9 @@ a{text-decoration:none;color:inherit}
 .ea751198{bottom:24px}
 .ea751198{z-index:999}
 @media (max-width:1024px){
-.e4b93d29{padding:16px 24px 16px 24px}
-.e65db6a0{gap:20px}
-.e65db6a0{padding:110px 48px 40px 48px}
+.e4b93d29{padding:16px 40px 16px 40px}
+.e65db6a0>.e-con-inner{gap:24px}
+.e65db6a0{padding:112px 40px 48px 40px}
 .e65db6a0{min-height:520px}
 .e98ab86c .elementor-heading-title{font-size:60px}
 .e3b13ed5 .elementor-heading-title{font-size:22px}
@@ -374,46 +376,49 @@ a{text-decoration:none;color:inherit}
 .e60a4e88{padding:64px 40px 64px 40px}
 .e804e6dc{--w:100%}
 .ed060600 .elementor-heading-title{font-size:42px}
-.e73ed6be{padding:28px 28px 28px 28px}
+.e73ed6be{padding:32px 32px 32px 32px}
 .e97dde5c{--w:100%}
-.ef1db84f{padding:60px 40px 32px 40px}
+.ef1db84f{padding:64px 40px 40px 40px}
 .ee70425f{flex-direction:column}
-.ee70425f{gap:36px}
+.ee70425f{gap:40px}
 .e3954f85{--w:100%}
 .ef03e3c8 .elementor-heading-title{font-size:40px}
 .e3a61edd{align-items:flex-start}
 .e3a61edd{--w:100%}
 .e1aba2f0{grid-template-columns:repeat(2,1fr)}
-.e1aba2f0{gap:14px}
+.e1aba2f0{gap:16px}
 .eb1a5646{flex-direction:column}
-.eb1a5646{gap:14px}
+.eb1a5646{gap:16px}
 .eb1a5646{align-items:flex-start}
 .eb9f7fe3{--w:100%}
 }
 @media (max-width:767px){
-.e4b93d29{padding:14px 16px 14px 16px}
+.e4b93d29{padding:16px 24px 16px 24px}
+.e2ee244c .elementor-button{padding:16px 32px 16px 32px}
 .e2ee244c{display:none!important}
-.e65db6a0{gap:18px}
-.e65db6a0{padding:110px 24px 40px 24px}
+.e65db6a0>.e-con-inner{gap:16px}
+.e65db6a0{padding:112px 24px 48px 24px}
 .e65db6a0{min-height:520px}
 .e98ab86c .elementor-heading-title{font-size:44px}
 .e3b13ed5 .elementor-heading-title{font-size:19px}
+.e295b5ac .elementor-button{padding:20px 32px 20px 32px}
 .e60a4e88>.e-con-inner{flex-direction:column}
-.e60a4e88>.e-con-inner{gap:36px}
+.e60a4e88>.e-con-inner{gap:40px}
 .e60a4e88{padding:48px 24px 48px 24px}
 .ed060600 .elementor-heading-title{font-size:36px}
-.e73ed6be{padding:22px 18px 22px 18px}
+.e73ed6be{padding:24px 24px 24px 24px}
 .ec5e012a .elementor-col-50{flex:1 1 100%}
-.ef1db84f{padding:48px 24px 28px 24px}
+.ef1db84f{padding:48px 24px 32px 24px}
 .ee70425f{flex-direction:column}
 .ee70425f{gap:32px}
 .ef03e3c8 .elementor-heading-title{font-size:34px}
 .e3a61edd{align-items:flex-start}
+.e8315dbe .elementor-button{padding:16px 36px 16px 36px}
 .e1aba2f0{grid-template-columns:repeat(1,1fr)}
-.e1aba2f0{gap:10px}
+.e1aba2f0{gap:8px}
 .eb1a5646{flex-direction:column}
-.eb1a5646{gap:14px}
+.eb1a5646{gap:16px}
 .eb1a5646{align-items:flex-start}
 }</style></head><body>
-<div class="e-con e4b93d29 e-parent  cl-header"><div class="elementor-element eff61558 elementor-widget elementor-widget-image "><div class="elementor-widget-container"><img src="../../assets/logo-creemllar.jpg" alt="Creem Llar - espais per viure"></div></div><div class="elementor-element eb798c25 elementor-widget elementor-widget-nav-menu"><div class="elementor-widget-container"><nav class="elementor-nav-menu--main"><ul class="elementor-nav-menu"><li class="menu-item"><a class="elementor-item" href="/creemllar/">Inici</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/projectes/">Projectes</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/cuines/">Cuines</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/banys/">Banys</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/interiorisme/">Interiorisme</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/parquets/">Parquets</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/nosaltres/">Nosaltres</a></li><li class="menu-item active"><a class="elementor-item active" href="/creemllar/contacte/">Contacte</a></li></ul></nav><button class="elementor-menu-toggle" aria-label="Menú" onclick="this.parentNode.classList.toggle('open')"><i class="fas fa-bars"></i></button></div></div><div class="elementor-element e2ee244c elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span></span></a></div></div></div></div><div class="e-con e65db6a0 e-parent has-ov cl-hero"><div class="elementor-element e98ab86c elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h1 class="elementor-heading-title elementor-size-default">Contacte</h1></div></div><div class="elementor-element e3b13ed5 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem<br>sense compromís.</p></div></div><div class="elementor-element e295b5ac elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllartel:+34972684896"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Truca'ns</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div><div class="e-con e60a4e88 e-parent  cl-contact"><div class="e-con-inner"><div class="e-con e804e6dc e-child  "><div class="elementor-element e03d5b4b elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">ESCRIU-NOS</p></div></div><div class="elementor-element ed060600 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del<br>teu projecte</h2></div></div><div class="e-con e73ed6be e-child  "><div class="elementor-element ec5e012a elementor-widget elementor-widget-form"><div class="elementor-widget-container"><form class="elementor-form" onsubmit="return false"><div class="elementor-form-fields-wrapper"><div class="elementor-field-group"><label>Nom</label><input class="elementor-field" type="text" placeholder="Nom" required></div><div class="elementor-field-group"><label>Correu electrònic</label><input class="elementor-field" type="email" placeholder="Correu electrònic" required></div><div class="elementor-field-group"><label>Assumpte</label><input class="elementor-field" type="text" placeholder="Assumpte" required></div><div class="elementor-field-group"><label>Missatge</label><textarea class="elementor-field" rows="5" placeholder="Missatge" required></textarea></div><div class="elementor-field-group"><label style="display:flex;gap:10px;align-items:center"><input type="checkbox" required> Accepto la política de privacitat</label></div><div class="elementor-field-group"><button class="elementor-button" type="submit">Enviar</button></div></div></form></div></div></div></div><div class="e-con e97dde5c e-child  "><div class="elementor-element e3180eac elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">ON TROBAR-NOS</p></div></div><div class="e-con e4231455 e-child  "><div class="elementor-element eada4bc9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Figueres</h3></div></div><div class="elementor-element ee8bc675 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element ec4734c2 elementor-widget elementor-widget-google_maps"><div class="elementor-widget-container"><div class="elementor-custom-embed"><iframe loading="lazy" src="https://maps.google.com/maps?q=C.+Hortes,+34,+17600+Figueres&t=m&z=15&output=embed&iwloc=near" title="C. Hortes, 34, 17600 Figueres"></iframe></div></div></div></div><div class="e-con e1b23f35 e-child  "><div class="elementor-element e036198a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Banyoles</h3></div></div><div class="elementor-element ed572415 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e96fb58c elementor-widget elementor-widget-google_maps"><div class="elementor-widget-container"><div class="elementor-custom-embed"><iframe loading="lazy" src="https://maps.google.com/maps?q=C/+Pare+Claret,+1,+17820+Banyoles&t=m&z=15&output=embed&iwloc=near" title="C/ Pare Claret, 1, 17820 Banyoles"></iframe></div></div></div></div></div></div></div><div class="e-con e8cde18d e-parent  cl-footer-wrap"><div class="e-con ef1db84f e-parent  cl-footer"><div class="e-con-inner"><div class="e-con ee70425f e-child  "><div class="e-con e3954f85 e-child  "><div class="elementor-element e406752a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">COMENCEM?</p></div></div><div class="elementor-element ef03e3c8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del teu projecte</h2></div></div><div class="elementor-element e8ea330e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem sense compromís.</p></div></div></div><div class="e-con e3a61edd e-child  "><div class="elementor-element e8315dbe elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div><div class="e-con e1aba2f0 e-child  "><div class="elementor-element ea1cfea9 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li></ul></div></div><div class="elementor-element e106d736 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li></ul></div></div><div class="elementor-element ee16014f elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li></ul></div></div><div class="elementor-element e39b59bf elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li></ul></div></div><div class="elementor-element e22c8855 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e44c7b25 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div></div></div></div><div class="e-con eb1a5646 e-child  "><div class="elementor-element e18fb5b8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Copyright CREEM LLAR</p></div></div><div class="elementor-element e17747e3 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · Diumenges tancat</p></div></div><div class="e-con eb9f7fe3 e-child  "><div class="elementor-element e359df3c elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div></div></div></div><div class="elementor-element ed60b516 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div></div></div></div><div class="elementor-element ed52006a elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></div></div></div></div><div class="elementor-element e63e31af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default"><a href="/creemllar/politica-de-privacitat/">Política de privacitat</a></p></div></div></div></div><div class="elementor-element ea751198 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon elementor-view-stacked"><a href="https://wa.me/34972684896" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div></div></div></div></div></div>
+<div class="e-con e4b93d29 e-parent  cl-header"><div class="e-con-inner"><div class="elementor-element eff61558 elementor-widget elementor-widget-image "><div class="elementor-widget-container"><img src="../../assets/logo-creemllar.jpg" alt="Creem Llar - espais per viure"></div></div><div class="elementor-element eb798c25 elementor-widget elementor-widget-nav-menu"><div class="elementor-widget-container"><nav class="elementor-nav-menu--main"><ul class="elementor-nav-menu"><li class="menu-item"><a class="elementor-item" href="/creemllar/">Inici</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/projectes/">Projectes</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/cuines/">Cuines</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/banys/">Banys</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/interiorisme/">Interiorisme</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/parquets/">Parquets</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/nosaltres/">Nosaltres</a></li><li class="menu-item active"><a class="elementor-item active" href="/creemllar/contacte/">Contacte</a></li></ul></nav><button class="elementor-menu-toggle" aria-label="Menú" onclick="this.closest('.elementor-widget-nav-menu').classList.toggle('open')"><i class="fas fa-bars"></i></button></div></div><div class="elementor-element e2ee244c elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span></span></a></div></div></div></div></div><div class="e-con e65db6a0 e-parent has-ov cl-hero"><div class="e-con-inner"><div class="elementor-element e98ab86c elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h1 class="elementor-heading-title elementor-size-default">Contacte</h1></div></div><div class="elementor-element e3b13ed5 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem<br>sense compromís.</p></div></div><div class="elementor-element e295b5ac elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="tel:+34972684896"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Truca'ns</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div></div><div class="e-con e60a4e88 e-parent  cl-contact"><div class="e-con-inner"><div class="e-con e804e6dc e-child  "><div class="elementor-element e03d5b4b elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">ESCRIU-NOS</p></div></div><div class="elementor-element ed060600 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del<br>teu projecte</h2></div></div><div class="e-con e73ed6be e-child  "><div class="elementor-element ec5e012a elementor-widget elementor-widget-form"><div class="elementor-widget-container"><form class="elementor-form" onsubmit="return false"><div class="elementor-form-fields-wrapper"><div class="elementor-field-group"><label>Nom</label><input class="elementor-field" type="text" placeholder="Nom" required></div><div class="elementor-field-group"><label>Correu electrònic</label><input class="elementor-field" type="email" placeholder="Correu electrònic" required></div><div class="elementor-field-group"><label>Assumpte</label><input class="elementor-field" type="text" placeholder="Assumpte" required></div><div class="elementor-field-group"><label>Missatge</label><textarea class="elementor-field" rows="5" placeholder="Missatge" required></textarea></div><div class="elementor-field-group"><label style="display:flex;gap:10px;align-items:center"><input type="checkbox" required> Accepto la política de privacitat</label></div><div class="elementor-field-group"><button class="elementor-button" type="submit">Enviar</button></div></div></form></div></div></div></div><div class="e-con e97dde5c e-child  "><div class="elementor-element e3180eac elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">ON TROBAR-NOS</p></div></div><div class="e-con e4231455 e-child  "><div class="elementor-element eada4bc9 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Figueres</h3></div></div><div class="elementor-element ee8bc675 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element ec4734c2 elementor-widget elementor-widget-google_maps"><div class="elementor-widget-container"><div class="elementor-custom-embed"><iframe loading="lazy" src="https://maps.google.com/maps?q=C.+Hortes,+34,+17600+Figueres&t=m&z=15&output=embed&iwloc=near" title="C. Hortes, 34, 17600 Figueres"></iframe></div></div></div></div><div class="e-con e1b23f35 e-child  "><div class="elementor-element e036198a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Banyoles</h3></div></div><div class="elementor-element ed572415 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e96fb58c elementor-widget elementor-widget-google_maps"><div class="elementor-widget-container"><div class="elementor-custom-embed"><iframe loading="lazy" src="https://maps.google.com/maps?q=C/+Pare+Claret,+1,+17820+Banyoles&t=m&z=15&output=embed&iwloc=near" title="C/ Pare Claret, 1, 17820 Banyoles"></iframe></div></div></div></div></div></div></div><div class="e-con e8cde18d e-parent  cl-footer-wrap"><div class="e-con ef1db84f e-parent  cl-footer"><div class="e-con-inner"><div class="e-con ee70425f e-child  "><div class="e-con e3954f85 e-child  "><div class="elementor-element e406752a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">COMENCEM?</p></div></div><div class="elementor-element ef03e3c8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del teu projecte</h2></div></div><div class="elementor-element e8ea330e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem sense compromís.</p></div></div></div><div class="e-con e3a61edd e-child  "><div class="elementor-element e8315dbe elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div><div class="e-con e1aba2f0 e-child  "><div class="elementor-element ea1cfea9 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li></ul></div></div><div class="elementor-element e106d736 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li></ul></div></div><div class="elementor-element ee16014f elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li></ul></div></div><div class="elementor-element e39b59bf elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li></ul></div></div><div class="elementor-element e22c8855 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e44c7b25 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div></div></div></div><div class="e-con eb1a5646 e-child  "><div class="elementor-element e18fb5b8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Copyright CREEM LLAR</p></div></div><div class="elementor-element e17747e3 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · Diumenges tancat</p></div></div><div class="e-con eb9f7fe3 e-child  "><div class="elementor-element e359df3c elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div></div></div></div><div class="elementor-element ed60b516 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div></div></div></div><div class="elementor-element ed52006a elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></div></div></div></div><div class="elementor-element e63e31af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default"><a href="/creemllar/politica-de-privacitat/">Política de privacitat</a></p></div></div></div></div><div class="elementor-element ea751198 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon elementor-view-stacked"><a href="https://wa.me/34972684896" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div></div></div></div></div></div>
 </body></html>

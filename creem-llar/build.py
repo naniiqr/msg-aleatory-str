@@ -32,6 +32,34 @@ MENU = [("Inici", "/"), ("Projectes", "/projectes/"), ("Cuines", "/cuines/"), ("
         ("Contacte", "/contacte/")]
 MENU_SLUG = "menu-principal"
 
+# Ritme espacial: graella de 8 px, amplada de contingut i gutters comuns a totes les seccions
+BOX = 1312                       # amplada màxima del contingut (centrat)
+GUT = (64, 40, 24)               # marge lateral: escriptori / tauleta / mòbil
+
+
+def snap(v, step=8):
+    """Arrodoneix a múltiples de 8 (4 si el valor és petit). Accepta nombre, tupla o R."""
+    if isinstance(v, R):
+        return R(*[snap(x, step) if x is not None else None for x in (v.v[""], v.v["_tablet"], v.v["_mobile"])])
+    if isinstance(v, (tuple, list)):
+        return tuple(snap(x, step) for x in v)
+    if isinstance(v, (int, float)):
+        if v <= 0:
+            return 0
+        if v < 8:
+            return 4 * max(1, round(v / 4))
+        return int(step * int(v / step + 0.5))
+    return v
+
+
+def P(kind, top=None, bottom=None):
+    """Padding de secció amb gutters comuns. kind: 'sec' (80/64/48) o 'band' (48/40/32)."""
+    vt = {"sec": (80, 64, 48), "band": (48, 40, 32)}[kind]
+    t = [top if top is not None else v for v in vt] if not isinstance(top, tuple) else list(top)
+    b = [bottom if bottom is not None else v for v in vt] if not isinstance(bottom, tuple) else list(bottom)
+    return R((t[0], GUT[0], b[0], GUT[0]), (t[1], GUT[1], b[1], GUT[1]), (t[2], GUT[2], b[2], GUT[2]))
+
+
 # ---------------------------------------------------------------- infra
 _cnt = itertools.count(1)
 
@@ -176,13 +204,19 @@ def button(text, url="#", bg=None, color="#fff", size=15, weight=400, ls=0, pad=
            hover_bg=None, hover_color=None, hide=None):
     i = nid()
     sel = f".e{i} .elementor-button"
+    pad = snap(pad, 4)
+    bb = bw[2] if border else 0
+    mpv = max(pad[0], -(-(44 - size - bb) // 2))          # alçada mínima 44 px en mòbil
+    mpad = (mpv, pad[1], mpv, pad[3])
     s = {"text": text, "link": link(url), "button_text_color": color,
-         "background_color": bg or "#FFFFFF00", "text_padding": box(pad),
+         "background_color": bg or "#FFFFFF00",
          "border_radius": box(radius), "size": "sm"}
     rules = []
     typo(s, rules, sel, "", font, size, weight, 1, ls, tf)
+    put(s, "text_padding", R(pad, None, mpad), box)
     rules += [("", sel, f"color:{color}"), ("", sel, f"background-color:{bg or 'transparent'}"),
-              ("", sel, f"padding:{boxcss(pad)}"), ("", sel, f"border-radius:{boxcss(radius)}")]
+              ("", sel, f"border-radius:{boxcss(radius)}")]
+    rule(rules, sel, "padding", R(pad, None, mpad), boxcss)
     if border:
         s["border_border"] = "solid"
         s["border_width"] = box(bw)
@@ -205,7 +239,7 @@ def button(text, url="#", bg=None, color="#fff", size=15, weight=400, ls=0, pad=
     if cls:
         s["_css_classes"] = cls
     el = {"id": i, "elType": "widget", "settings": s, "elements": [], "widgetType": "button"}
-    href = url if url.startswith(("#", "http")) else SITE + url
+    href = url if url.startswith(("#", "http", "tel:", "mailto:")) else SITE + url
     html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-button {cls}">'
             f'<div class="elementor-widget-container"><div class="elementor-button-wrapper">'
             f'<a class="elementor-button elementor-button-link elementor-size-sm" href="{href}">'
@@ -353,7 +387,7 @@ def nav_menu(active="Inici", size=15, weight=300, color="#fff", space=22, vpad=5
     html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-nav-menu">'
             f'<div class="elementor-widget-container"><nav class="elementor-nav-menu--main">'
             f'<ul class="elementor-nav-menu">{li}</ul></nav>'
-            f'<button class="elementor-menu-toggle" aria-label="Menú" onclick="this.parentNode.classList.toggle(\'open\')">'
+            f'<button class="elementor-menu-toggle" aria-label="Menú" onclick="this.closest(\'.elementor-widget-nav-menu\').classList.toggle(\'open\')">'
             f'<i class="fas fa-bars"></i></button></div></div>')
     return Node(el, html, rules)
 
@@ -386,6 +420,9 @@ def container(children, dir="column", gap=20, justify="flex-start", align="stret
               inner=False, hide=None, margin=None, hold=False):
     i = nid()
     cls_e = f"e{i}"
+    gap, pad = snap(gap), snap(pad)
+    if margin is not None:
+        margin = snap(margin)
     s, rules = {}, []
     outer = f".{cls_e}"
     lay = f".{cls_e}>.e-con-inner" if boxed else outer
@@ -434,8 +471,8 @@ def container(children, dir="column", gap=20, justify="flex-start", align="stret
         put(s, "min_height", minh, sz)
         rule(rules, outer, "min-height", minh, lambda v: f"{v}px")
     if width is not None:
-        put(s, "width", width, lambda v: sz(v, "%"))
-        rule(rules, outer, "--w", width, lambda v: f"{v}%")
+        put(s, "width", width, lambda v: sz(v[0], v[1]) if isinstance(v, tuple) else sz(v, "%"))
+        rule(rules, outer, "--w", width, lambda v: f"{v[0]}{v[1]}" if isinstance(v, tuple) else f"{v}%")
     if bg or bgimg or overlay or grad:
         s["background_background"] = "gradient" if grad else "classic"
     if bg:
@@ -511,7 +548,7 @@ def hdr(active):
     btn = button("Demana pressupost", "/contacte/", bg=C_BROWN, color="#fff", size=16, weight=400,
                  pad=(15, 30, 15, 30), border="#8C7358", radius=2, hide=["mobile"])
     return container([logo, nav, btn], dir="row", justify="space-between", align="center",
-                     gap=24, pad=R((16, 19, 16, 96), (16, 24, 16, 24), (14, 16, 14, 16)),
+                     gap=24, boxed=BOX, pad=R((16, GUT[0], 16, GUT[0]), (16, GUT[1], 16, GUT[1]), (16, GUT[2], 16, GUT[2])),
                      pos={"type": "absolute", "x": 0, "y": 0}, z=100, cls="cl-header")
 
 
@@ -550,8 +587,7 @@ def ftr():
                      border="#FFFFFF26", bw=(1, 0, 0, 0))
     wa = icon("fab fa-whatsapp", 32, "#fff", pos=(24, 24), link_url="https://wa.me/34972684896",
               view="stacked", bgc="#25D366", pad=15, shape="circle")
-    return container([top, copy, wa], gap=40, boxed=1320,
-                     pad=R((70, 60, 40, 60), (60, 40, 32, 40), (48, 24, 28, 24)),
+    return container([top, copy, wa], gap=40, boxed=BOX, pad=P("sec", bottom=(48, 40, 32)),
                      cls="cl-footer")
 
 
@@ -562,7 +598,7 @@ def ftr_wrap():
                      grad={"a": "#4B3F36", "b": "#2A2420", "angle": 125, "ap": 0, "bp": 100}, cls="cl-footer-wrap")
 
 
-def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(110, 40), arrow=True,
+def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(112, 48), arrow=True,
          title="Espais<br>fets a mida"):
     kids = []
     if eyebrow:
@@ -570,10 +606,10 @@ def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(110, 40
     kids.append(heading(title, "h1", SANS, R(74, 60, 44), 300, "#FFFFFF", 1.05))
     kids.append(heading(p_text, "p", SANS, R(24, 22, 19), 300, "#FFFFFFF2", 1.4))
     kids.append(button(btn_text, btn_url, bg=C_TAN, color="#2B2118", size=15, weight=500, ls=1.2,
-                       pad=(20, 34, 20, 34), radius=1, tf="uppercase" if arrow else None,
+                       pad=(20, 32, 20, 32), radius=1, tf="uppercase" if arrow else None,
                        icon="fas fa-long-arrow-alt-right"))
-    return container(kids, gap=R(22, 20, 18), justify="center", align="flex-start",
-                     pad=R((py[0], 60, py[1], 133), (110, 48, 40, 48), (110, 24, 40, 24)),
+    return container(kids, gap=R(24, 24, 16), justify="center", align="flex-start", boxed=BOX,
+                     pad=R((py[0], GUT[0], py[1], GUT[0]), (112, GUT[1], 48, GUT[1]), (112, GUT[2], 48, GUT[2])),
                      minh=R(minh, 520, 520), bgimg=img, bgpos="right center", cls="cl-hero",
                      overlay={"a": "#1A120CCC", "b": "#1A120C00", "angle": 90, "ap": 0, "bp": 62})
 
@@ -591,7 +627,7 @@ def categories():
              tile("cat-interiorisme.jpg", "Interiorisme", "Solucions a mida per a cada estil de vida."),
              tile("cat-reformes.jpg", "Reformes", "Transformem els teus espais amb garantia i experiència.")]
     grid = container(tiles, grid=(R(4, 2, 1), 1), gap=R(37, 28, 28), inner=True, pad=0)
-    return container([grid], boxed=1310, bg=C_BG2, pad=R((46, 65, 40, 65), (40, 40, 36, 40), (32, 24, 32, 24)),
+    return container([grid], boxed=BOX, bg=C_BG2, pad=P("band"),
                      gap=0, cls="cl-cats")
 
 
@@ -607,11 +643,11 @@ def props():
                                 heading(t, "h3", SANS, 22, 400, "#141413", 1.2, align="center"),
                                 heading(d, "p", SANS, 15, 300, C_TEXT, 1.4, align="center")],
                                gap=10, inner=True, align="center",
-                               pad=R((36, 20, 36, 20), (30, 20, 30, 20), (24, 12, 24, 12)),
+                               pad=R((40, 24, 40, 24), (32, 24, 32, 24), (24, 16, 24, 16)),
                                border=C_LINE,
                                bw=R((0, 0 if last else 1, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))))
     grid = container(cells, grid=(R(4, 2, 1), 1), gap=0, inner=True, pad=0)
-    return container([grid], boxed=1310, bg=C_BG3, pad=R((0, 65, 0, 65), (0, 40, 0, 40), (0, 24, 0, 24)),
+    return container([grid], boxed=BOX, bg=C_BG3, pad=P("band", top=0, bottom=0),
                      gap=0, cls="cl-props")
 
 
@@ -636,8 +672,8 @@ def featured():
              feat_card("home-proj-2.jpg", "Bany amb caràcter", "Banyoles"),
              feat_card("home-proj-3.jpg", "Reforma integral", "Figueres")]
     grid = container(cards, grid=(R(3, 2, 1), 1), gap=R(18, 18, 28), inner=True, pad=0)
-    return container([head, grid], gap=26, boxed=1320, bg=C_BG,
-                     pad=R((64, 60, 56, 60), (56, 40, 48, 40), (44, 24, 40, 24)), cls="cl-featured")
+    return container([head, grid], gap=26, boxed=BOX, bg=C_BG,
+                     pad=P("sec"), cls="cl-featured")
 
 
 def metode():
@@ -660,8 +696,8 @@ def metode():
                            bw=R((0, 0, 0, 1), (0, 0, 0, 0), (0, 0, 0, 0)), width=R(70, 100))
     row = container([left, steps_grid], dir=R("row", "column", "column"), align="center",
                     gap=R(44, 32, 28), inner=True, pad=0)
-    return container([row], boxed=1310, bg=C_METODE, gap=0,
-                     pad=R((44, 65, 44, 65), (44, 40, 44, 40), (36, 24, 36, 24)), cls="cl-metode")
+    return container([row], boxed=BOX, bg=C_METODE, gap=0,
+                     pad=P("band"), cls="cl-metode")
 
 
 def quote(text, size=32):
@@ -683,7 +719,7 @@ def interiorisme(titulo="Dissenyem espais<br>per cada estil de vida"):
     q = quote("“ La teva llar,<br>el nostre<br>compromís ”", 30)
     right = container([text, q], dir=R("row", "column", "column"), align=R("center", "flex-start", "flex-start"),
                       gap=R(30, 28, 24), inner=True, width=R(54.5, 100), bg=C_BEIGE,
-                      pad=R((60, 60, 60, 70), (48, 40, 48, 40), (40, 24, 40, 24)), justify="center")
+                      pad=R((64, 72, 64, 72), (48, 40, 48, 40), (40, 24, 40, 24)), justify="center")
     return container([img, right], dir=R("row", "column", "column"), gap=0, align="stretch", pad=0,
                      cls="cl-split")
 
@@ -701,8 +737,8 @@ def equip(titol="Un equip al teu costat", text=None, enllac=True):
                      gap=14, inner=True, pad=0, width=R(44, 100), align="flex-start")
     q = quote("“ Llar<br>és molt més<br>que un lloc ”", 30)
     return container([img, text, q], dir=R("row", "column", "column"), align=R("center", "flex-start", "flex-start"),
-                     gap=R(48, 28, 24), boxed=1440, bg="#FFFFFF",
-                     pad=R((40, 74, 40, 74), (40, 40, 40, 40), (36, 24, 36, 24)), cls="cl-team")
+                     gap=R(48, 28, 24), boxed=BOX, bg="#FFFFFF",
+                     pad=P("band"), cls="cl-team")
 
 
 def insta_head():
@@ -713,7 +749,7 @@ def insta_head():
     return container([container([ico, name], dir="row", align="center", gap=8, inner=True, pad=0,
                                  width=R(17, 100)), txt],
                      dir=R("row", "row", "column"), align=R("center", "center", "flex-start"), gap=R(36, 24, 12),
-                     bg="#FFFFFF", pad=R((16, 38, 14, 38), (16, 40, 14, 40), (16, 24, 14, 24)),
+                     boxed=BOX, bg="#FFFFFF", pad=P("band", top=(24, 24, 16), bottom=(24, 24, 16)),
                      cls="cl-ig-head")
 
 
@@ -721,7 +757,7 @@ def insta_feed():
     feed = image("instagram-feed.jpg", h=None, w=100, alt="Feed d'Instagram de Creem Llar")
     more = button("Veure més", "https://www.instagram.com/", None, "#FFFFFF", 14, 400, 0, (6, 0, 6, 0),
                   radius=0, align="right")
-    return container([feed, more], gap=0, bg="#0A0D12", pad=R((0, 38, 12, 38), (0, 20, 12, 20), (0, 16, 12, 16)),
+    return container([feed, more], gap=0, boxed=BOX, bg="#0A0D12", pad=P("band", top=0, bottom=(16, 16, 8)),
                      cls="cl-ig-feed")
 
 
@@ -762,7 +798,7 @@ def proj_card(n, title, city, cat):
     return container([heading(title, "h3", SERIF, 26, 400, "#FFFFFF", 1.2),
                       icon_list([(city, "fas fa-map-marker-alt", None)], "#E3B988", 14, "#FFFFFF", SANS, 15, 300)],
                      inner=True, gap=6, justify="flex-end", align="flex-start",
-                     pad=R((20, 22, 18, 22), (20, 22, 18, 22), (20, 18, 16, 18)),
+                     pad=R((24, 24, 24, 24), (24, 24, 24, 24), (24, 24, 24, 24)),
                      minh=R(240, 230, 220), bgimg=f"proj-{n:02d}.jpg",
                      overlay={"a": "#00000000", "b": "#000000BF", "angle": 180, "ap": 38, "bp": 100},
                      cls=f"cl-card cat-{cat}")
@@ -777,8 +813,8 @@ def proj_intro():
                                "Pla de l'Estany.", "p", SANS, 17, 300, "#4A443F", 1.5)],
                       inner=True, pad=0, width=R(36, 100), align="flex-start")
     return container([left, right], dir=R("row", "column", "column"), justify="space-between",
-                     align=R("flex-end", "flex-start", "flex-start"), gap=R(40, 24, 20), boxed=1380,
-                     pad=R((60, 30, 28, 30), (52, 40, 24, 40), (40, 24, 20, 24)), bg=C_BG, cls="cl-pintro")
+                     align=R("flex-end", "flex-start", "flex-start"), gap=R(40, 24, 20), boxed=BOX,
+                     pad=P("sec", bottom=(32, 32, 24)), bg=C_BG, cls="cl-pintro")
 
 
 def proj_filters():
@@ -790,15 +826,15 @@ def proj_filters():
                            pad=(15, 28, 15, 28), border="#CFC8BF", radius=1,
                            cls="cl-filter is-active" if key == "tots" else "cl-filter",
                            hover_bg="#FFFFFF00"))
-    return container(btns, dir="row", justify="center", align="center", wrap=True, gap=12, boxed=1380,
-                     pad=R((14, 30, 30, 30), (10, 40, 24, 40), (8, 24, 20, 24)), bg=C_BG, cls="cl-filters")
+    return container(btns, dir="row", justify="center", align="center", wrap=True, gap=16, boxed=BOX,
+                     pad=P("sec", top=0, bottom=(40, 32, 24)), bg=C_BG, cls="cl-filters")
 
 
 def proj_grid():
     cards = [proj_card(n + 1, t, c, k) for n, (t, c, k) in enumerate(PROJECTS)]
     grid = container(cards, grid=(R(3, 2, 1), 5), gap=R(24, 20, 18), inner=True, pad=0)
-    return container([grid, html_widget(FILTER_JS)], boxed=1380, bg=C_BG, gap=0,
-                     pad=R((0, 30, 70, 30), (0, 40, 56, 40), (0, 24, 44, 24)), cls="cl-pgrid")
+    return container([grid, html_widget(FILTER_JS)], boxed=BOX, bg=C_BG, gap=0,
+                     pad=P("sec", top=0), cls="cl-pgrid")
 
 
 # ================================================================ PÀGINES
@@ -810,7 +846,7 @@ def page_inici():
 
 def page_projectes():
     return [hero("hero-projectes.jpg", None, "Cuines, banys, interiorisme, reformes<br>i parquets per crear llars "
-                 "úniques", "Contactar amb nosaltres", "/contacte/", minh=505, py=(120, 40), arrow=False),
+                 "úniques", "Contactar amb nosaltres", "/contacte/", minh=505, arrow=False),
             proj_intro(), proj_filters(), proj_grid(),
             interiorisme("Dissenyem espais<br>per a persones reals"), equip()]
 
@@ -900,8 +936,8 @@ def sec_intro(eyebrow, titol, text):
     right = container([heading(text, "p", SANS, 17, 300, "#4A443F", 1.5)], inner=True, pad=0,
                       width=R(36, 100), align="flex-start")
     return container([left, right], dir=R("row", "column", "column"), justify="space-between",
-                     align=R("flex-end", "flex-start", "flex-start"), gap=R(40, 24, 20), boxed=1380,
-                     pad=R((60, 30, 40, 30), (52, 40, 32, 40), (40, 24, 28, 24)), bg=C_BG, cls="cl-intro")
+                     align=R("flex-end", "flex-start", "flex-start"), gap=R(40, 24, 20), boxed=BOX,
+                     pad=P("sec", bottom=(48, 40, 32)), bg=C_BG, cls="cl-intro")
 
 
 def cat_grid(cat):
@@ -909,12 +945,12 @@ def cat_grid(cat):
     cards = [proj_card(n, t, c, cat) for n, t, c in items]
     rows = (len(cards) + 2) // 3
     grid = container(cards, grid=(R(3, 2, 1), rows), gap=R(24, 20, 18), inner=True, pad=0)
-    return container([grid], boxed=1380, bg=C_BG, gap=0,
-                     pad=R((0, 30, 70, 30), (0, 40, 56, 40), (0, 24, 44, 24)), cls="cl-pgrid")
+    return container([grid], boxed=BOX, bg=C_BG, gap=0,
+                     pad=P("sec", top=0), cls="cl-pgrid")
 
 
 def page_servei(titol, tagline, cat, hero_img, eyebrow, h2):
-    return [hero(hero_img, None, tagline, "Demana pressupost", "/contacte/", minh=505, py=(120, 40),
+    return [hero(hero_img, None, tagline, "Demana pressupost", "/contacte/", minh=505, 
                  arrow=False, title=titol),
             sec_intro(eyebrow, h2, INTRO_TXT), cat_grid(cat), metode(),
             interiorisme("Dissenyem espais<br>per a persones reals")]
@@ -946,7 +982,7 @@ def page_nosaltres():
             "viure, crear llar. Ens envoltem d'un gran equip d'interioristes, paletes, muntadors i lampistes que "
             "donen el millor de si mateixos perquè els nostres clients facin realitat els seus somnis.")
     return [hero("hero-nosaltres.jpg", None, "Dissenyem espais per viure.<br>Crear espais, crear llar.",
-                 "Parlem del teu projecte", "/contacte/", minh=505, py=(120, 40), arrow=False, title="Nosaltres"),
+                 "Parlem del teu projecte", "/contacte/", minh=505, arrow=False, title="Nosaltres"),
             equip("L'equip de Creem Llar", text, enllac=False), props(), metode(), interiorisme()]
 
 
@@ -964,7 +1000,7 @@ def page_contacte():
               "Enviar", "info@creemllar.com")
     left = container([heading("ESCRIU-NOS", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
                       heading("Parlem del<br>teu projecte", "h2", SERIF, R(48, 42, 36), 400, "#111111", 1.1),
-                      container([fm], inner=True, bg="#FFFFFF", pad=R((36, 36, 36, 36), (28, 28, 28, 28), (22, 18, 22, 18)))],
+                      container([fm], inner=True, bg="#FFFFFF", pad=R((40, 40, 40, 40), (32, 32, 32, 32), (24, 24, 24, 24)))],
                      gap=16, inner=True, pad=0, width=R(48, 100))
     right = container([heading("ON TROBAR-NOS", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
                        office("Figueres", "C. Hortes, 34 – 17600 Figueres", "+34 972 684 896", "info@creemllar.com",
@@ -973,10 +1009,10 @@ def page_contacte():
                               "C/ Pare Claret, 1, 17820 Banyoles")],
                       gap=26, inner=True, pad=0, width=R(52, 100))
     body = container([left, right], dir=R("row", "column", "column"), gap=R(60, 40, 36), align="flex-start",
-                     boxed=1320, bg=C_BG, pad=R((80, 60, 90, 60), (64, 40, 64, 40), (48, 24, 48, 24)),
+                     boxed=BOX, bg=C_BG, pad=P("sec"),
                      cls="cl-contact")
     return [hero("hero-contacte.jpg", None, "Explica'ns la teva idea i t'assessorem<br>sense compromís.",
-                 "Truca'ns", "tel:+34972684896", minh=505, py=(120, 40), arrow=False, title="Contacte"),
+                 "Truca'ns", "tel:+34972684896", minh=505, arrow=False, title="Contacte"),
             body]
 
 
@@ -988,8 +1024,8 @@ body{background:#F8F5F0;font-family:'Jost',sans-serif;-webkit-font-smoothing:ant
 img{max-width:100%;height:auto;vertical-align:middle;display:inline-block;border:0}
 a{text-decoration:none;color:inherit}
 .e-con{display:flex;flex-direction:column;position:relative;width:100%;min-width:0;--w:100%}
-.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0}
-.e-con.e-child{width:var(--w);flex:0 1 auto}
+.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0;flex-grow:1}
+.e-con.e-child{width:var(--w);flex:0 1 auto;max-width:100%}
 .e-con.e-parent{width:100%}
 .e-con::before{content:'';position:absolute;inset:0;pointer-events:none}
 .e-con:not(.has-ov)::before{display:none}
@@ -1007,7 +1043,7 @@ a{text-decoration:none;color:inherit}
 .elementor-nav-menu{list-style:none;margin:0;padding:0;display:flex;align-items:center}
 .elementor-nav-menu a{display:block;border:1px solid transparent;white-space:nowrap}
 .elementor-nav-menu .active a,.elementor-nav-menu a:hover{border-color:#fff}
-.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;min-width:44px;min-height:44px}
 .elementor-divider{display:block}
 .cl-header .elementor-widget-nav-menu{flex:0 0 auto}
 @media (max-width:1024px){
@@ -1092,6 +1128,7 @@ def main():
                 "<body style='font-family:sans-serif;padding:40px'><h1>Previsualitzacions</h1><ul>"
                 + "".join(f"<li><a href='{s}.html'>{t}</a></li>" for s, t, _, _ in pages) + "</ul>")
     standalone([p[0] for p in pages])
+    write_docs([p[0] for p in pages])
     print("OK ->", OUT)
 
 
@@ -1108,6 +1145,32 @@ def standalone(slugs):
             return f"data:image/jpeg;base64,{b}"
         h = re.sub(r"\.\./\.\./assets/([\w\-\.]+\.jpg)", rep, h)
         open(f"{OUT}/descarregar/{slug}.html", "w", encoding="utf-8").write(h)
+
+
+def write_docs(slugs):
+    """Web navegable per a GitHub Pages: /docs (index = Inici, el menú enllaça les pàgines entre elles)."""
+    import re
+    docs = os.path.join(os.path.dirname(ROOT), "docs")
+    shutil.rmtree(docs, ignore_errors=True)
+    os.makedirs(f"{docs}/assets")
+    for f in os.listdir(f"{ROOT}/assets"):
+        shutil.copy(f"{ROOT}/assets/{f}", f"{docs}/assets/{f}")
+    pages = set(slugs)
+
+    def rewrite(m):
+        slug = m.group(1).strip("/")
+        if slug == "":
+            return 'href="index.html"'
+        return f'href="{slug}.html"' if slug in pages else 'href="#"'
+    for slug in slugs:
+        h = open(f"{OUT}/html/{slug}.html", encoding="utf-8").read()
+        h = h.replace("../../assets/", "assets/")
+        h = re.sub(r'href="' + re.escape(SITE) + r'/?([a-z0-9\-/]*)"', rewrite, h)
+        name = "index.html" if slug == "inici" else f"{slug}.html"
+        open(f"{docs}/{name}", "w", encoding="utf-8").write(h)
+        if slug == "inici":
+            open(f"{docs}/404.html", "w", encoding="utf-8").write(h)
+    open(f"{docs}/.nojekyll", "w").close()
 
 
 if __name__ == "__main__":
