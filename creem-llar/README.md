@@ -28,3 +28,9 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 
 ## Previsualización web (GitHub Pages)
 `docs/` es una web navegable: `index.html` = Inici y el menú enlaza las 8 páginas entre sí. Se regenera con `python3 creem-llar/build.py`. En Settings → Pages elige la rama y la carpeta `/docs`.
+
+## Fitxa de projecte (plantilla per duplicar)
+`output/json/projecte.json` (preview: `docs/projecte.html`). Importa-la una vegada, crea una pàgina "Projecte - <nom>" i duplica-la per a cada projecte:
+1. Canvia títol (H1), localitat, tipus i superfície, el text del repte i de la solució i la llista de punts.
+2. Substitueix les imatges: fons del hero, imatge del repte, fons de la solució i les 5 de la galeria (obren en lightbox).
+3. Escriu el SEO del projecte amb la fórmula: `<tipus de projecte> a <localitat>` (keyphrase), al principi del títol i de la descripció.

@@ -291,7 +291,8 @@ def icon(name, size=30, color="#000", align=None, pos=None, link_url=None, view=
     return Node(el, html, rules)
 
 
-def image(key, h=None, w=100, alt="", fit="cover", align=None, wunit="%", cls="", hide=None, radius=None):
+def image(key, h=None, w=100, alt="", fit="cover", align=None, wunit="%", cls="", hide=None, radius=None,
+          href=None, lightbox=False):
     i = nid()
     s = {"image": {"url": img_url(key), "id": "", "size": "", "alt": alt, "source": "library"},
          "image_size": "full", "width": sz(w, wunit), "object-fit": fit}
@@ -311,24 +312,34 @@ def image(key, h=None, w=100, alt="", fit="cover", align=None, wunit="%", cls=""
     _hide(s, rules, f".e{i}", hide)
     if cls:
         s["_css_classes"] = cls
+    tag = f'<img src="../../assets/{key}" alt="{escape(alt)}">'
+    if href:
+        s["link_to"] = "custom"
+        s["link"] = link(href)
+        tag = f'<a href="{SITE}{href}">{tag}</a>'
+    elif lightbox:
+        s["link_to"] = "file"
+        s["open_lightbox"] = "yes"
+        tag = f'<a href="../../assets/{key}" class="elementor-lightbox">{tag}</a>'
     el = {"id": i, "elType": "widget", "settings": s, "elements": [], "widgetType": "image"}
     html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-image {cls}">'
-            f'<div class="elementor-widget-container"><img src="../../assets/{key}" alt="{escape(alt)}"></div></div>')
+            f'<div class="elementor-widget-container">{tag}</div></div>')
     return Node(el, html, rules)
 
 
 def icon_list(items, icon_color="#000", icon_size=14, color="#000", font=SANS, size=15, weight=400, ls=None,
-              tf=None, indent=8, cls=""):
+              tf=None, indent=8, cls="", space=0):
     """items: [(text, icon, url|None)]"""
     i = nid()
     s = {"icon_list": [], "view": "traditional", "icon_color": icon_color, "icon_size": sz(icon_size),
-         "text_color": color, "text_indent": sz(indent), "space_between": sz(0)}
+         "text_color": color, "text_indent": sz(indent), "space_between": sz(space)}
     rules = []
     sel = f".e{i} .elementor-icon-list-text"
     typo(s, rules, sel, "icon_", font, size, weight, 1.3, ls, tf)
     rules += [("", sel, f"color:{color}"), ("", f".e{i} .elementor-icon-list-icon", f"color:{icon_color}"),
               ("", f".e{i} .elementor-icon-list-icon", f"font-size:{icon_size}px"),
-              ("", sel, f"padding-left:{indent}px")]
+              ("", sel, f"padding-left:{indent}px"),
+              ("", f".e{i} .elementor-icon-list-item:not(:last-child)", f"margin-bottom:{space}px")]
     lis = ""
     for text, ic, url in items:
         s["icon_list"].append({"text": text, "selected_icon": icon_val(ic), "_id": nid(),
@@ -651,13 +662,13 @@ def props():
                      gap=0, cls="cl-props")
 
 
-def feat_card(img, title, city, arrow_url="/projectes/"):
-    text = container([heading(title, "h3", SANS, 22, 400, "#141413", 1.2),
+def feat_card(img, title, city, arrow_url="/projectes/", href=None):
+    text = container([heading(title, "h3", SANS, 22, 400, "#141413", 1.2, href=href),
                       heading(city.upper(), "p", SANS, 13, 400, C_TEXT, 1.2, 2)],
                      gap=6, inner=True, pad=0, width=80)
     row = container([text, icon("fas fa-long-arrow-alt-right", 22, "#141413", align="right")],
                     dir="row", justify="space-between", align="center", gap=10, inner=True, pad=0)
-    return container([image(img, h=R(262, 240, 220), alt=title), row], gap=14, inner=True, pad=0)
+    return container([image(img, h=R(262, 240, 220), alt=title, href=href), row], gap=14, inner=True, pad=0)
 
 
 def featured():
@@ -668,7 +679,7 @@ def featured():
                     border=C_DARK, bw=(0, 0, 1, 0), radius=0, icon="fas fa-long-arrow-alt-right")
     head = container([head_l, head_r], dir="row", justify="space-between", align="flex-end", gap=20,
                      inner=True, pad=0)
-    cards = [feat_card("home-proj-1.jpg", "Cuina contemporània", "Figueres"),
+    cards = [feat_card("home-proj-1.jpg", "Cuina contemporània", "Figueres", href="/projecte/"),
              feat_card("home-proj-2.jpg", "Bany amb caràcter", "Banyoles"),
              feat_card("home-proj-3.jpg", "Reforma integral", "Figueres")]
     grid = container(cards, grid=(R(3, 2, 1), 1), gap=R(18, 18, 28), inner=True, pad=0)
@@ -1016,6 +1027,97 @@ def page_contacte():
             body]
 
 
+# ---------------------------------------------------------------- FITXA DE PROJECTE (plantilla per duplicar)
+def pj_spec(ic, etiqueta, valor, last=False):
+    return container([icon(ic, 28, "#2B2B2B"),
+                      heading(etiqueta, "p", SANS, 15, 500, "#141413", 1.2),
+                      heading(valor, "p", SANS, 14, 300, C_TEXT, 1.2)],
+                     gap=8, inner=True, align="flex-start", pad=R((0, 24, 0, 24), (0, 16, 0, 16), (0, 16, 0, 16)),
+                     border=C_LINE, bw=R((0, 0 if last else 1, 0, 0), (0, 0 if last else 1, 0, 0), (0, 0, 0, 0)))
+
+
+def pj_hero():
+    kids = [heading("← Tots els projectes", "p", SANS, 15, 300, "#FFFFFFD9", 1.2, href="/projectes/"),
+            heading("PROJECTE D'INTERIORISME", "p", SANS, 13, 400, "#FFFFFFCC", 1.2, 3),
+            heading("Cuina contemporània<br>a Figueres", "h1", SERIF, R(64, 52, 40), 400, "#FFFFFF", 1.1),
+            heading("Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais "
+                    "oberts.", "p", SANS, 19, 300, "#FFFFFFF2", 1.5),
+            button("Demana un pressupost similar", "/contacte/", bg=None, color="#FFFFFF", size=16, weight=400,
+                   pad=(16, 32, 16, 32), border="#FFFFFFB3", radius=1, icon="fas fa-long-arrow-alt-right")]
+    text = container(kids, gap=24, inner=True, pad=0, align="flex-start", width=R(50, 100))
+    return container([text], justify="center", align="flex-start", boxed=BOX,
+                     pad=R((112, GUT[0], 64, GUT[0]), (112, GUT[1], 48, GUT[1]), (112, GUT[2], 48, GUT[2])),
+                     minh=R(640, 560, 560), bgimg="hero-inici.jpg", bgpos="center center", cls="cl-hero cl-pj-hero",
+                     overlay={"a": "#120C08D9", "b": "#120C0826", "angle": 90, "ap": 0, "bp": 70})
+
+
+def pj_repte():
+    txt = container([heading("EL REPTE", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                     heading("Una cuina oberta,<br>pràctica i amb caràcter", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
+                     heading("L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una "
+                             "estètica contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la "
+                             "connexió amb el menjador i el jardí.", "p", SANS, 17, 300, "#2E2A27", 1.6),
+                     container([pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres"),
+                                pj_spec("fas fa-home", "Tipus de projecte", "Reforma integral"),
+                                pj_spec("fas fa-ruler-combined", "Superfície", "28 m²", last=True)],
+                               grid=(3, 1), gap=0, inner=True, pad=R((16, 0, 0, 0), (16, 0, 0, 0), (16, 0, 0, 0)))],
+                    gap=24, inner=True, pad=0, width=R(50, 100), justify="center")
+    img = container([image("home-proj-1.jpg", h=R(448, 360, 280), alt="El repte del projecte", lightbox=True)],
+                    inner=True, pad=0, width=R(50, 100))
+    return container([txt, img], dir=R("row", "column", "column"), align="center", gap=R(64, 40, 32), boxed=BOX,
+                     bg="#FFFFFF", pad=P("sec"), cls="cl-pj-repte")
+
+
+def pj_solucio():
+    foto = container([], inner=True, width=R(50, 100), bgimg="interiorisme.jpg", minh=R(560, 360, 280), pad=0)
+    checks = icon_list([(t, "far fa-check-circle", None) for t in
+                        ("Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
+                         "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior")],
+                       C_BROWN, 18, "#2E2A27", SANS, 16, 300, indent=12, space=16)
+    panel = container([heading("LA SOLUCIÓ", "p", SANS, 13, 400, "#4A443F", 1.2, 2.5),
+                       heading("Disseny i funcionalitat<br>en perfecta harmonia", "h2", SERIF, R(40, 36, 32), 400, "#141413", 1.2),
+                       heading("Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada "
+                               "per al confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, "
+                               "preparació i espai social.", "p", SANS, 17, 300, "#2E2A27", 1.6),
+                       checks],
+                      inner=True, width=R(50, 100), bg=C_BEIGE, justify="center", align="flex-start", gap=24,
+                      pad=R((64, 72, 64, 72), (48, 40, 48, 40), (40, 24, 40, 24)))
+    return container([foto, panel], dir=R("row", "column", "column"), gap=0, align="stretch", pad=0,
+                     cls="cl-split cl-pj-solucio")
+
+
+def pj_galeria():
+    cap = container([heading("GALERIA D'IMATGES", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                     heading("Detalls que fan la diferència", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2)],
+                    gap=8, inner=True, pad=0)
+    gran = container([image("home-proj-3.jpg", h=R(480, 360, 280), alt="Galeria 1", lightbox=True)],
+                     inner=True, pad=0, width=R(50, 100))
+    petites = container([image(k, h=R(232, 176, 140), alt=f"Galeria {n}", lightbox=True)
+                         for n, k in enumerate(("home-proj-2.jpg", "proj-01.jpg", "proj-04.jpg", "proj-10.jpg"), 2)],
+                        grid=(2, 2), gap=16, inner=True, pad=0, width=R(50, 100))
+    mosaic = container([gran, petites], dir=R("row", "column", "column"), gap=16, inner=True, pad=0)
+    return container([cap, mosaic], gap=32, boxed=BOX, bg="#FFFFFF",
+                     pad=P("sec"), cls="cl-pj-galeria")
+
+
+def pj_cta():
+    txt = container([heading("TENS UN PROJECTE SIMILAR?", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+                     heading("Fem realitat la cuina dels teus somnis", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
+                     heading("T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un "
+                             "pressupost sense compromís.", "p", SANS, 17, 300, "#2E2A27", 1.6),
+                     button("Demana pressupost", "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
+                            pad=(16, 32, 16, 32), radius=1, icon="fas fa-long-arrow-alt-right")],
+                    gap=24, inner=True, pad=0, width=R(64, 100), align="flex-start")
+    q = quote("“ Espais que<br>s'adapten a tu ”", 30)
+    return container([txt, q], dir=R("row", "column", "column"), justify="space-between",
+                     align=R("center", "flex-start", "flex-start"), gap=R(48, 32, 24), boxed=BOX, bg=C_BG2,
+                     pad=P("sec"), cls="cl-pj-cta")
+
+
+def page_projecte():
+    return [pj_hero(), pj_repte(), pj_solucio(), pj_galeria(), pj_cta()]
+
+
 # ================================================================ SORTIDA
 BASE_CSS = """
 *{box-sizing:border-box}
@@ -1117,7 +1219,8 @@ def main():
              ("cuines", "Cuines", "Cuines", page_cuines), ("banys", "Banys", "Banys", page_banys),
              ("interiorisme", "Interiorisme", "Interiorisme", page_interiorisme),
              ("parquets", "Parquets", "Parquets", page_parquets), ("nosaltres", "Nosaltres", "Nosaltres", page_nosaltres),
-             ("contacte", "Contacte", "Contacte", page_contacte)]
+             ("contacte", "Contacte", "Contacte", page_contacte),
+             ("projecte", "Projecte (plantilla)", "Projectes", page_projecte)]
     for slug, title, active, fn in pages:
         nodes = fn()
         write_json(slug, f"Creem Llar - {title}", "page", nodes, ps)

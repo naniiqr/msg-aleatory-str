@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projecte (plantilla) · previsualització Elementor</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Over+the+Rainbow&family=Grand+Hotel&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#F8F5F0;font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
+img{max-width:100%;height:auto;vertical-align:middle;display:inline-block;border:0}
+a{text-decoration:none;color:inherit}
+.e-con{display:flex;flex-direction:column;position:relative;width:100%;min-width:0;--w:100%}
+.e-con>.e-con-inner{display:flex;flex-direction:column;width:100%;margin:0 auto;min-width:0;flex-grow:1}
+.e-con.e-child{width:var(--w);flex:0 1 auto;max-width:100%}
+.e-con.e-parent{width:100%}
+.e-con::before{content:'';position:absolute;inset:0;pointer-events:none}
+.e-con:not(.has-ov)::before{display:none}
+.has-ov>*,.has-ov>.e-con-inner{position:relative;z-index:1}
+.elementor-widget{min-width:0;position:relative}
+.elementor-heading-title{margin:0;padding:0}
+.elementor-button{display:inline-block;text-align:center;fill:#fff;transition:all .3s}
+.elementor-button-content-wrapper{display:flex;justify-content:center;align-items:center}
+.elementor-button-icon{margin-left:10px;display:inline-flex;font-size:1em}
+.elementor-icon-wrapper{display:block}
+.elementor-icon{display:inline-block;line-height:1;text-align:center}
+.elementor-icon-list-items{list-style:none;margin:0;padding:0}
+.elementor-icon-list-item{display:flex;align-items:center}
+.elementor-icon-list-icon{display:inline-flex}
+.elementor-nav-menu{list-style:none;margin:0;padding:0;display:flex;align-items:center}
+.elementor-nav-menu a{display:block;border:1px solid transparent;white-space:nowrap}
+.elementor-nav-menu .active a,.elementor-nav-menu a:hover{border-color:#fff}
+.elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;min-width:44px;min-height:44px}
+.elementor-divider{display:block}
+.cl-header .elementor-widget-nav-menu{flex:0 0 auto}
+@media (max-width:1024px){
+  .elementor-nav-menu--main{display:none}
+  .elementor-menu-toggle{display:block}
+  .elementor-widget-nav-menu.open .elementor-nav-menu--main{display:block;position:absolute;top:100%;right:0;background:#2A221C;padding:12px;z-index:50}
+  .elementor-widget-nav-menu.open .elementor-nav-menu{flex-direction:column;align-items:stretch;gap:4px!important}
+}
+
+.e50baffa>.e-con-inner{max-width:1312px}
+.e50baffa>.e-con-inner{flex-direction:row}
+.e50baffa>.e-con-inner{gap:24px}
+.e50baffa>.e-con-inner{justify-content:space-between}
+.e50baffa>.e-con-inner{align-items:center}
+.e50baffa{padding:16px 64px 16px 64px}
+.e50baffa{position:absolute}
+.e50baffa{left:0px}
+.e50baffa{top:0px}
+.e50baffa{--w:100%}
+.e50baffa{z-index:100}
+.ed7a867a img{width:180px}
+.ea21ff4d .elementor-nav-menu a{font-size:15px}
+.ea21ff4d .elementor-nav-menu a{line-height:1.2em}
+.ea21ff4d .elementor-nav-menu a{font-family:'Jost',sans-serif}
+.ea21ff4d .elementor-nav-menu a{font-weight:300}
+.ea21ff4d .elementor-nav-menu a{color:#fff}
+.ea21ff4d .elementor-nav-menu a{padding:5px 9px}
+.ea21ff4d .elementor-nav-menu{gap:22px}
+.e69a1bbb .elementor-button{font-size:16px}
+.e69a1bbb .elementor-button{line-height:1em}
+.e69a1bbb .elementor-button{letter-spacing:0px}
+.e69a1bbb .elementor-button{font-family:'Jost',sans-serif}
+.e69a1bbb .elementor-button{font-weight:400}
+.e69a1bbb .elementor-button{color:#fff}
+.e69a1bbb .elementor-button{background-color:#5B452D}
+.e69a1bbb .elementor-button{border-radius:2px 2px 2px 2px}
+.e69a1bbb .elementor-button{padding:16px 32px 16px 32px}
+.e69a1bbb .elementor-button{border:solid #8C7358}
+.e69a1bbb .elementor-button{border-width:1px 1px 1px 1px}
+.e69a1bbb .elementor-button:hover{background-color:#5B452D}
+.e69a1bbb .elementor-button:hover{color:#fff}
+.e79e7bb0>.e-con-inner{max-width:1312px}
+.e79e7bb0>.e-con-inner{flex-direction:column}
+.e79e7bb0>.e-con-inner{gap:24px}
+.e79e7bb0>.e-con-inner{justify-content:center}
+.e79e7bb0>.e-con-inner{align-items:flex-start}
+.e79e7bb0{padding:112px 64px 64px 64px}
+.e79e7bb0{min-height:640px}
+.e79e7bb0{background-image:url(../../assets/hero-inici.jpg)}
+.e79e7bb0{background-position:center center}
+.e79e7bb0{background-repeat:no-repeat}
+.e79e7bb0{background-size:cover}
+.e79e7bb0::before{background-image:linear-gradient(90deg,#120C08D9 0%,#120C0826 70%)}
+.e3bab376{flex-direction:column}
+.e3bab376{gap:24px}
+.e3bab376{justify-content:flex-start}
+.e3bab376{align-items:flex-start}
+.e3bab376{padding:0px 0px 0px 0px}
+.e3bab376{--w:50%}
+.e5fd4aec .elementor-heading-title{font-size:15px}
+.e5fd4aec .elementor-heading-title{line-height:1.2em}
+.e5fd4aec .elementor-heading-title{font-family:'Jost',sans-serif}
+.e5fd4aec .elementor-heading-title{font-weight:300}
+.e5fd4aec .elementor-heading-title{color:#FFFFFFD9}
+.e90eefab .elementor-heading-title{font-size:13px}
+.e90eefab .elementor-heading-title{line-height:1.2em}
+.e90eefab .elementor-heading-title{letter-spacing:3px}
+.e90eefab .elementor-heading-title{font-family:'Jost',sans-serif}
+.e90eefab .elementor-heading-title{font-weight:400}
+.e90eefab .elementor-heading-title{color:#FFFFFFCC}
+.e9da96a0 .elementor-heading-title{font-size:64px}
+.e9da96a0 .elementor-heading-title{line-height:1.1em}
+.e9da96a0 .elementor-heading-title{font-family:'Playfair Display',sans-serif}
+.e9da96a0 .elementor-heading-title{font-weight:400}
+.e9da96a0 .elementor-heading-title{color:#FFFFFF}
+.e063a27d .elementor-heading-title{font-size:19px}
+.e063a27d .elementor-heading-title{line-height:1.5em}
+.e063a27d .elementor-heading-title{font-family:'Jost',sans-serif}
+.e063a27d .elementor-heading-title{font-weight:300}
+.e063a27d .elementor-heading-title{color:#FFFFFFF2}
+.ec2158d0 .elementor-button{font-size:16px}
+.ec2158d0 .elementor-button{line-height:1em}
+.ec2158d0 .elementor-button{letter-spacing:0px}
+.ec2158d0 .elementor-button{font-family:'Jost',sans-serif}
+.ec2158d0 .elementor-button{font-weight:400}
+.ec2158d0 .elementor-button{color:#FFFFFF}
+.ec2158d0 .elementor-button{background-color:transparent}
+.ec2158d0 .elementor-button{border-radius:1px 1px 1px 1px}
+.ec2158d0 .elementor-button{padding:16px 32px 16px 32px}
+.ec2158d0 .elementor-button{border:solid #FFFFFFB3}
+.ec2158d0 .elementor-button{border-width:1px 1px 1px 1px}
+.ec2158d0 .elementor-button:hover{background-color:transparent}
+.ec2158d0 .elementor-button:hover{color:#FFFFFF}
+.e44f3c3e>.e-con-inner{max-width:1312px}
+.e44f3c3e>.e-con-inner{flex-direction:row}
+.e44f3c3e>.e-con-inner{gap:64px}
+.e44f3c3e>.e-con-inner{justify-content:flex-start}
+.e44f3c3e>.e-con-inner{align-items:center}
+.e44f3c3e{padding:80px 64px 80px 64px}
+.e44f3c3e{background-color:#FFFFFF}
+.e98363aa{flex-direction:column}
+.e98363aa{gap:24px}
+.e98363aa{justify-content:center}
+.e98363aa{align-items:stretch}
+.e98363aa{padding:0px 0px 0px 0px}
+.e98363aa{--w:50%}
+.ee19fc97 .elementor-heading-title{font-size:13px}
+.ee19fc97 .elementor-heading-title{line-height:1.2em}
+.ee19fc97 .elementor-heading-title{letter-spacing:2.5px}
+.ee19fc97 .elementor-heading-title{font-family:'Jost',sans-serif}
+.ee19fc97 .elementor-heading-title{font-weight:400}
+.ee19fc97 .elementor-heading-title{color:#5E5A57}
+.e2d413db .elementor-heading-title{font-size:40px}
+.e2d413db .elementor-heading-title{line-height:1.2em}
+.e2d413db .elementor-heading-title{font-family:'Playfair Display',sans-serif}
+.e2d413db .elementor-heading-title{font-weight:400}
+.e2d413db .elementor-heading-title{color:#111111}
+.eeb4705d .elementor-heading-title{font-size:17px}
+.eeb4705d .elementor-heading-title{line-height:1.6em}
+.eeb4705d .elementor-heading-title{font-family:'Jost',sans-serif}
+.eeb4705d .elementor-heading-title{font-weight:300}
+.eeb4705d .elementor-heading-title{color:#2E2A27}
+.ec693f2f{display:grid}
+.ec693f2f{grid-template-columns:repeat(3,1fr)}
+.ec693f2f{grid-template-rows:repeat(1,1fr)}
+.ec693f2f{gap:0px}
+.ec693f2f{align-items:stretch}
+.ec693f2f{padding:16px 0px 0px 0px}
+.e082aea3{flex-direction:column}
+.e082aea3{gap:8px}
+.e082aea3{justify-content:flex-start}
+.e082aea3{align-items:flex-start}
+.e082aea3{padding:0px 24px 0px 24px}
+.e082aea3{border-style:solid;border-color:#D9D2C9}
+.e082aea3{border-width:0px 1px 0px 0px}
+.efef6b74 .elementor-icon{font-size:28px}
+.efef6b74 .elementor-icon{color:#2B2B2B}
+.efef6b74 .elementor-icon{line-height:1}
+.e1b046a3 .elementor-heading-title{font-size:15px}
+.e1b046a3 .elementor-heading-title{line-height:1.2em}
+.e1b046a3 .elementor-heading-title{font-family:'Jost',sans-serif}
+.e1b046a3 .elementor-heading-title{font-weight:500}
+.e1b046a3 .elementor-heading-title{color:#141413}
+.e0eeaabf .elementor-heading-title{font-size:14px}
+.e0eeaabf .elementor-heading-title{line-height:1.2em}
+.e0eeaabf .elementor-heading-title{font-family:'Jost',sans-serif}
+.e0eeaabf .elementor-heading-title{font-weight:300}
+.e0eeaabf .elementor-heading-title{color:#5E5A57}
+.ea0bdb8b{flex-direction:column}
+.ea0bdb8b{gap:8px}
+.ea0bdb8b{justify-content:flex-start}
+.ea0bdb8b{align-items:flex-start}
+.ea0bdb8b{padding:0px 24px 0px 24px}
+.ea0bdb8b{border-style:solid;border-color:#D9D2C9}
+.ea0bdb8b{border-width:0px 1px 0px 0px}
+.e87e7a09 .elementor-icon{font-size:28px}
+.e87e7a09 .elementor-icon{color:#2B2B2B}
+.e87e7a09 .elementor-icon{line-height:1}
+.e5f452cf .elementor-heading-title{font-size:15px}
+.e5f452cf .elementor-heading-title{line-height:1.2em}
+.e5f452cf .elementor-heading-title{font-family:'Jost',sans-serif}
+.e5f452cf .elementor-heading-title{font-weight:500}
+.e5f452cf .elementor-heading-title{color:#141413}
+.eb03db5d .elementor-heading-title{font-size:14px}
+.eb03db5d .elementor-heading-title{line-height:1.2em}
+.eb03db5d .elementor-heading-title{font-family:'Jost',sans-serif}
+.eb03db5d .elementor-heading-title{font-weight:300}
+.eb03db5d .elementor-heading-title{color:#5E5A57}
+.e5a1cbd2{flex-direction:column}
+.e5a1cbd2{gap:8px}
+.e5a1cbd2{justify-content:flex-start}
+.e5a1cbd2{align-items:flex-start}
+.e5a1cbd2{padding:0px 24px 0px 24px}
+.e5a1cbd2{border-style:solid;border-color:#D9D2C9}
+.e5a1cbd2{border-width:0px 0px 0px 0px}
+.e6c78e30 .elementor-icon{font-size:28px}
+.e6c78e30 .elementor-icon{color:#2B2B2B}
+.e6c78e30 .elementor-icon{line-height:1}
+.ef0c65a6 .elementor-heading-title{font-size:15px}
+.ef0c65a6 .elementor-heading-title{line-height:1.2em}
+.ef0c65a6 .elementor-heading-title{font-family:'Jost',sans-serif}
+.ef0c65a6 .elementor-heading-title{font-weight:500}
+.ef0c65a6 .elementor-heading-title{color:#141413}
+.e4f6bc15 .elementor-heading-title{font-size:14px}
+.e4f6bc15 .elementor-heading-title{line-height:1.2em}
+.e4f6bc15 .elementor-heading-title{font-family:'Jost',sans-serif}
+.e4f6bc15 .elementor-heading-title{font-weight:300}
+.e4f6bc15 .elementor-heading-title{color:#5E5A57}
+.ef35cfca{flex-direction:column}
+.ef35cfca{gap:24px}
+.ef35cfca{justify-content:flex-start}
+.ef35cfca{align-items:stretch}
+.ef35cfca{padding:0px 0px 0px 0px}
+.ef35cfca{--w:50%}
+.e9e0ac7d img{width:100%}
+.e9e0ac7d img{height:448px}
+.e9e0ac7d img{object-fit:cover}
+.e40c5f79{flex-direction:row}
+.e40c5f79{gap:0px}
+.e40c5f79{justify-content:flex-start}
+.e40c5f79{align-items:stretch}
+.e40c5f79{padding:0px 0px 0px 0px}
+.eb2dee02{flex-direction:column}
+.eb2dee02{gap:24px}
+.eb2dee02{justify-content:flex-start}
+.eb2dee02{align-items:stretch}
+.eb2dee02{padding:0px 0px 0px 0px}
+.eb2dee02{min-height:560px}
+.eb2dee02{--w:50%}
+.eb2dee02{background-image:url(../../assets/interiorisme.jpg)}
+.eb2dee02{background-position:center center}
+.eb2dee02{background-repeat:no-repeat}
+.eb2dee02{background-size:cover}
+.e784f2d8{flex-direction:column}
+.e784f2d8{gap:24px}
+.e784f2d8{justify-content:center}
+.e784f2d8{align-items:flex-start}
+.e784f2d8{padding:64px 72px 64px 72px}
+.e784f2d8{--w:50%}
+.e784f2d8{background-color:#F0E9E3}
+.e902514a .elementor-heading-title{font-size:13px}
+.e902514a .elementor-heading-title{line-height:1.2em}
+.e902514a .elementor-heading-title{letter-spacing:2.5px}
+.e902514a .elementor-heading-title{font-family:'Jost',sans-serif}
+.e902514a .elementor-heading-title{font-weight:400}
+.e902514a .elementor-heading-title{color:#4A443F}
+.ef8e4cb5 .elementor-heading-title{font-size:40px}
+.ef8e4cb5 .elementor-heading-title{line-height:1.2em}
+.ef8e4cb5 .elementor-heading-title{font-family:'Playfair Display',sans-serif}
+.ef8e4cb5 .elementor-heading-title{font-weight:400}
+.ef8e4cb5 .elementor-heading-title{color:#141413}
+.eddb8f4d .elementor-heading-title{font-size:17px}
+.eddb8f4d .elementor-heading-title{line-height:1.6em}
+.eddb8f4d .elementor-heading-title{font-family:'Jost',sans-serif}
+.eddb8f4d .elementor-heading-title{font-weight:300}
+.eddb8f4d .elementor-heading-title{color:#2E2A27}
+.e0655dd1 .elementor-icon-list-text{font-size:16px}
+.e0655dd1 .elementor-icon-list-text{line-height:1.3em}
+.e0655dd1 .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.e0655dd1 .elementor-icon-list-text{font-weight:300}
+.e0655dd1 .elementor-icon-list-text{color:#2E2A27}
+.e0655dd1 .elementor-icon-list-icon{color:#5B452D}
+.e0655dd1 .elementor-icon-list-icon{font-size:18px}
+.e0655dd1 .elementor-icon-list-text{padding-left:12px}
+.e0655dd1 .elementor-icon-list-item:not(:last-child){margin-bottom:16px}
+.e5388074>.e-con-inner{max-width:1312px}
+.e5388074>.e-con-inner{flex-direction:column}
+.e5388074>.e-con-inner{gap:32px}
+.e5388074>.e-con-inner{justify-content:flex-start}
+.e5388074>.e-con-inner{align-items:stretch}
+.e5388074{padding:80px 64px 80px 64px}
+.e5388074{background-color:#FFFFFF}
+.e859aac5{flex-direction:column}
+.e859aac5{gap:8px}
+.e859aac5{justify-content:flex-start}
+.e859aac5{align-items:stretch}
+.e859aac5{padding:0px 0px 0px 0px}
+.ed6ed71c .elementor-heading-title{font-size:13px}
+.ed6ed71c .elementor-heading-title{line-height:1.2em}
+.ed6ed71c .elementor-heading-title{letter-spacing:2.5px}
+.ed6ed71c .elementor-heading-title{font-family:'Jost',sans-serif}
+.ed6ed71c .elementor-heading-title{font-weight:400}
+.ed6ed71c .elementor-heading-title{color:#5E5A57}
+.e98e5c10 .elementor-heading-title{font-size:40px}
+.e98e5c10 .elementor-heading-title{line-height:1.2em}
+.e98e5c10 .elementor-heading-title{font-family:'Playfair Display',sans-serif}
+.e98e5c10 .elementor-heading-title{font-weight:400}
+.e98e5c10 .elementor-heading-title{color:#111111}
+.ed94a1ab{flex-direction:row}
+.ed94a1ab{gap:16px}
+.ed94a1ab{justify-content:flex-start}
+.ed94a1ab{align-items:stretch}
+.ed94a1ab{padding:0px 0px 0px 0px}
+.e70a01fc{flex-direction:column}
+.e70a01fc{gap:24px}
+.e70a01fc{justify-content:flex-start}
+.e70a01fc{align-items:stretch}
+.e70a01fc{padding:0px 0px 0px 0px}
+.e70a01fc{--w:50%}
+.eca00b97 img{width:100%}
+.eca00b97 img{height:480px}
+.eca00b97 img{object-fit:cover}
+.e7296118{display:grid}
+.e7296118{grid-template-columns:repeat(2,1fr)}
+.e7296118{grid-template-rows:repeat(2,1fr)}
+.e7296118{gap:16px}
+.e7296118{align-items:stretch}
+.e7296118{padding:0px 0px 0px 0px}
+.e7296118{--w:50%}
+.e33b1c64 img{width:100%}
+.e33b1c64 img{height:232px}
+.e33b1c64 img{object-fit:cover}
+.e0723505 img{width:100%}
+.e0723505 img{height:232px}
+.e0723505 img{object-fit:cover}
+.e8e487ef img{width:100%}
+.e8e487ef img{height:232px}
+.e8e487ef img{object-fit:cover}
+.e27a6842 img{width:100%}
+.e27a6842 img{height:232px}
+.e27a6842 img{object-fit:cover}
+.e8de7989>.e-con-inner{max-width:1312px}
+.e8de7989>.e-con-inner{flex-direction:row}
+.e8de7989>.e-con-inner{gap:48px}
+.e8de7989>.e-con-inner{justify-content:space-between}
+.e8de7989>.e-con-inner{align-items:center}
+.e8de7989{padding:80px 64px 80px 64px}
+.e8de7989{background-color:#F0EDE8}
+.e52cc167{flex-direction:column}
+.e52cc167{gap:24px}
+.e52cc167{justify-content:flex-start}
+.e52cc167{align-items:flex-start}
+.e52cc167{padding:0px 0px 0px 0px}
+.e52cc167{--w:64%}
+.eac51d2f .elementor-heading-title{font-size:13px}
+.eac51d2f .elementor-heading-title{line-height:1.2em}
+.eac51d2f .elementor-heading-title{letter-spacing:2.5px}
+.eac51d2f .elementor-heading-title{font-family:'Jost',sans-serif}
+.eac51d2f .elementor-heading-title{font-weight:400}
+.eac51d2f .elementor-heading-title{color:#5E5A57}
+.e4546e4d .elementor-heading-title{font-size:40px}
+.e4546e4d .elementor-heading-title{line-height:1.2em}
+.e4546e4d .elementor-heading-title{font-family:'Playfair Display',sans-serif}
+.e4546e4d .elementor-heading-title{font-weight:400}
+.e4546e4d .elementor-heading-title{color:#111111}
+.e57d04b4 .elementor-heading-title{font-size:17px}
+.e57d04b4 .elementor-heading-title{line-height:1.6em}
+.e57d04b4 .elementor-heading-title{font-family:'Jost',sans-serif}
+.e57d04b4 .elementor-heading-title{font-weight:300}
+.e57d04b4 .elementor-heading-title{color:#2E2A27}
+.e1dc6d53 .elementor-button{font-size:16px}
+.e1dc6d53 .elementor-button{line-height:1em}
+.e1dc6d53 .elementor-button{letter-spacing:0px}
+.e1dc6d53 .elementor-button{font-family:'Jost',sans-serif}
+.e1dc6d53 .elementor-button{font-weight:400}
+.e1dc6d53 .elementor-button{color:#fff}
+.e1dc6d53 .elementor-button{background-color:#141413}
+.e1dc6d53 .elementor-button{border-radius:1px 1px 1px 1px}
+.e1dc6d53 .elementor-button{padding:16px 32px 16px 32px}
+.e1dc6d53 .elementor-button:hover{background-color:#141413}
+.e1dc6d53 .elementor-button:hover{color:#fff}
+.e79b059a{flex-direction:column}
+.e79b059a{gap:8px}
+.e79b059a{justify-content:flex-start}
+.e79b059a{align-items:flex-start}
+.e79b059a{padding:0px 0px 0px 0px}
+.e79b059a{--w:30%}
+.eba6da4d .elementor-heading-title{font-size:30px}
+.eba6da4d .elementor-heading-title{line-height:1.45em}
+.eba6da4d .elementor-heading-title{font-family:'Over the Rainbow',sans-serif}
+.eba6da4d .elementor-heading-title{font-weight:400}
+.eba6da4d .elementor-heading-title{color:#3A3A3A}
+.eddd97da .elementor-divider{padding:0}
+.eddd97da .elementor-divider-separator{border-top:1px solid #3A3A3A}
+.eddd97da .elementor-divider-separator{width:40%}
+.e8cde18d{flex-direction:column}
+.e8cde18d{gap:0px}
+.e8cde18d{justify-content:flex-start}
+.e8cde18d{align-items:stretch}
+.e8cde18d{padding:0px 0px 0px 0px}
+.e8cde18d{background-image:linear-gradient(125deg,#4B3F36 0%,#2A2420 100%)}
+.ef1db84f>.e-con-inner{max-width:1312px}
+.ef1db84f>.e-con-inner{flex-direction:column}
+.ef1db84f>.e-con-inner{gap:40px}
+.ef1db84f>.e-con-inner{justify-content:flex-start}
+.ef1db84f>.e-con-inner{align-items:stretch}
+.ef1db84f{padding:80px 64px 48px 64px}
+.ee70425f{flex-direction:row}
+.ee70425f{gap:64px}
+.ee70425f{justify-content:space-between}
+.ee70425f{align-items:center}
+.ee70425f{padding:0px 0px 0px 0px}
+.e3954f85{flex-direction:column}
+.e3954f85{gap:16px}
+.e3954f85{justify-content:flex-start}
+.e3954f85{align-items:stretch}
+.e3954f85{padding:0px 0px 0px 0px}
+.e3954f85{--w:50%}
+.e406752a .elementor-heading-title{font-size:13px}
+.e406752a .elementor-heading-title{line-height:1.2em}
+.e406752a .elementor-heading-title{letter-spacing:2.5px}
+.e406752a .elementor-heading-title{font-family:'Jost',sans-serif}
+.e406752a .elementor-heading-title{font-weight:400}
+.e406752a .elementor-heading-title{color:#FFFFFFCC}
+.ef03e3c8 .elementor-heading-title{font-size:48px}
+.ef03e3c8 .elementor-heading-title{line-height:1.15em}
+.ef03e3c8 .elementor-heading-title{font-family:'Playfair Display',sans-serif}
+.ef03e3c8 .elementor-heading-title{font-weight:400}
+.ef03e3c8 .elementor-heading-title{color:#FFFFFF}
+.e8ea330e .elementor-heading-title{font-size:18px}
+.e8ea330e .elementor-heading-title{line-height:1.4em}
+.e8ea330e .elementor-heading-title{font-family:'Jost',sans-serif}
+.e8ea330e .elementor-heading-title{font-weight:300}
+.e8ea330e .elementor-heading-title{color:#FFFFFFE6}
+.e3a61edd{flex-direction:column}
+.e3a61edd{gap:32px}
+.e3a61edd{justify-content:flex-start}
+.e3a61edd{align-items:flex-start}
+.e3a61edd{padding:0px 0px 0px 0px}
+.e3a61edd{--w:50%}
+.e8315dbe .elementor-button{font-size:17px}
+.e8315dbe .elementor-button{line-height:1em}
+.e8315dbe .elementor-button{letter-spacing:0px}
+.e8315dbe .elementor-button{font-family:'Jost',sans-serif}
+.e8315dbe .elementor-button{font-weight:400}
+.e8315dbe .elementor-button{color:#141413}
+.e8315dbe .elementor-button{background-color:#F7F4F0}
+.e8315dbe .elementor-button{border-radius:2px 2px 2px 2px}
+.e8315dbe .elementor-button{padding:16px 36px 16px 36px}
+.e8315dbe .elementor-button:hover{background-color:#F7F4F0}
+.e8315dbe .elementor-button:hover{color:#141413}
+.e1aba2f0{display:grid}
+.e1aba2f0{grid-template-columns:repeat(2,1fr)}
+.e1aba2f0{grid-template-rows:repeat(3,1fr)}
+.e1aba2f0{gap:16px}
+.e1aba2f0{align-items:stretch}
+.e1aba2f0{padding:0px 0px 0px 0px}
+.ea1cfea9 .elementor-icon-list-text{font-size:15px}
+.ea1cfea9 .elementor-icon-list-text{line-height:1.3em}
+.ea1cfea9 .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.ea1cfea9 .elementor-icon-list-text{font-weight:300}
+.ea1cfea9 .elementor-icon-list-text{color:#FFFFFFD9}
+.ea1cfea9 .elementor-icon-list-icon{color:#FFFFFF}
+.ea1cfea9 .elementor-icon-list-icon{font-size:15px}
+.ea1cfea9 .elementor-icon-list-text{padding-left:8px}
+.ea1cfea9 .elementor-icon-list-item:not(:last-child){margin-bottom:0px}
+.e106d736 .elementor-icon-list-text{font-size:15px}
+.e106d736 .elementor-icon-list-text{line-height:1.3em}
+.e106d736 .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.e106d736 .elementor-icon-list-text{font-weight:300}
+.e106d736 .elementor-icon-list-text{color:#FFFFFFD9}
+.e106d736 .elementor-icon-list-icon{color:#FFFFFF}
+.e106d736 .elementor-icon-list-icon{font-size:15px}
+.e106d736 .elementor-icon-list-text{padding-left:8px}
+.e106d736 .elementor-icon-list-item:not(:last-child){margin-bottom:0px}
+.ee16014f .elementor-icon-list-text{font-size:15px}
+.ee16014f .elementor-icon-list-text{line-height:1.3em}
+.ee16014f .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.ee16014f .elementor-icon-list-text{font-weight:300}
+.ee16014f .elementor-icon-list-text{color:#FFFFFFD9}
+.ee16014f .elementor-icon-list-icon{color:#FFFFFF}
+.ee16014f .elementor-icon-list-icon{font-size:15px}
+.ee16014f .elementor-icon-list-text{padding-left:8px}
+.ee16014f .elementor-icon-list-item:not(:last-child){margin-bottom:0px}
+.e39b59bf .elementor-icon-list-text{font-size:15px}
+.e39b59bf .elementor-icon-list-text{line-height:1.3em}
+.e39b59bf .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.e39b59bf .elementor-icon-list-text{font-weight:300}
+.e39b59bf .elementor-icon-list-text{color:#FFFFFFD9}
+.e39b59bf .elementor-icon-list-icon{color:#FFFFFF}
+.e39b59bf .elementor-icon-list-icon{font-size:15px}
+.e39b59bf .elementor-icon-list-text{padding-left:8px}
+.e39b59bf .elementor-icon-list-item:not(:last-child){margin-bottom:0px}
+.e22c8855 .elementor-icon-list-text{font-size:15px}
+.e22c8855 .elementor-icon-list-text{line-height:1.3em}
+.e22c8855 .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.e22c8855 .elementor-icon-list-text{font-weight:300}
+.e22c8855 .elementor-icon-list-text{color:#FFFFFFD9}
+.e22c8855 .elementor-icon-list-icon{color:#FFFFFF}
+.e22c8855 .elementor-icon-list-icon{font-size:15px}
+.e22c8855 .elementor-icon-list-text{padding-left:8px}
+.e22c8855 .elementor-icon-list-item:not(:last-child){margin-bottom:0px}
+.e44c7b25 .elementor-icon-list-text{font-size:15px}
+.e44c7b25 .elementor-icon-list-text{line-height:1.3em}
+.e44c7b25 .elementor-icon-list-text{font-family:'Jost',sans-serif}
+.e44c7b25 .elementor-icon-list-text{font-weight:300}
+.e44c7b25 .elementor-icon-list-text{color:#FFFFFFD9}
+.e44c7b25 .elementor-icon-list-icon{color:#FFFFFF}
+.e44c7b25 .elementor-icon-list-icon{font-size:15px}
+.e44c7b25 .elementor-icon-list-text{padding-left:8px}
+.e44c7b25 .elementor-icon-list-item:not(:last-child){margin-bottom:0px}
+.eb1a5646{flex-direction:row}
+.eb1a5646{gap:24px}
+.eb1a5646{justify-content:space-between}
+.eb1a5646{align-items:center}
+.eb1a5646{padding:0px 0px 0px 0px}
+.eb1a5646{border-style:solid;border-color:#FFFFFF26}
+.eb1a5646{border-width:1px 0px 0px 0px}
+.e18fb5b8 .elementor-heading-title{font-size:14px}
+.e18fb5b8 .elementor-heading-title{line-height:1.2em}
+.e18fb5b8 .elementor-heading-title{font-family:'Jost',sans-serif}
+.e18fb5b8 .elementor-heading-title{font-weight:300}
+.e18fb5b8 .elementor-heading-title{color:#FFFFFFB3}
+.e17747e3 .elementor-heading-title{font-size:14px}
+.e17747e3 .elementor-heading-title{line-height:1.5em}
+.e17747e3 .elementor-heading-title{font-family:'Jost',sans-serif}
+.e17747e3 .elementor-heading-title{font-weight:300}
+.e17747e3 .elementor-heading-title{color:#FFFFFFB3}
+.eb9f7fe3{flex-direction:row}
+.eb9f7fe3{gap:16px}
+.eb9f7fe3{justify-content:flex-end}
+.eb9f7fe3{align-items:center}
+.eb9f7fe3{padding:0px 0px 0px 0px}
+.eb9f7fe3{--w:30%}
+.e359df3c .elementor-icon{font-size:18px}
+.e359df3c .elementor-icon{color:#FFFFFFCC}
+.e359df3c .elementor-icon{line-height:1}
+.ed60b516 .elementor-icon{font-size:18px}
+.ed60b516 .elementor-icon{color:#FFFFFFCC}
+.ed60b516 .elementor-icon{line-height:1}
+.ed52006a .elementor-icon{font-size:18px}
+.ed52006a .elementor-icon{color:#FFFFFFCC}
+.ed52006a .elementor-icon{line-height:1}
+.e63e31af .elementor-heading-title{font-size:14px}
+.e63e31af .elementor-heading-title{line-height:1.2em}
+.e63e31af .elementor-heading-title{font-family:'Jost',sans-serif}
+.e63e31af .elementor-heading-title{font-weight:300}
+.e63e31af .elementor-heading-title{color:#FFFFFFB3}
+.ea751198 .elementor-icon{font-size:32px}
+.ea751198 .elementor-icon{color:#fff}
+.ea751198 .elementor-icon{line-height:1}
+.ea751198 .elementor-icon{background-color:#25D366}
+.ea751198 .elementor-icon{color:#fff}
+.ea751198 .elementor-icon{padding:15px}
+.ea751198 .elementor-icon{border-radius:50%}
+.ea751198 .elementor-icon{display:inline-flex}
+.ea751198 .elementor-icon{box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.ea751198{position:fixed}
+.ea751198{right:24px}
+.ea751198{bottom:24px}
+.ea751198{z-index:999}
+@media (max-width:1024px){
+.e50baffa{padding:16px 40px 16px 40px}
+.e79e7bb0{padding:112px 40px 48px 40px}
+.e79e7bb0{min-height:560px}
+.e3bab376{--w:100%}
+.e9da96a0 .elementor-heading-title{font-size:52px}
+.e44f3c3e>.e-con-inner{flex-direction:column}
+.e44f3c3e>.e-con-inner{gap:40px}
+.e44f3c3e{padding:64px 40px 64px 40px}
+.e98363aa{--w:100%}
+.e2d413db .elementor-heading-title{font-size:36px}
+.ec693f2f{padding:16px 0px 0px 0px}
+.e082aea3{padding:0px 16px 0px 16px}
+.e082aea3{border-width:0px 1px 0px 0px}
+.ea0bdb8b{padding:0px 16px 0px 16px}
+.ea0bdb8b{border-width:0px 1px 0px 0px}
+.e5a1cbd2{padding:0px 16px 0px 16px}
+.e5a1cbd2{border-width:0px 0px 0px 0px}
+.ef35cfca{--w:100%}
+.e9e0ac7d img{height:360px}
+.e40c5f79{flex-direction:column}
+.eb2dee02{min-height:360px}
+.eb2dee02{--w:100%}
+.e784f2d8{padding:48px 40px 48px 40px}
+.e784f2d8{--w:100%}
+.ef8e4cb5 .elementor-heading-title{font-size:36px}
+.e5388074{padding:64px 40px 64px 40px}
+.e98e5c10 .elementor-heading-title{font-size:36px}
+.ed94a1ab{flex-direction:column}
+.e70a01fc{--w:100%}
+.eca00b97 img{height:360px}
+.e7296118{--w:100%}
+.e33b1c64 img{height:176px}
+.e0723505 img{height:176px}
+.e8e487ef img{height:176px}
+.e27a6842 img{height:176px}
+.e8de7989>.e-con-inner{flex-direction:column}
+.e8de7989>.e-con-inner{gap:32px}
+.e8de7989>.e-con-inner{align-items:flex-start}
+.e8de7989{padding:64px 40px 64px 40px}
+.e52cc167{--w:100%}
+.e4546e4d .elementor-heading-title{font-size:36px}
+.e79b059a{--w:100%}
+.ef1db84f{padding:64px 40px 40px 40px}
+.ee70425f{flex-direction:column}
+.ee70425f{gap:40px}
+.e3954f85{--w:100%}
+.ef03e3c8 .elementor-heading-title{font-size:40px}
+.e3a61edd{align-items:flex-start}
+.e3a61edd{--w:100%}
+.e1aba2f0{grid-template-columns:repeat(2,1fr)}
+.e1aba2f0{gap:16px}
+.eb1a5646{flex-direction:column}
+.eb1a5646{gap:16px}
+.eb1a5646{align-items:flex-start}
+.eb9f7fe3{--w:100%}
+}
+@media (max-width:767px){
+.e50baffa{padding:16px 24px 16px 24px}
+.e69a1bbb .elementor-button{padding:16px 32px 16px 32px}
+.e69a1bbb{display:none!important}
+.e79e7bb0{padding:112px 24px 48px 24px}
+.e79e7bb0{min-height:560px}
+.e9da96a0 .elementor-heading-title{font-size:40px}
+.ec2158d0 .elementor-button{padding:16px 32px 16px 32px}
+.e44f3c3e>.e-con-inner{flex-direction:column}
+.e44f3c3e>.e-con-inner{gap:32px}
+.e44f3c3e{padding:48px 24px 48px 24px}
+.e2d413db .elementor-heading-title{font-size:32px}
+.ec693f2f{padding:16px 0px 0px 0px}
+.e082aea3{padding:0px 16px 0px 16px}
+.e082aea3{border-width:0px 0px 0px 0px}
+.ea0bdb8b{padding:0px 16px 0px 16px}
+.ea0bdb8b{border-width:0px 0px 0px 0px}
+.e5a1cbd2{padding:0px 16px 0px 16px}
+.e5a1cbd2{border-width:0px 0px 0px 0px}
+.e9e0ac7d img{height:280px}
+.e40c5f79{flex-direction:column}
+.eb2dee02{min-height:280px}
+.e784f2d8{padding:40px 24px 40px 24px}
+.ef8e4cb5 .elementor-heading-title{font-size:32px}
+.e5388074{padding:48px 24px 48px 24px}
+.e98e5c10 .elementor-heading-title{font-size:32px}
+.ed94a1ab{flex-direction:column}
+.eca00b97 img{height:280px}
+.e33b1c64 img{height:140px}
+.e0723505 img{height:140px}
+.e8e487ef img{height:140px}
+.e27a6842 img{height:140px}
+.e8de7989>.e-con-inner{flex-direction:column}
+.e8de7989>.e-con-inner{gap:24px}
+.e8de7989>.e-con-inner{align-items:flex-start}
+.e8de7989{padding:48px 24px 48px 24px}
+.e4546e4d .elementor-heading-title{font-size:32px}
+.e1dc6d53 .elementor-button{padding:16px 32px 16px 32px}
+.ef1db84f{padding:48px 24px 32px 24px}
+.ee70425f{flex-direction:column}
+.ee70425f{gap:32px}
+.ef03e3c8 .elementor-heading-title{font-size:34px}
+.e3a61edd{align-items:flex-start}
+.e8315dbe .elementor-button{padding:16px 36px 16px 36px}
+.e1aba2f0{grid-template-columns:repeat(1,1fr)}
+.e1aba2f0{gap:8px}
+.eb1a5646{flex-direction:column}
+.eb1a5646{gap:16px}
+.eb1a5646{align-items:flex-start}
+}</style></head><body>
+<div class="e-con e50baffa e-parent  cl-header"><div class="e-con-inner"><div class="elementor-element ed7a867a elementor-widget elementor-widget-image "><div class="elementor-widget-container"><img src="../../assets/logo-creemllar.jpg" alt="Creem Llar - espais per viure"></div></div><div class="elementor-element ea21ff4d elementor-widget elementor-widget-nav-menu"><div class="elementor-widget-container"><nav class="elementor-nav-menu--main"><ul class="elementor-nav-menu"><li class="menu-item"><a class="elementor-item" href="/creemllar/">Inici</a></li><li class="menu-item active"><a class="elementor-item active" href="/creemllar/projectes/">Projectes</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/cuines/">Cuines</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/banys/">Banys</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/interiorisme/">Interiorisme</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/parquets/">Parquets</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/nosaltres/">Nosaltres</a></li><li class="menu-item"><a class="elementor-item" href="/creemllar/contacte/">Contacte</a></li></ul></nav><button class="elementor-menu-toggle" aria-label="Menú" onclick="this.closest('.elementor-widget-nav-menu').classList.toggle('open')"><i class="fas fa-bars"></i></button></div></div><div class="elementor-element e69a1bbb elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span></span></a></div></div></div></div></div><div class="e-con e79e7bb0 e-parent has-ov cl-hero cl-pj-hero"><div class="e-con-inner"><div class="e-con e3bab376 e-child  "><div class="elementor-element e5fd4aec elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default"><a href="/creemllar/projectes/">← Tots els projectes</a></p></div></div><div class="elementor-element e90eefab elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">PROJECTE D'INTERIORISME</p></div></div><div class="elementor-element e9da96a0 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h1 class="elementor-heading-title elementor-size-default">Cuina contemporània<br>a Figueres</h1></div></div><div class="elementor-element e063a27d elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais oberts.</p></div></div><div class="elementor-element ec2158d0 elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana un pressupost similar</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div></div></div><div class="e-con e44f3c3e e-parent  cl-pj-repte"><div class="e-con-inner"><div class="e-con e98363aa e-child  "><div class="elementor-element ee19fc97 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">EL REPTE</p></div></div><div class="elementor-element e2d413db elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Una cuina oberta,<br>pràctica i amb caràcter</h2></div></div><div class="elementor-element eeb4705d elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una estètica contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió amb el menjador i el jardí.</p></div></div><div class="e-con ec693f2f e-child  "><div class="e-con e082aea3 e-child  "><div class="elementor-element efef6b74 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="fas fa-map-marker-alt"></i></div></div></div></div><div class="elementor-element e1b046a3 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Ubicació</p></div></div><div class="elementor-element e0eeaabf elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Figueres</p></div></div></div><div class="e-con ea0bdb8b e-child  "><div class="elementor-element e87e7a09 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="fas fa-home"></i></div></div></div></div><div class="elementor-element e5f452cf elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Tipus de projecte</p></div></div><div class="elementor-element eb03db5d elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Reforma integral</p></div></div></div><div class="e-con e5a1cbd2 e-child  "><div class="elementor-element e6c78e30 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><i class="fas fa-ruler-combined"></i></div></div></div></div><div class="elementor-element ef0c65a6 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Superfície</p></div></div><div class="elementor-element e4f6bc15 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">28 m²</p></div></div></div></div></div><div class="e-con ef35cfca e-child  "><div class="elementor-element e9e0ac7d elementor-widget elementor-widget-image "><div class="elementor-widget-container"><a href="../../assets/home-proj-1.jpg" class="elementor-lightbox"><img src="../../assets/home-proj-1.jpg" alt="El repte del projecte"></a></div></div></div></div></div><div class="e-con e40c5f79 e-parent  cl-split cl-pj-solucio"><div class="e-con eb2dee02 e-child  "></div><div class="e-con e784f2d8 e-child  "><div class="elementor-element e902514a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">LA SOLUCIÓ</p></div></div><div class="elementor-element ef8e4cb5 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Disseny i funcionalitat<br>en perfecta harmonia</h2></div></div><div class="elementor-element eddb8f4d elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada per al confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, preparació i espai social.</p></div></div><div class="elementor-element e0655dd1 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-check-circle"></i></span><span class="elementor-icon-list-text">Mobiliari a mida</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-check-circle"></i></span><span class="elementor-icon-list-text">Materials d'alta qualitat</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-check-circle"></i></span><span class="elementor-icon-list-text">Il·luminació integrada</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-check-circle"></i></span><span class="elementor-icon-list-text">Gran capacitat d'emmagatzematge</span></li><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-check-circle"></i></span><span class="elementor-icon-list-text">Connexió amb l'exterior</span></li></ul></div></div></div></div><div class="e-con e5388074 e-parent  cl-pj-galeria"><div class="e-con-inner"><div class="e-con e859aac5 e-child  "><div class="elementor-element ed6ed71c elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">GALERIA D'IMATGES</p></div></div><div class="elementor-element e98e5c10 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Detalls que fan la diferència</h2></div></div></div><div class="e-con ed94a1ab e-child  "><div class="e-con e70a01fc e-child  "><div class="elementor-element eca00b97 elementor-widget elementor-widget-image "><div class="elementor-widget-container"><a href="../../assets/home-proj-3.jpg" class="elementor-lightbox"><img src="../../assets/home-proj-3.jpg" alt="Galeria 1"></a></div></div></div><div class="e-con e7296118 e-child  "><div class="elementor-element e33b1c64 elementor-widget elementor-widget-image "><div class="elementor-widget-container"><a href="../../assets/home-proj-2.jpg" class="elementor-lightbox"><img src="../../assets/home-proj-2.jpg" alt="Galeria 2"></a></div></div><div class="elementor-element e0723505 elementor-widget elementor-widget-image "><div class="elementor-widget-container"><a href="../../assets/proj-01.jpg" class="elementor-lightbox"><img src="../../assets/proj-01.jpg" alt="Galeria 3"></a></div></div><div class="elementor-element e8e487ef elementor-widget elementor-widget-image "><div class="elementor-widget-container"><a href="../../assets/proj-04.jpg" class="elementor-lightbox"><img src="../../assets/proj-04.jpg" alt="Galeria 4"></a></div></div><div class="elementor-element e27a6842 elementor-widget elementor-widget-image "><div class="elementor-widget-container"><a href="../../assets/proj-10.jpg" class="elementor-lightbox"><img src="../../assets/proj-10.jpg" alt="Galeria 5"></a></div></div></div></div></div></div><div class="e-con e8de7989 e-parent  cl-pj-cta"><div class="e-con-inner"><div class="e-con e52cc167 e-child  "><div class="elementor-element eac51d2f elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">TENS UN PROJECTE SIMILAR?</p></div></div><div class="elementor-element e4546e4d elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Fem realitat la cuina dels teus somnis</h2></div></div><div class="elementor-element e57d04b4 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un pressupost sense compromís.</p></div></div><div class="elementor-element e1dc6d53 elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div></div><div class="e-con e79b059a e-child  "><div class="elementor-element eba6da4d elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">“ Espais que<br>s'adapten a tu ”</p></div></div><div class="elementor-element eddd97da elementor-widget elementor-widget-divider"><div class="elementor-widget-container"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div></div></div></div></div><div class="e-con e8cde18d e-parent  cl-footer-wrap"><div class="e-con ef1db84f e-parent  cl-footer"><div class="e-con-inner"><div class="e-con ee70425f e-child  "><div class="e-con e3954f85 e-child  "><div class="elementor-element e406752a elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">COMENCEM?</p></div></div><div class="elementor-element ef03e3c8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">Parlem del teu projecte</h2></div></div><div class="elementor-element e8ea330e elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Explica'ns la teva idea i t'assessorem sense compromís.</p></div></div></div><div class="e-con e3a61edd e-child  "><div class="elementor-element e8315dbe elementor-widget elementor-widget-button "><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="/creemllar/contacte/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Demana pressupost</span><span class="elementor-button-icon"><i class="fas fa-long-arrow-alt-right"></i></span></span></a></div></div></div><div class="e-con e1aba2f0 e-child  "><div class="elementor-element ea1cfea9 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C. Hortes, 34 – 17600 Figueres</span></li></ul></div></div><div class="elementor-element e106d736 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-map-marker-alt"></i></span><span class="elementor-icon-list-text">C/ Pare Claret, 1 – 17820 Banyoles</span></li></ul></div></div><div class="elementor-element ee16014f elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972684896"><span class="elementor-icon-list-text">+34 972 684 896</span></a></li></ul></div></div><div class="elementor-element e39b59bf elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="fas fa-phone-alt"></i></span><a href="tel:+34972519324"><span class="elementor-icon-list-text">+34 972 519 324</span></a></li></ul></div></div><div class="elementor-element e22c8855 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div><div class="elementor-element e44c7b25 elementor-widget elementor-widget-icon-list "><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><i class="far fa-envelope"></i></span><a href="mailto:info@creemllar.com"><span class="elementor-icon-list-text">info@creemllar.com</span></a></li></ul></div></div></div></div></div><div class="e-con eb1a5646 e-child  "><div class="elementor-element e18fb5b8 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Copyright CREEM LLAR</p></div></div><div class="elementor-element e17747e3 elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · Diumenges tancat</p></div></div><div class="e-con eb9f7fe3 e-child  "><div class="elementor-element e359df3c elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div></div></div></div><div class="elementor-element ed60b516 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div></div></div></div><div class="elementor-element ed52006a elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></div></div></div></div><div class="elementor-element e63e31af elementor-widget elementor-widget-heading "><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default"><a href="/creemllar/politica-de-privacitat/">Política de privacitat</a></p></div></div></div></div><div class="elementor-element ea751198 elementor-widget elementor-widget-icon "><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon elementor-view-stacked"><a href="https://wa.me/34972684896" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div></div></div></div></div></div>
+</body></html>

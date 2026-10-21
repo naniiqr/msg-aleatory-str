@@ -1884,6 +1884,13 @@
                       "unit": "px",
                       "size": 220,
                       "sizes": []
+                    },
+                    "link_to": "custom",
+                    "link": {
+                      "url": "/projecte/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
                     }
                   },
                   "elements": [],
@@ -1963,6 +1970,12 @@
                               "unit": "em",
                               "size": 1.2,
                               "sizes": []
+                            },
+                            "link": {
+                              "url": "/projecte/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
                             }
                           },
                           "elements": [],
