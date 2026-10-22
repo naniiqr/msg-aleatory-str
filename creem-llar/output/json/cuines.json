@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "15be4ce",
+      "id": "bf05026",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -116,7 +116,7 @@
       },
       "elements": [
         {
-          "id": "f30f08a",
+          "id": "6511aa3",
           "elType": "widget",
           "settings": {
             "title": "Cuines",
@@ -150,7 +150,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "2e90cae",
+          "id": "d240423",
           "elType": "widget",
           "settings": {
             "title": "Dissenys funcionals i elegants<br>per al teu dia a dia.",
@@ -184,7 +184,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "042d0b1",
+          "id": "238bf3b",
           "elType": "widget",
           "settings": {
             "text": "Demana pressupost",
@@ -259,7 +259,7 @@
       "isInner": false
     },
     {
-      "id": "1977c05",
+      "id": "9695442",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -326,7 +326,7 @@
       },
       "elements": [
         {
-          "id": "b3c8857",
+          "id": "f76568c",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -361,7 +361,7 @@
           },
           "elements": [
             {
-              "id": "f60d814",
+              "id": "cf649ab",
               "elType": "widget",
               "settings": {
                 "title": "LES NOSTRES",
@@ -390,7 +390,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "c3b292c",
+              "id": "e522af8",
               "elType": "widget",
               "settings": {
                 "title": "Cuines",
@@ -427,7 +427,7 @@
           "isInner": true
         },
         {
-          "id": "ba1befa",
+          "id": "b3f5449",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -462,7 +462,7 @@
           },
           "elements": [
             {
-              "id": "77b245a",
+              "id": "5d3456f",
               "elType": "widget",
               "settings": {
                 "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
@@ -492,7 +492,7 @@
       "isInner": false
     },
     {
-      "id": "3cb91e0",
+      "id": "1d39000",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -541,7 +541,7 @@
       },
       "elements": [
         {
-          "id": "37a0e4a",
+          "id": "2ec5333",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -601,7 +601,7 @@
           },
           "elements": [
             {
-              "id": "2617c9d",
+              "id": "c07d6b9",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -694,7 +694,7 @@
               },
               "elements": [
                 {
-                  "id": "dc2fa4d",
+                  "id": "71c3787",
                   "elType": "widget",
                   "settings": {
                     "title": "Cuina moderna amb illa",
@@ -718,7 +718,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "df1e82b",
+                  "id": "62f370d",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -728,7 +728,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "99d8cdd",
+                        "_id": "1dc389d",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -776,7 +776,7 @@
               "isInner": true
             },
             {
-              "id": "14ad6fc",
+              "id": "725dd3b",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -869,7 +869,7 @@
               },
               "elements": [
                 {
-                  "id": "316a17f",
+                  "id": "7e9fbb9",
                   "elType": "widget",
                   "settings": {
                     "title": "Cuina contemporània",
@@ -893,7 +893,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "821494f",
+                  "id": "26ae0e5",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -903,7 +903,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "b520725",
+                        "_id": "97edd6a",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -951,7 +951,7 @@
               "isInner": true
             },
             {
-              "id": "2b83c1a",
+              "id": "10036b2",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1044,7 +1044,7 @@
               },
               "elements": [
                 {
-                  "id": "59904fe",
+                  "id": "83809e4",
                   "elType": "widget",
                   "settings": {
                     "title": "Cuina oberta al menjador",
@@ -1068,7 +1068,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "d0d45a3",
+                  "id": "097b110",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -1078,7 +1078,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "77376ca",
+                        "_id": "e7891d2",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -1126,7 +1126,7 @@
               "isInner": true
             },
             {
-              "id": "6355d36",
+              "id": "e2e26ef",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1219,7 +1219,7 @@
               },
               "elements": [
                 {
-                  "id": "1cf28e6",
+                  "id": "0885dd8",
                   "elType": "widget",
                   "settings": {
                     "title": "Cuina en tons naturals",
@@ -1243,7 +1243,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "0676927",
+                  "id": "49be6a2",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -1253,7 +1253,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "cd3dd17",
+                        "_id": "6260253",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -1301,7 +1301,7 @@
               "isInner": true
             },
             {
-              "id": "d7feaad",
+              "id": "2729911",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1394,7 +1394,7 @@
               },
               "elements": [
                 {
-                  "id": "a3666fd",
+                  "id": "ac2270c",
                   "elType": "widget",
                   "settings": {
                     "title": "Cuina minimalista",
@@ -1418,7 +1418,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "69fcb8e",
+                  "id": "5fe4b03",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -1428,7 +1428,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "c5cccf1",
+                        "_id": "5710298",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -1476,7 +1476,7 @@
               "isInner": true
             },
             {
-              "id": "51305ce",
+              "id": "dc6d28d",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1569,7 +1569,7 @@
               },
               "elements": [
                 {
-                  "id": "099dd9e",
+                  "id": "7f5b202",
                   "elType": "widget",
                   "settings": {
                     "title": "Cuina amb fusta i pedra",
@@ -1593,7 +1593,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "80c01fe",
+                  "id": "f0f5855",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -1603,7 +1603,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "f0bbbbc",
+                        "_id": "abc83a8",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -1657,7 +1657,7 @@
       "isInner": false
     },
     {
-      "id": "f77414a",
+      "id": "da88f92",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1706,7 +1706,7 @@
       },
       "elements": [
         {
-          "id": "6f70531",
+          "id": "c1ab3c0",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1747,7 +1747,7 @@
           },
           "elements": [
             {
-              "id": "d03961c",
+              "id": "30eb497",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1782,7 +1782,7 @@
               },
               "elements": [
                 {
-                  "id": "ef933b2",
+                  "id": "11665ad",
                   "elType": "widget",
                   "settings": {
                     "title": "EL NOSTRE MÈTODE",
@@ -1811,7 +1811,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "4284e7d",
+                  "id": "9b88c6a",
                   "elType": "widget",
                   "settings": {
                     "title": "Un procés senzill,<br>amb grans resultats",
@@ -1848,7 +1848,7 @@
               "isInner": true
             },
             {
-              "id": "95779d1",
+              "id": "f9399f9",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1960,7 +1960,7 @@
               },
               "elements": [
                 {
-                  "id": "ae0a622",
+                  "id": "b9b1f69",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1985,7 +1985,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5dd5887",
+                      "id": "7027681",
                       "elType": "container",
                       "settings": {
                         "content_width": "full",
@@ -2010,7 +2010,7 @@
                       },
                       "elements": [
                         {
-                          "id": "ccbdadb",
+                          "id": "941dabb",
                           "elType": "widget",
                           "settings": {
                             "title": "01",
@@ -2035,7 +2035,7 @@
                           "widgetType": "heading"
                         },
                         {
-                          "id": "699a31c",
+                          "id": "8673f14",
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
@@ -2053,7 +2053,7 @@
                           "widgetType": "icon"
                         },
                         {
-                          "id": "83c3fb1",
+                          "id": "2f0ae8a",
                           "elType": "widget",
                           "settings": {
                             "style": "solid",
@@ -2082,7 +2082,7 @@
                       "isInner": true
                     },
                     {
-                      "id": "c2b9180",
+                      "id": "a596558",
                       "elType": "widget",
                       "settings": {
                         "title": "Escoltem",
@@ -2106,7 +2106,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "4984e40",
+                      "id": "d0f2e9e",
                       "elType": "widget",
                       "settings": {
                         "title": "Analitzem les teves necessitats i et proposem idees a mida.",
@@ -2133,7 +2133,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "4e2c7a9",
+                  "id": "69b981e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2158,7 +2158,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b3ab5da",
+                      "id": "c122922",
                       "elType": "container",
                       "settings": {
                         "content_width": "full",
@@ -2183,7 +2183,7 @@
                       },
                       "elements": [
                         {
-                          "id": "a77d296",
+                          "id": "7f6451c",
                           "elType": "widget",
                           "settings": {
                             "title": "02",
@@ -2208,7 +2208,7 @@
                           "widgetType": "heading"
                         },
                         {
-                          "id": "2572c07",
+                          "id": "24d00ed",
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
@@ -2226,7 +2226,7 @@
                           "widgetType": "icon"
                         },
                         {
-                          "id": "0a89d52",
+                          "id": "3388aa4",
                           "elType": "widget",
                           "settings": {
                             "style": "solid",
@@ -2255,7 +2255,7 @@
                       "isInner": true
                     },
                     {
-                      "id": "1ca2ab4",
+                      "id": "9f4d958",
                       "elType": "widget",
                       "settings": {
                         "title": "Dissenyem",
@@ -2279,7 +2279,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "c0fec88",
+                      "id": "5bb8b8d",
                       "elType": "widget",
                       "settings": {
                         "title": "Planifiquem cada detall amb rigor i transparència.",
@@ -2306,7 +2306,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "9ab0d4b",
+                  "id": "621d8e7",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2331,7 +2331,7 @@
                   },
                   "elements": [
                     {
-                      "id": "24ab5dd",
+                      "id": "061deb7",
                       "elType": "container",
                       "settings": {
                         "content_width": "full",
@@ -2356,7 +2356,7 @@
                       },
                       "elements": [
                         {
-                          "id": "d1e3a9d",
+                          "id": "4124cba",
                           "elType": "widget",
                           "settings": {
                             "title": "03",
@@ -2381,7 +2381,7 @@
                           "widgetType": "heading"
                         },
                         {
-                          "id": "e36ce36",
+                          "id": "c31df60",
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
@@ -2399,7 +2399,7 @@
                           "widgetType": "icon"
                         },
                         {
-                          "id": "8b3d15f",
+                          "id": "5956560",
                           "elType": "widget",
                           "settings": {
                             "style": "solid",
@@ -2428,7 +2428,7 @@
                       "isInner": true
                     },
                     {
-                      "id": "bb4701b",
+                      "id": "3945fd9",
                       "elType": "widget",
                       "settings": {
                         "title": "Fem realitat",
@@ -2452,7 +2452,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "074b8d7",
+                      "id": "e748d10",
                       "elType": "widget",
                       "settings": {
                         "title": "Ens ocupem de tot perquè només gaudeixis del resultat.",
@@ -2488,7 +2488,7 @@
       "isInner": false
     },
     {
-      "id": "bf47f69",
+      "id": "984551f",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -2516,7 +2516,7 @@
       },
       "elements": [
         {
-          "id": "e689acf",
+          "id": "0fabbc9",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -2575,7 +2575,7 @@
           "isInner": true
         },
         {
-          "id": "8e1f525",
+          "id": "cc7eb9f",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -2646,7 +2646,7 @@
           },
           "elements": [
             {
-              "id": "ac9704e",
+              "id": "99cad00",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -2681,7 +2681,7 @@
               },
               "elements": [
                 {
-                  "id": "ec0cc38",
+                  "id": "7c33155",
                   "elType": "widget",
                   "settings": {
                     "title": "INTERIORISME A FIGUERES | BANYOLES",
@@ -2710,7 +2710,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "9acf035",
+                  "id": "8ac59a0",
                   "elType": "widget",
                   "settings": {
                     "title": "Dissenyem espais<br>per a persones reals",
@@ -2744,7 +2744,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "12727a0",
+                  "id": "cb5d586",
                   "elType": "widget",
                   "settings": {
                     "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
@@ -2768,7 +2768,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "970be41",
+                  "id": "1434120",
                   "elType": "widget",
                   "settings": {
                     "text": "Parlem del teu projecte",
@@ -2843,7 +2843,7 @@
               "isInner": true
             },
             {
-              "id": "994eb00",
+              "id": "6877bf5",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -2878,7 +2878,7 @@
               },
               "elements": [
                 {
-                  "id": "65c2e7b",
+                  "id": "f76a22c",
                   "elType": "widget",
                   "settings": {
                     "title": "“ La teva llar,<br>el nostre<br>compromís ”",
@@ -2902,7 +2902,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "6479dda",
+                  "id": "ae38368",
                   "elType": "widget",
                   "settings": {
                     "style": "solid",

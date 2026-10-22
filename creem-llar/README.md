@@ -34,3 +34,10 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 1. Canvia títol (H1), localitat, tipus i superfície, el text del repte i de la solució i la llista de punts.
 2. Substitueix les imatges: fons del hero, imatge del repte, fons de la solució i les 5 de la galeria (obren en lightbox).
 3. Escriu el SEO del projecte amb la fórmula: `<tipus de projecte> a <localitat>` (keyphrase), al principi del títol i de la descripció.
+
+## Projectes amb pestanyes
+`projectes.json` usa el widget **Pestanyes niuades** (Tabs) d'Elementor: Tots · Cuina · Banys · Interiorisme · Reformes · Parquets (+ "Per classificar", temporal).
+- Les dades surten de `data/projectes.csv` (34 projectes). Omple la columna *categoria* i torna a generar (`python3 build.py`) o envia'm el CSV.
+- El títol de cada targeta és `[NOM DE LA CARPETA]` com a guia: l'esborres en carregar el projecte. La localitat és real.
+- `tools/classificar_projectes.py` proposa categories a partir dels noms de carpetes/fitxers.
+- Cada projecte apareix a "Tots" i a la seva categoria: copia/enganxa la targeta (Ctrl+C / Ctrl+V) ja amb la foto posada.

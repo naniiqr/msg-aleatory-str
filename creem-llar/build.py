@@ -848,6 +848,82 @@ def proj_grid():
                      pad=P("sec", top=0), cls="cl-pgrid")
 
 
+# ---------------------------------------------------------------- Projectes amb pestanyes (widget Tabs niuat)
+CATS = ["Cuina", "Banys", "Interiorisme", "Reformes", "Parquets"]
+
+
+def load_projects():
+    import csv
+    out = []
+    with open(f"{ROOT}/data/projectes.csv", encoding="utf-8-sig") as f:
+        for r in csv.reader(f, delimiter=";"):
+            if not r or r[0] == "id":
+                continue
+            cats = [c.strip() for c in r[3].replace("/", ",").split(",") if c.strip()]
+            out.append({"id": r[0], "guia": r[1], "loc": r[2], "cats": cats, "nota": r[4] if len(r) > 4 else ""})
+    return out
+
+
+TABS_CSS = """<style>
+.cl-tabs.elementor-widget .e-n-tabs-heading{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:40px}
+.cl-tabs.elementor-widget .e-n-tab-title{background:transparent;border:1px solid #CFC8BF;border-radius:1px;color:#1E1B19;font:400 17px/1 'Jost',sans-serif;padding:16px 32px;cursor:pointer}
+.cl-tabs.elementor-widget .e-n-tab-title[aria-selected="true"]{background:#141413!important;color:#fff!important;border-color:#141413!important}
+.cl-tabs.elementor-widget .e-n-tab-title-text{color:inherit;font:inherit}
+.cl-tabs.elementor-widget .e-n-tabs-content>.e-con:not(.e-active){display:none!important}
+.cl-guia-nota{opacity:.7}
+</style>"""
+
+
+def tabs_widget(tabs, cls="cl-tabs"):
+    """tabs: [(titol, Node-contenidor)]. Genera el widget 'nested-tabs' d'Elementor i el seu equivalent HTML."""
+    i = nid()
+    items, heads, body, rules = [], "", "", []
+    for n, (titol, panel) in enumerate(tabs):
+        items.append({"tab_title": titol, "_id": nid()})
+        panel.el["settings"]["_title"] = titol
+        heads += (f'<button class="e-n-tab-title" role="tab" aria-selected="{"true" if n == 0 else "false"}" '
+                  f'data-tab="{n}"><span class="e-n-tab-title-text">{titol}</span></button>')
+        body += panel.html.replace('<div class="', f'<div role="tabpanel" data-panel="{n}" class="{"e-active " if n == 0 else ""}', 1)
+        rules += panel.rules
+    s = {"tabs": items, "tabs_justify_horizontal": "center", "tabs_title_space_between": sz(16),
+         "_css_classes": cls}
+    el = {"id": i, "elType": "widget", "settings": s, "elements": [p.el for _, p in tabs],
+          "widgetType": "nested-tabs"}
+    html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-n-tabs {cls}">'
+            f'<div class="elementor-widget-container"><div class="e-n-tabs"><div class="e-n-tabs-heading" role="tablist">'
+            f'{heads}</div><div class="e-n-tabs-content">{body}</div></div></div></div>')
+    return Node(el, html, rules, [p for _, p in tabs])
+
+
+def guia_card(idx, p):
+    """Targeta d'un projecte. El títol porta el nom de la carpeta com a guia (s'esborra en carregar el projecte)."""
+    n = (idx % 15) + 1
+    return proj_card(n, f"[{p['guia']}]", p["loc"] or "—", "x")
+
+
+def proj_pestanyes():
+    projs = load_projects()
+    cards_all = [guia_card(i, p) for i, p in enumerate(projs)]
+
+    def panel(cards, missatge):
+        if not cards:
+            return container([heading(missatge, "p", SANS, 17, 300, C_TEXT, 1.5, align="center", cls="cl-guia-nota")],
+                             inner=True, pad=R((24, 0, 24, 0), (24, 0, 24, 0), (16, 0, 16, 0)))
+        rows = -(-len(cards) // 3)
+        return container(cards, grid=(R(3, 2, 1), rows), gap=R(24, 24, 16), inner=True, pad=0)
+
+    tabs = [("Tots", panel(cards_all, ""))]
+    for c in CATS:
+        # cada targeta es crea de nou: els nodes no es poden reutilitzar entre pestanyes
+        sel = [guia_card(i, p) for i, p in enumerate(projs) if c in p["cats"]]
+        tabs.append((c, panel(sel, f"[GUIA] Encara no hi ha cap projecte assignat a «{c}». Copia i enganxa aquí les "
+                                   "targetes de la pestanya «Tots» que corresponguin.")))
+    pend = [guia_card(i, p) for i, p in enumerate(projs) if not p["cats"]]
+    tabs.append(("Per classificar", panel(pend, "")))
+    w = tabs_widget(tabs)
+    return container([w, html_widget(TABS_CSS)], boxed=BOX, bg=C_BG, gap=0, pad=P("sec", top=0), cls="cl-ptabs")
+
+
 # ================================================================ PÀGINES
 def page_inici():
     return [hero("hero-inici.jpg", None, "Cuines, banys i interiorisme<br>per crear llars úniques",
@@ -858,7 +934,7 @@ def page_inici():
 def page_projectes():
     return [hero("hero-projectes.jpg", None, "Cuines, banys, interiorisme, reformes<br>i parquets per crear llars "
                  "úniques", "Contactar amb nosaltres", "/contacte/", minh=505, arrow=False),
-            proj_intro(), proj_filters(), proj_grid(),
+            proj_intro(), proj_pestanyes(),
             interiorisme("Dissenyem espais<br>per a persones reals"), equip()]
 
 
@@ -1189,6 +1265,9 @@ def write_html(name, title, parts):
 <style>{BASE_CSS}
 {collect_css(rules)}</style></head><body>
 {body}
+<script>document.addEventListener('click',function(e){{var b=e.target.closest('.e-n-tab-title');if(!b)return;var w=b.closest('.e-n-tabs');
+w.querySelectorAll('.e-n-tab-title').forEach(function(x){{x.setAttribute('aria-selected',x===b?'true':'false');}});
+w.querySelectorAll(':scope>.e-n-tabs-content>.e-con').forEach(function(p){{p.classList.toggle('e-active',p.dataset.panel===b.dataset.tab);}});}});</script>
 </body></html>"""
     os.makedirs(f"{OUT}/html", exist_ok=True)
     with open(f"{OUT}/html/{name}.html", "w", encoding="utf-8") as f:

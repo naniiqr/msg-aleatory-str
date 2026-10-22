@@ -1,0 +1,35 @@
+﻿id;guia (nom de la carpeta);localitat;categoria (Cuina/Banys/Interiorisme/Reformes/Parquets);nota
+p01;ADRIA RAMOS;Figueres;;
+p02;ALBA CLIMENT;Figueres;;
+p03;ALBA LUCIA LOPEZ;Vinya Gran;Banys;Carpeta: 'BANYS VINYA GRAN' (foto .HEIC). Categoria inferida del nom
+p04;ALBERT GENIS;Figueres;;
+p05;ALEX MARTI;Figueres;;
+p06;ALICIA SERRANO;Cadaqués;;
+p07;ANDREU PORTBOU;;;La carpeta no indica localitat
+p08;ANNA LLOSA;Figueres;;Hi ha un zip i un .jpg
+p09;BANYOLES;Banyoles;;La carpeta només diu 'BANYOLES', sense nom de client
+p10;BARRA BAR;L'Escala;Interiorisme;Local comercial: categoria inferida, confirma
+p11;BESCANÓ;Bescanó;;La carpeta només diu la localitat
+p12;BOADELLA;Boadella;;La carpeta només diu la localitat
+p13;BUFFET ROSELLO;El Pertús;Interiorisme;Local comercial: categoria inferida, confirma
+p14;CAMPING LA SIRENE;;;La carpeta no indica localitat
+p15;CARLES PANAREDA;;;La carpeta no indica localitat
+p16;CARLES PUJOL;Figueres;;L'arxiu és un .crdownload (descàrrega incompleta)
+p17;CARLES SERRA;Fortià;;
+p18;CARLOTTA;Albons;;
+p19;CARME GONGORA;L'Escala;;
+p20;CARME SANTALO;Ordis;;
+p21;CARME VIARNES;Massanet;;
+p22;CLARA FITA;Peralada;;
+p23;CONXITA GOLANOS;Pontós;;
+p24;CRISTINA TERSA;Marzà;;
+p25;DANI (BANY MAS PAU);Avinyonet;Banys;Carpeta: 'DANI BANY MAS PAU'. Categoria inferida del nom
+p26;DANI ZENITH;Medinyà;;
+p27;DOLORS ALBUJAR;Figueres;;
+p28;DOLORS BOSCH;Figueres;;
+p29;DOLORS PUNSET;Mollet de Perelada;;
+p30;ELISABETH I FRANZ;Colera;;
+p31;ENRIC PASTOR;Navata;;
+p32;ERNEST RUIZ;Navata;;
+p33;ESTEVE BRUN;Mas Pai;;
+p34;ESTHER DIEZ (DESPATX I CAPÇAL);Vilasacra;Interiorisme;Despatx: categoria inferida, confirma
