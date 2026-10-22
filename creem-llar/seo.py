@@ -10,7 +10,7 @@ FONT = ImageFont.truetype("/usr/share/fonts/truetype/liberation/LiberationSans-R
 PAGES = [
  ("Inici", "/", "estudi d'interiorisme a Figueres",
   "Estudi d'interiorisme a Figueres | Cuines, banys i reformes",
-  "Estudi d'interiorisme a Figueres i Banyoles: dissenyem cuines, banys, reformes i parquets a mida per crear llars úniques. Demana pressupost sense compromís."),
+  "Estudi d'interiorisme a Figueres i Banyoles: dissenyem cuines, banys, reformes i parquets a mida per crear llars úniques. Demana pressupost."),
  ("Projectes", "/projectes/", "projectes d'interiorisme a l'Empordà",
   "Projectes d'interiorisme a l'Empordà | Creem Llar Figueres",
   "Projectes d'interiorisme a l'Empordà i el Pla de l'Estany: cuines, banys, reformes i parquets a Figueres, Banyoles i més. Descobreix el nostre treball."),
@@ -19,12 +19,12 @@ PAGES = [
   "Cuines a Figueres i Banyoles: dissenys a mida funcionals i elegants per al teu dia a dia, amb materials de qualitat i acompanyament. Demana pressupost."),
  ("Banys", "/banys/", "banys a Banyoles",
   "Banys a Banyoles | Reformes de banys a mida – Creem Llar",
-  "Banys a Banyoles i Figueres: reformes d'espais moderns, còmodes i plens de benestar, amb disseny a mida i garantia. Explica'ns la teva idea sense compromís."),
+  "Banys a Banyoles i Figueres: reformes d'espais moderns, còmodes i plens de benestar, amb disseny a mida i garantia. Explica'ns la teva idea."),
  ("Interiorisme", "/interiorisme/", "disseny d'interiors a Banyoles",
   "Disseny d'interiors a Banyoles | Creem Llar Figueres",
   "Disseny d'interiors a Banyoles i Figueres per a cada estil de vida: combinem estètica, funcionalitat i benestar. Parla amb el nostre equip d'interioristes."),
  ("Parquets", "/parquets/", "parquets a Figueres",
-  "Parquets a Figueres i Banyoles | Paviments càlids per a la llar",
+  "Parquets a Figueres | Paviments càlids – Creem Llar",
   "Parquets a Figueres i Banyoles: paviments càlids i duradors per a la teva llar, amb assessorament i col·locació professional. Demana pressupost."),
  ("Nosaltres", "/nosaltres/", "equip d'interioristes a Figueres",
   "Equip d'interioristes a Figueres | Qui som – Creem Llar",
@@ -38,8 +38,9 @@ PAGES = [
 ]
 PLACES = ("figueres", "banyoles", "empordà", "girona", "pla de l'estany")
 def has_place(t): return any(p in t.lower() for p in PLACES)
-T_MIN, T_MAX_PX = 400, 600
-D_MIN, D_MAX = 120, 156
+T_MIN, T_MAX_PX = 400, 580
+D_MIN, D_MAX = 140, 155
+TC_MIN, TC_MAX = 45, 60
 
 def px(s): return round(FONT.getlength(s))
 rows, ok_all = [], True
@@ -47,8 +48,9 @@ for name, slug, kw, title, desc in PAGES:
     checks = {
       "títol comença per keyphrase": title.lower().startswith(kw.lower()),
       "descripció comença per keyphrase": desc.lower().startswith(kw.lower()),
-      "títol dins 400-600 px": T_MIN <= px(title) <= T_MAX_PX,
-      "descripció 120-156 car.": D_MIN <= len(desc) <= D_MAX,
+      "títol 45-60 car.": TC_MIN <= len(title) <= TC_MAX,
+      "títol dins 400-580 px": T_MIN <= px(title) <= T_MAX_PX,
+      "descripció 140-155 car.": D_MIN <= len(desc) <= D_MAX,
       "keyphrase ≤ 4 paraules": len(kw.split()) <= 4,
       "lloc a la keyphrase": has_place(kw),
       "lloc al títol": has_place(title),
