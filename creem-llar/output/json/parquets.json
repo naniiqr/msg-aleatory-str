@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "8de7989",
+      "id": "50baffa",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -65,7 +65,7 @@
         },
         "background_background": "classic",
         "background_image": {
-          "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/hero-projectes.jpg",
+          "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/proj-14.jpg",
           "id": "",
           "size": "",
           "alt": "",
@@ -102,7 +102,7 @@
       },
       "elements": [
         {
-          "id": "79b059a",
+          "id": "69a1bbb",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -167,7 +167,56 @@
           },
           "elements": [
             {
-              "id": "52cc167",
+              "id": "79b059a",
+              "elType": "widget",
+              "settings": {
+                "title": "FIGUERES  |  BANYOLES",
+                "header_size": "p",
+                "title_color": "#FFFFFFE6",
+                "typography_typography": "custom",
+                "typography_font_family": "DM Sans",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.2,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 4.5,
+                  "sizes": []
+                },
+                "typography_letter_spacing_tablet": {
+                  "unit": "px",
+                  "size": 4,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": 3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "8de7989",
               "elType": "widget",
               "settings": {
                 "title": "Parquets",
@@ -211,7 +260,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "ba6da4d",
+              "id": "d7a867a",
               "elType": "widget",
               "settings": {
                 "title": "Paviments càlids<br>pensats per a la teva llar.",
@@ -255,7 +304,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "ddd97da",
+              "id": "a21ff4d",
               "elType": "widget",
               "settings": {
                 "text": "Demana pressupost",
@@ -333,7 +382,7 @@
       "isInner": false
     },
     {
-      "id": "d4d9b3b",
+      "id": "beb69db",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -400,7 +449,7 @@
       },
       "elements": [
         {
-          "id": "69a1bbb",
+          "id": "9042e6a",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -435,17 +484,17 @@
           },
           "elements": [
             {
-              "id": "d7a867a",
+              "id": "5bfae98",
               "elType": "widget",
               "settings": {
-                "title": "ELS NOSTRES",
+                "title": "PARQUETS A FIGUERES I BANYOLES",
                 "header_size": "p",
                 "title_color": "#5E5A57",
                 "typography_typography": "custom",
                 "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 13,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -456,7 +505,7 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 2.5,
+                  "size": 3.5,
                   "sizes": []
                 }
               },
@@ -464,10 +513,10 @@
               "widgetType": "heading"
             },
             {
-              "id": "a21ff4d",
+              "id": "d4d9b3b",
               "elType": "widget",
               "settings": {
-                "title": "Parquets",
+                "title": "Terres amb<br>caràcter",
                 "header_size": "h2",
                 "title_color": "#111111",
                 "typography_typography": "custom",
@@ -501,7 +550,7 @@
           "isInner": true
         },
         {
-          "id": "5bfae98",
+          "id": "c70e138",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -536,10 +585,10 @@
           },
           "elements": [
             {
-              "id": "50baffa",
+              "id": "dc12506",
               "elType": "widget",
               "settings": {
-                "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
+                "title": "Assessorem i col·loquem parquets i paviments de fusta que aporten calidesa i durabilitat a qualsevol estança. Et ajudem a triar el to, l'acabat i el tipus més adequats per a cada espai.",
                 "header_size": "p",
                 "title_color": "#4A443F",
                 "typography_typography": "custom",
@@ -549,10 +598,10 @@
                   "size": 17,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
-                  "size": 1.5,
+                  "size": 1.6,
                   "sizes": []
                 }
               },
@@ -566,7 +615,7 @@
       "isInner": false
     },
     {
-      "id": "f3e579f",
+      "id": "779ea89",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -615,7 +664,7 @@
       },
       "elements": [
         {
-          "id": "cdd9c89",
+          "id": "5c4645b",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -675,7 +724,7 @@
           },
           "elements": [
             {
-              "id": "beb69db",
+              "id": "e1880a5",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -768,7 +817,7 @@
               },
               "elements": [
                 {
-                  "id": "9042e6a",
+                  "id": "cdd9c89",
                   "elType": "widget",
                   "settings": {
                     "title": "Parquet d'interior",
@@ -792,7 +841,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "dc12506",
+                  "id": "f3e579f",
                   "elType": "widget",
                   "settings": {
                     "icon_list": [
@@ -802,7 +851,7 @@
                           "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
-                        "_id": "c70e138",
+                        "_id": "ad7d753",
                         "link": {
                           "url": "",
                           "is_external": "",
@@ -856,7 +905,7 @@
       "isInner": false
     },
     {
-      "id": "0a439b4",
+      "id": "06f2fb6",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -905,7 +954,7 @@
       },
       "elements": [
         {
-          "id": "4abb7ce",
+          "id": "bede606",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -946,7 +995,7 @@
           },
           "elements": [
             {
-              "id": "5c4645b",
+              "id": "ccacc56",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -981,7 +1030,7 @@
               },
               "elements": [
                 {
-                  "id": "ad7d753",
+                  "id": "e8533a3",
                   "elType": "widget",
                   "settings": {
                     "title": "EL NOSTRE MÈTODE",
@@ -1010,10 +1059,10 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "e1880a5",
+                  "id": "50cb216",
                   "elType": "widget",
                   "settings": {
-                    "title": "Un procés senzill,<br>amb grans resultats",
+                    "title": "El teu parquet,<br>ben col·locat",
                     "header_size": "h2",
                     "title_color": "#1F2A44",
                     "typography_typography": "custom",
@@ -1047,7 +1096,7 @@
               "isInner": true
             },
             {
-              "id": "0492e9f",
+              "id": "a6f9f9f",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1159,7 +1208,7 @@
               },
               "elements": [
                 {
-                  "id": "714a728",
+                  "id": "c661943",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1184,7 +1233,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ccacc56",
+                      "id": "8693461",
                       "elType": "container",
                       "settings": {
                         "content_width": "full",
@@ -1209,7 +1258,7 @@
                       },
                       "elements": [
                         {
-                          "id": "779ea89",
+                          "id": "31de381",
                           "elType": "widget",
                           "settings": {
                             "title": "01",
@@ -1234,7 +1283,7 @@
                           "widgetType": "heading"
                         },
                         {
-                          "id": "e8533a3",
+                          "id": "fe1cc33",
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
@@ -1252,7 +1301,7 @@
                           "widgetType": "icon"
                         },
                         {
-                          "id": "50cb216",
+                          "id": "714a728",
                           "elType": "widget",
                           "settings": {
                             "style": "solid",
@@ -1280,7 +1329,7 @@
                       "isInner": true
                     },
                     {
-                      "id": "31de381",
+                      "id": "b7373b2",
                       "elType": "widget",
                       "settings": {
                         "title": "Escoltem",
@@ -1304,10 +1353,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "fe1cc33",
+                      "id": "917e7a5",
                       "elType": "widget",
                       "settings": {
-                        "title": "Analitzem les teves necessitats i et proposem idees a mida.",
+                        "title": "Analitzem l'estança, l'ús que se'n farà i l'estil que busques.",
                         "header_size": "p",
                         "title_color": "#5E5A57",
                         "typography_typography": "custom",
@@ -1331,7 +1380,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "a8734b5",
+                  "id": "fc89b1d",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1356,7 +1405,7 @@
                   },
                   "elements": [
                     {
-                      "id": "c661943",
+                      "id": "960582e",
                       "elType": "container",
                       "settings": {
                         "content_width": "full",
@@ -1381,7 +1430,7 @@
                       },
                       "elements": [
                         {
-                          "id": "8693461",
+                          "id": "bf972fd",
                           "elType": "widget",
                           "settings": {
                             "title": "02",
@@ -1406,7 +1455,7 @@
                           "widgetType": "heading"
                         },
                         {
-                          "id": "b7373b2",
+                          "id": "1d03a99",
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
@@ -1424,7 +1473,7 @@
                           "widgetType": "icon"
                         },
                         {
-                          "id": "917e7a5",
+                          "id": "a8734b5",
                           "elType": "widget",
                           "settings": {
                             "style": "solid",
@@ -1452,7 +1501,7 @@
                       "isInner": true
                     },
                     {
-                      "id": "bf972fd",
+                      "id": "af2e4cd",
                       "elType": "widget",
                       "settings": {
                         "title": "Dissenyem",
@@ -1476,10 +1525,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "1d03a99",
+                      "id": "df943ea",
                       "elType": "widget",
                       "settings": {
-                        "title": "Planifiquem cada detall amb rigor i transparència.",
+                        "title": "Et proposem tipus de parquet, acabats i tons que combinin amb la resta de l'espai.",
                         "header_size": "p",
                         "title_color": "#5E5A57",
                         "typography_typography": "custom",
@@ -1503,7 +1552,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "13e43f5",
+                  "id": "2dd78ac",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1528,7 +1577,7 @@
                   },
                   "elements": [
                     {
-                      "id": "fc89b1d",
+                      "id": "0492e9f",
                       "elType": "container",
                       "settings": {
                         "content_width": "full",
@@ -1553,7 +1602,7 @@
                       },
                       "elements": [
                         {
-                          "id": "960582e",
+                          "id": "3e8431d",
                           "elType": "widget",
                           "settings": {
                             "title": "03",
@@ -1578,7 +1627,7 @@
                           "widgetType": "heading"
                         },
                         {
-                          "id": "af2e4cd",
+                          "id": "aa1bd74",
                           "elType": "widget",
                           "settings": {
                             "selected_icon": {
@@ -1596,7 +1645,7 @@
                           "widgetType": "icon"
                         },
                         {
-                          "id": "df943ea",
+                          "id": "13e43f5",
                           "elType": "widget",
                           "settings": {
                             "style": "solid",
@@ -1624,7 +1673,7 @@
                       "isInner": true
                     },
                     {
-                      "id": "3e8431d",
+                      "id": "4abb7ce",
                       "elType": "widget",
                       "settings": {
                         "title": "Fem realitat",
@@ -1648,10 +1697,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "aa1bd74",
+                      "id": "0a439b4",
                       "elType": "widget",
                       "settings": {
-                        "title": "Ens ocupem de tot perquè només gaudeixis del resultat.",
+                        "title": "Col·loquem el parquet amb cura i t'ho deixem tot llest per estrenar.",
                         "header_size": "p",
                         "title_color": "#5E5A57",
                         "typography_typography": "custom",
@@ -1684,7 +1733,7 @@
       "isInner": false
     },
     {
-      "id": "38bc62e",
+      "id": "21f6744",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -1712,7 +1761,7 @@
       },
       "elements": [
         {
-          "id": "2dd78ac",
+          "id": "d089f92",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1757,7 +1806,7 @@
             },
             "background_background": "classic",
             "background_image": {
-              "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/interiorisme.jpg",
+              "url": "https://proveswebsfigueres.com/creemllar/wp-content/uploads/2026/10/proj-14.jpg",
               "id": "",
               "size": "",
               "alt": "",
@@ -1771,7 +1820,7 @@
           "isInner": true
         },
         {
-          "id": "e9c3149",
+          "id": "c53a969",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1842,7 +1891,7 @@
           },
           "elements": [
             {
-              "id": "83e0dd4",
+              "id": "e9c3149",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1877,10 +1926,10 @@
               },
               "elements": [
                 {
-                  "id": "a6f9f9f",
+                  "id": "83e0dd4",
                   "elType": "widget",
                   "settings": {
-                    "title": "INTERIORISME A FIGUERES | BANYOLES",
+                    "title": "PARQUETS A FIGUERES | BANYOLES",
                     "header_size": "p",
                     "title_color": "#4A443F",
                     "typography_typography": "custom",
@@ -1906,10 +1955,10 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "bede606",
+                  "id": "b4434dd",
                   "elType": "widget",
                   "settings": {
-                    "title": "Dissenyem espais<br>per a persones reals",
+                    "title": "Terres càlids<br>per a cada estança",
                     "header_size": "h2",
                     "title_color": "#141413",
                     "typography_typography": "custom",
@@ -1940,10 +1989,10 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "06f2fb6",
+                  "id": "5f468ce",
                   "elType": "widget",
                   "settings": {
-                    "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
+                    "title": "Triem amb tu el parquet que millor s'adapta a l'estil i a l'ús de cada espai, i ens encarreguem de col·locar-lo perquè duri.",
                     "header_size": "p",
                     "title_color": "#2E2A27",
                     "typography_typography": "custom",
@@ -1964,10 +2013,10 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "d089f92",
+                  "id": "69e8c45",
                   "elType": "widget",
                   "settings": {
-                    "text": "Parlem del teu projecte",
+                    "text": "Parlem del teu parquet",
                     "link": {
                       "url": "/contacte/",
                       "is_external": "",
@@ -2039,7 +2088,7 @@
               "isInner": true
             },
             {
-              "id": "69e8c45",
+              "id": "57d0ca0",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -2074,10 +2123,10 @@
               },
               "elements": [
                 {
-                  "id": "b4434dd",
+                  "id": "38bc62e",
                   "elType": "widget",
                   "settings": {
-                    "title": "“ La teva llar,<br>el nostre<br>compromís ”",
+                    "title": "“ Una llar càlida<br>comença<br>pel terra ”",
                     "header_size": "p",
                     "title_color": "#3A3A3A",
                     "typography_typography": "custom",
@@ -2114,7 +2163,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "5f468ce",
+                  "id": "7d9249c",
                   "elType": "widget",
                   "settings": {
                     "style": "solid",

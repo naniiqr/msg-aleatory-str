@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "aa9a303",
+      "id": "321de23",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -102,7 +102,7 @@
       },
       "elements": [
         {
-          "id": "835205a",
+          "id": "9573932",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -137,7 +137,7 @@
           },
           "elements": [
             {
-              "id": "b0a7ebf",
+              "id": "3eec869",
               "elType": "widget",
               "settings": {
                 "title": "← Tots els projectes",
@@ -167,7 +167,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "3043425",
+              "id": "835205a",
               "elType": "widget",
               "settings": {
                 "title": "PROJECTE D'INTERIORISME",
@@ -196,7 +196,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "f66b1de",
+              "id": "aa9a303",
               "elType": "widget",
               "settings": {
                 "title": "Cuina contemporània<br>a Figueres",
@@ -230,7 +230,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "4feabb1",
+              "id": "5c2ac0f",
               "elType": "widget",
               "settings": {
                 "title": "Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais oberts.",
@@ -254,7 +254,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "3eec869",
+              "id": "f8c07f1",
               "elType": "widget",
               "settings": {
                 "text": "Demana un pressupost similar",
@@ -342,7 +342,7 @@
       "isInner": false
     },
     {
-      "id": "69dbd95",
+      "id": "938e312",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -407,7 +407,7 @@
       },
       "elements": [
         {
-          "id": "44d1c60",
+          "id": "265af59",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -442,7 +442,7 @@
           },
           "elements": [
             {
-              "id": "5c2ac0f",
+              "id": "5040ed3",
               "elType": "widget",
               "settings": {
                 "title": "EL REPTE",
@@ -471,7 +471,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "f8c07f1",
+              "id": "49cd819",
               "elType": "widget",
               "settings": {
                 "title": "Una cuina oberta,<br>pràctica i amb caràcter",
@@ -505,7 +505,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "9573932",
+              "id": "95f9e55",
               "elType": "widget",
               "settings": {
                 "title": "L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una estètica contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió amb el menjador i el jardí.",
@@ -529,7 +529,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "1433369",
+              "id": "69dbd95",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -580,142 +580,6 @@
                 }
               },
               "elements": [
-                {
-                  "id": "95f9e55",
-                  "elType": "container",
-                  "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "flex_gap": {
-                      "column": "8",
-                      "row": "8",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 8
-                    },
-                    "flex_justify_content": "flex-start",
-                    "flex_align_items": "flex-start",
-                    "padding": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "24",
-                      "bottom": "0",
-                      "left": "24",
-                      "isLinked": false
-                    },
-                    "padding_tablet": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "16",
-                      "bottom": "0",
-                      "left": "16",
-                      "isLinked": false
-                    },
-                    "padding_mobile": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "16",
-                      "bottom": "0",
-                      "left": "16",
-                      "isLinked": false
-                    },
-                    "border_border": "solid",
-                    "border_width": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "1",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": false
-                    },
-                    "border_width_tablet": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "1",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": false
-                    },
-                    "border_width_mobile": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "0",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": true
-                    },
-                    "border_color": "#D9D2C9"
-                  },
-                  "elements": [
-                    {
-                      "id": "321de23",
-                      "elType": "widget",
-                      "settings": {
-                        "selected_icon": {
-                          "value": "fas fa-map-marker-alt",
-                          "library": "fa-solid"
-                        },
-                        "primary_color": "#2B2B2B",
-                        "size": {
-                          "unit": "px",
-                          "size": 28,
-                          "sizes": []
-                        }
-                      },
-                      "elements": [],
-                      "widgetType": "icon"
-                    },
-                    {
-                      "id": "5040ed3",
-                      "elType": "widget",
-                      "settings": {
-                        "title": "Ubicació",
-                        "header_size": "p",
-                        "title_color": "#141413",
-                        "typography_typography": "custom",
-                        "typography_font_family": "DM Sans",
-                        "typography_font_size": {
-                          "unit": "px",
-                          "size": 15,
-                          "sizes": []
-                        },
-                        "typography_font_weight": "500",
-                        "typography_line_height": {
-                          "unit": "em",
-                          "size": 1.2,
-                          "sizes": []
-                        }
-                      },
-                      "elements": [],
-                      "widgetType": "heading"
-                    },
-                    {
-                      "id": "49cd819",
-                      "elType": "widget",
-                      "settings": {
-                        "title": "Figueres",
-                        "header_size": "p",
-                        "title_color": "#5E5A57",
-                        "typography_typography": "custom",
-                        "typography_font_family": "DM Sans",
-                        "typography_font_size": {
-                          "unit": "px",
-                          "size": 14,
-                          "sizes": []
-                        },
-                        "typography_font_weight": "300",
-                        "typography_line_height": {
-                          "unit": "em",
-                          "size": 1.2,
-                          "sizes": []
-                        }
-                      },
-                      "elements": [],
-                      "widgetType": "heading"
-                    }
-                  ],
-                  "isInner": true
-                },
                 {
                   "id": "2648cc4",
                   "elType": "container",
@@ -788,7 +652,7 @@
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-home",
+                          "value": "fas fa-map-marker-alt",
                           "library": "fa-solid"
                         },
                         "primary_color": "#2B2B2B",
@@ -803,6 +667,142 @@
                     },
                     {
                       "id": "70a5e82",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Ubicació",
+                        "header_size": "p",
+                        "title_color": "#141413",
+                        "typography_typography": "custom",
+                        "typography_font_family": "DM Sans",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.2,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "fd1abca",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Figueres",
+                        "header_size": "p",
+                        "title_color": "#5E5A57",
+                        "typography_typography": "custom",
+                        "typography_font_family": "DM Sans",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.2,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "74cae37",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "8",
+                      "row": "8",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 8
+                    },
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "flex-start",
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "24",
+                      "bottom": "0",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "padding_tablet": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "16",
+                      "bottom": "0",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "16",
+                      "bottom": "0",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "1",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_width_tablet": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "1",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_width_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "border_color": "#D9D2C9"
+                  },
+                  "elements": [
+                    {
+                      "id": "2b9a54a",
+                      "elType": "widget",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-home",
+                          "library": "fa-solid"
+                        },
+                        "primary_color": "#2B2B2B",
+                        "size": {
+                          "unit": "px",
+                          "size": 28,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "widgetType": "icon"
+                    },
+                    {
+                      "id": "5d1b756",
                       "elType": "widget",
                       "settings": {
                         "title": "Tipus de projecte",
@@ -826,7 +826,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "fd1abca",
+                      "id": "e0de29b",
                       "elType": "widget",
                       "settings": {
                         "title": "Reforma integral",
@@ -853,7 +853,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "74cae37",
+                  "id": "642639e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -920,7 +920,7 @@
                   },
                   "elements": [
                     {
-                      "id": "2b9a54a",
+                      "id": "1433369",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -938,7 +938,7 @@
                       "widgetType": "icon"
                     },
                     {
-                      "id": "5d1b756",
+                      "id": "44d1c60",
                       "elType": "widget",
                       "settings": {
                         "title": "Superfície",
@@ -962,7 +962,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "e0de29b",
+                      "id": "6c42ede",
                       "elType": "widget",
                       "settings": {
                         "title": "28 m²",
@@ -995,7 +995,7 @@
           "isInner": true
         },
         {
-          "id": "642639e",
+          "id": "fc80d0e",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1030,7 +1030,7 @@
           },
           "elements": [
             {
-              "id": "6c42ede",
+              "id": "0cd60f4",
               "elType": "widget",
               "settings": {
                 "image": {
@@ -1075,7 +1075,7 @@
       "isInner": false
     },
     {
-      "id": "aa1bfcc",
+      "id": "08cb00f",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -1103,7 +1103,7 @@
       },
       "elements": [
         {
-          "id": "265af59",
+          "id": "a4c425c",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1167,7 +1167,7 @@
           "isInner": true
         },
         {
-          "id": "510d253",
+          "id": "57d6f2d",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1220,7 +1220,7 @@
           },
           "elements": [
             {
-              "id": "559b63f",
+              "id": "aa1bfcc",
               "elType": "widget",
               "settings": {
                 "title": "LA SOLUCIÓ",
@@ -1249,7 +1249,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "524f085",
+              "id": "0ea08d4",
               "elType": "widget",
               "settings": {
                 "title": "Disseny i funcionalitat<br>en perfecta harmonia",
@@ -1283,7 +1283,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "808efba",
+              "id": "92ed540",
               "elType": "widget",
               "settings": {
                 "title": "Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada per al confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, preparació i espai social.",
@@ -1307,7 +1307,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "0cd60f4",
+              "id": "14336c3",
               "elType": "widget",
               "settings": {
                 "icon_list": [
@@ -1317,7 +1317,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "fc80d0e",
+                    "_id": "72cca32",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1331,7 +1331,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "938e312",
+                    "_id": "559b63f",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1345,7 +1345,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "a4c425c",
+                    "_id": "524f085",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1359,7 +1359,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "14336c3",
+                    "_id": "808efba",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1373,7 +1373,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "72cca32",
+                    "_id": "510d253",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1424,7 +1424,7 @@
       "isInner": false
     },
     {
-      "id": "1152dd3",
+      "id": "78a3be5",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1473,7 +1473,7 @@
       },
       "elements": [
         {
-          "id": "57d6f2d",
+          "id": "d0a0eec",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1498,7 +1498,7 @@
           },
           "elements": [
             {
-              "id": "0ea08d4",
+              "id": "4de096b",
               "elType": "widget",
               "settings": {
                 "title": "GALERIA D'IMATGES",
@@ -1527,7 +1527,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "92ed540",
+              "id": "f0c4c7e",
               "elType": "widget",
               "settings": {
                 "title": "Detalls que fan la diferència",
@@ -1564,7 +1564,7 @@
           "isInner": true
         },
         {
-          "id": "4bc2841",
+          "id": "b4afc91",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1591,7 +1591,7 @@
           },
           "elements": [
             {
-              "id": "4de096b",
+              "id": "e5f91bb",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1626,7 +1626,7 @@
               },
               "elements": [
                 {
-                  "id": "08cb00f",
+                  "id": "7cf14e2",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1668,7 +1668,7 @@
               "isInner": true
             },
             {
-              "id": "df5e2e6",
+              "id": "5c83902",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1714,7 +1714,7 @@
               },
               "elements": [
                 {
-                  "id": "f0c4c7e",
+                  "id": "df5e2e6",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1753,7 +1753,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "d0a0eec",
+                  "id": "4bc2841",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1792,7 +1792,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "7cf14e2",
+                  "id": "1152dd3",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1831,7 +1831,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "e5f91bb",
+                  "id": "4e5d1c9",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1879,7 +1879,7 @@
       "isInner": false
     },
     {
-      "id": "27e536a",
+      "id": "66f3ef4",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1946,7 +1946,7 @@
       },
       "elements": [
         {
-          "id": "4b3376b",
+          "id": "27e536a",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1981,7 +1981,7 @@
           },
           "elements": [
             {
-              "id": "4e5d1c9",
+              "id": "4b3376b",
               "elType": "widget",
               "settings": {
                 "title": "TENS UN PROJECTE SIMILAR?",
@@ -2010,7 +2010,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "5c83902",
+              "id": "e78a7bd",
               "elType": "widget",
               "settings": {
                 "title": "Fem realitat la cuina dels teus somnis",
@@ -2044,7 +2044,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "b4afc91",
+              "id": "de2186f",
               "elType": "widget",
               "settings": {
                 "title": "T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un pressupost sense compromís.",
@@ -2068,7 +2068,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "78a3be5",
+              "id": "bb6f7ad",
               "elType": "widget",
               "settings": {
                 "text": "Demana pressupost",
@@ -2143,7 +2143,7 @@
           "isInner": true
         },
         {
-          "id": "bb6f7ad",
+          "id": "4f3d0ae",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -2178,7 +2178,7 @@
           },
           "elements": [
             {
-              "id": "e78a7bd",
+              "id": "b3bb177",
               "elType": "widget",
               "settings": {
                 "title": "“ Espais que<br>s'adapten a tu ”",
@@ -2218,7 +2218,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "de2186f",
+              "id": "ce7c1ed",
               "elType": "widget",
               "settings": {
                 "style": "solid",

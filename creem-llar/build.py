@@ -693,14 +693,15 @@ def featured():
                      pad=P("sec"), cls="cl-featured")
 
 
-def metode():
+def metode(titol="Un procés senzill,<br>amb grans resultats", passos=None):
     left = container([heading("EL NOSTRE MÈTODE", "p", SANS, 15, 400, C_TEXT, 1.2, 3.1),
-                      heading("Un procés senzill,<br>amb grans resultats", "h2", SERIF, R(41.8, 36, 32), 400, C_NAVY, 1.2)],
+                      heading(titol, "h2", SERIF, R(41.8, 36, 32), 400, C_NAVY, 1.2)],
                      gap=14, inner=True, width=R(30, 100), pad=0)
     steps = []
-    data = [("01", "far fa-comment", "Escoltem", "Analitzem les teves necessitats i et proposem idees a mida."),
-            ("02", "far fa-file-alt", "Dissenyem", "Planifiquem cada detall amb rigor i transparència."),
-            ("03", "fas fa-wrench", "Fem realitat", "Ens ocupem de tot perquè només gaudeixis del resultat.")]
+    p = passos or [("Escoltem", "Analitzem les teves necessitats i et proposem idees a mida."),
+                   ("Dissenyem", "Planifiquem cada detall amb rigor i transparència."),
+                   ("Fem realitat", "Ens ocupem de tot perquè només gaudeixis del resultat.")]
+    data = [("01", "far fa-comment") + p[0], ("02", "far fa-file-alt") + p[1], ("03", "fas fa-wrench") + p[2]]
     for num, ic, t, d in data:
         top = container([heading(num, "p", SERIF, 34, 400, "#5A5550", 1, style="italic"),
                          icon(ic, 30, "#2B2B2B"), divider(98, 1, "#8F877D", wunit="px")],
@@ -724,17 +725,19 @@ def quote(text, size=42):
                      align="flex-start", hide=None)
 
 
-def interiorisme(titulo="Dissenyem espais<br>per cada estil de vida"):
-    img = container([], inner=True, width=R(45.5, 100), bgimg="interiorisme.jpg", minh=R(434, 300),
+def interiorisme(titulo="Dissenyem espais<br>per cada estil de vida", eyebrow="INTERIORISME A FIGUERES | BANYOLES",
+                 text="Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre "
+                      "adaptats al teu estil de vida i a l'entorn on vius.",
+                 boto="Parlem del teu projecte", cita="“ La teva llar,<br>el nostre<br>compromís ”", img_key="interiorisme.jpg"):
+    img = container([], inner=True, width=R(45.5, 100), bgimg=img_key, minh=R(434, 300),
                     pad=0)
-    kids = [heading("INTERIORISME A FIGUERES | BANYOLES", "p", SANS, 15, 400, "#4A443F", 1.2, 3.2),
+    kids = [heading(eyebrow, "p", SANS, 15, 400, "#4A443F", 1.2, 3.2),
             heading(titulo, "h2", SERIF, R(43.5, 40, 34), 400, "#141413", 1.26),
-            heading("Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre "
-                    "adaptats al teu estil de vida i a l'entorn on vius.", "p", SANS, 17, 400, "#2E2A27", 1.6),
-            button("Parlem del teu projecte", "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
+            heading(text, "p", SANS, 17, 400, "#2E2A27", 1.6),
+            button(boto, "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
                    pad=(18, 34, 18, 34), radius=1, icon="fas fa-long-arrow-alt-right")]
     text = container(kids, gap=24, inner=True, pad=0, width=R((440, "px"), 100), align="flex-start")
-    q = quote("“ La teva llar,<br>el nostre<br>compromís ”", 42)
+    q = quote(cita, 42)
     right = container([text, q], dir=R("row", "column", "column"), align=R("center", "flex-start", "flex-start"),
                       gap=R(30, 28, 24), inner=True, width=R(54.5, 100), bg=C_BEIGE,
                       pad=R((40, 56, 40, 56), (48, 40, 48, 40), (40, 24, 40, 24)), justify="center")
@@ -1024,10 +1027,10 @@ INTRO_TXT = ("Creem cuines, banys i espais que combinen estètica, funcionalitat
 
 
 def sec_intro(eyebrow, titol, text):
-    left = container([heading(eyebrow, "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+    left = container([heading(eyebrow, "p", SANS, 15, 400, C_TEXT, 1.2, 3.5),
                       heading(titol, "h2", SERIF, R(56, 46, 38), 400, "#111111", 1.1)],
                      gap=8, inner=True, pad=0, width=R(50, 100))
-    right = container([heading(text, "p", SANS, 17, 300, "#4A443F", 1.5)], inner=True, pad=0,
+    right = container([heading(text, "p", SANS, 17, 400, "#4A443F", 1.6)], inner=True, pad=0,
                       width=R(36, 100), align="flex-start")
     return container([left, right], dir=R("row", "column", "column"), justify="space-between",
                      align=R("flex-end", "flex-start", "flex-start"), gap=R(40, 24, 20), boxed=BOX,
@@ -1043,31 +1046,90 @@ def cat_grid(cat):
                      pad=P("sec", top=0), cls="cl-pgrid")
 
 
-def page_servei(titol, tagline, cat, hero_img, eyebrow, h2):
-    return [hero(hero_img, None, tagline, "Demana pressupost", "/contacte/", minh=505, 
-                 arrow=False, title=titol),
-            sec_intro(eyebrow, h2, INTRO_TXT), cat_grid(cat), metode(),
-            interiorisme("Dissenyem espais<br>per a persones reals")]
+SERVEIS = {
+    "cuines": dict(
+        titol="Cuines", cat="cuina", hero="hero-inici.jpg", split_img="cat-cuines.jpg",
+        tagline="Dissenys funcionals i elegants<br>per al teu dia a dia.",
+        eyebrow="CUINES A FIGUERES I BANYOLES", h2="El cor<br>de la llar",
+        intro=("Dissenyem cuines a mida que s'adapten a com vius: una distribució pensada per al dia a dia, mobiliari "
+               "amb bons acabats, materials de qualitat i una il·luminació que crea ambient. T'acompanyem des de la "
+               "primera idea fins al muntatge final."),
+        metode_h="La teva cuina,<br>pas a pas",
+        passos=[("Escoltem", "Veiem com cuines, quant espai tens i què necessites en el teu dia a dia."),
+                ("Dissenyem", "Plantegem la distribució, els materials i els electrodomèstics amb rigor i transparència."),
+                ("Fem realitat", "Ens ocupem de tot el muntatge perquè només hagis de gaudir de la teva nova cuina.")],
+        split_h="Cuines pensades<br>per viure-hi", split_eb="CUINES A FIGUERES | BANYOLES",
+        split_p=("Una cuina ben pensada canvia el teu dia a dia. Explica'ns com la vols i et proposarem la solució que "
+                 "millor encaixa amb el teu espai i el teu estil de vida."),
+        split_b="Parlem de la teva cuina", cita="“ La teva cuina,<br>a la teva<br>mida ”"),
+    "banys": dict(
+        titol="Banys", cat="banys", hero="home-proj-2.jpg", split_img="cat-banys.jpg",
+        tagline="Espais moderns, còmodes<br>i plens de benestar.",
+        eyebrow="BANYS A BANYOLES I FIGUERES", h2="Espais de<br>benestar",
+        intro=("Dissenyem banys moderns, còmodes i funcionals: una distribució ben aprofitada, revestiments duradors, "
+               "il·luminació cuidada i detalls a mida. Ens encarreguem de tota la reforma perquè el teu bany et faci "
+               "la vida més fàcil."),
+        metode_h="El teu bany,<br>pas a pas",
+        passos=[("Escoltem", "Valorem com utilitzes el bany i quines necessitats de confort i accessibilitat tens."),
+                ("Dissenyem", "Proposem distribució, revestiments i sanitaris, cuidant l'aigua, la llum i l'espai."),
+                ("Fem realitat", "Coordinem tota l'obra perquè el teu nou bany estigui a punt, amb garantia.")],
+        split_h="Banys per gaudir<br>cada dia", split_eb="BANYS A BANYOLES | FIGUERES",
+        split_p=("Reformem i creem banys moderns, còmodes i plens de benestar, amb materials resistents i un disseny "
+                 "que t'acompanya durant anys."),
+        split_b="Parlem del teu bany", cita="“ Benestar<br>en cada<br>detall ”"),
+    "interiorisme": dict(
+        titol="Interiorisme", cat="interiorisme", hero="hero-projectes.jpg", split_img="interiorisme.jpg",
+        tagline="Solucions a mida<br>per a cada estil de vida.",
+        eyebrow="INTERIORISME A BANYOLES I FIGUERES", h2="Espais<br>a la teva mida",
+        intro=("Treballem l'interiorisme de manera global: mobiliari, colors, materials i il·luminació pensats junts "
+               "perquè cada estança sigui bonica, funcional i coherent amb la teva manera de viure."),
+        metode_h="El teu interior,<br>fins al darrer detall",
+        passos=[("Escoltem", "Coneixem el teu estil de vida i com vols viure i sentir cada espai."),
+                ("Dissenyem", "Definim ambients, mobiliari, colors i il·luminació amb coherència i criteri."),
+                ("Fem realitat", "Executem el projecte fins a l'últim detall perquè el resultat sigui el que has imaginat.")],
+        split_h="Dissenyem espais<br>per a persones reals", split_eb="INTERIORISME A FIGUERES | BANYOLES",
+        split_p=("Creem espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida "
+                 "i a l'entorn on vius."),
+        split_b="Parlem del teu projecte", cita="“ La teva llar,<br>el nostre<br>compromís ”"),
+    "parquets": dict(
+        titol="Parquets", cat="parquets", hero="proj-14.jpg", split_img="proj-14.jpg",
+        tagline="Paviments càlids<br>pensats per a la teva llar.",
+        eyebrow="PARQUETS A FIGUERES I BANYOLES", h2="Terres amb<br>caràcter",
+        intro=("Assessorem i col·loquem parquets i paviments de fusta que aporten calidesa i durabilitat a qualsevol "
+               "estança. Et ajudem a triar el to, l'acabat i el tipus més adequats per a cada espai."),
+        metode_h="El teu parquet,<br>ben col·locat",
+        passos=[("Escoltem", "Analitzem l'estança, l'ús que se'n farà i l'estil que busques."),
+                ("Dissenyem", "Et proposem tipus de parquet, acabats i tons que combinin amb la resta de l'espai."),
+                ("Fem realitat", "Col·loquem el parquet amb cura i t'ho deixem tot llest per estrenar.")],
+        split_h="Terres càlids<br>per a cada estança", split_eb="PARQUETS A FIGUERES | BANYOLES",
+        split_p=("Triem amb tu el parquet que millor s'adapta a l'estil i a l'ús de cada espai, i ens encarreguem de "
+                 "col·locar-lo perquè duri."),
+        split_b="Parlem del teu parquet", cita="“ Una llar càlida<br>comença<br>pel terra ”"),
+}
+
+
+def page_servei(k):
+    c = SERVEIS[k]
+    return [hero(c["hero"], None, c["tagline"], "Demana pressupost", "/contacte/", minh=505, arrow=False,
+                 title=c["titol"], eyebrow="FIGUERES  |  BANYOLES"),
+            sec_intro(c["eyebrow"], c["h2"], c["intro"]), cat_grid(c["cat"]), metode(c["metode_h"], c["passos"]),
+            interiorisme(c["split_h"], c["split_eb"], c["split_p"], c["split_b"], c["cita"], c["split_img"])]
 
 
 def page_cuines():
-    return page_servei("Cuines", "Dissenys funcionals i elegants<br>per al teu dia a dia.", "cuina",
-                       "hero-inici.jpg", "LES NOSTRES", "Cuines")
+    return page_servei("cuines")
 
 
 def page_banys():
-    return page_servei("Banys", "Espais moderns, còmodes<br>i plens de benestar.", "banys",
-                       "hero-projectes.jpg", "ELS NOSTRES", "Banys")
+    return page_servei("banys")
 
 
 def page_interiorisme():
-    return page_servei("Interiorisme", "Solucions a mida<br>per a cada estil de vida.", "interiorisme",
-                       "hero-inici.jpg", "EL NOSTRE", "Interiorisme")
+    return page_servei("interiorisme")
 
 
 def page_parquets():
-    return page_servei("Parquets", "Paviments càlids<br>pensats per a la teva llar.", "parquets",
-                       "hero-projectes.jpg", "ELS NOSTRES", "Parquets")
+    return page_servei("parquets")
 
 
 def page_nosaltres():
