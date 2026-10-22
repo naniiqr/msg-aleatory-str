@@ -25,7 +25,7 @@ SITE = "/creemllar"  # prefix dels enllaços interns
 C_DARK, C_TEXT, C_TAN, C_BROWN, C_NAVY = "#141413", "#5E5A57", "#E3C39C", "#5B452D", "#1F2A44"
 C_BG, C_BG2, C_BG3, C_BEIGE, C_LINE = "#F8F5F0", "#F0EDE8", "#F5F4F1", "#F0E9E3", "#D9D2C9"
 C_METODE = "#F1ECE6"
-SANS, SERIF, SCRIPT, IGFONT = "Jost", "Playfair Display", "Over the Rainbow", "Grand Hotel"
+SANS, SERIF, SCRIPT, IGFONT = "DM Sans", "Playfair Display", "Mrs Saint Delafield", "Grand Hotel"
 
 MENU = [("Inici", "/"), ("Projectes", "/projectes/"), ("Cuines", "/cuines/"), ("Banys", "/banys/"),
         ("Interiorisme", "/interiorisme/"), ("Parquets", "/parquets/"), ("Nosaltres", "/nosaltres/"),
@@ -54,7 +54,7 @@ def snap(v, step=8):
 
 def P(kind, top=None, bottom=None):
     """Padding de secció amb gutters comuns. kind: 'sec' (80/64/48) o 'band' (48/40/32)."""
-    vt = {"sec": (80, 64, 48), "band": (48, 40, 32)}[kind]
+    vt = {"sec": (48, 40, 32), "band": (48, 40, 32)}[kind]
     t = [top if top is not None else v for v in vt] if not isinstance(top, tuple) else list(top)
     b = [bottom if bottom is not None else v for v in vt] if not isinstance(bottom, tuple) else list(bottom)
     return R((t[0], GUT[0], b[0], GUT[0]), (t[1], GUT[1], b[1], GUT[1]), (t[2], GUT[2], b[2], GUT[2]))
@@ -173,8 +173,15 @@ def widget(wtype, settings, inner_html, rules, extra_cls=""):
 
 
 # ---------------------------------------------------------------- widgets
+def _rot(s, rules, sel, deg):
+    """Rotació (Avançat → Transformar → Rotar) per als textos manuscrits inclinats."""
+    s["_transform_rotate_popover"] = "transform"
+    s["_transform_rotateZ_effect"] = {"unit": "px", "size": deg, "sizes": []}
+    rules.append(("", sel, f"transform:rotate({deg}deg)"))
+
+
 def heading(text, tag="h2", font=SANS, size=16, weight=400, color="#000000", lh=1.2, ls=None, tf=None,
-            style=None, align=None, href=None, cls="", hide=None, margin=None):
+            style=None, align=None, href=None, cls="", hide=None, margin=None, rot=None):
     s = {"title": text, "header_size": tag, "title_color": color}
     rules = []
     i = nid()
@@ -187,6 +194,8 @@ def heading(text, tag="h2", font=SANS, size=16, weight=400, color="#000000", lh=
     if href:
         s["link"] = link(href)
     _hide(s, rules, f".e{i}", hide)
+    if rot:
+        _rot(s, rules, f".e{i}", rot)
     if cls:
         s["_css_classes"] = cls
     el = {"id": i, "elType": "widget", "settings": s, "elements": [], "widgetType": "heading"}
@@ -357,16 +366,18 @@ def icon_list(items, icon_color="#000", icon_size=14, color="#000", font=SANS, s
     return Node(el, html, rules)
 
 
-def divider(w=100, weight=1, color=C_LINE, grow=False, hide=None):
+def divider(w=100, weight=1, color=C_LINE, grow=False, hide=None, rot=None, wunit="%"):
     i = nid()
-    s = {"style": "solid", "weight": sz(weight), "color": color, "width": sz(w, "%"), "gap": sz(0)}
+    s = {"style": "solid", "weight": sz(weight), "color": color, "width": sz(w, wunit), "gap": sz(0)}
     rules = [("", f".e{i} .elementor-divider", "padding:0"),
              ("", f".e{i} .elementor-divider-separator", f"border-top:{weight}px solid {color}"),
-             ("", f".e{i} .elementor-divider-separator", f"width:{w}%")]
+             ("", f".e{i} .elementor-divider-separator", f"width:{w}{wunit}")]
     if grow:
         s["_flex_size"] = "grow"
         rules.append(("", f".e{i}", "flex:1 1 auto"))
     _hide(s, rules, f".e{i}", hide)
+    if rot:
+        _rot(s, rules, f".e{i}", rot)
     el = {"id": i, "elType": "widget", "settings": s, "elements": [], "widgetType": "divider"}
     html = (f'<div class="elementor-element e{i} elementor-widget elementor-widget-divider">'
             f'<div class="elementor-widget-container"><div class="elementor-divider">'
@@ -374,7 +385,7 @@ def divider(w=100, weight=1, color=C_LINE, grow=False, hide=None):
     return Node(el, html, rules)
 
 
-def nav_menu(active="Inici", size=15, weight=300, color="#fff", space=22, vpad=5, hpad=9):
+def nav_menu(active="Inici", size=15, weight=300, color="#fff", space=4, vpad=5, hpad=9):
     i = nid()
     s = {"layout": "horizontal", "menu": MENU_SLUG, "align_items": "center", "pointer": "framed",
          "animation_framed": "fade", "color_menu_item": color, "color_menu_item_hover": color,
@@ -449,11 +460,11 @@ def container(children, dir="column", gap=20, justify="flex-start", align="stret
         s["container_type"] = "grid"
         cols, rows = grid
         put(s, "grid_columns_grid", cols, lambda v: sz(v, "fr"))
-        s["grid_rows_grid"] = sz(rows, "fr")
+        put(s, "grid_rows_grid", rows, lambda v: sz(v, "fr"))
         put(s, "grid_gaps", gap, gapv)
         rules.append(("", lay, "display:grid"))
         rule(rules, lay, "grid-template-columns", cols, lambda v: f"repeat({v},1fr)")
-        rules.append(("", lay, f"grid-template-rows:repeat({rows},1fr)"))
+        rule(rules, lay, "grid-template-rows", rows, lambda v: f"repeat({v},1fr)")
         rule(rules, lay, "gap", gap, lambda v: f"{v}px")
         s["grid_auto_flow"] = "row"
         s["grid_justify_items"] = "stretch" if align == "stretch" else align
@@ -556,49 +567,42 @@ def hdr(active):
     logo = image("logo-creemllar.jpg", w=180, wunit="px", alt="Creem Llar - espais per viure",
                  hide=None)
     nav = nav_menu(active)
-    btn = button("Demana pressupost", "/contacte/", bg=C_BROWN, color="#fff", size=16, weight=400,
-                 pad=(15, 30, 15, 30), border="#8C7358", radius=2, hide=["mobile"])
+    btn = button("Demana pressupost", "/contacte/", bg=C_BROWN, color="#fff", size=18, weight=400,
+                 pad=(14, 24, 14, 24), border="#8C7358", radius=2, hide=["mobile"])
     return container([logo, nav, btn], dir="row", justify="space-between", align="center",
-                     gap=24, boxed=BOX, pad=R((16, GUT[0], 16, GUT[0]), (16, GUT[1], 16, GUT[1]), (16, GUT[2], 16, GUT[2])),
+                     gap=24, boxed=1440, pad=R((16, 20, 16, 96), (16, GUT[1], 16, GUT[1]), (16, GUT[2], 16, GUT[2])),
                      pos={"type": "absolute", "x": 0, "y": 0}, z=100, cls="cl-header")
 
 
 def ftr():
     eyebrow = heading("COMENCEM?", "p", SANS, 13, 400, "#FFFFFFCC", 1.2, 2.5)
-    h = heading("Parlem del teu projecte", "h2", SERIF, R(48, 40, 34), 400, "#FFFFFF", 1.15)
-    p = heading("Explica'ns la teva idea i t'assessorem sense compromís.", "p", SANS, 18, 300,
+    h = heading("Parlem del teu projecte", "h2", SERIF, R(49.4, 40, 34), 400, "#FFFFFF", 1.15)
+    p = heading("Explica'ns la teva idea i t'assessorem sense compromís.", "p", SANS, 17.5, 400,
                 "#FFFFFFE6", 1.4)
     left = container([eyebrow, h, p], gap=12, inner=True, width=R(50, 100), pad=0)
 
     cta = button("Demana pressupost", "/contacte/", bg="#F7F4F0", color=C_DARK, size=17, weight=400,
                  pad=(16, 34, 16, 34), radius=2, icon="fas fa-long-arrow-alt-right")
-    items = [("C. Hortes, 34 – 17600 Figueres", "fas fa-map-marker-alt", None),
-             ("C/ Pare Claret, 1 – 17820 Banyoles", "fas fa-map-marker-alt", None),
-             ("+34 972 684 896", "fas fa-phone-alt", "tel:+34972684896"),
+    items = [("+34 972 684 896", "fas fa-phone-alt", "tel:+34972684896"),
+             ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com"),
+             ("Figueres, Girona", "fas fa-map-marker-alt", None),
              ("+34 972 519 324", "fas fa-phone-alt", "tel:+34972519324"),
              ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com"),
-             ("info@creemllar.com", "far fa-envelope", "mailto:info@creemllar.com")]
+             ("Banyoles, Girona", "fas fa-map-marker-alt", None)]
     cells = [icon_list([it], "#FFFFFF", 15, "#FFFFFFD9", SANS, 15, 300) for it in items]
-    contact = container(cells, grid=(R(2, 2, 1), 3), gap=R(14, 14, 10), inner=True, pad=0)
-    right = container([cta, contact], gap=28, inner=True, width=R(50, 100), pad=0,
+    contact = container(cells, grid=(R(3, 2, 1), R(2, 3, 6)), gap=R(16, 16, 8), inner=True, pad=0)
+    right = container([cta, contact], gap=28, inner=True, width=R((480, "px"), 100), pad=0,
                       align=R("flex-start", "flex-start", "flex-start"))
     top = container([left, right], dir=R("row", "column", "column"), justify="space-between", align="center",
                     gap=R(60, 36, 32), inner=True, pad=0)
-    copy = heading("Copyright CREEM LLAR", "p", SANS, 14, 300, "#FFFFFFB3", 1.2)
-    horari = heading("Horari: de dilluns a divendres, de 9h a 13h i de 15h a 19h<br>Dissabtes, en hores convingudes · "
-                     "Diumenges tancat", "p", SANS, 14, 300, "#FFFFFFB3", 1.5)
-    socials = container([icon("fab fa-facebook-f", 18, "#FFFFFFCC", link_url="#"),
-                         icon("fab fa-instagram", 18, "#FFFFFFCC", link_url="https://www.instagram.com/"),
-                         icon("fab fa-pinterest-p", 18, "#FFFFFFCC", link_url="#"),
-                         heading("Política de privacitat", "p", SANS, 14, 300, "#FFFFFFB3", 1.2,
-                                 href="/politica-de-privacitat/")],
-                        dir="row", align="center", justify="flex-end", gap=18, inner=True, pad=0, width=R(30, 100))
-    copy = container([copy, horari, socials], dir=R("row", "column", "column"), justify="space-between",
-                     align=R("center", "flex-start", "flex-start"), gap=R(24, 14, 14), inner=True, pad=0,
-                     border="#FFFFFF26", bw=(1, 0, 0, 0))
+    copy = container([heading("Copyright CREEM LLAR", "p", SANS, 14, 300, "#FFFFFFB3", 1.2),
+                      heading("Política de privacitat", "p", SANS, 14, 300, "#FFFFFFB3", 1.2,
+                              href="/politica-de-privacitat/")],
+                     dir="row", justify="space-between", align="center", gap=16, inner=True, pad=0)
     wa = icon("fab fa-whatsapp", 32, "#fff", pos=(24, 24), link_url="https://wa.me/34972684896",
               view="stacked", bgc="#25D366", pad=15, shape="circle")
-    return container([top, copy, wa], gap=40, boxed=BOX, pad=P("sec", bottom=(48, 40, 32)),
+    return container([top, copy, wa], gap=32, boxed=BOX,
+                     pad=R((48, 98, 24, 98), (40, GUT[1], 24, GUT[1]), (32, GUT[2], 24, GUT[2])),
                      cls="cl-footer")
 
 
@@ -613,13 +617,15 @@ def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(112, 48
          title="Espais<br>fets a mida"):
     kids = []
     if eyebrow:
-        kids.append(heading(eyebrow, "p", SANS, 16, 300, "#FFFFFFE6", 1.2, 3))
-    kids.append(heading(title, "h1", SANS, R(74, 60, 44), 300, "#FFFFFF", 1.05))
-    kids.append(heading(p_text, "p", SANS, R(24, 22, 19), 300, "#FFFFFFF2", 1.4))
-    kids.append(button(btn_text, btn_url, bg=C_TAN, color="#2B2118", size=15, weight=500, ls=1.2,
-                       pad=(20, 32, 20, 32), radius=1, tf="uppercase" if arrow else None,
+        kids.append(heading(eyebrow, "p", SANS, R(20, 18, 15), 400, "#FFFFFFE6", 1.2, R(4.5, 4, 3)))
+    kids.append(heading(title, "h1", SANS, R(93, 76, 52), 300, "#FFFFFF", R(0.88, 0.9, 0.95)))
+    kids.append(heading(p_text, "p", SANS, R(28, 24, 19), 400, "#FFFFFFF2", R(1.4, 1.35, 1.3)))
+    kids.append(button(btn_text, btn_url, bg=C_TAN, color="#2B2118", size=16, weight=500, ls=1.5,
+                       pad=(20, 40, 20, 40), radius=1, tf="uppercase" if arrow else None,
                        icon="fas fa-long-arrow-alt-right"))
-    return container(kids, gap=R(24, 24, 16), justify="center", align="flex-start", boxed=BOX,
+    text = container(kids, gap=R(24, 24, 16), justify="center", align="flex-start", inner=True,
+                     pad=R((0, 0, 0, 64), (0, 0, 0, 0), (0, 0, 0, 0)), width=R(60, 100))
+    return container([text], gap=0, justify="center", align="flex-start", boxed=BOX,
                      pad=R((py[0], GUT[0], py[1], GUT[0]), (112, GUT[1], 48, GUT[1]), (112, GUT[2], 48, GUT[2])),
                      minh=R(minh, 520, 520), bgimg=img, bgpos="right center", cls="cl-hero",
                      overlay={"a": "#1A120CCC", "b": "#1A120C00", "angle": 90, "ap": 0, "bp": 62})
@@ -627,8 +633,8 @@ def hero(img, ph, p_text, btn_text, btn_url, eyebrow=None, minh=572, py=(112, 48
 
 def tile(img, title, text):
     return container([image(img, h=R(229, 220, 200), alt=title),
-                      heading(title, "h3", SANS, 27, 500, "#141413", 1.2),
-                      heading(text, "p", SANS, 16, 300, C_TEXT, 1.45)],
+                      heading(title, "h3", SANS, 25.5, 500, "#141413", 1.2),
+                      heading(text, "p", SANS, R(19.4, 18, 17), 400, C_TEXT, 1.22)],
                      gap=10, inner=True, pad=0, align="stretch")
 
 
@@ -651,10 +657,10 @@ def props():
     for n, (ic, t, d) in enumerate(data):
         last = n == 3
         cells.append(container([icon(ic, 32, "#2B2B2B", align="center"),
-                                heading(t, "h3", SANS, 22, 400, "#141413", 1.2, align="center"),
-                                heading(d, "p", SANS, 15, 300, C_TEXT, 1.4, align="center")],
-                               gap=10, inner=True, align="center",
-                               pad=R((40, 24, 40, 24), (32, 24, 32, 24), (24, 16, 24, 16)),
+                                heading(t, "h3", SERIF, 20, 400, "#141413", 1.2, align="center"),
+                                heading(d, "p", SANS, 15.3, 400, C_TEXT, 1.4, align="center")],
+                               gap=10, inner=True, align="center", margin=R((32, 0, 32, 0), (24, 0, 24, 0), (0, 0, 0, 0)),
+                               pad=R((8, 24, 8, 24), (8, 24, 8, 24), (24, 16, 24, 16)),
                                border=C_LINE,
                                bw=R((0, 0 if last else 1, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))))
     grid = container(cells, grid=(R(4, 2, 1), 1), gap=0, inner=True, pad=0)
@@ -663,8 +669,8 @@ def props():
 
 
 def feat_card(img, title, city, arrow_url="/projectes/", href=None):
-    text = container([heading(title, "h3", SANS, 22, 400, "#141413", 1.2, href=href),
-                      heading(city.upper(), "p", SANS, 13, 400, C_TEXT, 1.2, 2)],
+    text = container([heading(title, "h3", SERIF, 21.5, 400, "#141413", 1.2, href=href),
+                      heading(city.upper(), "p", SANS, 14, 400, C_TEXT, 1.2, 2.4)],
                      gap=6, inner=True, pad=0, width=80)
     row = container([text, icon("fas fa-long-arrow-alt-right", 22, "#141413", align="right")],
                     dir="row", justify="space-between", align="center", gap=10, inner=True, pad=0)
@@ -672,24 +678,24 @@ def feat_card(img, title, city, arrow_url="/projectes/", href=None):
 
 
 def featured():
-    head_l = container([heading("PROJECTES DESTACATS", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
-                        heading("Espais que inspiren", "h2", SERIF, R(52, 44, 36), 400, "#111111", 1.1)],
-                       gap=8, inner=True, pad=0, width=60)
-    head_r = button("Veure tots els projectes", "/projectes/", None, C_DARK, 15, 400, 0, (4, 0, 4, 0),
+    head_l = container([heading("PROJECTES DESTACATS", "p", SANS, 15, 400, C_TEXT, 1.2, 3.9),
+                        heading("Espais que inspiren", "h2", SERIF, R(50, 44, 36), 400, "#111111", 1.1)],
+                       gap=8, inner=True, pad=0, width=R(60, 60, 100))
+    head_r = button("Veure tots els projectes", "/projectes/", None, C_DARK, 14, 400, 0, (4, 0, 4, 0),
                     border=C_DARK, bw=(0, 0, 1, 0), radius=0, icon="fas fa-long-arrow-alt-right")
-    head = container([head_l, head_r], dir="row", justify="space-between", align="flex-end", gap=20,
-                     inner=True, pad=0)
+    head = container([head_l, head_r], dir=R("row", "row", "column"), justify="space-between",
+                     align=R("flex-end", "flex-end", "flex-start"), gap=20, inner=True, pad=0)
     cards = [feat_card("home-proj-1.jpg", "Cuina contemporània", "Figueres", href="/projecte/"),
              feat_card("home-proj-2.jpg", "Bany amb caràcter", "Banyoles"),
              feat_card("home-proj-3.jpg", "Reforma integral", "Figueres")]
     grid = container(cards, grid=(R(3, 2, 1), 1), gap=R(18, 18, 28), inner=True, pad=0)
-    return container([head, grid], gap=26, boxed=BOX, bg=C_BG,
+    return container([head, grid], gap=26, boxed=BOX, bg="#FFFFFF",
                      pad=P("sec"), cls="cl-featured")
 
 
 def metode():
-    left = container([heading("EL NOSTRE MÈTODE", "p", SANS, 12, 400, C_TEXT, 1.2, 2.5),
-                      heading("Un procés senzill,<br>amb grans resultats", "h2", SERIF, R(40, 36, 32), 400, C_NAVY, 1.2)],
+    left = container([heading("EL NOSTRE MÈTODE", "p", SANS, 15, 400, C_TEXT, 1.2, 3.1),
+                      heading("Un procés senzill,<br>amb grans resultats", "h2", SERIF, R(41.8, 36, 32), 400, C_NAVY, 1.2)],
                      gap=14, inner=True, width=R(30, 100), pad=0)
     steps = []
     data = [("01", "far fa-comment", "Escoltem", "Analitzem les teves necessitats i et proposem idees a mida."),
@@ -697,10 +703,10 @@ def metode():
             ("03", "fas fa-wrench", "Fem realitat", "Ens ocupem de tot perquè només gaudeixis del resultat.")]
     for num, ic, t, d in data:
         top = container([heading(num, "p", SERIF, 34, 400, "#5A5550", 1, style="italic"),
-                         icon(ic, 30, "#2B2B2B"), divider(100, 1, "#8F877D", grow=True)],
+                         icon(ic, 30, "#2B2B2B"), divider(98, 1, "#8F877D", wunit="px")],
                         dir="row", align="center", gap=14, inner=True, pad=0)
-        steps.append(container([top, heading(t, "h3", SANS, 20, 500, "#141413", 1.2),
-                                heading(d, "p", SANS, 15, 300, C_TEXT, 1.45)],
+        steps.append(container([top, heading(t, "h3", SANS, 18.5, 500, "#141413", 1.2),
+                                heading(d, "p", SANS, 15.3, 400, C_TEXT, 1.6)],
                                gap=10, inner=True, pad=0))
     steps_grid = container(steps, grid=(R(3, 1, 1), 1), gap=R(34, 28, 28), inner=True,
                            pad=R((0, 0, 0, 44), (0, 0, 0, 0), (0, 0, 0, 0)), border=C_LINE,
@@ -711,42 +717,43 @@ def metode():
                      pad=P("band"), cls="cl-metode")
 
 
-def quote(text, size=32):
-    return container([heading(text, "p", SCRIPT, size, 400, "#3A3A3A", 1.45),
-                      divider(40, 1, "#3A3A3A")], gap=10, inner=True, pad=0, width=R(30, 100),
+def quote(text, size=42):
+    """Frase manuscrita del PDF: lletra fina i inclinada (~ -8°), amb el traç curt a sota."""
+    return container([heading(text, "p", SCRIPT, R(size, size - 4, size - 8), 400, "#3A3A3A", 1.05, rot=-8),
+                      divider(50, 1, "#3A3A3A", rot=-8)], gap=16, inner=True, pad=0, width=R((170, "px"), 100),
                      align="flex-start", hide=None)
 
 
 def interiorisme(titulo="Dissenyem espais<br>per cada estil de vida"):
     img = container([], inner=True, width=R(45.5, 100), bgimg="interiorisme.jpg", minh=R(434, 300),
                     pad=0)
-    kids = [heading("INTERIORISME A FIGUERES | BANYOLES", "p", SANS, 12, 400, "#4A443F", 1.2, 2.5),
-            heading(titulo, "h2", SERIF, R(46, 40, 34), 400, "#141413", 1.15),
+    kids = [heading("INTERIORISME A FIGUERES | BANYOLES", "p", SANS, 15, 400, "#4A443F", 1.2, 3.2),
+            heading(titulo, "h2", SERIF, R(43.5, 40, 34), 400, "#141413", 1.26),
             heading("Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre "
-                    "adaptats al teu estil de vida i a l'entorn on vius.", "p", SANS, 17, 300, "#2E2A27", 1.5),
+                    "adaptats al teu estil de vida i a l'entorn on vius.", "p", SANS, 17, 400, "#2E2A27", 1.6),
             button("Parlem del teu projecte", "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
                    pad=(18, 34, 18, 34), radius=1, icon="fas fa-long-arrow-alt-right")]
-    text = container(kids, gap=18, inner=True, pad=0, width=R(70, 100), align="flex-start")
-    q = quote("“ La teva llar,<br>el nostre<br>compromís ”", 30)
+    text = container(kids, gap=24, inner=True, pad=0, width=R((440, "px"), 100), align="flex-start")
+    q = quote("“ La teva llar,<br>el nostre<br>compromís ”", 42)
     right = container([text, q], dir=R("row", "column", "column"), align=R("center", "flex-start", "flex-start"),
                       gap=R(30, 28, 24), inner=True, width=R(54.5, 100), bg=C_BEIGE,
-                      pad=R((64, 72, 64, 72), (48, 40, 48, 40), (40, 24, 40, 24)), justify="center")
+                      pad=R((40, 56, 40, 56), (48, 40, 48, 40), (40, 24, 40, 24)), justify="center")
     return container([img, right], dir=R("row", "column", "column"), gap=0, align="stretch", pad=0,
                      cls="cl-split")
 
 
 def equip(titol="Un equip al teu costat", text=None, enllac=True):
     img = container([image("equip.jpg", h=R(255, 240, 220), alt="L'equip de Creem Llar")],
-                    inner=True, width=R(36, 100), pad=0)
-    text = container([heading("PERSONES QUE FAN POSSIBLE CREEM LLAR", "p", SANS, 12, 400, "#4A443F", 1.2, 2.5),
+                    inner=True, width=R((490, "px"), 100), pad=0)
+    text = container([heading("PERSONES QUE FAN POSSIBLE CREEM LLAR", "p", SANS, 15, 400, "#4A443F", 1.2, 2.1),
                       heading(titol, "h2", SERIF, R(36, 32, 30), 400, "#141413", 1.15),
                       heading(text or ("Som un estudi d'interiorisme amb arrels a Figueres, apassionats pel disseny i la "
                                        "qualitat. Treballem amb proximitat, escolta i compromís per crear espais únics, "
-                                       "pensats per a tu."), "p", SANS, 16, 300, "#2E2A27", 1.55),
-                      ] + ([button("Coneix l'equip", "/nosaltres/", None, C_DARK, 15, 400, 0, (4, 0, 4, 0),
+                                       "pensats per a tu."), "p", SANS, 15.6, 400, "#2E2A27", 1.76),
+                      ] + ([button("Coneix el nostre equip", "/nosaltres/", None, C_DARK, 14, 400, 0, (4, 0, 4, 0),
                              border=C_DARK, bw=(0, 0, 1, 0), radius=0, icon="fas fa-long-arrow-alt-right")] if enllac else []),
-                     gap=14, inner=True, pad=0, width=R(44, 100), align="flex-start")
-    q = quote("“ Llar<br>és molt més<br>que un lloc ”", 30)
+                     gap=16, inner=True, pad=0, width=R((560, "px"), 100), align="flex-start")
+    q = quote("“ Llar<br>és molt més<br>que un lloc ”", 42)
     return container([img, text, q], dir=R("row", "column", "column"), align=R("center", "flex-start", "flex-start"),
                      gap=R(48, 28, 24), boxed=BOX, bg="#FFFFFF",
                      pad=P("band"), cls="cl-team")
@@ -755,12 +762,12 @@ def equip(titol="Un equip al teu costat", text=None, enllac=True):
 def insta_head():
     ico = icon("fab fa-instagram", 34, "#E1306C")
     name = heading("Instagram", "p", IGFONT, 30, 400, "#262626", 1)
-    txt = heading("SEGUEIX-NOS A INSTAGRAM I ESTIGUES ACTUALITZAT DE LES TENDÈNCIES", "p", SANS,
-                  R(17, 15, 13), 400, "#141413", 1.3, 0.6)
+    txt = heading("SEGUEIX-NOS A INSTAGRAM I ESTIGUES ACTUALITZAT DE LES TENDÈNCIES", "p", "Josefin Sans",
+                  R(18.5, 16, 13), 400, "#141413", 1.3, 0)
     return container([container([ico, name], dir="row", align="center", gap=8, inner=True, pad=0,
                                  width=R(17, 100)), txt],
                      dir=R("row", "row", "column"), align=R("center", "center", "flex-start"), gap=R(36, 24, 12),
-                     boxed=BOX, bg="#FFFFFF", pad=P("band", top=(24, 24, 16), bottom=(24, 24, 16)),
+                     boxed=BOX, bg="#FFFFFF", pad=P("band", top=(8, 8, 8), bottom=(8, 8, 8)),
                      cls="cl-ig-head")
 
 
@@ -866,7 +873,7 @@ def load_projects():
 
 TABS_CSS = """<style>
 .cl-tabs.elementor-widget .e-n-tabs-heading{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:40px}
-.cl-tabs.elementor-widget .e-n-tab-title{background:transparent;border:1px solid #CFC8BF;border-radius:1px;color:#1E1B19;font:400 17px/1 'Jost',sans-serif;padding:16px 32px;cursor:pointer}
+.cl-tabs.elementor-widget .e-n-tab-title{background:transparent;border:1px solid #CFC8BF;border-radius:1px;color:#1E1B19;font:400 17px/1 'DM Sans',sans-serif;padding:16px 32px;cursor:pointer}
 .cl-tabs.elementor-widget .e-n-tab-title[aria-selected="true"]{background:#141413!important;color:#fff!important;border-color:#141413!important}
 .cl-tabs.elementor-widget .e-n-tab-title-text{color:inherit;font:inherit}
 .cl-tabs.elementor-widget .e-n-tabs-content>.e-con:not(.e-active){display:none!important}
@@ -1184,7 +1191,7 @@ def pj_cta():
                      button("Demana pressupost", "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
                             pad=(16, 32, 16, 32), radius=1, icon="fas fa-long-arrow-alt-right")],
                     gap=24, inner=True, pad=0, width=R(64, 100), align="flex-start")
-    q = quote("“ Espais que<br>s'adapten a tu ”", 30)
+    q = quote("“ Espais que<br>s'adapten a tu ”", 42)
     return container([txt, q], dir=R("row", "column", "column"), justify="space-between",
                      align=R("center", "flex-start", "flex-start"), gap=R(48, 32, 24), boxed=BOX, bg=C_BG2,
                      pad=P("sec"), cls="cl-pj-cta")
@@ -1198,7 +1205,7 @@ def page_projecte():
 BASE_CSS = """
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:#F8F5F0;font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
+body{background:#F8F5F0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
 img{max-width:100%;height:auto;vertical-align:middle;display:inline-block;border:0}
 a{text-decoration:none;color:inherit}
 .e-con{display:flex;flex-direction:column;position:relative;width:100%;min-width:0;--w:100%}
@@ -1223,6 +1230,7 @@ a{text-decoration:none;color:inherit}
 .elementor-nav-menu .active a,.elementor-nav-menu a:hover{border-color:#fff}
 .elementor-menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;min-width:44px;min-height:44px}
 .elementor-divider{display:block}
+.elementor-divider-separator{display:flex;margin:0}
 .cl-header .elementor-widget-nav-menu{flex:0 0 auto}
 @media (max-width:1024px){
   .elementor-nav-menu--main{display:none}
@@ -1248,8 +1256,8 @@ def collect_css(rules):
     return css
 
 
-GFONTS = ("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600&"
-          "family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Over+the+Rainbow&family=Grand+Hotel&display=swap")
+GFONTS = ("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&"
+          "family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@400&family=Mrs+Saint+Delafield&family=Grand+Hotel&display=swap")
 
 
 def write_html(name, title, parts):

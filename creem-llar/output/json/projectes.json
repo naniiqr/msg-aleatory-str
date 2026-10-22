@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "a9676f8",
+      "id": "361d881",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -15,25 +15,11 @@
         },
         "flex_direction": "column",
         "flex_gap": {
-          "column": "24",
-          "row": "24",
+          "column": "0",
+          "row": "0",
           "isLinked": true,
           "unit": "px",
-          "size": 24
-        },
-        "flex_gap_tablet": {
-          "column": "24",
-          "row": "24",
-          "isLinked": true,
-          "unit": "px",
-          "size": 24
-        },
-        "flex_gap_mobile": {
-          "column": "16",
-          "row": "16",
-          "isLinked": true,
-          "unit": "px",
-          "size": 16
+          "size": 0
         },
         "flex_justify_content": "center",
         "flex_align_items": "flex-start",
@@ -116,150 +102,238 @@
       },
       "elements": [
         {
-          "id": "361d881",
-          "elType": "widget",
+          "id": "e92fa2c",
+          "elType": "container",
           "settings": {
-            "title": "Espais<br>fets a mida",
-            "header_size": "h1",
-            "title_color": "#FFFFFF",
-            "typography_typography": "custom",
-            "typography_font_family": "Jost",
-            "typography_font_size": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_gap": {
+              "column": "24",
+              "row": "24",
+              "isLinked": true,
               "unit": "px",
-              "size": 74,
-              "sizes": []
+              "size": 24
             },
-            "typography_font_size_tablet": {
+            "flex_gap_tablet": {
+              "column": "24",
+              "row": "24",
+              "isLinked": true,
               "unit": "px",
+              "size": 24
+            },
+            "flex_gap_mobile": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "flex_justify_content": "center",
+            "flex_align_items": "flex-start",
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "64",
+              "isLinked": false
+            },
+            "padding_tablet": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "width": {
+              "unit": "%",
               "size": 60,
               "sizes": []
             },
-            "typography_font_size_mobile": {
-              "unit": "px",
-              "size": 44,
-              "sizes": []
-            },
-            "typography_font_weight": "300",
-            "typography_line_height": {
-              "unit": "em",
-              "size": 1.05,
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
               "sizes": []
             }
           },
-          "elements": [],
-          "widgetType": "heading"
-        },
-        {
-          "id": "dad1fda",
-          "elType": "widget",
-          "settings": {
-            "title": "Cuines, banys, interiorisme, reformes<br>i parquets per crear llars úniques",
-            "header_size": "p",
-            "title_color": "#FFFFFFF2",
-            "typography_typography": "custom",
-            "typography_font_family": "Jost",
-            "typography_font_size": {
-              "unit": "px",
-              "size": 24,
-              "sizes": []
+          "elements": [
+            {
+              "id": "d7817f1",
+              "elType": "widget",
+              "settings": {
+                "title": "Espais<br>fets a mida",
+                "header_size": "h1",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "DM Sans",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 93,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 76,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_font_weight": "300",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 0.88,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "em",
+                  "size": 0.9,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "em",
+                  "size": 0.95,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
             },
-            "typography_font_size_tablet": {
-              "unit": "px",
-              "size": 22,
-              "sizes": []
+            {
+              "id": "4c2ca5f",
+              "elType": "widget",
+              "settings": {
+                "title": "Cuines, banys, interiorisme, reformes<br>i parquets per crear llars úniques",
+                "header_size": "p",
+                "title_color": "#FFFFFFF2",
+                "typography_typography": "custom",
+                "typography_font_family": "DM Sans",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 28,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 24,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 19,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.4,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "em",
+                  "size": 1.35,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
             },
-            "typography_font_size_mobile": {
-              "unit": "px",
-              "size": 19,
-              "sizes": []
-            },
-            "typography_font_weight": "300",
-            "typography_line_height": {
-              "unit": "em",
-              "size": 1.4,
-              "sizes": []
+            {
+              "id": "f633256",
+              "elType": "widget",
+              "settings": {
+                "text": "Contactar amb nosaltres",
+                "link": {
+                  "url": "/contacte/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "button_text_color": "#2B2118",
+                "background_color": "#E3C39C",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "size": "sm",
+                "typography_typography": "custom",
+                "typography_font_family": "DM Sans",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "40",
+                  "bottom": "20",
+                  "left": "40",
+                  "isLinked": false
+                },
+                "text_padding_mobile": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "40",
+                  "bottom": "20",
+                  "left": "40",
+                  "isLinked": false
+                },
+                "button_background_hover_color": "#E3C39C",
+                "hover_color": "#2B2118",
+                "selected_icon": {
+                  "value": "fas fa-long-arrow-alt-right",
+                  "library": "fa-solid"
+                },
+                "icon_align": "right",
+                "icon_indent": {
+                  "unit": "px",
+                  "size": 10,
+                  "sizes": []
+                }
+              },
+              "elements": [],
+              "widgetType": "button"
             }
-          },
-          "elements": [],
-          "widgetType": "heading"
-        },
-        {
-          "id": "46fdc7d",
-          "elType": "widget",
-          "settings": {
-            "text": "Contactar amb nosaltres",
-            "link": {
-              "url": "/contacte/",
-              "is_external": "",
-              "nofollow": "",
-              "custom_attributes": ""
-            },
-            "button_text_color": "#2B2118",
-            "background_color": "#E3C39C",
-            "border_radius": {
-              "unit": "px",
-              "top": "1",
-              "right": "1",
-              "bottom": "1",
-              "left": "1",
-              "isLinked": true
-            },
-            "size": "sm",
-            "typography_typography": "custom",
-            "typography_font_family": "Jost",
-            "typography_font_size": {
-              "unit": "px",
-              "size": 15,
-              "sizes": []
-            },
-            "typography_font_weight": "500",
-            "typography_line_height": {
-              "unit": "em",
-              "size": 1,
-              "sizes": []
-            },
-            "typography_letter_spacing": {
-              "unit": "px",
-              "size": 1.2,
-              "sizes": []
-            },
-            "text_padding": {
-              "unit": "px",
-              "top": "20",
-              "right": "32",
-              "bottom": "20",
-              "left": "32",
-              "isLinked": false
-            },
-            "text_padding_mobile": {
-              "unit": "px",
-              "top": "20",
-              "right": "32",
-              "bottom": "20",
-              "left": "32",
-              "isLinked": false
-            },
-            "button_background_hover_color": "#E3C39C",
-            "hover_color": "#2B2118",
-            "selected_icon": {
-              "value": "fas fa-long-arrow-alt-right",
-              "library": "fa-solid"
-            },
-            "icon_align": "right",
-            "icon_indent": {
-              "unit": "px",
-              "size": 10,
-              "sizes": []
-            }
-          },
-          "elements": [],
-          "widgetType": "button"
+          ],
+          "isInner": true
         }
       ],
       "isInner": false
     },
     {
-      "id": "911868e",
+      "id": "60e9446",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -298,7 +372,7 @@
         "flex_align_items_mobile": "flex-start",
         "padding": {
           "unit": "px",
-          "top": "80",
+          "top": "48",
           "right": "64",
           "bottom": "32",
           "left": "64",
@@ -306,7 +380,7 @@
         },
         "padding_tablet": {
           "unit": "px",
-          "top": "64",
+          "top": "40",
           "right": "40",
           "bottom": "32",
           "left": "40",
@@ -314,7 +388,7 @@
         },
         "padding_mobile": {
           "unit": "px",
-          "top": "48",
+          "top": "32",
           "right": "24",
           "bottom": "24",
           "left": "24",
@@ -326,7 +400,7 @@
       },
       "elements": [
         {
-          "id": "60e9446",
+          "id": "a9676f8",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -361,14 +435,14 @@
           },
           "elements": [
             {
-              "id": "bbf3a8c",
+              "id": "dad1fda",
               "elType": "widget",
               "settings": {
                 "title": "ELS NOSTRES",
                 "header_size": "p",
                 "title_color": "#5E5A57",
                 "typography_typography": "custom",
-                "typography_font_family": "Jost",
+                "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 13,
@@ -390,7 +464,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "84f366b",
+              "id": "46fdc7d",
               "elType": "widget",
               "settings": {
                 "title": "Projectes",
@@ -427,7 +501,7 @@
           "isInner": true
         },
         {
-          "id": "38adf1e",
+          "id": "84f366b",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -462,14 +536,14 @@
           },
           "elements": [
             {
-              "id": "b09a86d",
+              "id": "bbf3a8c",
               "elType": "widget",
               "settings": {
                 "title": "Descobreix una selecció dels nostres projectes de cuines, banys, interiorisme, reformes i parquets a Figueres, Banyoles i altres localitats de l'Empordà i el Pla de l'Estany.",
                 "header_size": "p",
                 "title_color": "#4A443F",
                 "typography_typography": "custom",
-                "typography_font_family": "Jost",
+                "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 17,
@@ -492,7 +566,7 @@
       "isInner": false
     },
     {
-      "id": "5d870b4",
+      "id": "f807e7e",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -515,7 +589,7 @@
           "unit": "px",
           "top": "0",
           "right": "64",
-          "bottom": "80",
+          "bottom": "48",
           "left": "64",
           "isLinked": false
         },
@@ -523,7 +597,7 @@
           "unit": "px",
           "top": "0",
           "right": "40",
-          "bottom": "64",
+          "bottom": "40",
           "left": "40",
           "isLinked": false
         },
@@ -531,7 +605,7 @@
           "unit": "px",
           "top": "0",
           "right": "24",
-          "bottom": "48",
+          "bottom": "32",
           "left": "24",
           "isLinked": false
         },
@@ -541,37 +615,37 @@
       },
       "elements": [
         {
-          "id": "c1feeed",
+          "id": "43e5a86",
           "elType": "widget",
           "settings": {
             "tabs": [
               {
                 "tab_title": "Tots",
-                "_id": "9be3684"
+                "_id": "72fbd36"
               },
               {
                 "tab_title": "Cuina",
-                "_id": "5a3147d"
+                "_id": "43fe3e9"
               },
               {
                 "tab_title": "Banys",
-                "_id": "26ae275"
+                "_id": "c1feeed"
               },
               {
                 "tab_title": "Interiorisme",
-                "_id": "dd5812e"
+                "_id": "9be3684"
               },
               {
                 "tab_title": "Reformes",
-                "_id": "7379c75"
+                "_id": "5a3147d"
               },
               {
                 "tab_title": "Parquets",
-                "_id": "f807e7e"
+                "_id": "26ae275"
               },
               {
                 "tab_title": "Per classificar",
-                "_id": "02f0aba"
+                "_id": "dd5812e"
               }
             ],
             "tabs_justify_horizontal": "center",
@@ -584,7 +658,7 @@
           },
           "elements": [
             {
-              "id": "699a31c",
+              "id": "4284e7d",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -645,7 +719,7 @@
               },
               "elements": [
                 {
-                  "id": "34846c5",
+                  "id": "b020bc5",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -738,7 +812,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b020bc5",
+                      "id": "b09a86d",
                       "elType": "widget",
                       "settings": {
                         "title": "[ADRIA RAMOS]",
@@ -762,7 +836,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "e388159",
+                      "id": "38adf1e",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -772,7 +846,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "e22593d",
+                            "_id": "911868e",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -800,7 +874,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -820,7 +894,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "cfffb41",
+                  "id": "00ca302",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -913,7 +987,7 @@
                   },
                   "elements": [
                     {
-                      "id": "00ca302",
+                      "id": "e388159",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALBA CLIMENT]",
@@ -937,7 +1011,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "68c4f18",
+                      "id": "e22593d",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -947,7 +1021,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "f36df27",
+                            "_id": "34846c5",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -975,7 +1049,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -995,7 +1069,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "addfb86",
+                  "id": "e419af9",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1088,7 +1162,7 @@
                   },
                   "elements": [
                     {
-                      "id": "e419af9",
+                      "id": "68c4f18",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALBA LUCIA LOPEZ]",
@@ -1112,7 +1186,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "1fd9edb",
+                      "id": "f36df27",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -1122,7 +1196,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "906ca0b",
+                            "_id": "cfffb41",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -1150,7 +1224,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -1170,7 +1244,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "0df51ae",
+                  "id": "3c0e252",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1263,7 +1337,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3c0e252",
+                      "id": "1fd9edb",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALBERT GENIS]",
@@ -1287,7 +1361,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "fcfc59a",
+                      "id": "906ca0b",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -1297,7 +1371,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "874fd19",
+                            "_id": "addfb86",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -1325,7 +1399,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -1345,7 +1419,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "791af2c",
+                  "id": "ebb4f6b",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1438,7 +1512,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ebb4f6b",
+                      "id": "fcfc59a",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALEX MARTI]",
@@ -1462,7 +1536,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "6760a49",
+                      "id": "874fd19",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -1472,7 +1546,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "8ef4d01",
+                            "_id": "0df51ae",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -1500,7 +1574,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -1520,7 +1594,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "89caa23",
+                  "id": "4ba8784",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1613,7 +1687,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4ba8784",
+                      "id": "6760a49",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALICIA SERRANO]",
@@ -1637,7 +1711,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "d0ad90c",
+                      "id": "8ef4d01",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -1647,7 +1721,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "611c4d0",
+                            "_id": "791af2c",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -1675,7 +1749,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -1695,7 +1769,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "dd47462",
+                  "id": "9c8331a",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1788,7 +1862,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9c8331a",
+                      "id": "d0ad90c",
                       "elType": "widget",
                       "settings": {
                         "title": "[ANDREU PORTBOU]",
@@ -1812,7 +1886,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "ff2a212",
+                      "id": "611c4d0",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -1822,7 +1896,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "4a0569d",
+                            "_id": "89caa23",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -1850,7 +1924,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -1870,7 +1944,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "ba90685",
+                  "id": "86f16a5",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1963,7 +2037,7 @@
                   },
                   "elements": [
                     {
-                      "id": "86f16a5",
+                      "id": "ff2a212",
                       "elType": "widget",
                       "settings": {
                         "title": "[ANNA LLOSA]",
@@ -1987,7 +2061,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "66c6e82",
+                      "id": "4a0569d",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -1997,7 +2071,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "9ff2c89",
+                            "_id": "dd47462",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -2025,7 +2099,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -2045,7 +2119,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "d836215",
+                  "id": "cbb8fed",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2138,7 +2212,7 @@
                   },
                   "elements": [
                     {
-                      "id": "cbb8fed",
+                      "id": "66c6e82",
                       "elType": "widget",
                       "settings": {
                         "title": "[BANYOLES]",
@@ -2162,7 +2236,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "0891306",
+                      "id": "9ff2c89",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -2172,7 +2246,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "746fda4",
+                            "_id": "ba90685",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -2200,7 +2274,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -2220,7 +2294,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "8c6ef79",
+                  "id": "ddf53a1",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2313,7 +2387,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ddf53a1",
+                      "id": "0891306",
                       "elType": "widget",
                       "settings": {
                         "title": "[BARRA BAR]",
@@ -2337,7 +2411,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "1266999",
+                      "id": "746fda4",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -2347,7 +2421,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "26bbcca",
+                            "_id": "d836215",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -2375,7 +2449,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -2395,7 +2469,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "e832ec1",
+                  "id": "58bf786",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2488,7 +2562,7 @@
                   },
                   "elements": [
                     {
-                      "id": "58bf786",
+                      "id": "1266999",
                       "elType": "widget",
                       "settings": {
                         "title": "[BESCANÓ]",
@@ -2512,7 +2586,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "b79b2e1",
+                      "id": "26bbcca",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -2522,7 +2596,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "a59ff9d",
+                            "_id": "8c6ef79",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -2550,7 +2624,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -2570,7 +2644,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "8992d5b",
+                  "id": "9e1860e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2663,7 +2737,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9e1860e",
+                      "id": "b79b2e1",
                       "elType": "widget",
                       "settings": {
                         "title": "[BOADELLA]",
@@ -2687,7 +2761,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "5d73e9a",
+                      "id": "a59ff9d",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -2697,7 +2771,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "cd16d22",
+                            "_id": "e832ec1",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -2725,7 +2799,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -2745,7 +2819,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "610d90b",
+                  "id": "f2ded53",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2838,7 +2912,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f2ded53",
+                      "id": "5d73e9a",
                       "elType": "widget",
                       "settings": {
                         "title": "[BUFFET ROSELLO]",
@@ -2862,7 +2936,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "e3dfc1d",
+                      "id": "cd16d22",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -2872,7 +2946,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "b549fc3",
+                            "_id": "8992d5b",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -2900,7 +2974,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -2920,7 +2994,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "651c573",
+                  "id": "5c2928f",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -3013,7 +3087,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5c2928f",
+                      "id": "e3dfc1d",
                       "elType": "widget",
                       "settings": {
                         "title": "[CAMPING LA SIRENE]",
@@ -3037,7 +3111,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "7471170",
+                      "id": "b549fc3",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -3047,7 +3121,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "c5be50b",
+                            "_id": "610d90b",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -3075,7 +3149,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -3095,7 +3169,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "fa3e4d3",
+                  "id": "b27106d",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -3188,7 +3262,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b27106d",
+                      "id": "7471170",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLES PANAREDA]",
@@ -3212,7 +3286,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "47a77b2",
+                      "id": "c5be50b",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -3222,7 +3296,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "6f7e8d2",
+                            "_id": "651c573",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -3250,7 +3324,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -3270,7 +3344,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "c1c7a08",
+                  "id": "b4fdefa",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -3363,7 +3437,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b4fdefa",
+                      "id": "47a77b2",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLES PUJOL]",
@@ -3387,7 +3461,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "179f4cd",
+                      "id": "6f7e8d2",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -3397,7 +3471,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "c21da1c",
+                            "_id": "fa3e4d3",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -3425,7 +3499,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -3445,7 +3519,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "07c3b7f",
+                  "id": "97d9e79",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -3538,7 +3612,7 @@
                   },
                   "elements": [
                     {
-                      "id": "97d9e79",
+                      "id": "179f4cd",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLES SERRA]",
@@ -3562,7 +3636,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "21ac810",
+                      "id": "c21da1c",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -3572,7 +3646,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "0c06926",
+                            "_id": "c1c7a08",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -3600,7 +3674,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -3620,7 +3694,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "30f4ff4",
+                  "id": "1be0a17",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -3713,7 +3787,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1be0a17",
+                      "id": "21ac810",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLOTTA]",
@@ -3737,7 +3811,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "f3a6aa4",
+                      "id": "0c06926",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -3747,7 +3821,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "cf59bd6",
+                            "_id": "07c3b7f",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -3775,7 +3849,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -3795,7 +3869,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "ac1c304",
+                  "id": "68c2e16",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -3888,7 +3962,7 @@
                   },
                   "elements": [
                     {
-                      "id": "68c2e16",
+                      "id": "f3a6aa4",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARME GONGORA]",
@@ -3912,7 +3986,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "e149002",
+                      "id": "cf59bd6",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -3922,7 +3996,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "b7f8186",
+                            "_id": "30f4ff4",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -3950,7 +4024,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -3970,7 +4044,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "cb67627",
+                  "id": "6af641f",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -4063,7 +4137,7 @@
                   },
                   "elements": [
                     {
-                      "id": "6af641f",
+                      "id": "e149002",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARME SANTALO]",
@@ -4087,7 +4161,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "35071a9",
+                      "id": "b7f8186",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -4097,7 +4171,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "2c417a6",
+                            "_id": "ac1c304",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -4125,7 +4199,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -4145,7 +4219,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "8619cf6",
+                  "id": "5b5f881",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -4238,7 +4312,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5b5f881",
+                      "id": "35071a9",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARME VIARNES]",
@@ -4262,7 +4336,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "3c9c84a",
+                      "id": "2c417a6",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -4272,7 +4346,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "d1aa917",
+                            "_id": "cb67627",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -4300,7 +4374,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -4320,7 +4394,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "40dbe74",
+                  "id": "a0e4170",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -4413,7 +4487,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a0e4170",
+                      "id": "3c9c84a",
                       "elType": "widget",
                       "settings": {
                         "title": "[CLARA FITA]",
@@ -4437,7 +4511,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "5c63fc5",
+                      "id": "d1aa917",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -4447,7 +4521,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "c810ce5",
+                            "_id": "8619cf6",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -4475,7 +4549,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -4495,7 +4569,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "df623c9",
+                  "id": "aa1eddc",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -4588,7 +4662,7 @@
                   },
                   "elements": [
                     {
-                      "id": "aa1eddc",
+                      "id": "5c63fc5",
                       "elType": "widget",
                       "settings": {
                         "title": "[CONXITA GOLANOS]",
@@ -4612,7 +4686,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "b8d7e9e",
+                      "id": "c810ce5",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -4622,7 +4696,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "c12e5f4",
+                            "_id": "40dbe74",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -4650,7 +4724,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -4670,7 +4744,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "b1b6e96",
+                  "id": "7c8ab3d",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -4763,7 +4837,7 @@
                   },
                   "elements": [
                     {
-                      "id": "7c8ab3d",
+                      "id": "b8d7e9e",
                       "elType": "widget",
                       "settings": {
                         "title": "[CRISTINA TERSA]",
@@ -4787,7 +4861,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "9ddd89e",
+                      "id": "c12e5f4",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -4797,7 +4871,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "fb2d907",
+                            "_id": "df623c9",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -4825,7 +4899,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -4845,7 +4919,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "15be4ce",
+                  "id": "f30f08a",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -4938,7 +5012,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f30f08a",
+                      "id": "9ddd89e",
                       "elType": "widget",
                       "settings": {
                         "title": "[DANI (BANY MAS PAU)]",
@@ -4962,7 +5036,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "2e90cae",
+                      "id": "fb2d907",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -4972,7 +5046,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "042d0b1",
+                            "_id": "b1b6e96",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -5000,7 +5074,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -5020,7 +5094,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "77b245a",
+                  "id": "f60d814",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -5113,7 +5187,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f60d814",
+                      "id": "2e90cae",
                       "elType": "widget",
                       "settings": {
                         "title": "[DANI ZENITH]",
@@ -5137,7 +5211,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "c3b292c",
+                      "id": "042d0b1",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -5147,7 +5221,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "b3c8857",
+                            "_id": "15be4ce",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -5175,7 +5249,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -5195,7 +5269,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "df1e82b",
+                  "id": "ba1befa",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -5288,7 +5362,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ba1befa",
+                      "id": "c3b292c",
                       "elType": "widget",
                       "settings": {
                         "title": "[DOLORS ALBUJAR]",
@@ -5312,7 +5386,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "1977c05",
+                      "id": "b3c8857",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -5322,7 +5396,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "dc2fa4d",
+                            "_id": "77b245a",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -5350,7 +5424,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -5370,7 +5444,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "821494f",
+                  "id": "99d8cdd",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -5463,7 +5537,7 @@
                   },
                   "elements": [
                     {
-                      "id": "99d8cdd",
+                      "id": "1977c05",
                       "elType": "widget",
                       "settings": {
                         "title": "[DOLORS BOSCH]",
@@ -5487,7 +5561,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "2617c9d",
+                      "id": "dc2fa4d",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -5497,7 +5571,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "316a17f",
+                            "_id": "df1e82b",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -5525,7 +5599,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -5545,7 +5619,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "d0d45a3",
+                  "id": "b520725",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -5638,7 +5712,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b520725",
+                      "id": "2617c9d",
                       "elType": "widget",
                       "settings": {
                         "title": "[DOLORS PUNSET]",
@@ -5662,7 +5736,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "14ad6fc",
+                      "id": "316a17f",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -5672,7 +5746,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "59904fe",
+                            "_id": "821494f",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -5700,7 +5774,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -5720,7 +5794,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "0676927",
+                  "id": "77376ca",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -5813,7 +5887,7 @@
                   },
                   "elements": [
                     {
-                      "id": "77376ca",
+                      "id": "14ad6fc",
                       "elType": "widget",
                       "settings": {
                         "title": "[ELISABETH I FRANZ]",
@@ -5837,7 +5911,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "2b83c1a",
+                      "id": "59904fe",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -5847,7 +5921,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "1cf28e6",
+                            "_id": "d0d45a3",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -5875,7 +5949,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -5895,7 +5969,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "69fcb8e",
+                  "id": "cd3dd17",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -5988,7 +6062,7 @@
                   },
                   "elements": [
                     {
-                      "id": "cd3dd17",
+                      "id": "2b83c1a",
                       "elType": "widget",
                       "settings": {
                         "title": "[ENRIC PASTOR]",
@@ -6012,7 +6086,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "6355d36",
+                      "id": "1cf28e6",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -6022,7 +6096,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "a3666fd",
+                            "_id": "0676927",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -6050,7 +6124,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -6070,7 +6144,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "80c01fe",
+                  "id": "c5cccf1",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -6163,7 +6237,7 @@
                   },
                   "elements": [
                     {
-                      "id": "c5cccf1",
+                      "id": "6355d36",
                       "elType": "widget",
                       "settings": {
                         "title": "[ERNEST RUIZ]",
@@ -6187,7 +6261,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "d7feaad",
+                      "id": "a3666fd",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -6197,7 +6271,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "099dd9e",
+                            "_id": "69fcb8e",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -6225,7 +6299,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -6245,7 +6319,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "3cb91e0",
+                  "id": "f0bbbbc",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -6338,7 +6412,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f0bbbbc",
+                      "id": "d7feaad",
                       "elType": "widget",
                       "settings": {
                         "title": "[ESTEVE BRUN]",
@@ -6362,7 +6436,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "51305ce",
+                      "id": "099dd9e",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -6372,7 +6446,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "37a0e4a",
+                            "_id": "80c01fe",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -6400,7 +6474,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -6420,7 +6494,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "ccbdadb",
+                  "id": "ef933b2",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -6513,7 +6587,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ef933b2",
+                      "id": "51305ce",
                       "elType": "widget",
                       "settings": {
                         "title": "[ESTHER DIEZ (DESPATX I CAPÇAL)]",
@@ -6537,7 +6611,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "4284e7d",
+                      "id": "37a0e4a",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -6547,7 +6621,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "d03961c",
+                            "_id": "3cb91e0",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -6575,7 +6649,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -6598,7 +6672,7 @@
               "isInner": true
             },
             {
-              "id": "5dd5887",
+              "id": "ccbdadb",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -6640,14 +6714,14 @@
               },
               "elements": [
                 {
-                  "id": "83c3fb1",
+                  "id": "d03961c",
                   "elType": "widget",
                   "settings": {
                     "title": "[GUIA] Encara no hi ha cap projecte assignat a «Cuina». Copia i enganxa aquí les targetes de la pestanya «Tots» que corresponguin.",
                     "header_size": "p",
                     "title_color": "#5E5A57",
                     "typography_typography": "custom",
-                    "typography_font_family": "Jost",
+                    "typography_font_family": "DM Sans",
                     "typography_font_size": {
                       "unit": "px",
                       "size": 17,
@@ -6669,7 +6743,7 @@
               "isInner": true
             },
             {
-              "id": "c0fec88",
+              "id": "0a89d52",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -6730,7 +6804,7 @@
               },
               "elements": [
                 {
-                  "id": "a77d296",
+                  "id": "c2b9180",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -6823,7 +6897,7 @@
                   },
                   "elements": [
                     {
-                      "id": "c2b9180",
+                      "id": "699a31c",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALBA LUCIA LOPEZ]",
@@ -6847,7 +6921,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "4984e40",
+                      "id": "83c3fb1",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -6857,7 +6931,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "ae0a622",
+                            "_id": "5dd5887",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -6885,7 +6959,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -6905,7 +6979,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "1ca2ab4",
+                  "id": "2572c07",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -6998,7 +7072,7 @@
                   },
                   "elements": [
                     {
-                      "id": "2572c07",
+                      "id": "4984e40",
                       "elType": "widget",
                       "settings": {
                         "title": "[DANI (BANY MAS PAU)]",
@@ -7022,7 +7096,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "0a89d52",
+                      "id": "ae0a622",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -7032,7 +7106,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "b3ab5da",
+                            "_id": "a77d296",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -7060,7 +7134,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -7083,7 +7157,7 @@
               "isInner": true
             },
             {
-              "id": "ec0cc38",
+              "id": "6f70531",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -7144,7 +7218,7 @@
               },
               "elements": [
                 {
-                  "id": "8b3d15f",
+                  "id": "4e2c7a9",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -7237,7 +7311,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4e2c7a9",
+                      "id": "b3ab5da",
                       "elType": "widget",
                       "settings": {
                         "title": "[BARRA BAR]",
@@ -7261,7 +7335,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "d1e3a9d",
+                      "id": "1ca2ab4",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -7271,7 +7345,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "e36ce36",
+                            "_id": "c0fec88",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -7299,7 +7373,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -7319,7 +7393,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "9ab0d4b",
+                  "id": "24ab5dd",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -7412,7 +7486,7 @@
                   },
                   "elements": [
                     {
-                      "id": "24ab5dd",
+                      "id": "d1e3a9d",
                       "elType": "widget",
                       "settings": {
                         "title": "[BUFFET ROSELLO]",
@@ -7436,7 +7510,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "bb4701b",
+                      "id": "e36ce36",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -7446,7 +7520,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "074b8d7",
+                            "_id": "8b3d15f",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -7474,7 +7548,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -7494,7 +7568,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "e689acf",
+                  "id": "95779d1",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -7587,7 +7661,7 @@
                   },
                   "elements": [
                     {
-                      "id": "95779d1",
+                      "id": "bb4701b",
                       "elType": "widget",
                       "settings": {
                         "title": "[ESTHER DIEZ (DESPATX I CAPÇAL)]",
@@ -7611,7 +7685,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "6f70531",
+                      "id": "074b8d7",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -7621,7 +7695,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "f77414a",
+                            "_id": "9ab0d4b",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -7649,7 +7723,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -7672,7 +7746,7 @@
               "isInner": true
             },
             {
-              "id": "12727a0",
+              "id": "e689acf",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -7714,14 +7788,14 @@
               },
               "elements": [
                 {
-                  "id": "9acf035",
+                  "id": "f77414a",
                   "elType": "widget",
                   "settings": {
                     "title": "[GUIA] Encara no hi ha cap projecte assignat a «Reformes». Copia i enganxa aquí les targetes de la pestanya «Tots» que corresponguin.",
                     "header_size": "p",
                     "title_color": "#5E5A57",
                     "typography_typography": "custom",
-                    "typography_font_family": "Jost",
+                    "typography_font_family": "DM Sans",
                     "typography_font_size": {
                       "unit": "px",
                       "size": 17,
@@ -7743,7 +7817,7 @@
               "isInner": true
             },
             {
-              "id": "ac9704e",
+              "id": "9acf035",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -7785,14 +7859,14 @@
               },
               "elements": [
                 {
-                  "id": "970be41",
+                  "id": "ec0cc38",
                   "elType": "widget",
                   "settings": {
                     "title": "[GUIA] Encara no hi ha cap projecte assignat a «Parquets». Copia i enganxa aquí les targetes de la pestanya «Tots» que corresponguin.",
                     "header_size": "p",
                     "title_color": "#5E5A57",
                     "typography_typography": "custom",
-                    "typography_font_family": "Jost",
+                    "typography_font_family": "DM Sans",
                     "typography_font_size": {
                       "unit": "px",
                       "size": 17,
@@ -7814,7 +7888,7 @@
               "isInner": true
             },
             {
-              "id": "43fe3e9",
+              "id": "b3b348c",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -7875,7 +7949,7 @@
               },
               "elements": [
                 {
-                  "id": "8e1f525",
+                  "id": "65c2e7b",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -7968,7 +8042,7 @@
                   },
                   "elements": [
                     {
-                      "id": "65c2e7b",
+                      "id": "12727a0",
                       "elType": "widget",
                       "settings": {
                         "title": "[ADRIA RAMOS]",
@@ -7992,7 +8066,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "6479dda",
+                      "id": "970be41",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -8002,7 +8076,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "994eb00",
+                            "_id": "ac9704e",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -8030,7 +8104,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -8050,7 +8124,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "e9f25f3",
+                  "id": "bf47f69",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -8143,7 +8217,7 @@
                   },
                   "elements": [
                     {
-                      "id": "bf47f69",
+                      "id": "6479dda",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALBA CLIMENT]",
@@ -8167,7 +8241,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "1c717d1",
+                      "id": "994eb00",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -8177,7 +8251,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "ef4c5e0",
+                            "_id": "8e1f525",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -8205,7 +8279,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -8225,7 +8299,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "7ec0b82",
+                  "id": "4a1f86e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -8318,7 +8392,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4a1f86e",
+                      "id": "1c717d1",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALBERT GENIS]",
@@ -8342,7 +8416,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "49e954f",
+                      "id": "ef4c5e0",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -8352,7 +8426,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "341fed9",
+                            "_id": "e9f25f3",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -8380,7 +8454,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -8400,7 +8474,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "f6a73c3",
+                  "id": "624ff32",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -8493,7 +8567,7 @@
                   },
                   "elements": [
                     {
-                      "id": "624ff32",
+                      "id": "49e954f",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALEX MARTI]",
@@ -8517,7 +8591,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "5bdba63",
+                      "id": "341fed9",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -8527,7 +8601,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "434a6cc",
+                            "_id": "7ec0b82",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -8555,7 +8629,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -8575,7 +8649,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "8ea6407",
+                  "id": "503d798",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -8668,7 +8742,7 @@
                   },
                   "elements": [
                     {
-                      "id": "503d798",
+                      "id": "5bdba63",
                       "elType": "widget",
                       "settings": {
                         "title": "[ALICIA SERRANO]",
@@ -8692,7 +8766,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "02834cb",
+                      "id": "434a6cc",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -8702,7 +8776,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "e7b95b3",
+                            "_id": "f6a73c3",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -8730,7 +8804,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -8750,7 +8824,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "1550fdf",
+                  "id": "b7c2f89",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -8843,7 +8917,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b7c2f89",
+                      "id": "02834cb",
                       "elType": "widget",
                       "settings": {
                         "title": "[ANDREU PORTBOU]",
@@ -8867,7 +8941,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "585db14",
+                      "id": "e7b95b3",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -8877,7 +8951,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "aa7d100",
+                            "_id": "8ea6407",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -8905,7 +8979,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -8925,7 +8999,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "a9e04cb",
+                  "id": "27c684d",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -9018,7 +9092,7 @@
                   },
                   "elements": [
                     {
-                      "id": "27c684d",
+                      "id": "585db14",
                       "elType": "widget",
                       "settings": {
                         "title": "[ANNA LLOSA]",
@@ -9042,7 +9116,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "656e8a7",
+                      "id": "aa7d100",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -9052,7 +9126,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "b585fba",
+                            "_id": "1550fdf",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -9080,7 +9154,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -9100,7 +9174,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "df8427c",
+                  "id": "91fc611",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -9193,7 +9267,7 @@
                   },
                   "elements": [
                     {
-                      "id": "91fc611",
+                      "id": "656e8a7",
                       "elType": "widget",
                       "settings": {
                         "title": "[BANYOLES]",
@@ -9217,7 +9291,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "a7e72df",
+                      "id": "b585fba",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -9227,7 +9301,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "e1a6d8e",
+                            "_id": "a9e04cb",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -9255,7 +9329,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -9275,7 +9349,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "fb87379",
+                  "id": "a7477f9",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -9368,7 +9442,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a7477f9",
+                      "id": "a7e72df",
                       "elType": "widget",
                       "settings": {
                         "title": "[BESCANÓ]",
@@ -9392,7 +9466,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "02fb4f1",
+                      "id": "e1a6d8e",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -9402,7 +9476,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "ddc6ee6",
+                            "_id": "df8427c",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -9430,7 +9504,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -9450,7 +9524,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "11c8ea6",
+                  "id": "9776cfd",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -9543,7 +9617,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9776cfd",
+                      "id": "02fb4f1",
                       "elType": "widget",
                       "settings": {
                         "title": "[BOADELLA]",
@@ -9567,7 +9641,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "8474c0f",
+                      "id": "ddc6ee6",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -9577,7 +9651,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "721c9d2",
+                            "_id": "fb87379",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -9605,7 +9679,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -9625,7 +9699,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "16573ae",
+                  "id": "e45a455",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -9718,7 +9792,7 @@
                   },
                   "elements": [
                     {
-                      "id": "e45a455",
+                      "id": "8474c0f",
                       "elType": "widget",
                       "settings": {
                         "title": "[CAMPING LA SIRENE]",
@@ -9742,7 +9816,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "26067fa",
+                      "id": "721c9d2",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -9752,7 +9826,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "16823cd",
+                            "_id": "11c8ea6",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -9780,7 +9854,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -9800,7 +9874,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "2dfdbf7",
+                  "id": "5ebd86a",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -9893,7 +9967,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5ebd86a",
+                      "id": "26067fa",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLES PANAREDA]",
@@ -9917,7 +9991,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "060cfd1",
+                      "id": "16823cd",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -9927,7 +10001,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "bae4c8e",
+                            "_id": "16573ae",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -9955,7 +10029,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -9975,7 +10049,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "9a0bf58",
+                  "id": "a25f7ba",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -10068,7 +10142,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a25f7ba",
+                      "id": "060cfd1",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLES PUJOL]",
@@ -10092,7 +10166,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "98e7b05",
+                      "id": "bae4c8e",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -10102,7 +10176,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "7e1a0c9",
+                            "_id": "2dfdbf7",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -10130,7 +10204,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -10150,7 +10224,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "25c04bb",
+                  "id": "03240eb",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -10243,7 +10317,7 @@
                   },
                   "elements": [
                     {
-                      "id": "03240eb",
+                      "id": "98e7b05",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLES SERRA]",
@@ -10267,7 +10341,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "615807b",
+                      "id": "7e1a0c9",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -10277,7 +10351,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "d0d6bf7",
+                            "_id": "9a0bf58",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -10305,7 +10379,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -10325,7 +10399,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "24ac214",
+                  "id": "6c487c9",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -10418,7 +10492,7 @@
                   },
                   "elements": [
                     {
-                      "id": "6c487c9",
+                      "id": "615807b",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARLOTTA]",
@@ -10442,7 +10516,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "df99a65",
+                      "id": "d0d6bf7",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -10452,7 +10526,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "d3519c4",
+                            "_id": "25c04bb",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -10480,7 +10554,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -10500,7 +10574,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "67d4be6",
+                  "id": "f929d0e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -10593,7 +10667,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f929d0e",
+                      "id": "df99a65",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARME GONGORA]",
@@ -10617,7 +10691,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "f19c731",
+                      "id": "d3519c4",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -10627,7 +10701,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "64fffda",
+                            "_id": "24ac214",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -10655,7 +10729,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -10675,7 +10749,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "332a970",
+                  "id": "dd5201a",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -10768,7 +10842,7 @@
                   },
                   "elements": [
                     {
-                      "id": "dd5201a",
+                      "id": "f19c731",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARME SANTALO]",
@@ -10792,7 +10866,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "bb3ebf6",
+                      "id": "64fffda",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -10802,7 +10876,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "504096f",
+                            "_id": "67d4be6",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -10830,7 +10904,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -10850,7 +10924,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "decdf0a",
+                  "id": "202077a",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -10943,7 +11017,7 @@
                   },
                   "elements": [
                     {
-                      "id": "202077a",
+                      "id": "bb3ebf6",
                       "elType": "widget",
                       "settings": {
                         "title": "[CARME VIARNES]",
@@ -10967,7 +11041,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "eb8bf16",
+                      "id": "504096f",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -10977,7 +11051,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "649c6b6",
+                            "_id": "332a970",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -11005,7 +11079,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -11025,7 +11099,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "9f734e5",
+                  "id": "8cc65a2",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -11118,7 +11192,7 @@
                   },
                   "elements": [
                     {
-                      "id": "8cc65a2",
+                      "id": "eb8bf16",
                       "elType": "widget",
                       "settings": {
                         "title": "[CLARA FITA]",
@@ -11142,7 +11216,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "b5f8454",
+                      "id": "649c6b6",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -11152,7 +11226,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "53956d7",
+                            "_id": "decdf0a",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -11180,7 +11254,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -11200,7 +11274,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "a7632a6",
+                  "id": "8d12eb0",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -11293,7 +11367,7 @@
                   },
                   "elements": [
                     {
-                      "id": "8d12eb0",
+                      "id": "b5f8454",
                       "elType": "widget",
                       "settings": {
                         "title": "[CONXITA GOLANOS]",
@@ -11317,7 +11391,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "351930b",
+                      "id": "53956d7",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -11327,7 +11401,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "00df23b",
+                            "_id": "9f734e5",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -11355,7 +11429,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -11375,7 +11449,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "c6552ff",
+                  "id": "fb677c9",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -11468,7 +11542,7 @@
                   },
                   "elements": [
                     {
-                      "id": "fb677c9",
+                      "id": "351930b",
                       "elType": "widget",
                       "settings": {
                         "title": "[CRISTINA TERSA]",
@@ -11492,7 +11566,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "a3bef6a",
+                      "id": "00df23b",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -11502,7 +11576,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "78a2bbb",
+                            "_id": "a7632a6",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -11530,7 +11604,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -11550,7 +11624,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "60c611b",
+                  "id": "0f17bc1",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -11643,7 +11717,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0f17bc1",
+                      "id": "a3bef6a",
                       "elType": "widget",
                       "settings": {
                         "title": "[DANI ZENITH]",
@@ -11667,7 +11741,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "a25eaa7",
+                      "id": "78a2bbb",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -11677,7 +11751,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "830b135",
+                            "_id": "c6552ff",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -11705,7 +11779,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -11725,7 +11799,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "11db83d",
+                  "id": "a63f618",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -11818,7 +11892,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a63f618",
+                      "id": "a25eaa7",
                       "elType": "widget",
                       "settings": {
                         "title": "[DOLORS ALBUJAR]",
@@ -11842,7 +11916,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "3e97278",
+                      "id": "830b135",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -11852,7 +11926,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "935b053",
+                            "_id": "60c611b",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -11880,7 +11954,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -11900,7 +11974,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "497d9ac",
+                  "id": "22f283e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -11993,7 +12067,7 @@
                   },
                   "elements": [
                     {
-                      "id": "22f283e",
+                      "id": "3e97278",
                       "elType": "widget",
                       "settings": {
                         "title": "[DOLORS BOSCH]",
@@ -12017,7 +12091,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "5d43110",
+                      "id": "935b053",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -12027,7 +12101,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "fc12a11",
+                            "_id": "11db83d",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -12055,7 +12129,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -12075,7 +12149,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "fe39ca9",
+                  "id": "ef1d05f",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -12168,7 +12242,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ef1d05f",
+                      "id": "5d43110",
                       "elType": "widget",
                       "settings": {
                         "title": "[DOLORS PUNSET]",
@@ -12192,7 +12266,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "8f5c37d",
+                      "id": "fc12a11",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -12202,7 +12276,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "a20ab9d",
+                            "_id": "497d9ac",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -12230,7 +12304,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -12250,7 +12324,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "5efbd2d",
+                  "id": "9758776",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -12343,7 +12417,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9758776",
+                      "id": "8f5c37d",
                       "elType": "widget",
                       "settings": {
                         "title": "[ELISABETH I FRANZ]",
@@ -12367,7 +12441,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "8f71d04",
+                      "id": "a20ab9d",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -12377,7 +12451,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "948e34a",
+                            "_id": "fe39ca9",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -12405,7 +12479,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -12425,7 +12499,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "a9d0901",
+                  "id": "e7a8ec8",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -12518,7 +12592,7 @@
                   },
                   "elements": [
                     {
-                      "id": "e7a8ec8",
+                      "id": "8f71d04",
                       "elType": "widget",
                       "settings": {
                         "title": "[ENRIC PASTOR]",
@@ -12542,7 +12616,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "a2d3151",
+                      "id": "948e34a",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -12552,7 +12626,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "671420a",
+                            "_id": "5efbd2d",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -12580,7 +12654,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -12600,7 +12674,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "5d7d8ed",
+                  "id": "f816a5d",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -12693,7 +12767,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f816a5d",
+                      "id": "a2d3151",
                       "elType": "widget",
                       "settings": {
                         "title": "[ERNEST RUIZ]",
@@ -12717,7 +12791,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "c874062",
+                      "id": "671420a",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -12727,7 +12801,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "030c2ad",
+                            "_id": "a9d0901",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -12755,7 +12829,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -12775,7 +12849,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "72fbd36",
+                  "id": "5c26755",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -12868,7 +12942,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5c26755",
+                      "id": "c874062",
                       "elType": "widget",
                       "settings": {
                         "title": "[ESTEVE BRUN]",
@@ -12892,7 +12966,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "b3b348c",
+                      "id": "030c2ad",
                       "elType": "widget",
                       "settings": {
                         "icon_list": [
@@ -12902,7 +12976,7 @@
                               "value": "fas fa-map-marker-alt",
                               "library": "fa-solid"
                             },
-                            "_id": "43e5a86",
+                            "_id": "5d7d8ed",
                             "link": {
                               "url": "",
                               "is_external": "",
@@ -12930,7 +13004,7 @@
                           "sizes": []
                         },
                         "icon_typography_typography": "custom",
-                        "icon_typography_font_family": "Jost",
+                        "icon_typography_font_family": "DM Sans",
                         "icon_typography_font_size": {
                           "unit": "px",
                           "size": 15,
@@ -12956,10 +13030,10 @@
           "widgetType": "nested-tabs"
         },
         {
-          "id": "925615b",
+          "id": "7379c75",
           "elType": "widget",
           "settings": {
-            "html": "<style>\n.cl-tabs.elementor-widget .e-n-tabs-heading{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:40px}\n.cl-tabs.elementor-widget .e-n-tab-title{background:transparent;border:1px solid #CFC8BF;border-radius:1px;color:#1E1B19;font:400 17px/1 'Jost',sans-serif;padding:16px 32px;cursor:pointer}\n.cl-tabs.elementor-widget .e-n-tab-title[aria-selected=\"true\"]{background:#141413!important;color:#fff!important;border-color:#141413!important}\n.cl-tabs.elementor-widget .e-n-tab-title-text{color:inherit;font:inherit}\n.cl-tabs.elementor-widget .e-n-tabs-content>.e-con:not(.e-active){display:none!important}\n.cl-guia-nota{opacity:.7}\n</style>"
+            "html": "<style>\n.cl-tabs.elementor-widget .e-n-tabs-heading{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:40px}\n.cl-tabs.elementor-widget .e-n-tab-title{background:transparent;border:1px solid #CFC8BF;border-radius:1px;color:#1E1B19;font:400 17px/1 'DM Sans',sans-serif;padding:16px 32px;cursor:pointer}\n.cl-tabs.elementor-widget .e-n-tab-title[aria-selected=\"true\"]{background:#141413!important;color:#fff!important;border-color:#141413!important}\n.cl-tabs.elementor-widget .e-n-tab-title-text{color:inherit;font:inherit}\n.cl-tabs.elementor-widget .e-n-tabs-content>.e-con:not(.e-active){display:none!important}\n.cl-guia-nota{opacity:.7}\n</style>"
           },
           "elements": [],
           "widgetType": "html"
@@ -12968,7 +13042,7 @@
       "isInner": false
     },
     {
-      "id": "a31574f",
+      "id": "98edc6e",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -12996,7 +13070,7 @@
       },
       "elements": [
         {
-          "id": "19697f2",
+          "id": "02f0aba",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -13055,7 +13129,7 @@
           "isInner": true
         },
         {
-          "id": "0d545d3",
+          "id": "ed58e54",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -13089,10 +13163,10 @@
             "flex_align_items_mobile": "flex-start",
             "padding": {
               "unit": "px",
-              "top": "64",
-              "right": "72",
-              "bottom": "64",
-              "left": "72",
+              "top": "40",
+              "right": "56",
+              "bottom": "40",
+              "left": "56",
               "isLinked": false
             },
             "padding_tablet": {
@@ -13126,17 +13200,17 @@
           },
           "elements": [
             {
-              "id": "64c91af",
+              "id": "7613fd2",
               "elType": "container",
               "settings": {
                 "content_width": "full",
                 "flex_direction": "column",
                 "flex_gap": {
-                  "column": "16",
-                  "row": "16",
+                  "column": "24",
+                  "row": "24",
                   "isLinked": true,
                   "unit": "px",
-                  "size": 16
+                  "size": 24
                 },
                 "flex_justify_content": "flex-start",
                 "flex_align_items": "flex-start",
@@ -13149,8 +13223,8 @@
                   "isLinked": true
                 },
                 "width": {
-                  "unit": "%",
-                  "size": 70,
+                  "unit": "px",
+                  "size": 440,
                   "sizes": []
                 },
                 "width_tablet": {
@@ -13161,17 +13235,17 @@
               },
               "elements": [
                 {
-                  "id": "8cee669",
+                  "id": "925615b",
                   "elType": "widget",
                   "settings": {
                     "title": "INTERIORISME A FIGUERES | BANYOLES",
                     "header_size": "p",
                     "title_color": "#4A443F",
                     "typography_typography": "custom",
-                    "typography_font_family": "Jost",
+                    "typography_font_family": "DM Sans",
                     "typography_font_size": {
                       "unit": "px",
-                      "size": 12,
+                      "size": 15,
                       "sizes": []
                     },
                     "typography_font_weight": "400",
@@ -13182,7 +13256,7 @@
                     },
                     "typography_letter_spacing": {
                       "unit": "px",
-                      "size": 2.5,
+                      "size": 3.2,
                       "sizes": []
                     }
                   },
@@ -13190,7 +13264,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "7613fd2",
+                  "id": "5d870b4",
                   "elType": "widget",
                   "settings": {
                     "title": "Dissenyem espais<br>per a persones reals",
@@ -13200,7 +13274,7 @@
                     "typography_font_family": "Playfair Display",
                     "typography_font_size": {
                       "unit": "px",
-                      "size": 46,
+                      "size": 43.5,
                       "sizes": []
                     },
                     "typography_font_size_tablet": {
@@ -13216,7 +13290,7 @@
                     "typography_font_weight": "400",
                     "typography_line_height": {
                       "unit": "em",
-                      "size": 1.15,
+                      "size": 1.26,
                       "sizes": []
                     }
                   },
@@ -13224,23 +13298,23 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "f91ee37",
+                  "id": "19697f2",
                   "elType": "widget",
                   "settings": {
                     "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
                     "header_size": "p",
                     "title_color": "#2E2A27",
                     "typography_typography": "custom",
-                    "typography_font_family": "Jost",
+                    "typography_font_family": "DM Sans",
                     "typography_font_size": {
                       "unit": "px",
                       "size": 17,
                       "sizes": []
                     },
-                    "typography_font_weight": "300",
+                    "typography_font_weight": "400",
                     "typography_line_height": {
                       "unit": "em",
-                      "size": 1.5,
+                      "size": 1.6,
                       "sizes": []
                     }
                   },
@@ -13248,7 +13322,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "5e7c8da",
+                  "id": "8cee669",
                   "elType": "widget",
                   "settings": {
                     "text": "Parlem del teu projecte",
@@ -13270,7 +13344,7 @@
                     },
                     "size": "sm",
                     "typography_typography": "custom",
-                    "typography_font_family": "Jost",
+                    "typography_font_family": "DM Sans",
                     "typography_font_size": {
                       "unit": "px",
                       "size": 16,
@@ -13323,17 +13397,17 @@
               "isInner": true
             },
             {
-              "id": "0b40961",
+              "id": "64c91af",
               "elType": "container",
               "settings": {
                 "content_width": "full",
                 "flex_direction": "column",
                 "flex_gap": {
-                  "column": "8",
-                  "row": "8",
+                  "column": "16",
+                  "row": "16",
                   "isLinked": true,
                   "unit": "px",
-                  "size": 8
+                  "size": 16
                 },
                 "flex_justify_content": "flex-start",
                 "flex_align_items": "flex-start",
@@ -13346,8 +13420,8 @@
                   "isLinked": true
                 },
                 "width": {
-                  "unit": "%",
-                  "size": 30,
+                  "unit": "px",
+                  "size": 170,
                   "sizes": []
                 },
                 "width_tablet": {
@@ -13358,23 +13432,39 @@
               },
               "elements": [
                 {
-                  "id": "ed58e54",
+                  "id": "f91ee37",
                   "elType": "widget",
                   "settings": {
                     "title": "“ La teva llar,<br>el nostre<br>compromís ”",
                     "header_size": "p",
                     "title_color": "#3A3A3A",
                     "typography_typography": "custom",
-                    "typography_font_family": "Over the Rainbow",
+                    "typography_font_family": "Mrs Saint Delafield",
                     "typography_font_size": {
                       "unit": "px",
-                      "size": 30,
+                      "size": 42,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 38,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34,
                       "sizes": []
                     },
                     "typography_font_weight": "400",
                     "typography_line_height": {
                       "unit": "em",
-                      "size": 1.45,
+                      "size": 1.05,
+                      "sizes": []
+                    },
+                    "_transform_rotate_popover": "transform",
+                    "_transform_rotateZ_effect": {
+                      "unit": "px",
+                      "size": -8,
                       "sizes": []
                     }
                   },
@@ -13382,7 +13472,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "98edc6e",
+                  "id": "5e7c8da",
                   "elType": "widget",
                   "settings": {
                     "style": "solid",
@@ -13394,12 +13484,18 @@
                     "color": "#3A3A3A",
                     "width": {
                       "unit": "%",
-                      "size": 40,
+                      "size": 50,
                       "sizes": []
                     },
                     "gap": {
                       "unit": "px",
                       "size": 0,
+                      "sizes": []
+                    },
+                    "_transform_rotate_popover": "transform",
+                    "_transform_rotateZ_effect": {
+                      "unit": "px",
+                      "size": -8,
                       "sizes": []
                     }
                   },
@@ -13416,7 +13512,7 @@
       "isInner": false
     },
     {
-      "id": "9d64388",
+      "id": "b3c0c82",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -13483,7 +13579,7 @@
       },
       "elements": [
         {
-          "id": "20d7c5b",
+          "id": "0d545d3",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -13506,8 +13602,8 @@
               "isLinked": true
             },
             "width": {
-              "unit": "%",
-              "size": 36,
+              "unit": "px",
+              "size": 490,
               "sizes": []
             },
             "width_tablet": {
@@ -13518,7 +13614,7 @@
           },
           "elements": [
             {
-              "id": "920dff0",
+              "id": "0b40961",
               "elType": "widget",
               "settings": {
                 "image": {
@@ -13558,7 +13654,7 @@
           "isInner": true
         },
         {
-          "id": "fdeaa5a",
+          "id": "2218b66",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -13581,8 +13677,8 @@
               "isLinked": true
             },
             "width": {
-              "unit": "%",
-              "size": 44,
+              "unit": "px",
+              "size": 560,
               "sizes": []
             },
             "width_tablet": {
@@ -13593,17 +13689,17 @@
           },
           "elements": [
             {
-              "id": "a29a62e",
+              "id": "a31574f",
               "elType": "widget",
               "settings": {
                 "title": "PERSONES QUE FAN POSSIBLE CREEM LLAR",
                 "header_size": "p",
                 "title_color": "#4A443F",
                 "typography_typography": "custom",
-                "typography_font_family": "Jost",
+                "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 12,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -13614,7 +13710,7 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 2.5,
+                  "size": 2.1,
                   "sizes": []
                 }
               },
@@ -13622,7 +13718,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "2218b66",
+              "id": "920dff0",
               "elType": "widget",
               "settings": {
                 "title": "Un equip al teu costat",
@@ -13656,23 +13752,23 @@
               "widgetType": "heading"
             },
             {
-              "id": "34b5e44",
+              "id": "20d7c5b",
               "elType": "widget",
               "settings": {
                 "title": "Som un estudi d'interiorisme amb arrels a Figueres, apassionats pel disseny i la qualitat. Treballem amb proximitat, escolta i compromís per crear espais únics, pensats per a tu.",
                 "header_size": "p",
                 "title_color": "#2E2A27",
                 "typography_typography": "custom",
-                "typography_font_family": "Jost",
+                "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 16,
+                  "size": 15.6,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
-                  "size": 1.55,
+                  "size": 1.76,
                   "sizes": []
                 }
               },
@@ -13680,10 +13776,10 @@
               "widgetType": "heading"
             },
             {
-              "id": "edb5683",
+              "id": "a29a62e",
               "elType": "widget",
               "settings": {
-                "text": "Coneix l'equip",
+                "text": "Coneix el nostre equip",
                 "link": {
                   "url": "/nosaltres/",
                   "is_external": "",
@@ -13702,10 +13798,10 @@
                 },
                 "size": "sm",
                 "typography_typography": "custom",
-                "typography_font_family": "Jost",
+                "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 15,
+                  "size": 14,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -13729,9 +13825,9 @@
                 },
                 "text_padding_mobile": {
                   "unit": "px",
-                  "top": "14",
+                  "top": "15",
                   "right": "0",
-                  "bottom": "14",
+                  "bottom": "15",
                   "left": "0",
                   "isLinked": false
                 },
@@ -13765,17 +13861,17 @@
           "isInner": true
         },
         {
-          "id": "990f3bc",
+          "id": "fdeaa5a",
           "elType": "container",
           "settings": {
             "content_width": "full",
             "flex_direction": "column",
             "flex_gap": {
-              "column": "8",
-              "row": "8",
+              "column": "16",
+              "row": "16",
               "isLinked": true,
               "unit": "px",
-              "size": 8
+              "size": 16
             },
             "flex_justify_content": "flex-start",
             "flex_align_items": "flex-start",
@@ -13788,8 +13884,8 @@
               "isLinked": true
             },
             "width": {
-              "unit": "%",
-              "size": 30,
+              "unit": "px",
+              "size": 170,
               "sizes": []
             },
             "width_tablet": {
@@ -13800,23 +13896,39 @@
           },
           "elements": [
             {
-              "id": "b3c0c82",
+              "id": "34b5e44",
               "elType": "widget",
               "settings": {
                 "title": "“ Llar<br>és molt més<br>que un lloc ”",
                 "header_size": "p",
                 "title_color": "#3A3A3A",
                 "typography_typography": "custom",
-                "typography_font_family": "Over the Rainbow",
+                "typography_font_family": "Mrs Saint Delafield",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 30,
+                  "size": 42,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 34,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
-                  "size": 1.45,
+                  "size": 1.05,
+                  "sizes": []
+                },
+                "_transform_rotate_popover": "transform",
+                "_transform_rotateZ_effect": {
+                  "unit": "px",
+                  "size": -8,
                   "sizes": []
                 }
               },
@@ -13824,7 +13936,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "33b54fa",
+              "id": "edb5683",
               "elType": "widget",
               "settings": {
                 "style": "solid",
@@ -13836,12 +13948,18 @@
                 "color": "#3A3A3A",
                 "width": {
                   "unit": "%",
-                  "size": 40,
+                  "size": 50,
                   "sizes": []
                 },
                 "gap": {
                   "unit": "px",
                   "size": 0,
+                  "sizes": []
+                },
+                "_transform_rotate_popover": "transform",
+                "_transform_rotateZ_effect": {
+                  "unit": "px",
+                  "size": -8,
                   "sizes": []
                 }
               },
