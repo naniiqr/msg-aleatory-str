@@ -1228,67 +1228,84 @@ def pj_spec(ic, etiqueta, valor, last=False, dyn=None):
                      border=C_LINE, bw=R((0, 0 if last else 1, 0, 0), (0, 0 if last else 1, 0, 0), (0, 0, 0, 0)))
 
 
-def pj_hero():
+def T(c, key, sample, generic):
+    """Text d'una secció: el del servei (c) si n'hi ha; si no, mostra (estàtica) o general (GEN/DYN)."""
+    if c:
+        return c[key]
+    return sample if not (DYN or GEN) else generic
+
+
+def pj_hero(c=None):
     back = heading("← Tots els projectes", "p", SANS, 15, 400, "#FFFFFFD9", 1.2, href="/projectes/")
-    eyebrow = heading("PROJECTE · CUINA" if not GEN else "PROJECTE D'INTERIORISME", "p", SANS, 15, 400, "#FFFFFFCC", 1.2, 3.5, tf="uppercase")
+    eyebrow = heading(T(c, "eyebrow", "PROJECTE · CUINA", "PROJECTE D'INTERIORISME"), "p", SANS, 15, 400, "#FFFFFFCC",
+                      1.2, 3.5, tf="uppercase")
     bind(eyebrow, "title", "post-terms", taxonomy=TAXO, separator=", ", link="", before="Projecte · ")
-    titol = heading("Cuina contemporània<br>a Figueres" if not GEN else "Títol del<br>projecte", "h1", SERIF, R(64, 52, 40), 400, "#FFFFFF", 1.1)
+    titol = heading(T(c, "h1", "Cuina contemporània<br>a Figueres", "Títol del<br>projecte"), "h1", SERIF,
+                    R(64, 52, 40), 400, "#FFFFFF", 1.1)
     bind(titol, "title", "post-title")
-    ex = heading("Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais "
-                 "oberts." if not (DYN or GEN) else FB["excerpt"], "p", SANS, 19, 400, "#FFFFFFF2", 1.5)
+    ex = heading(T(c, "excerpt", "Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum "
+                   "i espais oberts.", FB["excerpt"]), "p", SANS, 19, 400, "#FFFFFFF2", 1.5)
     bind(ex, "title", "post-excerpt", fallback=FB["excerpt"])
     btn = button("Demana un pressupost similar", "/contacte/", bg=None, color="#FFFFFF", size=16, weight=400,
                  pad=(16, 32, 16, 32), border="#FFFFFFB3", radius=1, icon="fas fa-long-arrow-alt-right")
     text = container([back, eyebrow, titol, ex, btn], gap=24, inner=True, pad=0, align="flex-start", width=R(50, 100))
     hero_c = container([text], justify="center", align="flex-start", boxed=BOX,
                        pad=R((112, GUT[0], 64, GUT[0]), (112, GUT[1], 48, GUT[1]), (112, GUT[2], 48, GUT[2])),
-                       minh=R(640, 560, 560), bgimg="hero-inici.jpg", bgpos="center center", cls="cl-hero cl-pj-hero",
+                       minh=R(640, 560, 560), bgimg=(c or {}).get("img_hero", "hero-inici.jpg"), bgpos="center center",
+                       cls="cl-hero cl-pj-hero",
                        overlay={"a": "#120C08D9", "b": "#120C0826", "angle": 90, "ap": 0, "bp": 70})
     return bind(hero_c, "background_image", "post-featured-image")
 
 
-def pj_repte():
-    p = heading("L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una estètica "
-                "contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió amb el "
-                "menjador i el jardí." if not (DYN or GEN) else FB["repte"], "p", SANS, 17, 400, "#2E2A27", 1.6)
+def pj_repte(c=None):
+    p = heading(T(c, "repte_p", "L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una "
+                  "estètica contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió "
+                  "amb el menjador i el jardí.", FB["repte"]), "p", SANS, 17, 400, "#2E2A27", 1.6)
     bind(p, "title", "post-custom-field", **cf("repte_text", FB["repte"]))
-    h2 = heading("Una cuina oberta,<br>pràctica i amb caràcter" if not (DYN or GEN) else "Un projecte pensat<br>a la teva mida",
+    h2 = heading(T(c, "repte_h", "Una cuina oberta,<br>pràctica i amb caràcter", "Un projecte pensat<br>a la teva mida"),
                  "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2)
+    if c:   # plantilla per servei: Ubicació (s'escriu) + Tipus (fix) + «Inclou» (general, sense dades a omplir)
+        tercer = pj_spec("fas fa-pencil-ruler", "Inclou", c["inclou"], last=True)
+        tipus = pj_spec("fas fa-home", "Tipus de projecte", c["tipus"])
+    else:
+        tercer = pj_spec("fas fa-ruler-combined", "Superfície", "28 m²" if not GEN else "— m²", last=True,
+                         dyn=("post-custom-field", cf("superficie", FB["sup"])))
+        tipus = pj_spec("fas fa-home", "Tipus de projecte", "Cuina" if not GEN else "Cuina / Banys / Reforma",
+                        dyn=("post-terms", dict(taxonomy=TAXO, separator=", ", link="")))
     specs = container([
-        pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres" if not GEN else "Localitat", dyn=("post-custom-field", cf("localitat", FB["loc"]))),
-        pj_spec("fas fa-home", "Tipus de projecte", "Cuina" if not GEN else "Cuina / Banys / Reforma",
-                dyn=("post-terms", dict(taxonomy=TAXO, separator=", ", link=""))),
-        pj_spec("fas fa-ruler-combined", "Superfície", "28 m²" if not GEN else "— m²", last=True,
-                dyn=("post-custom-field", cf("superficie", FB["sup"])))],
+        pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres" if not (GEN or c) else "Localitat",
+                dyn=("post-custom-field", cf("localitat", FB["loc"]))), tipus, tercer],
         grid=(3, 1), gap=0, inner=True, pad=R((16, 0, 0, 0), (16, 0, 0, 0), (16, 0, 0, 0)))
     txt = container([heading("EL REPTE", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5), h2, p, specs],
                     gap=24, inner=True, pad=0, width=R(50, 100), justify="center")
-    im = image("home-proj-1.jpg", h=R(448, 360, 280), alt="El repte del projecte", lightbox=True)
+    im = image((c or {}).get("img_repte", "home-proj-1.jpg"), h=R(448, 360, 280), alt="El repte del projecte", lightbox=True)
     bind(im, "image", "acf-image", **acf_img("imatge_repte"))
     img = container([im], inner=True, pad=0, width=R(50, 100))
     return container([txt, img], dir=R("row", "column", "column"), align="center", gap=R(64, 40, 32), boxed=BOX,
                      bg="#FFFFFF", pad=P("sec"), cls="cl-pj-repte")
 
 
-def pj_solucio():
-    if GEN:
-        foto = container([image("interiorisme.jpg", h=R(560, 360, 280), alt="La solució")], inner=True,
-                         width=R(50, 100), pad=0)
+def pj_solucio(c=None):
+    img_sol = (c or {}).get("img_sol", "interiorisme.jpg")
+    if GEN or c:
+        foto = container([image(img_sol, h=R(560, 360, 280), alt="La solució")], inner=True, width=R(50, 100), pad=0)
     else:
-        foto = container([], inner=True, width=R(50, 100), bgimg="interiorisme.jpg", minh=R(560, 360, 280), pad=0)
+        foto = container([], inner=True, width=R(50, 100), bgimg=img_sol, minh=R(560, 360, 280), pad=0)
         bind(foto, "background_image", "acf-image", **acf_img("imatge_solucio"))
-    punts = ["Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
-             "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior"] if not (DYN or GEN) else FB["punts"]
+    punts = (c["punts"] if c else (["Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
+                                    "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior"]
+                                   if not (DYN or GEN) else FB["punts"]))
     checks = icon_list([(t, "far fa-check-circle", None) for t in punts],
                        C_BROWN, 18, "#2E2A27", SANS, 16, 400, indent=12, space=16)
     for n in range(5):
         bind_item(checks, n, "text", "post-custom-field", **cf(f"punt_{n + 1}", FB["punts"][n]))
-    p = heading("Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada per al "
-                "confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, preparació i "
-                "espai social." if not (DYN or GEN) else FB["solucio"], "p", SANS, 17, 400, "#2E2A27", 1.6)
+    p = heading(T(c, "sol_p", "Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada "
+                  "per al confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, "
+                  "preparació i espai social.", FB["solucio"]), "p", SANS, 17, 400, "#2E2A27", 1.6)
     bind(p, "title", "post-custom-field", **cf("solucio_text", FB["solucio"]))
     panel = container([heading("LA SOLUCIÓ", "p", SANS, 15, 400, "#4A443F", 1.2, 3.5),
-                       heading("Disseny i funcionalitat<br>en perfecta harmonia", "h2", SERIF, R(40, 36, 32), 400,
+                       heading(T(c, "sol_h", "Disseny i funcionalitat<br>en perfecta harmonia",
+                                 "Disseny i funcionalitat<br>en perfecta harmonia"), "h2", SERIF, R(40, 36, 32), 400,
                                "#141413", 1.2), p, checks],
                       inner=True, width=R(50, 100), bg=C_BEIGE, justify="center", align="flex-start", gap=24,
                       pad=R((64, 72, 64, 72), (48, 40, 48, 40), (40, 24, 40, 24)))
@@ -1296,11 +1313,11 @@ def pj_solucio():
                      cls="cl-split cl-pj-solucio")
 
 
-def pj_galeria():
+def pj_galeria(c=None):
     cap = container([heading("GALERIA D'IMATGES", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5),
                      heading("Detalls que fan la diferència", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2)],
                     gap=8, inner=True, pad=0)
-    keys = ["home-proj-3.jpg", "home-proj-2.jpg", "proj-01.jpg", "proj-04.jpg", "proj-10.jpg"]
+    keys = (c or {}).get("gal", ["home-proj-3.jpg", "home-proj-2.jpg", "proj-01.jpg", "proj-04.jpg", "proj-10.jpg"])
     ims = []
     for n, k in enumerate(keys, 1):
         im = image(k, h=R(480, 360, 280) if n == 1 else R(232, 176, 140), alt=f"Galeria {n}", lightbox=True)
@@ -1312,16 +1329,20 @@ def pj_galeria():
     return container([cap, mosaic], gap=32, boxed=BOX, bg="#FFFFFF", pad=P("sec"), cls="cl-pj-galeria")
 
 
-def pj_cta():
-    txt = container([heading("TENS UN PROJECTE SIMILAR?", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5),
-                     heading("Fem realitat la cuina dels teus somnis" if not (DYN or GEN) else "Fem realitat el teu projecte",
+def pj_cta(c=None):
+    txt = container([heading(T(c, "cta_eb", "TENS UN PROJECTE SIMILAR?", "TENS UN PROJECTE SIMILAR?"), "p", SANS, 15,
+                             400, C_TEXT, 1.2, 3.5),
+                     heading(T(c, "cta_h", "Fem realitat la cuina dels teus somnis", "Fem realitat el teu projecte"),
                              "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
-                     heading("T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un "
-                             "pressupost sense compromís.", "p", SANS, 17, 400, "#2E2A27", 1.6),
-                     button("Demana pressupost", "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
-                            pad=(16, 32, 16, 32), radius=1, icon="fas fa-long-arrow-alt-right")],
+                     heading(T(c, "cta_p", "T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. "
+                               "Demana un pressupost sense compromís.", "T'assessorem en tot el procés, des de la idea "
+                               "inicial fins a l'últim detall. Demana un pressupost sense compromís."),
+                             "p", SANS, 17, 400, "#2E2A27", 1.6),
+                     button(T(c, "cta_b", "Demana pressupost", "Demana pressupost"), "/contacte/", bg=C_DARK,
+                            color="#fff", size=16, weight=400, pad=(16, 32, 16, 32), radius=1,
+                            icon="fas fa-long-arrow-alt-right")],
                     gap=24, inner=True, pad=0, width=R(64, 100), align="flex-start")
-    q = quote("“ Espais que<br>s'adapten a tu ”", 42)
+    q = quote(T(c, "cita", "“ Espais que<br>s'adapten a tu ”", "“ Espais que<br>s'adapten a tu ”"), 42)
     return container([txt, q], dir=R("row", "column", "column"), justify="space-between",
                      align=R("center", "flex-start", "flex-start"), gap=R(48, 32, 24), boxed=BOX, bg=C_BG2,
                      pad=P("sec"), cls="cl-pj-cta")
@@ -1329,6 +1350,97 @@ def pj_cta():
 
 def page_projecte():
     return [pj_hero(), pj_repte(), pj_solucio(), pj_galeria(), pj_cta()]
+
+
+PJ_SERVEIS = {
+    "cuina": dict(
+        eyebrow="PROJECTE DE CUINA", h1="Cuina a<br>Localitat", tipus="Cuina", inclou="Disseny i muntatge",
+        excerpt="Una cuina a mida, funcional i pensada per al dia a dia, amb materials de qualitat i molta llum.",
+        repte_h="Una cuina pensada<br>per a viure-hi",
+        repte_p=("Cada cuina parteix d'una necessitat: aprofitar l'espai, guanyar comoditat i crear un lloc agradable on "
+                 "cuinar, menjar i compartir. Partim de com viu cada família per dissenyar una cuina a la seva mida."),
+        sol_h="Disseny i funcionalitat<br>en perfecta harmonia",
+        sol_p=("Hem dissenyat una cuina amb línies netes, bons materials i una distribució pensada per al dia a dia: "
+               "zona de treball còmoda, bon emmagatzematge i una il·luminació que crea ambient."),
+        punts=["Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
+               "Gran capacitat d'emmagatzematge", "Zona de treball còmoda"],
+        cta_eb="T'INTERESSA UNA CUINA COM AQUESTA?", cta_h="Fem realitat la teva cuina",
+        cta_p="Explica'ns com la imagines i t'assessorem sense compromís, des de la primera idea fins al muntatge final.",
+        cta_b="Demana pressupost de cuina", cita="“ La teva cuina,<br>a la teva<br>mida ”",
+        img_hero="hero-inici.jpg", img_repte="home-proj-1.jpg", img_sol="cat-cuines.jpg",
+        gal=["home-proj-1.jpg", "proj-01.jpg", "proj-02.jpg", "proj-04.jpg", "proj-05.jpg"]),
+    "banys": dict(
+        eyebrow="PROJECTE DE BANY", h1="Bany a<br>Localitat", tipus="Banys", inclou="Disseny i reforma",
+        excerpt="Un bany modern i còmode, pensat per al benestar de cada dia, amb materials resistents i un disseny cuidat.",
+        repte_h="Un bany pensat<br>per al benestar",
+        repte_p=("Cada bany parteix d'una necessitat: guanyar espai, comoditat i funcionalitat sense renunciar a un "
+                 "ambient agradable i fàcil de mantenir."),
+        sol_h="Confort i disseny<br>en cada detall",
+        sol_p=("Hem dissenyat un bany amb una distribució ben aprofitada, revestiments duradors i una il·luminació "
+               "cuidada, perquè el dia a dia sigui més còmode."),
+        punts=["Distribució ben aprofitada", "Revestiments de qualitat", "Il·luminació cuidada",
+               "Mobiliari i accessoris a mida", "Fàcil de mantenir"],
+        cta_eb="T'INTERESSA UN BANY COM AQUEST?", cta_h="Fem realitat el teu bany",
+        cta_p="Explica'ns què necessites i et proposem la reforma que millor s'adapta al teu espai.",
+        cta_b="Demana pressupost de bany", cita="“ Benestar<br>en cada<br>detall ”",
+        img_hero="home-proj-2.jpg", img_repte="cat-banys.jpg", img_sol="proj-07.jpg",
+        gal=["home-proj-2.jpg", "proj-07.jpg", "proj-08.jpg", "proj-09.jpg", "cat-banys.jpg"]),
+    "interiorisme": dict(
+        eyebrow="PROJECTE D'INTERIORISME", h1="Interiorisme a<br>Localitat", tipus="Interiorisme",
+        inclou="Disseny i execució",
+        excerpt="Un espai pensat de dalt a baix: mobiliari, colors, materials i il·luminació al servei de la teva manera de viure.",
+        repte_h="Un espai pensat<br>a la teva mida",
+        repte_p=("Cada projecte d'interiorisme parteix de la manera de viure de qui l'habita: com es fa servir l'espai, "
+                 "quin ambient es vol i quins detalls el fan especial."),
+        sol_h="Ambients amb criteri<br>i coherència",
+        sol_p=("Hem treballat mobiliari, colors, materials i il·luminació de manera conjunta perquè cada estança sigui "
+               "bonica, funcional i coherent amb la resta de la llar."),
+        punts=["Mobiliari a mida", "Paleta de colors i materials", "Il·luminació d'ambient",
+               "Distribució de l'espai", "Acabats cuidats"],
+        cta_eb="T'INTERESSA UN PROJECTE COM AQUEST?", cta_h="Fem realitat el teu interior",
+        cta_p="Explica'ns com vols viure el teu espai i el dissenyem plegats.",
+        cta_b="Demana pressupost", cita="“ La teva llar,<br>el nostre<br>compromís ”",
+        img_hero="hero-projectes.jpg", img_repte="cat-interiorisme.jpg", img_sol="interiorisme.jpg",
+        gal=["home-proj-3.jpg", "proj-10.jpg", "proj-11.jpg", "proj-12.jpg", "cat-interiorisme.jpg"]),
+    "reformes": dict(
+        eyebrow="PROJECTE DE REFORMA", h1="Reforma a<br>Localitat", tipus="Reformes", inclou="Gestió i execució",
+        excerpt="Una reforma gestionada de principi a fi, per transformar l'espai amb garantia i sense preocupacions.",
+        repte_h="Una reforma pensada<br>de principi a fi",
+        repte_p=("Cada reforma parteix d'un espai que cal renovar: guanyar comoditat, aprofitar millor els metres i "
+                 "donar-li una imatge nova, coordinant tot el procés."),
+        sol_h="Transformació amb garantia<br>i bons acabats",
+        sol_p=("Hem coordinat tot el procés d'obra, des del disseny fins a l'acabat final, per transformar l'espai amb "
+               "ordre, calidesa i atenció al detall."),
+        punts=["Gestió integral de l'obra", "Materials de qualitat", "Acabats cuidats", "Seguiment constant",
+               "Garantia i experiència"],
+        cta_eb="T'INTERESSA UNA REFORMA COM AQUESTA?", cta_h="Fem realitat la teva reforma",
+        cta_p="Explica'ns què vols canviar i t'assessorem sense compromís, amb tot el procés coordinat.",
+        cta_b="Demana pressupost de reforma", cita="“ Transformem<br>els teus<br>espais ”",
+        img_hero="proj-13.jpg", img_repte="cat-reformes.jpg", img_sol="proj-15.jpg",
+        gal=["proj-13.jpg", "proj-15.jpg", "cat-reformes.jpg", "proj-12.jpg", "proj-14.jpg"]),
+    "parquets": dict(
+        eyebrow="PROJECTE DE PARQUET", h1="Parquet a<br>Localitat", tipus="Parquets",
+        inclou="Assessorament i col·locació",
+        excerpt="Un terra de fusta càlid i resistent, triat per donar caràcter i confort a cada estança.",
+        repte_h="Un terra pensat<br>per a cada estança",
+        repte_p=("Cada projecte de parquet parteix de l'espai i de l'ús que se'n farà: triar el to, l'acabat i la "
+                 "col·locació adequats perquè el terra duri i s'integri amb la resta."),
+        sol_h="Calidesa i durabilitat<br>sota els teus peus",
+        sol_p=("Hem seleccionat un parquet que combina amb l'estil de l'espai i l'hem col·locat amb cura perquè el "
+               "resultat sigui uniforme, càlid i fàcil de mantenir."),
+        punts=["Fusta càlida i resistent", "To i acabat a mida", "Col·locació acurada", "Fàcil de mantenir",
+               "Combina amb tot l'espai"],
+        cta_eb="T'INTERESSA UN PARQUET COM AQUEST?", cta_h="Fem realitat el teu terra",
+        cta_p="Explica'ns com és l'espai i t'ajudem a triar el parquet que millor encaixa.",
+        cta_b="Demana pressupost de parquet", cita="“ Una llar càlida<br>comença<br>pel terra ”",
+        img_hero="proj-14.jpg", img_repte="proj-14.jpg", img_sol="proj-14.jpg",
+        gal=["proj-14.jpg", "proj-13.jpg", "proj-15.jpg", "proj-12.jpg", "proj-11.jpg"]),
+}
+
+
+def page_projecte_servei(k):
+    c = PJ_SERVEIS[k]
+    return [pj_hero(c), pj_repte(c), pj_solucio(c), pj_galeria(c), pj_cta(c)]
 
 
 def page_projecte_general():
@@ -1553,7 +1665,8 @@ def main():
              ("interiorisme", "Interiorisme", "Interiorisme", page_interiorisme),
              ("parquets", "Parquets", "Parquets", page_parquets), ("nosaltres", "Nosaltres", "Nosaltres", page_nosaltres),
              ("contacte", "Contacte", "Contacte", page_contacte),
-             ("projecte", "Projecte (plantilla)", "Projectes", page_projecte)]
+             ("projecte", "Projecte (plantilla)", "Projectes", page_projecte)] + [
+        (f"projecte-{k}", f"Projecte ({k})", "Projectes", (lambda k=k: page_projecte_servei(k))) for k in PJ_SERVEIS]
     for slug, title, active, fn in pages:
         nodes = fn()
         write_json(slug, f"Creem Llar - {title}", "page", nodes, ps)

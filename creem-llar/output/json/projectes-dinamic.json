@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "baaebad",
+      "id": "c315d7a",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -102,7 +102,7 @@
       },
       "elements": [
         {
-          "id": "bae5d12",
+          "id": "1f710e7",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -167,7 +167,7 @@
           },
           "elements": [
             {
-              "id": "3eab60b",
+              "id": "44696c2",
               "elType": "widget",
               "settings": {
                 "title": "Espais<br>fets a mida",
@@ -211,7 +211,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "8e7a7f1",
+              "id": "1f75aea",
               "elType": "widget",
               "settings": {
                 "title": "Cuines, banys, interiorisme, reformes<br>i parquets per crear llars úniques",
@@ -255,7 +255,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "08a8113",
+              "id": "6eaf306",
               "elType": "widget",
               "settings": {
                 "text": "Contactar amb nosaltres",
@@ -333,7 +333,7 @@
       "isInner": false
     },
     {
-      "id": "d7bdac6",
+      "id": "e5275eb",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -400,7 +400,7 @@
       },
       "elements": [
         {
-          "id": "efcccfe",
+          "id": "6d486df",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -435,7 +435,7 @@
           },
           "elements": [
             {
-              "id": "a5902a1",
+              "id": "d6ba042",
               "elType": "widget",
               "settings": {
                 "title": "ELS NOSTRES",
@@ -464,7 +464,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "c2db6f1",
+              "id": "18595a1",
               "elType": "widget",
               "settings": {
                 "title": "Projectes",
@@ -501,7 +501,7 @@
           "isInner": true
         },
         {
-          "id": "73814f1",
+          "id": "fdd6ecc",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -536,7 +536,7 @@
           },
           "elements": [
             {
-              "id": "2d54af1",
+              "id": "ee17430",
               "elType": "widget",
               "settings": {
                 "title": "Descobreix una selecció dels nostres projectes de cuines, banys, interiorisme, reformes i parquets a Figueres, Banyoles i altres localitats de l'Empordà i el Pla de l'Estany.",
@@ -566,7 +566,7 @@
       "isInner": false
     },
     {
-      "id": "6eaf306",
+      "id": "387f932",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -615,7 +615,7 @@
       },
       "elements": [
         {
-          "id": "44696c2",
+          "id": "3ba33ea",
           "elType": "widget",
           "widgetType": "taxonomy-filter",
           "elements": [],
@@ -627,7 +627,7 @@
           }
         },
         {
-          "id": "1f75aea",
+          "id": "1151ee9",
           "elType": "widget",
           "widgetType": "loop-grid",
           "elements": [],
@@ -656,7 +656,7 @@
       "isInner": false
     },
     {
-      "id": "505bfc2",
+      "id": "060935b",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -684,7 +684,7 @@
       },
       "elements": [
         {
-          "id": "bfa0143",
+          "id": "1a44050",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -743,7 +743,7 @@
           "isInner": true
         },
         {
-          "id": "a32d8f5",
+          "id": "60c855d",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -814,7 +814,7 @@
           },
           "elements": [
             {
-              "id": "357935c",
+              "id": "358fc5f",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -849,7 +849,7 @@
               },
               "elements": [
                 {
-                  "id": "d7266b0",
+                  "id": "313356e",
                   "elType": "widget",
                   "settings": {
                     "title": "INTERIORISME A FIGUERES | BANYOLES",
@@ -878,7 +878,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "3f3a53a",
+                  "id": "287363d",
                   "elType": "widget",
                   "settings": {
                     "title": "Dissenyem espais<br>per a persones reals",
@@ -912,7 +912,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "43d9b03",
+                  "id": "a862706",
                   "elType": "widget",
                   "settings": {
                     "title": "Creem cuines, banys i espais que combinen estètica, funcionalitat i benestar, sempre adaptats al teu estil de vida i a l'entorn on vius.",
@@ -936,7 +936,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "35e4174",
+                  "id": "000cfb9",
                   "elType": "widget",
                   "settings": {
                     "text": "Parlem del teu projecte",
@@ -1011,7 +1011,7 @@
               "isInner": true
             },
             {
-              "id": "c51184b",
+              "id": "bc0436b",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1046,7 +1046,7 @@
               },
               "elements": [
                 {
-                  "id": "aeb189f",
+                  "id": "189b123",
                   "elType": "widget",
                   "settings": {
                     "title": "“ La teva llar,<br>el nostre<br>compromís ”",
@@ -1086,7 +1086,7 @@
                   "widgetType": "heading"
                 },
                 {
-                  "id": "5567598",
+                  "id": "fe20c2d",
                   "elType": "widget",
                   "settings": {
                     "style": "solid",
@@ -1126,7 +1126,7 @@
       "isInner": false
     },
     {
-      "id": "575b279",
+      "id": "720cf09",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1193,7 +1193,7 @@
       },
       "elements": [
         {
-          "id": "8abf518",
+          "id": "10f7379",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1228,7 +1228,7 @@
           },
           "elements": [
             {
-              "id": "cfccd64",
+              "id": "334c163",
               "elType": "widget",
               "settings": {
                 "image": {
@@ -1268,7 +1268,7 @@
           "isInner": true
         },
         {
-          "id": "bf28d7f",
+          "id": "e0c17f2",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1303,7 +1303,7 @@
           },
           "elements": [
             {
-              "id": "a06c23e",
+              "id": "74025ce",
               "elType": "widget",
               "settings": {
                 "title": "PERSONES QUE FAN POSSIBLE CREEM LLAR",
@@ -1332,7 +1332,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "07ece6f",
+              "id": "a61b346",
               "elType": "widget",
               "settings": {
                 "title": "Un equip al teu costat",
@@ -1366,7 +1366,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "ab8358c",
+              "id": "93fdb9e",
               "elType": "widget",
               "settings": {
                 "title": "Som un estudi d'interiorisme amb arrels a Figueres, apassionats pel disseny i la qualitat. Treballem amb proximitat, escolta i compromís per crear espais únics, pensats per a tu.",
@@ -1390,7 +1390,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "d964c28",
+              "id": "7903963",
               "elType": "widget",
               "settings": {
                 "text": "Coneix el nostre equip",
@@ -1475,7 +1475,7 @@
           "isInner": true
         },
         {
-          "id": "9e4d600",
+          "id": "abde3a9",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1510,7 +1510,7 @@
           },
           "elements": [
             {
-              "id": "9670487",
+              "id": "6d9aff7",
               "elType": "widget",
               "settings": {
                 "title": "“ Llar<br>és molt més<br>que un lloc ”",
@@ -1550,7 +1550,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "f979827",
+              "id": "cf3b01d",
               "elType": "widget",
               "settings": {
                 "style": "solid",

@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "46aa6a9",
+      "id": "58b5e5c",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -102,7 +102,7 @@
       },
       "elements": [
         {
-          "id": "7662f7f",
+          "id": "3c02815",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -137,7 +137,7 @@
           },
           "elements": [
             {
-              "id": "230c031",
+              "id": "9213ca4",
               "elType": "widget",
               "settings": {
                 "title": "← Tots els projectes",
@@ -167,7 +167,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "af3c26b",
+              "id": "b41b8e3",
               "elType": "widget",
               "settings": {
                 "title": "PROJECTE D'INTERIORISME",
@@ -197,7 +197,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "7f0cc46",
+              "id": "6e7d630",
               "elType": "widget",
               "settings": {
                 "title": "Títol del<br>projecte",
@@ -231,7 +231,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "b9735a5",
+              "id": "bc505b9",
               "elType": "widget",
               "settings": {
                 "title": "Un projecte dissenyat a mida per viure millor cada espai, amb funcionalitat, estètica i benestar.",
@@ -255,7 +255,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "11a290d",
+              "id": "60c60cf",
               "elType": "widget",
               "settings": {
                 "text": "Demana un pressupost similar",
@@ -343,7 +343,7 @@
       "isInner": false
     },
     {
-      "id": "79e1a7c",
+      "id": "89d2c00",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -408,7 +408,7 @@
       },
       "elements": [
         {
-          "id": "883344d",
+          "id": "1ab3306",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -443,7 +443,7 @@
           },
           "elements": [
             {
-              "id": "8010021",
+              "id": "7fda036",
               "elType": "widget",
               "settings": {
                 "title": "EL REPTE",
@@ -472,7 +472,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "72a159e",
+              "id": "4deedc2",
               "elType": "widget",
               "settings": {
                 "title": "Un projecte pensat<br>a la teva mida",
@@ -506,7 +506,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "b0474a4",
+              "id": "37a4409",
               "elType": "widget",
               "settings": {
                 "title": "Cada projecte parteix d'una necessitat concreta: aprofitar millor l'espai, guanyar comoditat i crear un ambient que reflecteixi la manera de viure de qui l'habita.",
@@ -530,7 +530,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "4cde1d2",
+              "id": "4107311",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -582,7 +582,7 @@
               },
               "elements": [
                 {
-                  "id": "0fe2837",
+                  "id": "2286566",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -649,7 +649,7 @@
                   },
                   "elements": [
                     {
-                      "id": "bdd9f24",
+                      "id": "2fbf607",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -667,7 +667,7 @@
                       "widgetType": "icon"
                     },
                     {
-                      "id": "ce490fb",
+                      "id": "bcfd533",
                       "elType": "widget",
                       "settings": {
                         "title": "Ubicació",
@@ -691,7 +691,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "ed83a03",
+                      "id": "52cee8e",
                       "elType": "widget",
                       "settings": {
                         "title": "Localitat",
@@ -718,7 +718,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "51398bb",
+                  "id": "802ced4",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -785,7 +785,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5b73978",
+                      "id": "e502090",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -803,7 +803,7 @@
                       "widgetType": "icon"
                     },
                     {
-                      "id": "dd076b0",
+                      "id": "e07bab4",
                       "elType": "widget",
                       "settings": {
                         "title": "Tipus de projecte",
@@ -827,7 +827,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "1d9bc49",
+                      "id": "524aedd",
                       "elType": "widget",
                       "settings": {
                         "title": "Cuina / Banys / Reforma",
@@ -854,7 +854,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "664e596",
+                  "id": "757e021",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -921,7 +921,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3b8e044",
+                      "id": "4fd84ef",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -939,7 +939,7 @@
                       "widgetType": "icon"
                     },
                     {
-                      "id": "0b5d3cf",
+                      "id": "aaf2f29",
                       "elType": "widget",
                       "settings": {
                         "title": "Superfície",
@@ -963,7 +963,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "48ca61d",
+                      "id": "b9088ba",
                       "elType": "widget",
                       "settings": {
                         "title": "— m²",
@@ -996,7 +996,7 @@
           "isInner": true
         },
         {
-          "id": "844e57d",
+          "id": "f7a8d21",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1031,7 +1031,7 @@
           },
           "elements": [
             {
-              "id": "77998c2",
+              "id": "a9ef503",
               "elType": "widget",
               "settings": {
                 "image": {
@@ -1076,7 +1076,7 @@
       "isInner": false
     },
     {
-      "id": "295c3c1",
+      "id": "7dcee17",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -1104,7 +1104,7 @@
       },
       "elements": [
         {
-          "id": "438b12e",
+          "id": "342787e",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1139,7 +1139,7 @@
           },
           "elements": [
             {
-              "id": "4e17926",
+              "id": "8f09362",
               "elType": "widget",
               "settings": {
                 "image": {
@@ -1179,7 +1179,7 @@
           "isInner": true
         },
         {
-          "id": "2d57f32",
+          "id": "934759e",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1232,7 +1232,7 @@
           },
           "elements": [
             {
-              "id": "653da89",
+              "id": "4e4bae3",
               "elType": "widget",
               "settings": {
                 "title": "LA SOLUCIÓ",
@@ -1261,7 +1261,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "5b019bf",
+              "id": "b424926",
               "elType": "widget",
               "settings": {
                 "title": "Disseny i funcionalitat<br>en perfecta harmonia",
@@ -1295,7 +1295,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "838fee4",
+              "id": "191f1ec",
               "elType": "widget",
               "settings": {
                 "title": "Hem dissenyat una solució a mida, amb materials de qualitat i una distribució pensada per al confort diari, cuidant cada detall de principi a fi.",
@@ -1319,7 +1319,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "4fd6d78",
+              "id": "391610e",
               "elType": "widget",
               "settings": {
                 "icon_list": [
@@ -1329,7 +1329,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "791b10f",
+                    "_id": "74bb263",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1343,7 +1343,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "47e9f9d",
+                    "_id": "9d34fd8",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1357,7 +1357,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "b8b23c7",
+                    "_id": "d8f9cdf",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1371,7 +1371,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "b2a2fbe",
+                    "_id": "2aeb429",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1385,7 +1385,7 @@
                       "value": "far fa-check-circle",
                       "library": "fa-regular"
                     },
-                    "_id": "cad945c",
+                    "_id": "3276f80",
                     "link": {
                       "url": "",
                       "is_external": "",
@@ -1436,7 +1436,7 @@
       "isInner": false
     },
     {
-      "id": "a70f45a",
+      "id": "dbedb23",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1485,7 +1485,7 @@
       },
       "elements": [
         {
-          "id": "d801c0d",
+          "id": "9c7ac4b",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1510,7 +1510,7 @@
           },
           "elements": [
             {
-              "id": "8433df0",
+              "id": "3f542fe",
               "elType": "widget",
               "settings": {
                 "title": "GALERIA D'IMATGES",
@@ -1539,7 +1539,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "e6fbd22",
+              "id": "e0704c4",
               "elType": "widget",
               "settings": {
                 "title": "Detalls que fan la diferència",
@@ -1576,7 +1576,7 @@
           "isInner": true
         },
         {
-          "id": "a59581d",
+          "id": "c9b4250",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1603,7 +1603,7 @@
           },
           "elements": [
             {
-              "id": "cd53fa9",
+              "id": "5555df9",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1638,7 +1638,7 @@
               },
               "elements": [
                 {
-                  "id": "83ff90b",
+                  "id": "7f74e96",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1680,7 +1680,7 @@
               "isInner": true
             },
             {
-              "id": "3d691b8",
+              "id": "91f1c76",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1726,7 +1726,7 @@
               },
               "elements": [
                 {
-                  "id": "502cfb0",
+                  "id": "0e6b5ae",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1765,7 +1765,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "4e3cc6e",
+                  "id": "65fa29f",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1804,7 +1804,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "f53b1f5",
+                  "id": "1a9a6cf",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1843,7 +1843,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "5f85541",
+                  "id": "9761a30",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1891,7 +1891,7 @@
       "isInner": false
     },
     {
-      "id": "d7e0e56",
+      "id": "d8ecfee",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1958,7 +1958,7 @@
       },
       "elements": [
         {
-          "id": "87fe5db",
+          "id": "f262b6c",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1993,7 +1993,7 @@
           },
           "elements": [
             {
-              "id": "39fc8a5",
+              "id": "651074c",
               "elType": "widget",
               "settings": {
                 "title": "TENS UN PROJECTE SIMILAR?",
@@ -2022,7 +2022,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "706a423",
+              "id": "1976db2",
               "elType": "widget",
               "settings": {
                 "title": "Fem realitat el teu projecte",
@@ -2056,7 +2056,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "82ccc9c",
+              "id": "7d54719",
               "elType": "widget",
               "settings": {
                 "title": "T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un pressupost sense compromís.",
@@ -2080,7 +2080,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "03a0c26",
+              "id": "e3ae92f",
               "elType": "widget",
               "settings": {
                 "text": "Demana pressupost",
@@ -2155,7 +2155,7 @@
           "isInner": true
         },
         {
-          "id": "e1919ad",
+          "id": "c7a4e34",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -2190,7 +2190,7 @@
           },
           "elements": [
             {
-              "id": "30f7b58",
+              "id": "d6974e2",
               "elType": "widget",
               "settings": {
                 "title": "“ Espais que<br>s'adapten a tu ”",
@@ -2230,7 +2230,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "3f046ed",
+              "id": "4e54187",
               "elType": "widget",
               "settings": {
                 "style": "solid",

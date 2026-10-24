@@ -582,7 +582,7 @@
               },
               "elements": [
                 {
-                  "id": "fd1abca",
+                  "id": "6c42ede",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -649,7 +649,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0b87e7e",
+                      "id": "1433369",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -667,7 +667,7 @@
                       "widgetType": "icon"
                     },
                     {
-                      "id": "70a5e82",
+                      "id": "44d1c60",
                       "elType": "widget",
                       "settings": {
                         "title": "Ubicació",
@@ -691,7 +691,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "95f9e55",
+                      "id": "74cae37",
                       "elType": "widget",
                       "settings": {
                         "title": "Figueres",
@@ -854,7 +854,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "6c42ede",
+                  "id": "fd1abca",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -921,7 +921,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1433369",
+                      "id": "0b87e7e",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -939,7 +939,7 @@
                       "widgetType": "icon"
                     },
                     {
-                      "id": "44d1c60",
+                      "id": "70a5e82",
                       "elType": "widget",
                       "settings": {
                         "title": "Superfície",
@@ -963,7 +963,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "74cae37",
+                      "id": "95f9e55",
                       "elType": "widget",
                       "settings": {
                         "title": "28 m²",
