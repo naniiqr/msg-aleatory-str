@@ -38,7 +38,7 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 ## Projectes amb pestanyes
 `projectes.json` usa el widget **Pestanyes niuades** (Tabs) d'Elementor: Tots · Cuina · Banys · Interiorisme · Reformes · Parquets (+ "Per classificar", temporal).
 - Les dades surten de `data/projectes.csv` (34 projectes). Omple la columna *categoria* i torna a generar (`python3 build.py`) o envia'm el CSV.
-- El títol de cada targeta és `[NOM DE LA CARPETA]` com a guia: l'esborres en carregar el projecte. La localitat és real.
+- El títol de cada targeta és `[P01]`, `[P02]`… (identificador, sense noms de client). La clau id ↔ client és PRIVADA i només la té el propietari (`projectes-PRIVAT.csv`, no es puja mai).
 - `tools/classificar_projectes.py` proposa categories a partir dels noms de carpetes/fitxers.
 - Cada projecte apareix a "Tots" i a la seva categoria: copia/enganxa la targeta (Ctrl+C / Ctrl+V) ja amb la foto posada.
 
@@ -47,3 +47,6 @@ Ver `GUIA-PROJECTES-DINAMICS.md`. Archivos: `output/acf/camps-projecte.json`, `o
 
 ## Ficha de proyecto manual (la más simple)
 `output/json/projecte-general.json`: textos generales listos; solo se cambian título, localidad, tipo y fotos.
+
+## Fotos sin nombre de cliente
+`tools/renombrar_imatges.py` renombra y copia las fotos como `<tipo>-<localidad>-<id>-<nn>.webp` y genera `CLAVES-PRIVADAS.csv` (no subir). Opción `--netejar-metadades` quita EXIF/XMP de los .webp sin recomprimir.

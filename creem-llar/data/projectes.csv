@@ -1,35 +1,35 @@
-﻿id;guia (nom de la carpeta);localitat;categoria (Cuina/Banys/Interiorisme/Reformes/Parquets);nota
-p01;ADRIA RAMOS;Figueres;;
-p02;ALBA CLIMENT;Figueres;;
-p03;ALBA LUCIA LOPEZ;Vinya Gran;Banys;Carpeta: 'BANYS VINYA GRAN' (foto .HEIC). Categoria inferida del nom
-p04;ALBERT GENIS;Figueres;;
-p05;ALEX MARTI;Figueres;;
-p06;ALICIA SERRANO;Cadaqués;;
-p07;ANDREU PORTBOU;;;La carpeta no indica localitat
-p08;ANNA LLOSA;Figueres;;Hi ha un zip i un .jpg
-p09;BANYOLES;Banyoles;;La carpeta només diu 'BANYOLES', sense nom de client
-p10;BARRA BAR;L'Escala;Interiorisme;Local comercial: categoria inferida, confirma
-p11;BESCANÓ;Bescanó;;La carpeta només diu la localitat
-p12;BOADELLA;Boadella;;La carpeta només diu la localitat
-p13;BUFFET ROSELLO;El Pertús;Interiorisme;Local comercial: categoria inferida, confirma
-p14;CAMPING LA SIRENE;;;La carpeta no indica localitat
-p15;CARLES PANAREDA;;;La carpeta no indica localitat
-p16;CARLES PUJOL;Figueres;;L'arxiu és un .crdownload (descàrrega incompleta)
-p17;CARLES SERRA;Fortià;;
-p18;CARLOTTA;Albons;;
-p19;CARME GONGORA;L'Escala;;
-p20;CARME SANTALO;Ordis;;
-p21;CARME VIARNES;Massanet;;
-p22;CLARA FITA;Peralada;;
-p23;CONXITA GOLANOS;Pontós;;
-p24;CRISTINA TERSA;Marzà;;
-p25;DANI (BANY MAS PAU);Avinyonet;Banys;Carpeta: 'DANI BANY MAS PAU'. Categoria inferida del nom
-p26;DANI ZENITH;Medinyà;;
-p27;DOLORS ALBUJAR;Figueres;;
-p28;DOLORS BOSCH;Figueres;;
-p29;DOLORS PUNSET;Mollet de Perelada;;
-p30;ELISABETH I FRANZ;Colera;;
-p31;ENRIC PASTOR;Navata;;
-p32;ERNEST RUIZ;Navata;;
-p33;ESTEVE BRUN;Mas Pai;;
-p34;ESTHER DIEZ (DESPATX I CAPÇAL);Vilasacra;Interiorisme;Despatx: categoria inferida, confirma
+﻿id;guia (identificador);localitat;categoria (Cuina/Banys/Interiorisme/Reformes/Parquets);nota
+p01;P01;Figueres;;
+p02;P02;Figueres;;
+p03;P03;Vinya Gran;Banys;Categoria inferida del nom de la carpeta
+p04;P04;Figueres;;
+p05;P05;Figueres;;
+p06;P06;Cadaqués;;
+p07;P07;;;Sense localitat
+p08;P08;Figueres;;
+p09;P09;Banyoles;;Només hi ha la localitat
+p10;P10;L'Escala;Interiorisme;Local comercial: categoria inferida, confirma
+p11;P11;Bescanó;;Només hi ha la localitat
+p12;P12;Boadella;;Només hi ha la localitat
+p13;P13;El Pertús;Interiorisme;Local comercial: categoria inferida, confirma
+p14;P14;;;Sense localitat
+p15;P15;;;Sense localitat
+p16;P16;Figueres;;Descàrrega incompleta (.crdownload)
+p17;P17;Fortià;;
+p18;P18;Albons;;
+p19;P19;L'Escala;;
+p20;P20;Ordis;;
+p21;P21;Massanet;;
+p22;P22;Peralada;;
+p23;P23;Pontós;;
+p24;P24;Marzà;;
+p25;P25;Avinyonet;Banys;Categoria inferida del nom de la carpeta
+p26;P26;Medinyà;;
+p27;P27;Figueres;;
+p28;P28;Figueres;;
+p29;P29;Mollet de Perelada;;
+p30;P30;Colera;;
+p31;P31;Navata;;
+p32;P32;Navata;;
+p33;P33;Mas Pai;;
+p34;P34;Vilasacra;Interiorisme;Despatx: categoria inferida, confirma

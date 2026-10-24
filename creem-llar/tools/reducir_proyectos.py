@@ -37,7 +37,7 @@ def slug(t):
 
 
 def localitat(nombre):
-    """'ADRIA RAMOS_FIGUERES-2026...' -> 'Figueres'; sin guion bajo -> ''."""
+    """'NOM CLIENT_FIGUERES-2026...' -> 'Figueres'; sin guion bajo -> ''."""
     base = re.sub(r"\.[A-Za-z0-9]+$", "", nombre)
     if "_" not in base:
         return ""
