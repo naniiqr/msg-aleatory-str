@@ -4,7 +4,7 @@
   "type": "loop-item",
   "content": [
     {
-      "id": "d75d82d",
+      "id": "778f816",
       "elType": "container",
       "settings": {
         "content_width": "full",
@@ -95,13 +95,13 @@
         },
         "css_classes": "cl-card",
         "__dynamic__": {
-          "background_image": "[elementor-tag id=\"ebf3bb0\" name=\"post-featured-image\" settings=\"%7B%7D\"]",
-          "link": "[elementor-tag id=\"bcced08\" name=\"post-url\" settings=\"%7B%7D\"]"
+          "background_image": "[elementor-tag id=\"803202b\" name=\"post-featured-image\" settings=\"%7B%7D\"]",
+          "link": "[elementor-tag id=\"e1be2a8\" name=\"post-url\" settings=\"%7B%7D\"]"
         }
       },
       "elements": [
         {
-          "id": "dc165e1",
+          "id": "b2762f2",
           "elType": "widget",
           "settings": {
             "title": "Títol del projecte",
@@ -127,15 +127,15 @@
               "custom_attributes": ""
             },
             "__dynamic__": {
-              "title": "[elementor-tag id=\"2003808\" name=\"post-title\" settings=\"%7B%7D\"]",
-              "link": "[elementor-tag id=\"5e05ce5\" name=\"post-url\" settings=\"%7B%7D\"]"
+              "title": "[elementor-tag id=\"7bc6fe5\" name=\"post-title\" settings=\"%7B%7D\"]",
+              "link": "[elementor-tag id=\"6ff9778\" name=\"post-url\" settings=\"%7B%7D\"]"
             }
           },
           "elements": [],
           "widgetType": "heading"
         },
         {
-          "id": "9a3b84f",
+          "id": "11e368c",
           "elType": "widget",
           "settings": {
             "icon_list": [
@@ -145,7 +145,7 @@
                   "value": "fas fa-map-marker-alt",
                   "library": "fa-solid"
                 },
-                "_id": "8d59e3a",
+                "_id": "b2d16c9",
                 "link": {
                   "url": "",
                   "is_external": "",
@@ -153,7 +153,7 @@
                   "custom_attributes": ""
                 },
                 "__dynamic__": {
-                  "text": "[elementor-tag id=\"0d3f483\" name=\"post-custom-field\" settings=\"%7B%22key%22%3A%22%22%2C%22custom_key%22%3A%22localitat%22%2C%22fallback%22%3A%22%22%7D\"]"
+                  "text": "[elementor-tag id=\"6dc672f\" name=\"post-custom-field\" settings=\"%7B%22key%22%3A%22%22%2C%22custom_key%22%3A%22localitat%22%2C%22fallback%22%3A%22%22%7D\"]"
                 }
               }
             ],

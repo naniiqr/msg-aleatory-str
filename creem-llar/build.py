@@ -1175,6 +1175,7 @@ def page_contacte():
 # ---------------------------------------------------------------- FITXA DE PROJECTE (plantilla estàtica + dinàmica)
 import urllib.parse
 
+GEN = False          # True => versió estàtica amb textos generals (plantilla per duplicar)
 DYN = False          # True => la fitxa es construeix amb etiquetes dinàmiques d'Elementor Pro (plantilla "Entrada única")
 TAXO, CPT = "categoria_projecte", "projecte"
 
@@ -1229,12 +1230,12 @@ def pj_spec(ic, etiqueta, valor, last=False, dyn=None):
 
 def pj_hero():
     back = heading("← Tots els projectes", "p", SANS, 15, 400, "#FFFFFFD9", 1.2, href="/projectes/")
-    eyebrow = heading("PROJECTE · CUINA", "p", SANS, 15, 400, "#FFFFFFCC", 1.2, 3.5, tf="uppercase")
+    eyebrow = heading("PROJECTE · CUINA" if not GEN else "PROJECTE D'INTERIORISME", "p", SANS, 15, 400, "#FFFFFFCC", 1.2, 3.5, tf="uppercase")
     bind(eyebrow, "title", "post-terms", taxonomy=TAXO, separator=", ", link="", before="Projecte · ")
-    titol = heading("Cuina contemporània<br>a Figueres", "h1", SERIF, R(64, 52, 40), 400, "#FFFFFF", 1.1)
+    titol = heading("Cuina contemporània<br>a Figueres" if not GEN else "Títol del<br>projecte", "h1", SERIF, R(64, 52, 40), 400, "#FFFFFF", 1.1)
     bind(titol, "title", "post-title")
     ex = heading("Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais "
-                 "oberts." if not DYN else FB["excerpt"], "p", SANS, 19, 400, "#FFFFFFF2", 1.5)
+                 "oberts." if not (DYN or GEN) else FB["excerpt"], "p", SANS, 19, 400, "#FFFFFFF2", 1.5)
     bind(ex, "title", "post-excerpt", fallback=FB["excerpt"])
     btn = button("Demana un pressupost similar", "/contacte/", bg=None, color="#FFFFFF", size=16, weight=400,
                  pad=(16, 32, 16, 32), border="#FFFFFFB3", radius=1, icon="fas fa-long-arrow-alt-right")
@@ -1249,15 +1250,15 @@ def pj_hero():
 def pj_repte():
     p = heading("L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una estètica "
                 "contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió amb el "
-                "menjador i el jardí." if not DYN else FB["repte"], "p", SANS, 17, 400, "#2E2A27", 1.6)
+                "menjador i el jardí." if not (DYN or GEN) else FB["repte"], "p", SANS, 17, 400, "#2E2A27", 1.6)
     bind(p, "title", "post-custom-field", **cf("repte_text", FB["repte"]))
-    h2 = heading("Una cuina oberta,<br>pràctica i amb caràcter" if not DYN else "Un projecte pensat<br>a la teva mida",
+    h2 = heading("Una cuina oberta,<br>pràctica i amb caràcter" if not (DYN or GEN) else "Un projecte pensat<br>a la teva mida",
                  "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2)
     specs = container([
-        pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres", dyn=("post-custom-field", cf("localitat", FB["loc"]))),
-        pj_spec("fas fa-home", "Tipus de projecte", "Cuina",
+        pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres" if not GEN else "Localitat", dyn=("post-custom-field", cf("localitat", FB["loc"]))),
+        pj_spec("fas fa-home", "Tipus de projecte", "Cuina" if not GEN else "Cuina / Banys / Reforma",
                 dyn=("post-terms", dict(taxonomy=TAXO, separator=", ", link=""))),
-        pj_spec("fas fa-ruler-combined", "Superfície", "28 m²", last=True,
+        pj_spec("fas fa-ruler-combined", "Superfície", "28 m²" if not GEN else "— m²", last=True,
                 dyn=("post-custom-field", cf("superficie", FB["sup"])))],
         grid=(3, 1), gap=0, inner=True, pad=R((16, 0, 0, 0), (16, 0, 0, 0), (16, 0, 0, 0)))
     txt = container([heading("EL REPTE", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5), h2, p, specs],
@@ -1270,17 +1271,21 @@ def pj_repte():
 
 
 def pj_solucio():
-    foto = container([], inner=True, width=R(50, 100), bgimg="interiorisme.jpg", minh=R(560, 360, 280), pad=0)
-    bind(foto, "background_image", "acf-image", **acf_img("imatge_solucio"))
+    if GEN:
+        foto = container([image("interiorisme.jpg", h=R(560, 360, 280), alt="La solució")], inner=True,
+                         width=R(50, 100), pad=0)
+    else:
+        foto = container([], inner=True, width=R(50, 100), bgimg="interiorisme.jpg", minh=R(560, 360, 280), pad=0)
+        bind(foto, "background_image", "acf-image", **acf_img("imatge_solucio"))
     punts = ["Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
-             "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior"] if not DYN else FB["punts"]
+             "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior"] if not (DYN or GEN) else FB["punts"]
     checks = icon_list([(t, "far fa-check-circle", None) for t in punts],
                        C_BROWN, 18, "#2E2A27", SANS, 16, 400, indent=12, space=16)
     for n in range(5):
         bind_item(checks, n, "text", "post-custom-field", **cf(f"punt_{n + 1}", FB["punts"][n]))
     p = heading("Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada per al "
                 "confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, preparació i "
-                "espai social." if not DYN else FB["solucio"], "p", SANS, 17, 400, "#2E2A27", 1.6)
+                "espai social." if not (DYN or GEN) else FB["solucio"], "p", SANS, 17, 400, "#2E2A27", 1.6)
     bind(p, "title", "post-custom-field", **cf("solucio_text", FB["solucio"]))
     panel = container([heading("LA SOLUCIÓ", "p", SANS, 15, 400, "#4A443F", 1.2, 3.5),
                        heading("Disseny i funcionalitat<br>en perfecta harmonia", "h2", SERIF, R(40, 36, 32), 400,
@@ -1309,7 +1314,7 @@ def pj_galeria():
 
 def pj_cta():
     txt = container([heading("TENS UN PROJECTE SIMILAR?", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5),
-                     heading("Fem realitat la cuina dels teus somnis" if not DYN else "Fem realitat el teu projecte",
+                     heading("Fem realitat la cuina dels teus somnis" if not (DYN or GEN) else "Fem realitat el teu projecte",
                              "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
                      heading("T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un "
                              "pressupost sense compromís.", "p", SANS, 17, 400, "#2E2A27", 1.6),
@@ -1324,6 +1329,15 @@ def pj_cta():
 
 def page_projecte():
     return [pj_hero(), pj_repte(), pj_solucio(), pj_galeria(), pj_cta()]
+
+
+def page_projecte_general():
+    global GEN
+    GEN = True
+    try:
+        return page_projecte()
+    finally:
+        GEN = False
 
 
 def page_projecte_dinamic():
@@ -1545,6 +1559,7 @@ def main():
         write_json(slug, f"Creem Llar - {title}", "page", nodes, ps)
         write_html(slug, title, [hdr(active)] + nodes + [footer])
 
+    write_json("projecte-general", "Creem Llar - Projecte (general)", "page", page_projecte_general(), ps)
     write_acf()
     # --- plantilles dinàmiques (només JSON; no tenen previsualització estàtica)
     write_json("projecte-dinamic", "Creem Llar - Projecte (plantilla dinàmica)", "single-post", page_projecte_dinamic())

@@ -44,3 +44,6 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 
 ## Proyectos dinámicos
 Ver `GUIA-PROJECTES-DINAMICS.md`. Archivos: `output/acf/camps-projecte.json`, `output/json/projecte-dinamic.json`, `projecte-targeta-loop.json`, `projectes-dinamic.json`.
+
+## Ficha de proyecto manual (la más simple)
+`output/json/projecte-general.json`: textos generales listos; solo se cambian título, localidad, tipo y fotos.
