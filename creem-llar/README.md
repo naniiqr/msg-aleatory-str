@@ -50,3 +50,6 @@ Ver `GUIA-PROJECTES-DINAMICS.md`. Archivos: `output/acf/camps-projecte.json`, `o
 
 ## Fotos sin nombre de cliente
 `tools/renombrar_imatges.py` renombra y copia las fotos como `<tipo>-<localidad>-<id>-<nn>.webp` y genera `CLAVES-PRIVADAS.csv` (no subir). Opción `--netejar-metadades` quita EXIF/XMP de los .webp sin recomprimir.
+
+## Clasificar proyectos con hojas de miniaturas
+`tools/fulls_contacte.py imatges-web` crea unas pocas hojas JPG ligeras (solo identificadores P01… y localidad, sin nombres de cliente) para enseñarlas y asignar la categoría de cada proyecto.
