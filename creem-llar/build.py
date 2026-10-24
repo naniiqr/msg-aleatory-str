@@ -1172,59 +1172,119 @@ def page_contacte():
             body]
 
 
-# ---------------------------------------------------------------- FITXA DE PROJECTE (plantilla per duplicar)
-def pj_spec(ic, etiqueta, valor, last=False):
-    return container([icon(ic, 28, "#2B2B2B"),
-                      heading(etiqueta, "p", SANS, 15, 500, "#141413", 1.2),
-                      heading(valor, "p", SANS, 14, 300, C_TEXT, 1.2)],
+# ---------------------------------------------------------------- FITXA DE PROJECTE (plantilla estàtica + dinàmica)
+import urllib.parse
+
+DYN = False          # True => la fitxa es construeix amb etiquetes dinàmiques d'Elementor Pro (plantilla "Entrada única")
+TAXO, CPT = "categoria_projecte", "projecte"
+
+# textos generals (valors de reserva quan un camp del projecte està buit)
+FB = dict(
+    excerpt="Un projecte dissenyat a mida per viure millor cada espai, amb funcionalitat, estètica i benestar.",
+    repte=("Cada projecte parteix d'una necessitat concreta: aprofitar millor l'espai, guanyar comoditat i crear un "
+           "ambient que reflecteixi la manera de viure de qui l'habita."),
+    solucio=("Hem dissenyat una solució a mida, amb materials de qualitat i una distribució pensada per al confort "
+             "diari, cuidant cada detall de principi a fi."),
+    punts=["Disseny a mida", "Materials de qualitat", "Il·luminació cuidada", "Espais ben aprofitats",
+           "Acabats i detalls a mida"],
+    loc="—", sup="—")
+
+
+def tag(_name, **settings):
+    """Etiqueta dinàmica d'Elementor Pro: [elementor-tag id=".." name=".." settings=".."]"""
+    sj = urllib.parse.quote(json.dumps(settings, ensure_ascii=False, separators=(",", ":")), safe="")
+    return f'[elementor-tag id="{nid()}" name="{_name}" settings="{sj}"]'
+
+
+def bind(node, _campo, _tag, **settings):
+    """Enllaça un camp d'un element amb una etiqueta dinàmica (només en mode DYN)."""
+    if DYN:
+        node.el["settings"].setdefault("__dynamic__", {})[_campo] = tag(_tag, **settings)
+    return node
+
+
+def bind_item(node, n, _campo, _tag, **settings):
+    """Igual que bind() però per a un element d'una llista (Llista d'icones)."""
+    if DYN:
+        node.el["settings"]["icon_list"][n].setdefault("__dynamic__", {})[_campo] = tag(_tag, **settings)
+    return node
+
+
+def cf(key, fallback):
+    return dict(key="", custom_key=key, fallback=fallback)       # etiqueta "Camp personalitzat" (meta del projecte)
+
+
+def acf_img(slug):
+    return dict(key=f"field_cl_{slug}:{slug}")                   # etiqueta "ACF Imatge"
+
+
+def pj_spec(ic, etiqueta, valor, last=False, dyn=None):
+    v = heading(valor, "p", SANS, 14, 400, C_TEXT, 1.2)
+    if dyn:
+        bind(v, "title", dyn[0], **dyn[1])
+    return container([icon(ic, 28, "#2B2B2B"), heading(etiqueta, "p", SANS, 15, 500, "#141413", 1.2), v],
                      gap=8, inner=True, align="flex-start", pad=R((0, 24, 0, 24), (0, 16, 0, 16), (0, 16, 0, 16)),
                      border=C_LINE, bw=R((0, 0 if last else 1, 0, 0), (0, 0 if last else 1, 0, 0), (0, 0, 0, 0)))
 
 
 def pj_hero():
-    kids = [heading("← Tots els projectes", "p", SANS, 15, 300, "#FFFFFFD9", 1.2, href="/projectes/"),
-            heading("PROJECTE D'INTERIORISME", "p", SANS, 13, 400, "#FFFFFFCC", 1.2, 3),
-            heading("Cuina contemporània<br>a Figueres", "h1", SERIF, R(64, 52, 40), 400, "#FFFFFF", 1.1),
-            heading("Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais "
-                    "oberts.", "p", SANS, 19, 300, "#FFFFFFF2", 1.5),
-            button("Demana un pressupost similar", "/contacte/", bg=None, color="#FFFFFF", size=16, weight=400,
-                   pad=(16, 32, 16, 32), border="#FFFFFFB3", radius=1, icon="fas fa-long-arrow-alt-right")]
-    text = container(kids, gap=24, inner=True, pad=0, align="flex-start", width=R(50, 100))
-    return container([text], justify="center", align="flex-start", boxed=BOX,
-                     pad=R((112, GUT[0], 64, GUT[0]), (112, GUT[1], 48, GUT[1]), (112, GUT[2], 48, GUT[2])),
-                     minh=R(640, 560, 560), bgimg="hero-inici.jpg", bgpos="center center", cls="cl-hero cl-pj-hero",
-                     overlay={"a": "#120C08D9", "b": "#120C0826", "angle": 90, "ap": 0, "bp": 70})
+    back = heading("← Tots els projectes", "p", SANS, 15, 400, "#FFFFFFD9", 1.2, href="/projectes/")
+    eyebrow = heading("PROJECTE · CUINA", "p", SANS, 15, 400, "#FFFFFFCC", 1.2, 3.5, tf="uppercase")
+    bind(eyebrow, "title", "post-terms", taxonomy=TAXO, separator=", ", link="", before="Projecte · ")
+    titol = heading("Cuina contemporània<br>a Figueres", "h1", SERIF, R(64, 52, 40), 400, "#FFFFFF", 1.1)
+    bind(titol, "title", "post-title")
+    ex = heading("Una cuina moderna i funcional, dissenyada per gaudir del dia a dia amb elegància, llum i espais "
+                 "oberts." if not DYN else FB["excerpt"], "p", SANS, 19, 400, "#FFFFFFF2", 1.5)
+    bind(ex, "title", "post-excerpt", fallback=FB["excerpt"])
+    btn = button("Demana un pressupost similar", "/contacte/", bg=None, color="#FFFFFF", size=16, weight=400,
+                 pad=(16, 32, 16, 32), border="#FFFFFFB3", radius=1, icon="fas fa-long-arrow-alt-right")
+    text = container([back, eyebrow, titol, ex, btn], gap=24, inner=True, pad=0, align="flex-start", width=R(50, 100))
+    hero_c = container([text], justify="center", align="flex-start", boxed=BOX,
+                       pad=R((112, GUT[0], 64, GUT[0]), (112, GUT[1], 48, GUT[1]), (112, GUT[2], 48, GUT[2])),
+                       minh=R(640, 560, 560), bgimg="hero-inici.jpg", bgpos="center center", cls="cl-hero cl-pj-hero",
+                       overlay={"a": "#120C08D9", "b": "#120C0826", "angle": 90, "ap": 0, "bp": 70})
+    return bind(hero_c, "background_image", "post-featured-image")
 
 
 def pj_repte():
-    txt = container([heading("EL REPTE", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
-                     heading("Una cuina oberta,<br>pràctica i amb caràcter", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
-                     heading("L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una "
-                             "estètica contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la "
-                             "connexió amb el menjador i el jardí.", "p", SANS, 17, 300, "#2E2A27", 1.6),
-                     container([pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres"),
-                                pj_spec("fas fa-home", "Tipus de projecte", "Reforma integral"),
-                                pj_spec("fas fa-ruler-combined", "Superfície", "28 m²", last=True)],
-                               grid=(3, 1), gap=0, inner=True, pad=R((16, 0, 0, 0), (16, 0, 0, 0), (16, 0, 0, 0)))],
+    p = heading("L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una estètica "
+                "contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió amb el "
+                "menjador i el jardí." if not DYN else FB["repte"], "p", SANS, 17, 400, "#2E2A27", 1.6)
+    bind(p, "title", "post-custom-field", **cf("repte_text", FB["repte"]))
+    h2 = heading("Una cuina oberta,<br>pràctica i amb caràcter" if not DYN else "Un projecte pensat<br>a la teva mida",
+                 "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2)
+    specs = container([
+        pj_spec("fas fa-map-marker-alt", "Ubicació", "Figueres", dyn=("post-custom-field", cf("localitat", FB["loc"]))),
+        pj_spec("fas fa-home", "Tipus de projecte", "Cuina",
+                dyn=("post-terms", dict(taxonomy=TAXO, separator=", ", link=""))),
+        pj_spec("fas fa-ruler-combined", "Superfície", "28 m²", last=True,
+                dyn=("post-custom-field", cf("superficie", FB["sup"])))],
+        grid=(3, 1), gap=0, inner=True, pad=R((16, 0, 0, 0), (16, 0, 0, 0), (16, 0, 0, 0)))
+    txt = container([heading("EL REPTE", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5), h2, p, specs],
                     gap=24, inner=True, pad=0, width=R(50, 100), justify="center")
-    img = container([image("home-proj-1.jpg", h=R(448, 360, 280), alt="El repte del projecte", lightbox=True)],
-                    inner=True, pad=0, width=R(50, 100))
+    im = image("home-proj-1.jpg", h=R(448, 360, 280), alt="El repte del projecte", lightbox=True)
+    bind(im, "image", "acf-image", **acf_img("imatge_repte"))
+    img = container([im], inner=True, pad=0, width=R(50, 100))
     return container([txt, img], dir=R("row", "column", "column"), align="center", gap=R(64, 40, 32), boxed=BOX,
                      bg="#FFFFFF", pad=P("sec"), cls="cl-pj-repte")
 
 
 def pj_solucio():
     foto = container([], inner=True, width=R(50, 100), bgimg="interiorisme.jpg", minh=R(560, 360, 280), pad=0)
-    checks = icon_list([(t, "far fa-check-circle", None) for t in
-                        ("Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
-                         "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior")],
-                       C_BROWN, 18, "#2E2A27", SANS, 16, 300, indent=12, space=16)
-    panel = container([heading("LA SOLUCIÓ", "p", SANS, 13, 400, "#4A443F", 1.2, 2.5),
-                       heading("Disseny i funcionalitat<br>en perfecta harmonia", "h2", SERIF, R(40, 36, 32), 400, "#141413", 1.2),
-                       heading("Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada "
-                               "per al confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, "
-                               "preparació i espai social.", "p", SANS, 17, 300, "#2E2A27", 1.6),
-                       checks],
+    bind(foto, "background_image", "acf-image", **acf_img("imatge_solucio"))
+    punts = ["Mobiliari a mida", "Materials d'alta qualitat", "Il·luminació integrada",
+             "Gran capacitat d'emmagatzematge", "Connexió amb l'exterior"] if not DYN else FB["punts"]
+    checks = icon_list([(t, "far fa-check-circle", None) for t in punts],
+                       C_BROWN, 18, "#2E2A27", SANS, 16, 400, indent=12, space=16)
+    for n in range(5):
+        bind_item(checks, n, "text", "post-custom-field", **cf(f"punt_{n + 1}", FB["punts"][n]))
+    p = heading("Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada per al "
+                "confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, preparació i "
+                "espai social." if not DYN else FB["solucio"], "p", SANS, 17, 400, "#2E2A27", 1.6)
+    bind(p, "title", "post-custom-field", **cf("solucio_text", FB["solucio"]))
+    panel = container([heading("LA SOLUCIÓ", "p", SANS, 15, 400, "#4A443F", 1.2, 3.5),
+                       heading("Disseny i funcionalitat<br>en perfecta harmonia", "h2", SERIF, R(40, 36, 32), 400,
+                               "#141413", 1.2), p, checks],
                       inner=True, width=R(50, 100), bg=C_BEIGE, justify="center", align="flex-start", gap=24,
                       pad=R((64, 72, 64, 72), (48, 40, 48, 40), (40, 24, 40, 24)))
     return container([foto, panel], dir=R("row", "column", "column"), gap=0, align="stretch", pad=0,
@@ -1232,24 +1292,27 @@ def pj_solucio():
 
 
 def pj_galeria():
-    cap = container([heading("GALERIA D'IMATGES", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
+    cap = container([heading("GALERIA D'IMATGES", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5),
                      heading("Detalls que fan la diferència", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2)],
                     gap=8, inner=True, pad=0)
-    gran = container([image("home-proj-3.jpg", h=R(480, 360, 280), alt="Galeria 1", lightbox=True)],
-                     inner=True, pad=0, width=R(50, 100))
-    petites = container([image(k, h=R(232, 176, 140), alt=f"Galeria {n}", lightbox=True)
-                         for n, k in enumerate(("home-proj-2.jpg", "proj-01.jpg", "proj-04.jpg", "proj-10.jpg"), 2)],
-                        grid=(2, 2), gap=16, inner=True, pad=0, width=R(50, 100))
+    keys = ["home-proj-3.jpg", "home-proj-2.jpg", "proj-01.jpg", "proj-04.jpg", "proj-10.jpg"]
+    ims = []
+    for n, k in enumerate(keys, 1):
+        im = image(k, h=R(480, 360, 280) if n == 1 else R(232, 176, 140), alt=f"Galeria {n}", lightbox=True)
+        bind(im, "image", "acf-image", **acf_img(f"galeria_{n}"))
+        ims.append(im)
+    gran = container([ims[0]], inner=True, pad=0, width=R(50, 100))
+    petites = container(ims[1:], grid=(2, 2), gap=16, inner=True, pad=0, width=R(50, 100))
     mosaic = container([gran, petites], dir=R("row", "column", "column"), gap=16, inner=True, pad=0)
-    return container([cap, mosaic], gap=32, boxed=BOX, bg="#FFFFFF",
-                     pad=P("sec"), cls="cl-pj-galeria")
+    return container([cap, mosaic], gap=32, boxed=BOX, bg="#FFFFFF", pad=P("sec"), cls="cl-pj-galeria")
 
 
 def pj_cta():
-    txt = container([heading("TENS UN PROJECTE SIMILAR?", "p", SANS, 13, 400, C_TEXT, 1.2, 2.5),
-                     heading("Fem realitat la cuina dels teus somnis", "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
+    txt = container([heading("TENS UN PROJECTE SIMILAR?", "p", SANS, 15, 400, C_TEXT, 1.2, 3.5),
+                     heading("Fem realitat la cuina dels teus somnis" if not DYN else "Fem realitat el teu projecte",
+                             "h2", SERIF, R(40, 36, 32), 400, "#111111", 1.2),
                      heading("T'assessorem en tot el procés, des de la idea inicial fins a l'últim detall. Demana un "
-                             "pressupost sense compromís.", "p", SANS, 17, 300, "#2E2A27", 1.6),
+                             "pressupost sense compromís.", "p", SANS, 17, 400, "#2E2A27", 1.6),
                      button("Demana pressupost", "/contacte/", bg=C_DARK, color="#fff", size=16, weight=400,
                             pad=(16, 32, 16, 32), radius=1, icon="fas fa-long-arrow-alt-right")],
                     gap=24, inner=True, pad=0, width=R(64, 100), align="flex-start")
@@ -1261,6 +1324,67 @@ def pj_cta():
 
 def page_projecte():
     return [pj_hero(), pj_repte(), pj_solucio(), pj_galeria(), pj_cta()]
+
+
+def page_projecte_dinamic():
+    global DYN
+    DYN = True
+    try:
+        return page_projecte()
+    finally:
+        DYN = False
+
+
+# ---- targeta per al Loop Grid (plantilla "Loop Item"): cada projecte del llistat
+def loop_card():
+    titol = heading("Títol del projecte", "h3", SERIF, 26, 400, "#FFFFFF", 1.2, href="/projecte/")
+    loc = icon_list([("Localitat", "fas fa-map-marker-alt", None)], "#E3B988", 14, "#FFFFFF", SANS, 15, 400)
+    global DYN
+    DYN = True
+    try:
+        bind(titol, "title", "post-title")
+        bind(titol, "link", "post-url")
+        bind_item(loc, 0, "text", "post-custom-field", **cf("localitat", ""))
+        card = container([titol, loc], inner=False, gap=6, justify="flex-end", align="flex-start",
+                         pad=R((24, 24, 24, 24), (24, 24, 24, 24), (24, 24, 24, 24)),
+                         minh=R(240, 230, 220), bgimg="proj-01.jpg",
+                         overlay={"a": "#00000000", "b": "#000000BF", "angle": 180, "ap": 38, "bp": 100},
+                         cls="cl-card")
+        bind(card, "background_image", "post-featured-image")
+        bind(card, "link", "post-url")
+    finally:
+        DYN = False
+    return card
+
+
+def page_loop_item():
+    return [loop_card()]
+
+
+def loop_widgets():
+    """Llistat dinàmic de projectes: filtre per categoria + Loop Grid (cal triar la plantilla de targeta)."""
+    i, j = nid(), nid()
+    filt = {"id": i, "elType": "widget", "widgetType": "taxonomy-filter", "elements": [],
+            "settings": {"taxonomy": TAXO, "selected_element": "cl-projectes-grid", "show_all_option": "yes",
+                         "all_label": "Tots"}}
+    grid = {"id": j, "elType": "widget", "widgetType": "loop-grid", "elements": [],
+            "settings": {"_element_id": "cl-projectes-grid", "template_id": "", "columns": "3", "columns_tablet": "2",
+                         "columns_mobile": "1", "posts_per_page": 12, "post_query_post_type": CPT,
+                         "pagination_type": "numbers", "row_gap": sz(24), "column_gap": sz(24)}}
+    return Node(filt, "", []), Node(grid, "", [])
+
+
+def page_projectes_dinamic():
+    base = page_projectes()                       # capçalera, intro i franges finals de la pàgina actual
+    filt, grid = loop_widgets()
+    llistat = container([filt, grid], boxed=BOX, bg=C_BG, gap=32, pad=P("sec", top=0), cls="cl-ptabs")
+    out = []
+    for n in base:
+        if "cl-ptabs" in n.html:                  # substitueix les pestanyes estàtiques pel llistat dinàmic
+            out.append(llistat)
+        else:
+            out.append(n)
+    return out
 
 
 # ================================================================ SORTIDA
@@ -1352,6 +1476,52 @@ def write_json(name, title, ttype, nodes, page_settings=None):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def write_acf():
+    """Grup de camps d'ACF (gratuït) per als projectes. Importació: ACF → Eines → Importar."""
+    def w(width=""): return {"width": width, "class": "", "id": ""}
+    def base(key, label, name, typ, instr="", req=0):
+        return {"key": f"field_cl_{key}", "label": label, "name": name, "aria-label": "", "type": typ,
+                "instructions": instr, "required": req, "conditional_logic": 0, "wrapper": w()}
+    def text(key, label, instr="", req=0, ph=""):
+        f = base(key, label, key, "text", instr, req)
+        f.update({"default_value": "", "maxlength": "", "placeholder": ph, "prepend": "", "append": ""})
+        return f
+    def area(key, label, instr=""):
+        f = base(key, label, key, "textarea", instr)
+        f.update({"default_value": "", "maxlength": "", "rows": 4, "placeholder": "", "new_lines": ""})
+        return f
+    def img(key, label, instr=""):
+        f = base(key, label, key, "image", instr)
+        f.update({"return_format": "array", "library": "all", "min_width": "", "min_height": "", "min_size": "",
+                  "max_width": "", "max_height": "", "max_size": "", "mime_types": "", "preview_size": "medium"})
+        return f
+    def tab(key, label):
+        f = base("tab_" + key, label, "", "tab")
+        f.update({"placement": "top", "endpoint": 0})
+        return f
+    fields = [tab("dades", "Dades bàsiques"),
+              text("localitat", "Localitat", "Ej.: Figueres. Se muestra en la ficha y en la tarjeta del listado.", 1, "Figueres"),
+              text("superficie", "Superfície", "Opcional. Ej.: 28 m². Si lo dejas vacío se muestra «—».", 0, "28 m²"),
+              tab("textos", "Textos (opcionales)"),
+              area("repte_text", "El repte", "2-3 líneas. Si lo dejas vacío se muestra un texto general."),
+              area("solucio_text", "La solució", "2-3 líneas. Si lo dejas vacío se muestra un texto general."),
+              ] + [text(f"punt_{n}", f"Punt de la solució {n}", "Opcional. Si lo dejas vacío se muestra un texto general.")
+                   for n in range(1, 6)] + [
+              tab("imatges", "Imatges (opcionals)"),
+              img("imatge_repte", "Imatge del repte", "Imagen junto a «El repte»."),
+              img("imatge_solucio", "Imatge de la solució", "Imagen grande de «La solució»."),
+              ] + [img(f"galeria_{n}", f"Galeria {n}" + (" (la gran)" if n == 1 else ""),
+                       "Se abre ampliada al hacer clic.") for n in range(1, 6)]
+    group = [{"key": "group_cl_projecte", "title": "Dades del projecte", "fields": fields,
+              "location": [[{"param": "post_type", "operator": "==", "value": CPT}]],
+              "menu_order": 0, "position": "normal", "style": "default", "label_placement": "top",
+              "instruction_placement": "label", "hide_on_screen": "", "active": True, "description": "",
+              "show_in_rest": 0}]
+    os.makedirs(f"{OUT}/acf", exist_ok=True)
+    with open(f"{OUT}/acf/camps-projecte.json", "w", encoding="utf-8") as f:
+        json.dump(group, f, ensure_ascii=False, indent=2)
+
+
 def main():
     shutil.rmtree(OUT, ignore_errors=True)
     os.makedirs(f"{OUT}/html", exist_ok=True)
@@ -1374,6 +1544,12 @@ def main():
         nodes = fn()
         write_json(slug, f"Creem Llar - {title}", "page", nodes, ps)
         write_html(slug, title, [hdr(active)] + nodes + [footer])
+
+    write_acf()
+    # --- plantilles dinàmiques (només JSON; no tenen previsualització estàtica)
+    write_json("projecte-dinamic", "Creem Llar - Projecte (plantilla dinàmica)", "single-post", page_projecte_dinamic())
+    write_json("projecte-targeta-loop", "Creem Llar - Targeta de projecte (Loop Item)", "loop-item", page_loop_item())
+    write_json("projectes-dinamic", "Creem Llar - Projectes (llistat dinàmic)", "page", page_projectes_dinamic(), ps)
 
     with open(f"{OUT}/html/index.html", "w", encoding="utf-8") as f:
         f.write("<!doctype html><meta charset=utf-8><title>Creem Llar</title>"

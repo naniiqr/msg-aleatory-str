@@ -150,7 +150,7 @@
                   "size": 15,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
                   "size": 1.2,
@@ -170,14 +170,14 @@
               "id": "835205a",
               "elType": "widget",
               "settings": {
-                "title": "PROJECTE D'INTERIORISME",
+                "title": "PROJECTE · CUINA",
                 "header_size": "p",
                 "title_color": "#FFFFFFCC",
                 "typography_typography": "custom",
                 "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 13,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -188,9 +188,10 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 3,
+                  "size": 3.5,
                   "sizes": []
-                }
+                },
+                "typography_text_transform": "uppercase"
               },
               "elements": [],
               "widgetType": "heading"
@@ -243,7 +244,7 @@
                   "size": 19,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
                   "size": 1.5,
@@ -442,7 +443,7 @@
           },
           "elements": [
             {
-              "id": "5040ed3",
+              "id": "69dbd95",
               "elType": "widget",
               "settings": {
                 "title": "EL REPTE",
@@ -452,7 +453,7 @@
                 "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 13,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -463,7 +464,7 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 2.5,
+                  "size": 3.5,
                   "sizes": []
                 }
               },
@@ -505,7 +506,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "95f9e55",
+              "id": "5040ed3",
               "elType": "widget",
               "settings": {
                 "title": "L'objectiu d'aquest projecte era crear una cuina integrada a l'espai de dia, amb una estètica contemporània i una gran funcionalitat, aprofitant al màxim la llum natural i la connexió amb el menjador i el jardí.",
@@ -518,7 +519,7 @@
                   "size": 17,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
                   "size": 1.6,
@@ -529,7 +530,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "69dbd95",
+              "id": "642639e",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -581,7 +582,7 @@
               },
               "elements": [
                 {
-                  "id": "2648cc4",
+                  "id": "fd1abca",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -690,7 +691,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "fd1abca",
+                      "id": "95f9e55",
                       "elType": "widget",
                       "settings": {
                         "title": "Figueres",
@@ -703,7 +704,7 @@
                           "size": 14,
                           "sizes": []
                         },
-                        "typography_font_weight": "300",
+                        "typography_font_weight": "400",
                         "typography_line_height": {
                           "unit": "em",
                           "size": 1.2,
@@ -717,7 +718,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "74cae37",
+                  "id": "e0de29b",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -826,10 +827,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "e0de29b",
+                      "id": "2648cc4",
                       "elType": "widget",
                       "settings": {
-                        "title": "Reforma integral",
+                        "title": "Cuina",
                         "header_size": "p",
                         "title_color": "#5E5A57",
                         "typography_typography": "custom",
@@ -839,7 +840,7 @@
                           "size": 14,
                           "sizes": []
                         },
-                        "typography_font_weight": "300",
+                        "typography_font_weight": "400",
                         "typography_line_height": {
                           "unit": "em",
                           "size": 1.2,
@@ -853,7 +854,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "642639e",
+                  "id": "6c42ede",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -962,7 +963,7 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "6c42ede",
+                      "id": "74cae37",
                       "elType": "widget",
                       "settings": {
                         "title": "28 m²",
@@ -975,7 +976,7 @@
                           "size": 14,
                           "sizes": []
                         },
-                        "typography_font_weight": "300",
+                        "typography_font_weight": "400",
                         "typography_line_height": {
                           "unit": "em",
                           "size": 1.2,
@@ -1220,7 +1221,7 @@
           },
           "elements": [
             {
-              "id": "aa1bfcc",
+              "id": "0ea08d4",
               "elType": "widget",
               "settings": {
                 "title": "LA SOLUCIÓ",
@@ -1230,7 +1231,7 @@
                 "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 13,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -1241,7 +1242,7 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 2.5,
+                  "size": 3.5,
                   "sizes": []
                 }
               },
@@ -1249,7 +1250,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "0ea08d4",
+              "id": "92ed540",
               "elType": "widget",
               "settings": {
                 "title": "Disseny i funcionalitat<br>en perfecta harmonia",
@@ -1283,7 +1284,7 @@
               "widgetType": "heading"
             },
             {
-              "id": "92ed540",
+              "id": "aa1bfcc",
               "elType": "widget",
               "settings": {
                 "title": "Hem dissenyat una cuina amb línies netes, materials naturals i una distribució pensada per al confort diari. L'illa central esdevé el punt de trobada, combinant zona de cuina, preparació i espai social.",
@@ -1296,7 +1297,7 @@
                   "size": 17,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
                   "size": 1.6,
@@ -1407,7 +1408,7 @@
                   "size": 16,
                   "sizes": []
                 },
-                "icon_typography_font_weight": "300",
+                "icon_typography_font_weight": "400",
                 "icon_typography_line_height": {
                   "unit": "em",
                   "size": 1.3,
@@ -1508,7 +1509,7 @@
                 "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 13,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -1519,7 +1520,7 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 2.5,
+                  "size": 3.5,
                   "sizes": []
                 }
               },
@@ -1591,7 +1592,7 @@
           },
           "elements": [
             {
-              "id": "e5f91bb",
+              "id": "4e5d1c9",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1714,7 +1715,7 @@
               },
               "elements": [
                 {
-                  "id": "df5e2e6",
+                  "id": "e5f91bb",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1753,7 +1754,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "4bc2841",
+                  "id": "df5e2e6",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1792,7 +1793,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "1152dd3",
+                  "id": "4bc2841",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1831,7 +1832,7 @@
                   "widgetType": "image"
                 },
                 {
-                  "id": "4e5d1c9",
+                  "id": "1152dd3",
                   "elType": "widget",
                   "settings": {
                     "image": {
@@ -1991,7 +1992,7 @@
                 "typography_font_family": "DM Sans",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 13,
+                  "size": 15,
                   "sizes": []
                 },
                 "typography_font_weight": "400",
@@ -2002,7 +2003,7 @@
                 },
                 "typography_letter_spacing": {
                   "unit": "px",
-                  "size": 2.5,
+                  "size": 3.5,
                   "sizes": []
                 }
               },
@@ -2057,7 +2058,7 @@
                   "size": 17,
                   "sizes": []
                 },
-                "typography_font_weight": "300",
+                "typography_font_weight": "400",
                 "typography_line_height": {
                   "unit": "em",
                   "size": 1.6,

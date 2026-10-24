@@ -41,3 +41,6 @@ Generat amb `python3 build.py`. Cada component es defineix una sola vez y de él
 - El títol de cada targeta és `[NOM DE LA CARPETA]` com a guia: l'esborres en carregar el projecte. La localitat és real.
 - `tools/classificar_projectes.py` proposa categories a partir dels noms de carpetes/fitxers.
 - Cada projecte apareix a "Tots" i a la seva categoria: copia/enganxa la targeta (Ctrl+C / Ctrl+V) ja amb la foto posada.
+
+## Proyectos dinámicos
+Ver `GUIA-PROJECTES-DINAMICS.md`. Archivos: `output/acf/camps-projecte.json`, `output/json/projecte-dinamic.json`, `projecte-targeta-loop.json`, `projectes-dinamic.json`.

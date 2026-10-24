@@ -1,0 +1,432 @@
+[
+  {
+    "key": "group_cl_projecte",
+    "title": "Dades del projecte",
+    "fields": [
+      {
+        "key": "field_cl_tab_dades",
+        "label": "Dades bàsiques",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_cl_localitat",
+        "label": "Localitat",
+        "name": "localitat",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Ej.: Figueres. Se muestra en la ficha y en la tarjeta del listado.",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "Figueres",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_superficie",
+        "label": "Superfície",
+        "name": "superficie",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Opcional. Ej.: 28 m². Si lo dejas vacío se muestra «—».",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "28 m²",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_tab_textos",
+        "label": "Textos (opcionales)",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_cl_repte_text",
+        "label": "El repte",
+        "name": "repte_text",
+        "aria-label": "",
+        "type": "textarea",
+        "instructions": "2-3 líneas. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "rows": 4,
+        "placeholder": "",
+        "new_lines": ""
+      },
+      {
+        "key": "field_cl_solucio_text",
+        "label": "La solució",
+        "name": "solucio_text",
+        "aria-label": "",
+        "type": "textarea",
+        "instructions": "2-3 líneas. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "rows": 4,
+        "placeholder": "",
+        "new_lines": ""
+      },
+      {
+        "key": "field_cl_punt_1",
+        "label": "Punt de la solució 1",
+        "name": "punt_1",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Opcional. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_punt_2",
+        "label": "Punt de la solució 2",
+        "name": "punt_2",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Opcional. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_punt_3",
+        "label": "Punt de la solució 3",
+        "name": "punt_3",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Opcional. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_punt_4",
+        "label": "Punt de la solució 4",
+        "name": "punt_4",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Opcional. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_punt_5",
+        "label": "Punt de la solució 5",
+        "name": "punt_5",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Opcional. Si lo dejas vacío se muestra un texto general.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_cl_tab_imatges",
+        "label": "Imatges (opcionals)",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_cl_imatge_repte",
+        "label": "Imatge del repte",
+        "name": "imatge_repte",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Imagen junto a «El repte».",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_cl_imatge_solucio",
+        "label": "Imatge de la solució",
+        "name": "imatge_solucio",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Imagen grande de «La solució».",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_cl_galeria_1",
+        "label": "Galeria 1 (la gran)",
+        "name": "galeria_1",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Se abre ampliada al hacer clic.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_cl_galeria_2",
+        "label": "Galeria 2",
+        "name": "galeria_2",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Se abre ampliada al hacer clic.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_cl_galeria_3",
+        "label": "Galeria 3",
+        "name": "galeria_3",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Se abre ampliada al hacer clic.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_cl_galeria_4",
+        "label": "Galeria 4",
+        "name": "galeria_4",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Se abre ampliada al hacer clic.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_cl_galeria_5",
+        "label": "Galeria 5",
+        "name": "galeria_5",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Se abre ampliada al hacer clic.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "preview_size": "medium"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "projecte"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+  }
+]
