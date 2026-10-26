@@ -200,7 +200,7 @@
               "id": "6e7d630",
               "elType": "widget",
               "settings": {
-                "title": "Títol del<br>projecte",
+                "title": "Un projecte<br>a la teva mida",
                 "header_size": "h1",
                 "title_color": "#FFFFFF",
                 "typography_typography": "custom",
@@ -694,7 +694,7 @@
                       "id": "52cee8e",
                       "elType": "widget",
                       "settings": {
-                        "title": "Localitat",
+                        "title": "Comarques de Girona",
                         "header_size": "p",
                         "title_color": "#5E5A57",
                         "typography_typography": "custom",
