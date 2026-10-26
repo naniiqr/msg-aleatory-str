@@ -1435,6 +1435,25 @@ PJ_SERVEIS = {
         cta_b="Demana pressupost de parquet", cita="“ Una llar càlida<br>comença<br>pel terra ”",
         img_hero="proj-14.jpg", img_repte="proj-14.jpg", img_sol="proj-14.jpg",
         gal=["proj-14.jpg", "proj-13.jpg", "proj-15.jpg", "proj-12.jpg", "proj-11.jpg"]),
+    # Projecte combinat (cuina + bany, bany + parquet, cuina + interiorisme…): text 100% general.
+    # Només cal canviar l'eyebrow del hero, el «Tipus de projecte», el títol i la localitat.
+    "combinat": dict(
+        eyebrow="PROJECTE · CUINA I BANY", h1="Títol del<br>projecte", tipus="Cuina / Banys",
+        inclou="Disseny i execució",
+        excerpt="Un projecte pensat de principi a fi, amb materials de qualitat i atenció al detall en cada estança.",
+        repte_h="Un projecte pensat<br>a la teva mida",
+        repte_p=("Cada projecte parteix de la manera de viure de qui l'habita: aprofitar millor l'espai, guanyar "
+                 "comoditat i crear ambients agradables, coordinant tot el procés perquè el resultat sigui coherent."),
+        sol_h="Disseny i funcionalitat<br>en cada detall",
+        sol_p=("Hem treballat cada estança amb una mirada conjunta: distribució ben aprofitada, materials duradors, "
+               "bona il·luminació i acabats cuidats, perquè tot l'espai funcioni i sigui bonic."),
+        punts=["Mobiliari i acabats a mida", "Materials de qualitat", "Il·luminació cuidada",
+               "Distribució ben aprofitada", "Gestió i seguiment de tot el procés"],
+        cta_eb="T'INTERESSA UN PROJECTE COM AQUEST?", cta_h="Fem realitat el teu projecte",
+        cta_p="Explica'ns què necessites i t'assessorem sense compromís, des de la primera idea fins a l'últim detall.",
+        cta_b="Demana pressupost", cita="“ Espais que<br>s'adapten a tu ”",
+        img_hero="hero-projectes.jpg", img_repte="home-proj-1.jpg", img_sol="interiorisme.jpg",
+        gal=["home-proj-1.jpg", "home-proj-2.jpg", "home-proj-3.jpg", "proj-10.jpg", "proj-12.jpg"]),
 }
 
 
