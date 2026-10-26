@@ -1438,7 +1438,7 @@ PJ_SERVEIS = {
     # Projecte combinat (cuina + bany, bany + parquet, cuina + interiorisme…): text 100% general.
     # Només cal canviar l'eyebrow del hero, el «Tipus de projecte», el títol i la localitat.
     "combinat": dict(
-        eyebrow="PROJECTE · CUINA I BANY", h1="Projecte a<br>Localitat", tipus="Cuina / Banys",
+        eyebrow="PROJECTE · CUINA I BANY", h1="Reforma i interiorisme<br>a Localitat", tipus="Cuina / Banys",
         inclou="Disseny i execució",
         excerpt="Un projecte pensat de principi a fi, amb materials de qualitat i atenció al detall en cada estança.",
         repte_h="Un projecte pensat<br>a la teva mida",
